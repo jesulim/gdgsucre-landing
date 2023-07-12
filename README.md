@@ -1,5 +1,13 @@
+
+
+<div align="center">
+
 # GDG Sucre Landing Page
 
+<img alt="Projects of React" src="https://photos.google.com/photo/AF1QipOt2cReNjNMcAcieztJLip7LDDGtcsqmX7cfKE5" width="500">
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+</div>
+
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_codeflow.svg)](https://pr.new/github.com/jesulim/gdgsucre-landing)
 
