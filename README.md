@@ -4,7 +4,7 @@
 
 # GDG Sucre Landing Page
 
-<img alt="Projects of React" src="https://photos.google.com/photo/AF1QipOt2cReNjNMcAcieztJLip7LDDGtcsqmX7cfKE5" width="500">
+![gdgsucre](https://github.com/jesulim/gdgsucre-landing/assets/27868712/14068655-12d1-4634-a4af-733b790b1621)
 
 </div>
 
