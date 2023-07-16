@@ -10,7 +10,10 @@ module.exports = {
         blue: '#3D8BFF',
         yellow: '#FFBB01',
         white: '#FEFEFE'
-      }
+      },
+      fontFamily: {
+        google: ['Google Sans', 'sans-serif']
+      },
     }
   },
   plugins: []
