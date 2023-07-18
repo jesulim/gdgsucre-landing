@@ -12,7 +12,7 @@ module.exports = {
         white: '#FEFEFE'
       },
       fontFamily: {
-        google: ['Google Sans', 'sans-serif']
+        google: ['Google Sans', 'sans-serif'],
       },
     }
   },
