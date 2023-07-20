@@ -26,11 +26,11 @@ const Countdown = ({ targetDate }) => {
   }, [])
 
   return (
-    <div class='grid place-content-center max-w-screen-lg text-center'>
-      <div class='mb-2 mt-10 font-bold opacity-70 text-white'>
+    <div class='grid place-content-center text-center'>
+      <div class='mb-2 font-bold text-xl text-white'>
         Faltan:
       </div>
-      <div class='flex gap-8 [&>div]:text-center [&>div]:flex [&>div]:flex-col [&>div]:text-5xl [&>div]:text-yellow [&>div]:font-black'>
+      <div class='flex gap-8 [&>div]:text-center [&>div]:flex [&>div]:flex-col [&>div]:text-5xl [&>div]:text-yellow [&>div]:font-black [&>div]:lg:text-8xl'>
         <div>
           <span>{timeLeft.days}</span>
           <span class='text-white text-lg uppercase font-bold'>días</span>
