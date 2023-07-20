@@ -26,11 +26,28 @@ const Countdown = ({ targetDate }) => {
   }, [])
 
   return (
-    <div class='text-center text-yellow text-5xl font-bold'>
-      <span>{timeLeft.days} días, </span>
-      <span>{timeLeft.hours} horas, </span>
-      <span>{timeLeft.minutes} minutos y </span>
-      <span>{timeLeft.seconds} segundos</span>
+    <div class='grid place-content-center max-w-screen-lg text-center'>
+      <div class='mb-2 mt-10 font-bold opacity-70 text-white'>
+        Faltan:
+      </div>
+      <div class='flex gap-8 [&>div]:text-center [&>div]:flex [&>div]:flex-col [&>div]:text-5xl [&>div]:text-yellow [&>div]:font-black'>
+        <div>
+          <span>{timeLeft.days}</span>
+          <span class='text-white text-lg uppercase font-bold'>días</span>
+        </div>
+        <div>
+          <span>{timeLeft.hours}</span>
+          <span class='text-white text-lg uppercase font-bold'>horas</span>
+        </div>
+        <div>
+          <span>{timeLeft.minutes}</span>
+          <span class='text-white text-lg uppercase font-bold'>minutos</span>
+        </div>
+        <div>
+          <span>{timeLeft.seconds}</span>
+          <span class='text-white text-lg uppercase font-bold'>segundos</span>
+        </div>
+      </div>
     </div>
   )
 }
