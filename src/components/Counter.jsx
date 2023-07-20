@@ -26,7 +26,7 @@ const Countdown = ({ targetDate }) => {
   }, [])
 
   return (
-    <div class='grid place-content-center text-center'>
+    <div className='grid place-content-center text-center'>
       <div class='mb-2 font-bold text-xl text-white'>
         Faltan:
       </div>
