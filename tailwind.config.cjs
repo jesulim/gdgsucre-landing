@@ -13,7 +13,7 @@ module.exports = {
         white: '#FEFEFE'
       },
       fontFamily: {
-        google: ['Google Sans', 'sans-serif']
+        google: ['Prompt', 'sans-serif']
       }
     }
   },

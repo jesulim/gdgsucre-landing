@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/react": "^2.2.1",
     "@astrojs/tailwind": "^4.0.0",
+    "@fontsource/prompt": "^5.0.5",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "astro": "^2.8.1",
