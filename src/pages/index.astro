@@ -5,6 +5,8 @@ import Hero from '../components/Hero.astro'
 import About from '../components/About.astro'
 import Footer from '../components/Footer.astro'
 import Countdown  from '../components/Counter.jsx'
+import Speakers from '../components/Speakers.astro'
+import Agenda from '../components/Agenda.astro'
 // import Starfield from "../components/Starfield.astro";
 ---
 
@@ -14,6 +16,8 @@ import Countdown  from '../components/Counter.jsx'
 		<Hero />
 		<About />
 		<Countdown targetDate="2023-08-12T00:00:00" client:visible/>
+		<Speakers />
+		<Agenda />
 		<Footer />
 </Layout>
 
