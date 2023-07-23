@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 const Countdown = ({ targetDate }) => {
   const calculateTimeLeft = () => {
@@ -30,7 +30,7 @@ const Countdown = ({ targetDate }) => {
       <div className='mb-2 font-bold text-xl text-white'>
         Faltan:
       </div>
-      <div class='flex gap-8 [&>div]:text-center [&>div]:flex [&>div]:flex-col [&>div]:text-5xl [&>div]:text-yellow [&>div]:font-black [&>div]:lg:text-8xl'>
+      <div className='flex gap-8 [&>div]:text-center [&>div]:flex [&>div]:flex-col [&>div]:text-5xl [&>div]:text-yellow [&>div]:font-black [&>div]:lg:text-8xl'>
         <div>
           <span>{timeLeft.days}</span>
           <span className='text-white text-lg uppercase font-bold'>días</span>
