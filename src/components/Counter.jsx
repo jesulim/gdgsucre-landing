@@ -27,25 +27,25 @@ const Countdown = ({ targetDate }) => {
 
   return (
     <div className='grid place-content-center text-center'>
-      <div class='mb-2 font-bold text-xl text-white'>
+      <div className='mb-2 font-bold text-xl text-white'>
         Faltan:
       </div>
       <div class='flex gap-8 [&>div]:text-center [&>div]:flex [&>div]:flex-col [&>div]:text-5xl [&>div]:text-yellow [&>div]:font-black [&>div]:lg:text-8xl'>
         <div>
           <span>{timeLeft.days}</span>
-          <span class='text-white text-lg uppercase font-bold'>días</span>
+          <span className='text-white text-lg uppercase font-bold'>días</span>
         </div>
         <div>
           <span>{timeLeft.hours}</span>
-          <span class='text-white text-lg uppercase font-bold'>horas</span>
+          <span className='text-white text-lg uppercase font-bold'>horas</span>
         </div>
         <div>
           <span>{timeLeft.minutes}</span>
-          <span class='text-white text-lg uppercase font-bold'>minutos</span>
+          <span className='text-white text-lg uppercase font-bold'>minutos</span>
         </div>
         <div>
           <span>{timeLeft.seconds}</span>
-          <span class='text-white text-lg uppercase font-bold'>segundos</span>
+          <span className='text-white text-lg uppercase font-bold'>segundos</span>
         </div>
       </div>
     </div>

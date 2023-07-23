@@ -1,10 +1,41 @@
 ---
 import SectionTitle from './SectionTitle.astro'
-import hombre1 from '../../public/ariel-solis.png'
+import ariel from '../../ariel-solis.png'
+import carlos from '../../carlos-huaman.png'
+import david from '../../david-rios.png'
 ---
 
 <SectionTitle title="Speakers" />
-<div class="max-w-screen-md content mx-auto">
-  <img src={hombre1} alt="" />
-  <span class="text-yellow text-3xl font-bold">Ariel Solis</span>
+<div class="max-w-screen-md mx-auto columns-3">
+  <div class="relative">
+    <img src={ariel} alt="" class="w-auto" />
+    <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+      <span
+        class="p-0 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-yellow relative inline-block"
+      >
+        <span class="relative text-dark-gray text-2xl">Ariel Solis</span>
+      </span>
+    </div>
+  </div>
+  <div class="relative">
+    <img src={carlos} alt="" class="p-0" />
+    <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+      <span
+        class="px-0 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-yellow relative inline-block whitespace-nowrap"
+      >
+        <span class="relative text-dark-gray text-2xl">Carlos Huaman</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="relative">
+    <img src={david} alt="" />
+    <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+      <span
+        class="p-0 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-yellow relative inline-block"
+      >
+        <span class="relative text-dark-gray text-2xl">David Rios</span>
+      </span>
+    </div>
+  </div>
 </div>
