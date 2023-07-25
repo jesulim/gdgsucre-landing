@@ -2,8 +2,7 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "preact",
-    "types": ["astro/client", "preact"],
+    "jsxImportSource": "react",
     "isolatedModules": true,
     "moduleResolution": "node",
     "baseUrl": ".",

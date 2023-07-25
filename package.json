@@ -11,10 +11,15 @@
     "prettier": "prettier . --write"
   },
   "dependencies": {
-    "@astrojs/preact": "^2.2.1",
+    "@astrojs/react": "^2.2.1",
     "@astrojs/tailwind": "^4.0.0",
+    "@fontsource/prompt": "^5.0.5",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
     "astro": "^2.8.1",
-    "preact": "^10.16.0",
+    "flowbite": "^1.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
