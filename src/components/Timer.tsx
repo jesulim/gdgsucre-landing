@@ -16,17 +16,17 @@ export const Timer = ({ targetDate }: TimerProps) => {
   return (
     <>
       {continueTime && (
-        <div class='mb-2 font-bold'>Empezo Google I/O Sucre 2023</div>
+        <div className='mb-2 font-bold'>Empezo Google I/O Sucre 2023</div>
       )}
 
-      <section class='flex justify-center'>
+      <section className='flex justify-center'>
         {time.map(({ label, value }, index) => {
           const isLast = index === time.length - 1
 
           return (
-            <div class='flex-col w-24 lg:w-36'>
+            <div className='flex-col w-24 lg:w-36'>
               <div
-                class={`text-yellow font-bold text-5xl lg:text-7xl relative ${
+                className={`text-yellow font-bold text-5xl lg:text-7xl relative ${
                   !isLast &&
                   'after:ml-2 after:font-bold after:text-yellow after:content-[":"] after:absolute lg:after:ml-5'
                 }`}
@@ -34,7 +34,7 @@ export const Timer = ({ targetDate }: TimerProps) => {
                 {value}
               </div>
               {label && (
-                <span class='text-white text-xs lg:text-base'>{label}</span>
+                <span className='text-white text-xs lg:text-base'>{label}</span>
               )}
             </div>
           )
