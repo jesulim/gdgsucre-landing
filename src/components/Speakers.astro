@@ -1,41 +1,30 @@
 ---
 import SectionTitle from './SectionTitle.astro'
-import ariel from '../../public/ariel-solis.png'
-import carlos from '../../public/carlos-huaman.png'
-import david from '../../public/david-rios.png'
+import { Speaker } from './Speaker'
+const spekers = [
+  {
+    id: 1,
+    img: '/ariel-solis.png',
+    speaker: 'Ariel Solis'
+  },
+  {
+    id: 2,
+    img: '/carlos-huaman.png',
+    speaker: 'Carlos Huaman'
+  },
+  {
+    id: 3,
+    img: '/david-rios.png',
+    speaker: 'David Rios'
+  }
+]
 ---
 
-<SectionTitle title="Speakers" />
-<div class="max-w-screen-md mx-auto columns-3">
-  <div class="relative">
-    <img src={ariel} alt="" class="hover:scale-125 transition ease-in-out duration-500" />
-    <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
-      <span
-        class="p-0 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-yellow relative inline-block"
-      >
-        <span class="relative text-dark-gray text-2xl">Ariel Solis</span>
-      </span>
-    </div>
-  </div>
-  <div class="relative">
-    <img src={carlos} alt="" class="hover:scale-125 transition ease-in-out duration-500" />
-    <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
-      <span
-        class="px-0 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-yellow relative inline-block whitespace-nowrap"
-      >
-        <span class="relative text-dark-gray text-2xl">Carlos Huaman</span>
-      </span>
-    </div>
-  </div>
-
-  <div class="relative">
-    <img src={david} alt="" class="hover:scale-125 transition ease-in-out duration-500"/>
-    <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
-      <span
-        class="p-0 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-yellow relative inline-block"
-      >
-        <span class="relative text-dark-gray text-2xl">David Rios</span>
-      </span>
-    </div>
-  </div>
+<SectionTitle title='Speakers' />
+<div class='max-w-screen-md mx-auto columns-3'>
+  {
+    spekers.map(({ id, img, speaker }) => (
+      <Speaker id={id} img={img} speaker={speaker} client:visible />
+    ))
+  }
 </div>
