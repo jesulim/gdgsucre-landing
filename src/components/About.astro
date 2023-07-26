@@ -1,5 +1,6 @@
 ---
 import Icon from './Icon.astro'
+import { Timer } from './Timer'
 ---
 
 <section
@@ -26,5 +27,12 @@ import Icon from './Icon.astro'
     <div class='w-2/6 flex justify-center'>
       <Icon icon='logo_IO' />
     </div>
+  </div>
+  <div
+    class='py-24 flex items-center justify-center flex-col text-center gap-y-8 text-white'
+  >
+    <h2 class='text-3xl lg:text-4xl'>12 de agosto</h2>
+    <span class='mb-3'>Falta:</span>
+    <Timer targetDate={new Date(1691841600000)} client:only />
   </div>
 </section>

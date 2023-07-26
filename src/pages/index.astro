@@ -8,7 +8,6 @@ import Footer from '../components/Footer.astro'
 import Speakers from '../components/Speakers.astro'
 import Agenda from '../components/Agenda.astro'
 import Sponsors from '../components/Sponsors.astro'
-import { Timer } from '@components/Timer'
 // import Starfield from "../components/Starfield.astro";
 ---
 
@@ -18,13 +17,6 @@ import { Timer } from '@components/Timer'
   <Hero />
   <About />
   <!-- <Countdown targetDate="2023-08-12T00:00:00" client:visible/> -->
-  <div
-    class='py-24 flex items-center justify-center flex-col text-center gap-y-8'
-  >
-    <h2 class='text-3xl lg:text-4xl text-white'>12 de agosto</h2>
-    <span class='mb-3'>Falta:</span>
-    <Timer targetDate={new Date(1691841600000)} client:visible />
-  </div>
   <Speakers />
   <Agenda />
   <Sponsors />
