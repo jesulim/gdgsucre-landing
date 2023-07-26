@@ -1,15 +1,38 @@
-<div
-  class="block p-6 border rounded-lg shadow bg-white bg-opacity-20 border-gray-700 content mx-auto w-full max-w-screen-md my-12"
+---
+import Icon from './Icon.astro'
+import { Timer } from './Timer'
+---
+
+<section
+  id='about'
+  class='text-white break-words mx-auto max-w-screen-lg min-h-screen md:px-2 mt-28 py-24'
 >
-  <h5
-    class="mb-2 text-2xl font-bold tracking-tight text-white"
+  <div
+    class='py-24 flex items-center justify-center gap-y-8 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 content m-auto'
   >
-    Sobre el evento
-  </h5>
-  <p class="font-normal text-white">
-    Aprendamos juntos sobre las novedades que nos trajo el Google I/O en la
-    hermosa capital de Bolivia, donde hablaremos sobre nuevas tecnologías. de la
-    mano de expertos internacionales y nacionales en el área, actualizaciones,
-    codelabs y muchas sorpresas más. No te pierdas este gran evento 🎉
-  </p>
-</div>
+    <div class='w-2/3 px-10'>
+      <h2
+        class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'
+      >
+        Sobre el evento
+      </h2>
+      <p class='font-normal text-gray-700 dark:text-gray-400'>
+        Aprendamos juntos sobre las novedades que nos trajo el Google I/O en la
+        hermosa capital de Bolivia, donde hablaremos sobre nuevas tecnologías.
+        de la mano de expertos internacionales y nacionales en el área,
+        actualizaciones, codelabs y muchas sorpresas más. No te pierdas este
+        gran evento 🎉
+      </p>
+    </div>
+    <div class='w-2/6 flex justify-center'>
+      <Icon icon='logo_IO' />
+    </div>
+  </div>
+  <div
+    class='py-24 flex items-center justify-center flex-col text-center gap-y-8 text-white'
+  >
+    <h2 class='text-3xl lg:text-4xl'>12 de agosto</h2>
+    <span class='mb-3'>Falta:</span>
+    <Timer targetDate={new Date(1691841600000)} client:only />
+  </div>
+</section>

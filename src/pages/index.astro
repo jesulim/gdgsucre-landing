@@ -4,45 +4,45 @@ import Header from '../components/Header.astro'
 import Hero from '../components/Hero.astro'
 import About from '../components/About.astro'
 import Footer from '../components/Footer.astro'
-import Countdown  from '../components/Counter.jsx'
+// import Countdown from '../components/Counter.jsx'
 import Speakers from '../components/Speakers.astro'
 import Agenda from '../components/Agenda.astro'
 import Sponsors from '../components/Sponsors.astro'
 // import Starfield from "../components/Starfield.astro";
 ---
 
-<Layout title="GDG Sucre">
-		<!-- <Starfield /> -->
-		<Header />
-		<Hero />
-		<About />
-		<Countdown targetDate="2023-08-12T00:00:00" client:visible/>
-		<Speakers />
-		<Agenda />
-		<Sponsors />
-		<Footer />
+<Layout title='GDG Sucre'>
+  <!-- <Starfield /> -->
+  <Header />
+  <Hero />
+  <About />
+  <!-- <Countdown targetDate="2023-08-12T00:00:00" client:visible/> -->
+  <Speakers />
+  <Agenda />
+  <Sponsors />
+  <Footer />
 </Layout>
 
 <noscript>
-	<style>
-		#splash-bg-fallback {
-			display: block;
-		}
-	</style>
+  <style>
+    #splash-bg-fallback {
+      display: block;
+    }
+  </style>
 </noscript>
 
 <style>
-	@media (prefers-reduced-motion: reduce) {
-		picture {
-			@apply animate-none;
-		}
+  @media (prefers-reduced-motion: reduce) {
+    picture {
+      @apply animate-none;
+    }
 
-		:global(#starfield) {
-			@apply hidden;
-		}
+    :global(#starfield) {
+      @apply hidden;
+    }
 
-		#splash-bg-fallback {
-			@apply block;
-		}
-	}
+    #splash-bg-fallback {
+      @apply block;
+    }
+  }
 </style>
