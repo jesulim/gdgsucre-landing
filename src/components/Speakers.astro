@@ -21,7 +21,7 @@ const spekers = [
 ---
 
 <SectionTitle title='Speakers' />
-<div class='max-w-screen-md mx-auto columns-3'>
+<div class='max-w-screen-md mx-auto columns-2 md:columns-3'>
   {
     spekers.map(({ id, img, speaker }) => (
       <Speaker id={id} img={img} speaker={speaker} client:visible />
