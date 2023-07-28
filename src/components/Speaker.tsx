@@ -14,7 +14,7 @@ export const Speaker = ({ id, img, speaker }: Props) => {
         <img
           src={img}
           alt={speaker}
-          className='w-auto'
+          className='w-auto h-60 lg:h-80 xl:h-96 object-cover object-center'
           data-atropos-offset='-4.5'
         />
         <div className='absolute bottom-5 left-1/2 transform -translate-x-1/2'>
