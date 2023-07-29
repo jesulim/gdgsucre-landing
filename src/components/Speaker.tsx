@@ -24,7 +24,7 @@ export const Speaker = ({ id, img, speaker }: Props) => {
           >
             <span
               data-atropos-offset='4.5'
-              className='relative inline-block text-dark-gray text-xl md:text-2xl'
+              className='relative inline-block text-dark-gray text-lg md:text-2xl'
             >
               {speaker}
             </span>
