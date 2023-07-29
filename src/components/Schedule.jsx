@@ -16,7 +16,7 @@ const ScheduleCard = ({ type, schedule, title, name }) => {
                 {schedule}
               </div>
               <div className='flex-1 overflow-hidden'>
-                <p className={'text-2xl font-bold truncate ' + textColor}>
+                <p className={'text-xl md:text-2xl font-bold ' + textColor}>
                   {title}
                 </p>
                 <p className='text-md truncate text-white'>{name}</p>
