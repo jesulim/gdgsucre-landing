@@ -17,7 +17,7 @@ import Sponsors from '../components/Sponsors.astro'
   <Hero />
   <About />
   <!-- <Countdown targetDate="2023-08-12T00:00:00" client:visible/> -->
-  <Speakers/>
+  <Speakers />
   <Agenda />
   <Sponsors />
   <Footer />
@@ -32,7 +32,14 @@ import Sponsors from '../components/Sponsors.astro'
 </noscript>
 
 <style>
+  :global(html) {
+    scroll-behavior: smooth;
+  }
   @media (prefers-reduced-motion: reduce) {
+    :global(html) {
+      scroll-behavior: auto;
+    }
+
     picture {
       @apply animate-none;
     }

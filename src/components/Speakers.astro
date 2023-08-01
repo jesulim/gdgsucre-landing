@@ -60,13 +60,11 @@ const speakers = [
 ]
 ---
 
-<section id="speakers">
-  <SectionTitle title='Speakers'/>
-  <div class='max-w-screen-md mx-auto columns-2 md:columns-3 gap-16'>
-    {
-      speakers.map(({ id, img, speaker }) => (
-        <Speaker id={id} img={img} speaker={speaker} client:visible />
-      ))
-    }
-  </div>
-</section>
+<SectionTitle id='speakers' title='Speakers' />
+<div class='max-w-screen-md mx-auto columns-2 md:columns-3 gap-16'>
+  {
+    speakers.map(({ id, img, speaker }) => (
+      <Speaker id={id} img={img} speaker={speaker} client:visible />
+    ))
+  }
+</div>

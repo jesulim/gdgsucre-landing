@@ -3,7 +3,5 @@ import { Schedule } from './Schedule'
 import SectionTitle from './SectionTitle.astro'
 ---
 
-<section id="agenda">
-  <SectionTitle title='Agenda' />
-  <Schedule client:load />
-</section>
+<SectionTitle id='agenda' title='Agenda' />
+<Schedule client:load />
