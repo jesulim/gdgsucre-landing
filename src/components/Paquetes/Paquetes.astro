@@ -1,0 +1,72 @@
+---
+import 'swiper/css'
+import 'swiper/css/effect-cards'
+
+import SectionTitle from '../SectionTitle.astro'
+import PaqueteCard from './PaqueteCard.astro'
+---
+
+<SectionTitle id='paquetes' title='Paquetes' />
+
+<div class='swiper w-2/3 sm:w-1/2'>
+  <div class='swiper-wrapper'>
+    <div class='swiper-slide'>
+      <PaqueteCard
+        title='Flutter'
+        color='bg-blue'
+        price='30'
+        img='paquetes/flutter.png'
+      />
+    </div>
+    <div class='swiper-slide'>
+      <PaqueteCard
+        title='Tensorflow'
+        color='bg-orange-400'
+        price='55'
+        items={['Gorra']}
+        img='paquetes/tensorflow.png'
+      />
+    </div>
+    <div class='swiper-slide'>
+      <PaqueteCard
+        title='Angular'
+        color='bg-red'
+        price='80'
+        items={['Gorra', 'Tomatodo']}
+        img='paquetes/angular.png'
+      />
+    </div>
+    <div class='swiper-slide'>
+      <PaqueteCard
+        title='Firebase'
+        color='bg-yellow'
+        price='130'
+        img='paquetes/firebase.png'
+        items={['Gorra', 'Tomatodo', 'Polera']}
+      />
+    </div>
+  </div>
+
+  <div class='flex'>
+    <a
+      href='http://google.com'
+      class='uppercase mx-auto mt-6 text-2xl text-yellow hover:underline'
+    >
+      Obtén tu paquete
+    </a>
+  </div>
+
+  <script>
+    import Swiper from 'swiper/bundle'
+
+    new Swiper('.swiper', {
+      // spaceBetween: 32,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: true
+      },
+      effect: 'cards',
+      grabCursor: true
+    })
+  </script>
+</div>

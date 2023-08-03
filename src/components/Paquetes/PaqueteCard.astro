@@ -1,0 +1,36 @@
+---
+const { title, color, price, items, img = '' } = Astro.props
+const textColor = color == 'bg-yellow' ? 'text-black' : 'text-white'
+---
+
+<div class:list={['rounded-2xl h-96 md:h-80 ', color]}>
+  <div class:list={['p-3', textColor]}>
+    <div class='flex items-start justify-between mb-2'>
+      <h3 class='text-xl md:text-2xl font-semibold'>
+        Paquete <span class='font-bold'>
+          {title}
+        </span>
+      </h3>
+      <span
+        class='whitespace-nowrap rounded-full border-2 px-2 text-black border-black bg-white'
+      >
+        {price} Bs.</span
+      >
+    </div>
+
+    <div class='flex flex-col justify-between pl-6 sm:flex-row'>
+      <ul class='list list-disc text-sm md:text-lg'>
+        <li>Manilla QR</li>
+        <li>Refrigerio</li>
+        <li>Stickers</li>
+        <li>Llavero</li>
+        <li>Cuaderno</li>
+        {items?.map(item => <li class='font-semibold'>{item}</li>)}
+      </ul>
+
+      <div class='relative w-1/2 sm:w-full'>
+        <img class='absolute object-cover' src={img} />
+      </div>
+    </div>
+  </div>
+</div>

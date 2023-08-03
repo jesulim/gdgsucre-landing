@@ -8,15 +8,15 @@ import { Timer } from './Timer'
   class='text-white break-words mx-auto max-w-screen-lg min-h-screen md:px-2 pt-12'
 >
   <div
-    class='flex flex-col lg:flex-row items-center justify-center  border rounded-lg shadow border-gray-700 content m-auto bg-white bg-opacity-20'
+    class='flex flex-col lg:flex-row items-center justify-center border rounded-lg shadow border-gray-700 content m-auto bg-white bg-opacity-20'
   >
     <div class='px-6 pt-6'>
-      <h2
-        class='mb-2 text-2xl font-bold tracking-tight text-white'
-      >
+      <h2 class='mb-2 text-2xl font-bold tracking-tight text-white'>
         Sobre el evento
       </h2>
-      <p class='font-normal text-gray-200 text-center lg:text-left lg:text-lg lg:mt-8 '>
+      <p
+        class='font-normal text-gray-200 text-center lg:text-left lg:text-lg lg:mt-8'
+      >
         Aprendamos juntos sobre las novedades que nos trajo el Google I/O en la
         hermosa capital de Bolivia, donde hablaremos sobre nuevas tecnologías.
         de la mano de expertos internacionales y nacionales en el área,
@@ -31,8 +31,8 @@ import { Timer } from './Timer'
   <div
     class='py-12 flex items-center justify-center flex-col text-center gap-y-8 text-white'
   >
-    <h2 class='text-4xl text-blue font-bold'>12 de agosto</h2>
-    <span class='mb-3'>Faltan:</span>
+    <h2 class='text-4xl text-blue font-bold'>Sábado 12 de agosto</h2>
+    <span class='mb-2'>Faltan:</span>
     <Timer targetDate={new Date(1691841600000)} client:only />
   </div>
 </section>
