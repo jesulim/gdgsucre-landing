@@ -1,16 +1,33 @@
 ---
 import SectionTitle from './SectionTitle.astro'
+const sponsors = [
+  {
+    name: 'itera soluciones digitales',
+    logo: '/sponsors/itera.png',
+    url: 'https://www.facebook.com/profile.php?id=100063753325772'
+  },
+  {
+    name: 'Dro-bots accesorios para robótica y electrónica',
+    logo: '/sponsors/dro-bots.png',
+    url: 'http://dro-bots.com/'
+  },
+  {
+    name: 'Facultad de Ciencias Económicas y Empresariales',
+    logo: 'https://economicas.usfx.bo/wp-content/uploads/2017/11/escudo-fac-economia-1.png',
+    url: 'https://economicas.usfx.bo/'
+  }
+]
 ---
 
 <SectionTitle id='sponsors' title='Sponsors' />
-<div class='max-w-screen-md mx-auto grid grid-cols-2 gap-2'>
-  <div>
-    <a href='https://www.facebook.com/profile.php?id=100063753325772'>
-      <img
-        class='h-auto max-w-full'
-        src='/sponsors/itera.png'
-        alt='itera soluciones digitales'
-      />
-    </a>
-  </div>
+<div class='max-w-screen-md px-2 mx-auto grid grid-cols-2 gap-2 md:grid-cols-3'>
+  {
+    sponsors.map(sponsor => (
+      <div class='flex justify-center items-center rounded-md'>
+        <a href={sponsor.url}>
+          <img class='max-h-44' src={sponsor.logo} alt={sponsor.name} />
+        </a>
+      </div>
+    ))
+  }
 </div>
