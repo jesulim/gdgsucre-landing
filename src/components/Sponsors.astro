@@ -9,7 +9,7 @@ const sponsors = [
   {
     name: 'Dro-bots accesorios para robótica y electrónica',
     logo: '/sponsors/dro-bots.png',
-    url: 'http://dro-bots.com/'
+    url: 'https://www.facebook.com/profile.php?id=100083024454287'
   },
   {
     name: 'Facultad de Ciencias Económicas y Empresariales',
@@ -44,7 +44,7 @@ const sponsors = [
   {
     sponsors.map(sponsor => (
       <div class='flex justify-center items-center rounded-md'>
-        <a href={sponsor.url}>
+        <a href={sponsor.url} target="_blank">
           <img class='max-h-44' src={sponsor.logo} alt={sponsor.name} />
         </a>
       </div>
