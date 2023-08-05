@@ -9,7 +9,7 @@ export interface Props {
 
 export const Speaker = ({ id, img, speaker }: Props) => {
   return (
-    <Atropos className='atropos-banner'>
+    <Atropos className='atropos-banner' rotateTouch='scroll-y'>
       <div className='relative' key={id}>
         <img
           src={img}
