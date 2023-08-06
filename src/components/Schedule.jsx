@@ -3,6 +3,13 @@ import { useState, useEffect } from 'react'
 
 import { firestore } from '../firebase/client'
 
+const bgTechnologies = {
+  Cloud: 'bg-red',
+  Web: 'bg-blue',
+  IA: 'bg-yellow',
+  Mobile: 'bg-green'
+}
+
 const ScheduleCard = ({
   type,
   schedule,
@@ -50,15 +57,19 @@ const ScheduleCard = ({
               {type !== 'Actividad' && (
                 <span
                   className={
-                    'mt-2 text-sm md:text-lg ml-auto rounded-full px-2 ' +
-                    (type === 'Conferencia' ? 'bg-blue' : 'bg-red')
+                    'bg-white text-black border-2 border-black mt-2 text-sm md:text-lg ml-auto rounded-lg px-2'
                   }
                 >
                   {type}
                 </span>
               )}
               {technologyType && (
-                <span className='mt-2 text-sm md:text-lg  bg-green rounded-full px-2'>
+                <span
+                  className={
+                    'mt-2 px-2 text-sm md:text-lg text-black border-2 border-black rounded-full ' +
+                    bgTechnologies[technologyType]
+                  }
+                >
                   {technologyType}
                 </span>
               )}
