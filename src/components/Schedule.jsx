@@ -6,7 +6,7 @@ import { firestore } from '../firebase/client'
 const bgTechnologies = {
   Cloud: 'bg-red',
   Web: 'bg-blue',
-  IA: 'bg-yellow',
+  IA: 'bg-yellow px-4',
   Mobile: 'bg-green'
 }
 
@@ -19,10 +19,16 @@ const ScheduleCard = ({
   description,
   technologyType
 }) => {
+  const [clampText, setClampText] = useState(true)
+
+  const revealText = () => {
+    setClampText(!clampText)
+  }
+
   const textColor = type === 'Actividad' ? 'text-green' : 'text-yellow'
 
   return (
-    <div className='mx-auto w-full max-w-screen-lg py-2 px-4 border rounded-lg shadow sm:p-8 bg-white bg-opacity-20 border-gray-700'>
+    <div className='mx-auto w-full max-w-screen-lg py-2 px-4 border rounded-lg shadow sm:p-8 bg-white bg-opacity-20 border-gray-700 transition-[height]'>
       <div className='flow-root'>
         <ul role='list' className='divide-y divide-gray-700'>
           <li className='text-white'>
@@ -37,7 +43,7 @@ const ScheduleCard = ({
                   />
                 )}
               </div>
-              <div className='flex-1 overflow-hidden'>
+              <div className='flex-1 cursor-pointer' onClick={revealText}>
                 <p
                   className={
                     'text-xl md:text-2xl font-bold line-clamp-3 ' + textColor
@@ -48,7 +54,12 @@ const ScheduleCard = ({
                 <p className='text-md md:text-lg font-medium text-white opacity-80'>
                   {name}
                 </p>
-                <p className='text-lg md:text-xl text-white line-clamp-3'>
+                <p
+                  className={
+                    'text-lg md:text-xl text-white ' +
+                    (clampText && 'line-clamp-3')
+                  }
+                >
                   {description}
                 </p>
               </div>
