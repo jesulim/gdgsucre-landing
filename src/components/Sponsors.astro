@@ -40,11 +40,11 @@ const sponsors = [
 ---
 
 <SectionTitle id='sponsors' title='Sponsors' />
-<div class='max-w-screen-md px-2 mx-auto grid grid-cols-2 gap-2 md:grid-cols-3'>
+<div class='max-w-screen-md px-2 mx-auto grid grid-cols-2 gap-4 md:grid-cols-3'>
   {
     sponsors.map(sponsor => (
-      <div class='flex justify-center items-center rounded-md'>
-        <a href={sponsor.url} target="_blank">
+      <div class='flex justify-center items-center'>
+        <a href={sponsor.url} target='_blank'>
           <img class='max-h-44' src={sponsor.logo} alt={sponsor.name} />
         </a>
       </div>
