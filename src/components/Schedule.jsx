@@ -37,7 +37,7 @@ const ScheduleCard = ({
                 <h3 className='text-2xl font-bold'>{schedule}</h3>
                 {photoUrl && (
                   <img
-                    className='w-10 h-10 rounded-full'
+                    className='w-12 h-12 rounded-full'
                     src={photoUrl}
                     alt={name}
                   />
