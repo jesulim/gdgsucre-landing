@@ -1,5 +1,5 @@
 ---
-const { title, color, price, items, img = '' } = Astro.props
+const { title, color, price, items, img = '', soldOut } = Astro.props
 const textColor = color == 'bg-yellow' ? 'text-black' : 'text-white'
 ---
 
@@ -19,7 +19,7 @@ const textColor = color == 'bg-yellow' ? 'text-black' : 'text-white'
     </div>
 
     <div class='flex flex-col justify-between pl-6 sm:flex-row'>
-      <ul class='list list-disc text-sm md:text-lg z-10'>
+      <ul class='list list-disc text-sm md:text-lg z-1'>
         <li>Manilla QR</li>
         <li>Refrigerio</li>
         <li>Stickers</li>
@@ -35,6 +35,17 @@ const textColor = color == 'bg-yellow' ? 'text-black' : 'text-white'
       </div>
     </div>
   </div>
+  {
+    soldOut && (
+      <div class='bg-[#fafafa80] rounded-2xl flex absolute inset-0.5 z-20 '>
+        <img
+          class='w-3/4 mx-auto my-auto opacity-100'
+          src='paquetes/sold-out.png'
+          alt='sold out'
+        />
+      </div>
+    )
+  }
 </div>
 
 <style>
