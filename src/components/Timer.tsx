@@ -24,7 +24,7 @@ export const Timer = ({ targetDate }: TimerProps) => {
           const isLast = index === time.length - 1
 
           return (
-            <div className='flex-col w-24 lg:w-36' key={label}>
+            <div className='flex-col w-20 sm:w-24 lg:w-36' key={label}>
               <div
                 className={`text-yellow font-bold text-5xl lg:text-7xl relative ${
                   !isLast &&

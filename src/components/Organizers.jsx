@@ -36,9 +36,9 @@ export const Organizers = () => {
 
           return (
             <a
-              className={`text-white text-center w-32 h-32 hover:text-${accentColor}`}
+              className={`text-white text-center w-28 sm:w-32 h-auto hover:text-${accentColor}`}
               key={id}
-              href={link}
+              {...(link && { href: link })}
               target='_blank'
               rel='noopener noreferrer'
             >
