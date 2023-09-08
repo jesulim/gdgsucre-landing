@@ -1,39 +1,50 @@
 ---
+import { Image } from 'astro:assets'
+
 import SectionTitle from './SectionTitle.astro'
+
+import facultadEconomia from '../assets/sponsors/facultad-economia.png'
+import itera from '../assets/sponsors/itera.png'
+import droBots from '../assets/sponsors/dro-bots.png'
+import xyz from '../assets/sponsors/xyz.jpg'
+import itGroup from '../assets/sponsors/it-group.png'
+import magisterioRural from '../assets/sponsors/magisterio-rural.png'
+import jetbrains from '../assets/sponsors/jetbrains.webp'
+
 const sponsors = [
   {
     name: 'itera soluciones digitales',
-    logo: '/sponsors/itera.png',
+    logo: itera,
     url: 'https://www.facebook.com/profile.php?id=100063753325772'
   },
   {
     name: 'Dro-bots accesorios para robótica y electrónica',
-    logo: '/sponsors/dro-bots.png',
+    logo: droBots,
     url: 'https://www.facebook.com/profile.php?id=100083024454287'
   },
   {
     name: 'Facultad de Ciencias Económicas y Empresariales',
-    logo: 'https://economicas.usfx.bo/wp-content/uploads/2017/11/escudo-fac-economia-1.png',
+    logo: facultadEconomia,
     url: 'https://economicas.usfx.bo/'
   },
   {
     name: 'XYZ Sistema Profesional de Sonido y Luces',
-    logo: '/sponsors/xyz.jpg',
+    logo: xyz,
     url: 'https://www.facebook.com/profile.php?id=100057052885906&mibextid=ZbWKwL'
   },
   {
     name: 'ITGroup Systems',
-    logo: '/sponsors/it-group.png',
+    logo: itGroup,
     url: 'https://www.facebook.com/ITGroupSystems/'
   },
   {
     name: 'Cooperativa de Ahorro y Crédito Abierta Magisterio Rural de Chuquisaca R.L.',
-    logo: '/sponsors/magisterio-rural.png',
+    logo: magisterioRural,
     url: 'https://www.facebook.com/CMRChuq/'
   },
   {
     name: 'JetBrains',
-    logo: '/sponsors/jetbrains.webp',
+    logo: jetbrains,
     url: 'https://www.facebook.com/JetBrains'
   }
 ]
@@ -45,7 +56,7 @@ const sponsors = [
     sponsors.map(sponsor => (
       <div class='flex justify-center items-center'>
         <a href={sponsor.url} target='_blank'>
-          <img class='max-h-44' src={sponsor.logo} alt={sponsor.name} />
+          <Image src={sponsor.logo} alt={sponsor.name} />
         </a>
       </div>
     ))

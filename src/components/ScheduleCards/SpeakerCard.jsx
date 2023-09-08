@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
-import Twitter from '../icons/social/Twitter.svg'
-import Instagram from '../icons/social/Instagram.svg'
-import Linkedin from '../icons/social/Linkedin.svg'
-import Github from '../icons/social/Github.svg'
-import Web from '../icons/social/Web.svg'
+import Twitter from '../icons/social/Twitter.svg?url'
+import Instagram from '../icons/social/Instagram.svg?url'
+import Linkedin from '../icons/social/Linkedin.svg?url'
+import Github from '../icons/social/Github.svg?url'
+import Web from '../icons/social/Web.svg?url'
 
 const techTypeStyles = {
   Cloud: 'bg-red',
@@ -56,7 +56,7 @@ export const SpeakerCard = ({
               {title}
             </p>
             <svg
-              class={
+              className={
                 'mt-2 ml-2 w-3 h-3 shrink-0 ' +
                 (!showDetails ? 'rotate-180' : '')
               }
@@ -67,9 +67,9 @@ export const SpeakerCard = ({
             >
               <path
                 stroke='currentColor'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
                 d='M9 5 5 1 1 5'
               />
             </svg>
@@ -79,17 +79,19 @@ export const SpeakerCard = ({
             className={
               'text-base sm:text-lg ' + (!showDetails ? 'line-clamp-3' : '')
             }
+            onClick={e => e.stopPropagation()}
           >
             {description}
           </p>
           {showDetails && (
-            <div>
+            <div onClick={e => e.stopPropagation()}>
               <h5 className='font-bold mt-4'>Sobre mí:</h5>
               <p className='font-normal text-base'>{aboutMe}</p>
 
               <div className='flex items-center space-x-2 -mx-2 mt-1'>
                 {SocialNetwork.map(({ type, link }) => (
                   <a
+                    key={link}
                     href={link}
                     target='_blank'
                     rel='noopener noreferrer'

@@ -16,8 +16,5 @@ module.exports = {
         google: ['Prompt', 'sans-serif']
       }
     }
-  },
-  plugins: [
-    require('flowbite/plugin')
-  ]
+  }
 }
