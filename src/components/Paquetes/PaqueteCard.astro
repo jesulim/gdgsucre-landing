@@ -1,6 +1,21 @@
 ---
+import { Image } from 'astro:assets'
+import soldOutImage from '../../assets/paquetes/sold-out.png'
 const { title, color, price, items, img = '', soldOut } = Astro.props
+
+import angular from '../../assets/paquetes/angular.png'
+import firebase from '../../assets/paquetes/firebase.png'
+import flutter from '../../assets/paquetes/flutter.png'
+import tensorflow from '../../assets/paquetes/tensorflow.png'
+
 const textColor = color == 'bg-yellow' ? 'text-black' : 'text-white'
+
+const bundleImg = {
+  angular: angular,
+  firebase: firebase,
+  flutter: flutter,
+  tensorflow: tensorflow
+}
 ---
 
 <div class:list={['rounded-2xl h-96 border-2 border-black md:h-80', color]}>
@@ -31,16 +46,20 @@ const textColor = color == 'bg-yellow' ? 'text-black' : 'text-white'
       <div
         class='z-0 absolute bottom-8 right-16 xl:right-20 w-5/12 sm:w-1/3 lg:w-1/4'
       >
-        <img class='object-cover w-full transform custom-scale-200' src={img} />
+        <Image
+          class='object-cover w-full transform custom-scale-200'
+          src={bundleImg[img]}
+          alt='angular'
+        />
       </div>
     </div>
   </div>
   {
     soldOut && (
       <div class='bg-[#fafafa80] rounded-2xl flex absolute inset-0.5 z-20 '>
-        <img
+        <Image
           class='w-3/4 mx-auto my-auto opacity-100'
-          src='paquetes/sold-out.png'
+          src={soldOutImage}
           alt='sold out'
         />
       </div>
