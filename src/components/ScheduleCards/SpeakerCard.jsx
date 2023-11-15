@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Image } from 'astro:assets'
 
 import Twitter from '../icons/social/Twitter.svg?url'
 import Instagram from '../icons/social/Instagram.svg?url'
