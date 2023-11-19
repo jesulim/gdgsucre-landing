@@ -89,3 +89,15 @@ import GdgLogo from '../components/logos/GdgLogo.astro'
     </div>
   </div>
 </nav>
+
+<script>
+  document
+    .querySelector('[data-collapse-toggle]')
+    .addEventListener('click', function () {
+      const target = document.getElementById(this.getAttribute('aria-controls'))
+      const expanded = this.getAttribute('aria-expanded') === 'true' || false
+
+      this.setAttribute('aria-expanded', !expanded)
+      target.classList.toggle('hidden')
+    })
+</script>
