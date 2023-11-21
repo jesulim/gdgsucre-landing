@@ -14,7 +14,8 @@ module.exports = {
       },
       fontFamily: {
         google: ['Prompt', 'sans-serif'],
-        quantico: ['Quantico', 'sans-serif']
+        quantico: ['Quantico', 'sans-serif'],
+        russo: ['Russo One', 'san-serif']
       }
     }
   }
