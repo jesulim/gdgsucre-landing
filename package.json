@@ -14,6 +14,7 @@
     "@astrojs/react": "^3.0.1",
     "@astrojs/tailwind": "^5.0.0",
     "@fontsource/prompt": "^5.0.5",
+    "@fontsource/quantico": "^5.0.17",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "astro": "^3.0.10",

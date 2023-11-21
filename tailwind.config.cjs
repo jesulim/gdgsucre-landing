@@ -13,7 +13,8 @@ module.exports = {
         white: '#FEFEFE'
       },
       fontFamily: {
-        google: ['Prompt', 'sans-serif']
+        google: ['Prompt', 'sans-serif'],
+        quantico: ['Quantico', 'sans-serif']
       }
     }
   }
