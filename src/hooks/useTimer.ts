@@ -7,11 +7,6 @@ type RemainingDate<T> = {
   seconds: T
 }
 
-const localeDate = () => {
-  const date = new Date()
-  return new Date(date.toLocaleString('en-US'))
-}
-
 const mapValues = (
   object: { [key: string]: unknown },
   iterator: (key: unknown) => void
@@ -25,7 +20,7 @@ const mapValues = (
 const alwaysPositive = (value: number) => Math.max(0, value)
 
 const getRemainingTime = (targetDate: Date) => {
-  const currentDate = localeDate()
+  const currentDate = new Date()
 
   const difference = targetDate.getTime() - currentDate.getTime()
   const days = alwaysPositive(Math.floor(difference / (1000 * 60 * 60 * 24)))
@@ -46,9 +41,12 @@ const fillZeros = (remainingDate: RemainingDate<number>) => {
 }
 
 export const useTimer = (targetDate: Date) => {
-  const [remainingDate, setRemainingDate] = useState(
-    getRemainingTime(targetDate)
-  )
+  const [remainingDate, setRemainingDate] = useState({
+    days: 1,
+    hours: 2,
+    minutes: 3,
+    seconds: 4
+  })
 
   const { seconds, minutes, hours, days } = remainingDate
   const continueTime =

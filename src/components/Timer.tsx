@@ -40,7 +40,7 @@ export const Timer = ({ targetDate }: TimerProps) => {
                 {value}
               </div>
               {label && (
-                <span className='text-yellow text-xs lg:text-base'>
+                <span className='text-yellow text-sm lg:text-base'>
                   {label}
                 </span>
               )}
