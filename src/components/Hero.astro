@@ -1,11 +1,12 @@
 ---
-import DevfestLogo from './logos/DevfestLogo.astro';
+import DevfestLogo from './logos/DevfestLogo.astro'
+import { Timer } from './Timer'
 ---
 
 <hero>
   <section class='bg-black mt-32 mx-4'>
     <div class='mx-auto max-w-screen-md text-center lg:py-16'>
-      <div class="grid place-content-center">
+      <div class='grid place-content-center'>
         <DevfestLogo />
         <h1
           class='mb-8 text-2xl font-thin tracking-tight leading-none md:text-5xl lg:text-9xl text-white text-right'
@@ -13,11 +14,11 @@ import DevfestLogo from './logos/DevfestLogo.astro';
           Sucre 2023
         </h1>
       </div>
-      
+
       <div class='flex flex-col space-y-4 max-w-sm mx-auto'>
         <a
           href='https://gdg.community.dev/events/details/google-gdg-sucre-presents-devfest-sucre-2023/'
-          class='inline-flex justify-center items-center py-2 mx-24 text-2xl font-medium text-center  border bg-blue focus:ring-4 text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800'
+          class='inline-flex justify-center items-center py-2 mx-24 text-2xl font-medium text-center border bg-blue focus:ring-4 text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800'
           target='_blank'
         >
           Regístrate
@@ -38,6 +39,11 @@ import DevfestLogo from './logos/DevfestLogo.astro';
           Descarga la app oficial del evento
         </a> -->
       </div>
+    </div>
+    <div
+      class='py-12 flex items-center justify-center flex-col text-center gap-y-4 sm:gap-y-8 text-white'
+    >
+      <Timer targetDate={new Date('2023-12-09T09:00:00')} client:load />
     </div>
   </section>
 </hero>

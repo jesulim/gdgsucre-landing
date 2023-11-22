@@ -6,6 +6,15 @@ type TimerProps = {
 
 export const Timer = ({ targetDate }: TimerProps) => {
   const { days, hours, minutes, seconds, continueTime } = useTimer(targetDate)
+
+  if (continueTime) {
+    return (
+      <div className='mb-2 font-bold text-2xl text-green animate-bounce'>
+        ¡Empezó el <br /> Devfest Sucre 2023!
+      </div>
+    )
+  }
+
   const time = [
     { label: 'Días', value: days },
     { label: 'Horas', value: hours },
@@ -15,10 +24,7 @@ export const Timer = ({ targetDate }: TimerProps) => {
 
   return (
     <>
-      {continueTime && (
-        <div className='mb-2 font-bold text-2xl text-green animate-bounce'>Empezó el <br /> Devfest Sucre 2023</div>
-      )}
-
+      <span className='mb-2 text-2xl'>Faltan:</span>
       <section className='flex justify-center'>
         {time.map(({ label, value }, index) => {
           const isLast = index === time.length - 1
@@ -34,12 +40,15 @@ export const Timer = ({ targetDate }: TimerProps) => {
                 {value}
               </div>
               {label && (
-                <span className='text-yellow text-xs lg:text-base'>{label}</span>
+                <span className='text-yellow text-xs lg:text-base'>
+                  {label}
+                </span>
               )}
             </div>
           )
         })}
       </section>
+      <h2 className='text-2xl text-blue'>Sábado 09 de diciembre</h2>
     </>
   )
 }
