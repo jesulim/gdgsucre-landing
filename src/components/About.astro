@@ -1,25 +1,22 @@
 ---
 import '@fontsource/quantico'
+
+import DFDivisor from './DFDivisor.astro'
 ---
 
-<section
-  id='about'
-  class='text-white break-words max-w-screen-lg min-h-screen md:px-2'
->
-  <div
-    class='flex flex-col lg:flex-row items-center justify-center border rounded-lg shadow border-gray-700 content m-auto bg-white bg-opacity-20'
-  >
-    <div class='px-6 pt-6 bg-white'>
-      <h2 class='mb-2 text-2xl font-extrabold tracking-tight text-black'>
-        ¿Qué es el DevFest?
-      </h2>
-      <p
-        class='font-medium text-lg text-black lg:text-left lg:text-lg lg:mt-8 mb-8'
-      >
-        Es un evento de un día entero de conocimiento. A través de Conferencias
-        y Talleres podrás potenciar tus habilidades en multiples áreas como
-        desarrollo Web y Móvil, diseño UI/UX, Cloud e Inteligencia artificial.
-      </p>
-    </div>
+<section id='about' class='max-w-screen-lg mx-auto'>
+  <DFDivisor />
+
+  <div class='px-6 py-4 bg-white text-black lg:py-8'>
+    <h2 class='mb-2 text-2xl font-extrabold tracking-tight'>
+      ¿Qué es el DevFest?
+    </h2>
+    <p class='font-medium text-lg lg:text-left lg:text-lg'>
+      Es un evento de un día entero de conocimiento. A través de Conferencias y
+      Talleres podrás potenciar tus habilidades en multiples áreas como
+      desarrollo Web y Móvil, diseño UI/UX, Cloud e Inteligencia artificial.
+    </p>
   </div>
+
+  <DFDivisor rotated />
 </section>
