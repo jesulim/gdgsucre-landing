@@ -1,14 +1,14 @@
 ---
-import GdgLogo from '../components/logos/GdgLogo.astro'
+import GdgLogoBw from '../components/logos/GdgLogo_bw.astro'
 ---
 
 <nav
-  class='bg-dark-gray fixed w-full z-20 top-0 left-0 border-b border-gray-600'
+  class='bg-black fixed w-full z-20 top-0 left-0 border-b border-gray-600'
 >
   <div
     class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'
   >
-    <GdgLogo />
+    <GdgLogoBw />
     <div class='flex md:order-2 lg:hidden'>
       <button
         data-collapse-toggle='navbar-sticky'
@@ -39,7 +39,7 @@ import GdgLogo from '../components/logos/GdgLogo.astro'
       id='navbar-sticky'
     >
       <ul
-        class='flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-dark-gray md:bg-dark-gray border-gray-700'
+        class='flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-black md:bg-black border-gray-700'
       >
         <li>
           <a
@@ -51,7 +51,7 @@ import GdgLogo from '../components/logos/GdgLogo.astro'
         <li>
           <a
             href='#paquetes'
-            class='bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text hover:text-red py-2 pl-3 pr-4 md:p-0'
+            class='block bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text hover:text-red py-2 pl-3 pr-4 md:p-0'
             >Paquetes</a
           >
         </li>
@@ -97,3 +97,15 @@ import GdgLogo from '../components/logos/GdgLogo.astro'
     </div>
   </div>
 </nav>
+
+<script>
+  document
+    .querySelector('[data-collapse-toggle]')
+    .addEventListener('click', function () {
+      const target = document.getElementById(this.getAttribute('aria-controls'))
+      const expanded = this.getAttribute('aria-expanded') === 'true' || false
+
+      this.setAttribute('aria-expanded', !expanded)
+      target.classList.toggle('hidden')
+    })
+</script>

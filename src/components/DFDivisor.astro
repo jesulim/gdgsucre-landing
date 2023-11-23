@@ -1,0 +1,14 @@
+---
+import dfDivisor from '../assets/df-divisor.webp'
+const { rotated } = Astro.props
+---
+
+<div class={rotated && 'transform rotate-180'}>
+  <div
+    class='bg-repeat w-full h-16 hidden sm:block'
+    style='background-image: url(divisor-tile.svg);'
+  >
+  </div>
+
+  <img src={dfDivisor.src} alt='dfDivisor' class='bg-repeat w-full sm:hidden' />
+</div>
