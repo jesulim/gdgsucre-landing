@@ -13,13 +13,13 @@ export const Speaker = ({ id, img, name }: Props) => {
       <div className='relative' key={id}>
         <img
           src='/speaker-bg.webp'
-          className='w-full h-full '
+          className='w-full h-full'
           data-atropos-offset='0'
         />
         <img
           src={img}
           alt={name}
-          className='absolute inset-0 mx-auto h-full  object-cover'
+          className='absolute inset-0 mx-auto h-full object-cover'
           data-atropos-offset='-4.5'
         />
         <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2'>
