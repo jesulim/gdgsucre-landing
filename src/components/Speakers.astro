@@ -3,68 +3,61 @@ import SectionTitle from './SectionTitle.astro'
 import { Speaker } from './Speaker'
 const speakers = [
   {
-    id: 1,
-    img: '/ariel-solis.png',
-    speaker: 'Ariel Ortuño'
+    img: '/speakers/alejandro-núñez.png',
+    name: 'Alejandro Núñez'
   },
   {
-    id: 2,
-    img: '/carlos-huaman.png',
-    speaker: 'Carlo Huamán'
+    img: '/speakers/antonio-giler.png',
+    name: 'Antonio Giler'
   },
   {
-    id: 3,
-    img: '/david-rios.png',
-    speaker: 'David Rios'
+    img: '/speakers/brian-castillo.png',
+    name: 'Brian Castillo'
   },
   {
-    id: 4,
-    img: '/silvana-gutierrez.png',
-    speaker: 'Silvana Gutierrez'
+    img: '/speakers/brian-vega.png',
+    name: 'Brian Vega'
   },
   {
-    id: 5,
-    img: '/diego-velasquez.png',
-    speaker: 'Diego Velásquez'
+    img: '/speakers/carlos-collazos.png',
+    name: 'Carlos Collazos'
   },
   {
-    id: 6,
-    img: '/ivan-sangueza.png',
-    speaker: 'Iván Sangueza'
+    img: '/speakers/david-rios.png',
+    name: 'David Ríos'
   },
   {
-    id: 7,
-    img: '/mauricio-arce.png',
-    speaker: 'Mauricio Arce'
+    img: '/speakers/hansy-schmitt.png',
+    name: 'Hansy Schmitt'
   },
   {
-    id: 8,
-    img: '/yury-camacho.png',
-    speaker: 'Yury Camacho'
+    img: '/speakers/jean-roldan.png',
+    name: 'Jean Roldán'
   },
   {
-    id: 9,
-    img: 'karol-catacora.png',
-    speaker: 'Karol Catacora'
+    img: '/speakers/nicolas-leclaros.png',
+    name: 'Nicolás Leclaros'
   },
   {
-    id: 10,
-    img: '/sergio-ochoa.png',
-    speaker: 'Sergio Ochoa'
+    img: '/speakers/pablo-noya.png',
+    name: 'Pablo Noya'
   },
   {
-    id: 11,
-    img: '/nathaly-alarcon.png',
-    speaker: 'Nathaly Alarcón'
+    img: '/speakers/paolo-pinto.png',
+    name: 'Paolo Pinto'
+  },
+  {
+    img: '/speakers/sergio-fernandez.png',
+    name: 'Sergio Fernández'
   }
 ]
 ---
 
 <SectionTitle id='speakers' title='Speakers' />
-<!-- <div class='max-w-screen-md mx-auto columns-2 md:columns-3 gap-8 px-4'>
+<div class='max-w-screen-md mx-auto grid grid-cols-2 md:grid-cols-3 gap-8 px-4'>
   {
-    speakers.map(({ id, img, speaker }) => (
-      <Speaker id={id} img={img} speaker={speaker} client:visible />
+    speakers.map((speakerProps, i) => (
+      <Speaker id={i} {...speakerProps} client:visible />
     ))
   }
-</div> -->
+</div>
