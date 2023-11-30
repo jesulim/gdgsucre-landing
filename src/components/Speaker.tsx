@@ -13,7 +13,7 @@ export const Speaker = ({ id, img, name }: Props) => {
       <div className='relative' key={id}>
         <img
           src='/speaker-bg.webp'
-          className='w-full h-full'
+          className='w-full h-full '
           data-atropos-offset='0'
         />
         <img
@@ -25,11 +25,11 @@ export const Speaker = ({ id, img, name }: Props) => {
         <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2'>
           <div
             data-atropos-offset='-2'
-            className='px-2 bg-red relative inline-block w-max'
+            className='px-2 bg-black relative inline-block w-max'
           >
             <span
-              data-atropos-offset='4.5'
-              className='relative inline-block text-black text-lg md:text-2xl'
+              data-atropos-offset='5'
+              className='relative inline-block text-white text-md md:text-xl'
             >
               {name}
             </span>
