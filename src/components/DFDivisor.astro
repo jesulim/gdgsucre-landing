@@ -5,10 +5,7 @@ const { rotated } = Astro.props
 
 <div class={rotated && 'transform rotate-180'}>
   <div
-    class='bg-repeat w-full h-16 hidden sm:block'
-    style='background-image: url(divisor-tile.svg);'
+    class='bg-cover h-40 md:h-44 lg:h-48 bg-[url(df-divisor.webp)] sm:bg-[url(df-divisor-lg.webp)]'
   >
   </div>
-
-  <img src={dfDivisor.src} alt='dfDivisor' class='bg-repeat w-full sm:hidden' />
 </div>
