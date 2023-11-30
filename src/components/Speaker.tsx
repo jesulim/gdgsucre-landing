@@ -12,7 +12,7 @@ export const Speaker = ({ id, img, name }: Props) => {
     <Atropos className='atropos-banner' rotateTouch='scroll-y'>
       <div className='relative' key={id}>
         <img
-          src='/speaker-bg.png'
+          src='/speaker-bg.webp'
           className='w-full h-full'
           data-atropos-offset='0'
         />
