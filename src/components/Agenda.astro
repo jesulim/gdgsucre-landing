@@ -1,39 +1,41 @@
 ---
 import SectionTitle from './SectionTitle.astro'
 import scheduleData from '../data/schedule.json'
+import ScheduleCard from './ScheduleCard.astro'
 ---
 
 <SectionTitle id='agenda' title='Agenda' />
 <div class='max-w-screen-lg mx-auto'>
   <div
-    class='flex flex-row space-x-8 overflow-scroll snap-x snap-mandatory text-white'
+    class='schedule flex flex-row overflow-scroll snap-x snap-mandatory text-white md:justify-center md:overflow-hidden'
   >
-    <div class='snap-start px-8'>
+    <div class='snap-start px-6'>
       <h4 class='font-bold text-2xl'>Charlas</h4>
-      {
-        scheduleData.talks.map(talk => (
-          <li class='py-2 w-60 list-none'>
-            <p class='font-semibold text-blue text-xs'>{talk.time}</p>
-            <p class='text-sm font-medium '>{talk.title}</p>
-            <p class='text-xs text-gray-300'>{talk.speaker}</p>
-          </li>
-        ))
-      }
+      {scheduleData.talks.map(talk => <ScheduleCard {...talk} type='talk' />)}
     </div>
-    <!-- verical divisor -->
-    <div class='border-r-2 border-gray-700 h-30'></div>
+    <!-- vertical divisor -->
+    <div class='border-l-2 border-gray-600 mt-12 mb-4'></div>
 
-    <div class='snap-start'>
+    <div class='snap-start px-6'>
       <h4 class='font-bold text-2xl'>Talleres</h4>
       {
         scheduleData.workshops.map(workshop => (
-          <div class='py-2 w-72 '>
-            <p class='font-semibold text-yellow text-xs'>{workshop.time}</p>
-            <p class='font-medium '>{workshop.title}</p>
-            <p class='text-xs text-gray-300'>{workshop.speaker}</p>
-          </div>
+          <ScheduleCard {...workshop} type='workshop' />
         ))
       }
     </div>
   </div>
 </div>
+
+<style>
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .schedule::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .schedule {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+</style>
