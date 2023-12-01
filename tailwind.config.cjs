@@ -16,7 +16,7 @@ module.exports = {
         google: ['Prompt', 'sans-serif'],
         quantico: ['Quantico', 'sans-serif'],
         russo: ['Russo One', 'sans-serif'],
-        emoji: ['Noto Color Emoji', 'Noto Emoji', 'sans-serif']
+        emoji: ['Noto Color Emoji', 'Prompt', 'sans-serif']
       }
     }
   }

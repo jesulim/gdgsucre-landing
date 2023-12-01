@@ -29,7 +29,7 @@ export const Speaker = ({ id, img, name }: Props) => {
           >
             <span
               data-atropos-offset='5'
-              className='relative inline-block text-white text-md md:text-xl'
+              className='font-emoji relative inline-block text-white text-md md:text-xl'
             >
               {name}
             </span>
