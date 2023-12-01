@@ -1,9 +1,39 @@
 ---
-import { Schedule } from './Schedule'
 import SectionTitle from './SectionTitle.astro'
+import scheduleData from '../data/schedule.json'
 ---
 
 <SectionTitle id='agenda' title='Agenda' />
-<!-- <div class='px-2'>
-  <Schedule client:visible />
-</div> -->
+<div class='max-w-screen-lg mx-auto'>
+  <div
+    class='flex flex-row space-x-8 overflow-scroll snap-x snap-mandatory text-white'
+  >
+    <div class='snap-start px-8'>
+      <h4 class='font-bold text-2xl'>Charlas</h4>
+      {
+        scheduleData.talks.map(talk => (
+          <li class='py-2 w-60 list-none'>
+            <p class='font-semibold text-blue text-xs'>{talk.time}</p>
+            <p class='text-sm font-medium '>{talk.title}</p>
+            <p class='text-xs text-gray-300'>{talk.speaker}</p>
+          </li>
+        ))
+      }
+    </div>
+    <!-- verical divisor -->
+    <div class='border-r-2 border-gray-700 h-30'></div>
+
+    <div class='snap-start'>
+      <h4 class='font-bold text-2xl'>Talleres</h4>
+      {
+        scheduleData.workshops.map(workshop => (
+          <div class='py-2 w-72 '>
+            <p class='font-semibold text-yellow text-xs'>{workshop.time}</p>
+            <p class='font-medium '>{workshop.title}</p>
+            <p class='text-xs text-gray-300'>{workshop.speaker}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
