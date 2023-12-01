@@ -13,6 +13,7 @@
   "dependencies": {
     "@astrojs/react": "^3.0.1",
     "@astrojs/tailwind": "^5.0.0",
+    "@fontsource/noto-color-emoji": "^5.0.16",
     "@fontsource/prompt": "^5.0.5",
     "@fontsource/quantico": "^5.0.17",
     "@fontsource/russo-one": "^5.0.17",
