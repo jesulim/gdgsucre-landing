@@ -1,224 +1,48 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Header from '@components/Header.astro';
-import Footer from '@components/Footer.astro';
-
-
-
+import PastEvent from '@components/PastEventCard.astro'
+import 'swiper/css'
+import 'swiper/css/effect-cards'
 ---
 
-<Layout title='Eventos Pasados'>
-    <Header />
-    <body>
-      <div class="container">
-          <div id="slide">
-              <div class="item" style="background-image: url(1.jpg);">
-                  <div class="content">
-                      <div class="name">Google I/O 2023</div>
-                      <div class="des">Aprendamos juntos sobre las novedades que nos trajo el Google I/O en la hermosa capital de Bolivia, donde hablaremos sobre nuevas tecnologías. de la mano de expertos internacionales y nacionales en el área, actualizaciones, codelabs y muchas sorpresas más. No te pierdas este gran evento 🎉</div>
-                      <button>Ver más</button>
-                  </div>
-              </div>
-              <div class="item" style="background-image: url(4.jpg);">
-                  <div class="content">
-                      <div class="name">GDG</div>
-                      <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptatibus vitae distinctio, itaque id aliquam suscipit quaerat aspernatur, reiciendis maiores aut quas facilis officia ipsa quidem ad. Aspernatur, sapiente repudiandae.</div>
-                      <button>Ver más</button>
-                  </div>
-              </div>
-              <div class="item" style="background-image: url(3.jpg);">
-                  <div class="content">
-                      <div class="name">GDG</div>
-                      <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloremque repellendus sit libero atque adipisci nisi hic vitae similique consectetur repellat accusamus, perferendis necessitatibus, velit dolorem facilis, expedita facere optio!</div>
-                      <button>Ver más</button>
-                  </div>
-              </div>
-              <div class="item" style="background-image: url(4.jpg);">
-                  <div class="content">
-                      <div class="name">GDG</div>
-                      <div class="des">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus amet, deleniti fugit beatae illo accusamus distinctio exercitationem. Voluptate odio sit sapiente reiciendis, repellendus assumenda maxime similique. Placeat, sint voluptas! Nobis.</div>
-                      <button>Ver más</button>
-                  </div>
-              </div>
-              <div class="item" style="background-image: url(5.jpg);">
-                  <div class="content">
-                      <div class="name">GDG</div>
-                      <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, necessitatibus hic, ea atque labore aut, quo dolores unde nobis temporibus nesciunt. Rerum, quibusdam dignissimos. Ipsa quod numquam cumque quisquam nihil!</div>
-                      <button>Ver más</button>
-                  </div>
-              </div>
-              <div class="item" style="background-image: url(6.jpg);">
-                  <div class="content">
-                      <div class="name">GDG</div>
-                      <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sunt eaque, rerum voluptate sit obcaecati ad ullam nisi quae dolor minima velit ipsam mollitia itaque dolorem veritatis excepturi et? Temporibus?</div>
-                      <button>Ver más</button>
-                  </div>
-              </div>
-          </div>
-          <div class="buttons">
-              <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
-              <button id="next"><i class="fa-solid fa-angle-right"></i></button>
-          </div>
+<div class='h-screen mx-auto bg-gray-800 pt-8 space-y-16'>
+  <h3 class='text-white font-semibold mx-8 lg:mx-64 text-3xl md:text-5xl'>
+    Eventos pasados
+  </h3>
+
+  <div class='swiper p-16'>
+    <div class='swiper-wrapper space-x-8'>
+      <div class='swiper-slide'>
+        <PastEvent
+          title='I/O Extended Sucre 2023'
+          desktopScreenshot='/screenshots/io-extended-2023-desktop.png'
+          mobileScreenshot='/screenshots/io-extended-2023-mobile.png'
+          href='https://googleio2023.gdgsucre.com/'
+        />
       </div>
-  </body>
-</Layout>
 
-<script>
-  document.getElementById('next').onclick = function(){
-    let lists = document.querySelectorAll('.item');
-    document.getElementById('slide').appendChild(lists[0]);
-}
-document.getElementById('prev').onclick = function(){
-    let lists = document.querySelectorAll('.item');
-    document.getElementById('slide').prepend(lists[lists.length - 1]);
-}
-</script>
+      <div class='swiper-slide'>
+        <PastEvent
+          title='DevFest Sucre 2023'
+          desktopScreenshot='/screenshots/devfest-2023-desktop.png'
+          mobileScreenshot='/screenshots/devfest-2023-mobile.png'
+          href='https://gdgsucre.com/'
+        />
+      </div>
+    </div>
 
-<noscript>
-  <style>
-    #splash-bg-fallback {
-      display: block;
-    }
-  </style>
-</noscript>
+    <script>
+      import Swiper from 'swiper/bundle'
 
-<style>
- body{
-    background-color: #eaeaea;
-    overflow: hidden;
-}
-.container{
-    position: absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-50%);
-    width:100%;
-    height:100%;
-    background-color: #f5f5f5;
-    box-shadow: 0 30px 50px #dbdbdb;
-    overflow: hidden;
-}
-#slide{
-    width:100%;
-    margin-top:20px;
-}
-.item{
-    width:100%;
-    height:50%;
-    background-position: 50% 50%;
-    display: inline-block;
-    transition: 0.5s;
-    background-size: cover;
-    position: absolute;
-    z-index: 1;
-    top:50%;
-    transform: translate(0,-50%);
-    border-radius: 20px;
-    box-shadow:  0 30px 50px #505050;
-}
-.item:nth-child(1),
-.item:nth-child(2){
-    left:0;
-    top:0;
-    transform: translate(0,0);
-    border-radius: 0;
-    width:100%;
-    height:100%;
-    box-shadow: none;
-}
-.item:nth-child(3){
-    left:50%;
-}
-.item:nth-child(4){
-    left:calc(50% + 220px);
-}
-.item:nth-child(5){
-    left:calc(50% + 440px);
-}
-.item:nth-child(n+6){
-    left:calc(50% + 660px);
-    opacity: 0;
-}
-.item .content{
-    position: absolute;
-    top:50%;
-    left:5%;
-    width:90%;
-    text-align: left;
-    padding:0;
-    color:black;
-    transform: translate(0,-50%);
-    display: none;
-    font-family: system-ui;
-}
-.item:nth-child(2) .content{
-    display: block;
-    z-index: 11111;
-}
-.item .name{
-    font-size: 40px;
-    font-weight: bold;
-    opacity: 0;
-    animation:showcontent 1s ease-in-out 1 forwards
-}
-.item .des{
-    margin:20px 0;
-    opacity: 0;
-    animation:showcontent 1s ease-in-out 0.3s 1 forwards
-}
-.item button{
-    padding:10px 20px;
-    border:none;
-    opacity: 0;
-    animation:showcontent 1s ease-in-out 0.6s 1 forwards
-}
-@keyframes showcontent{
-    from{
-        opacity: 0;
-        transform: translate(0,100px);
-        filter:blur(33px);
-    }to{
-        opacity: 1;
-        transform: translate(0,0);
-        filter:blur(0);
-    }
-}
-.buttons{
-    position: absolute;
-    bottom:10px;
-    z-index: 222222;
-    text-align: center;
-    width:100%;
-}
-.buttons button{
-    width:50px;
-    height:50px;
-    border-radius: 50%;
-    border:1px solid #555;
-    transition: 0.5s;
-}.buttons button:hover{
-    background-color: #bac383;
-}
-
-@media only screen and (max-width: 600px) {
-    .container{
-        width:100%;
-        height:100%;
-    }
-    #slide{
-        width:100%;
-        margin-top:20px;
-    }
-    .item{
-        width:100%;
-        height:50%;
-    }
-    .item .content{
-        left:5%;
-        width:90%;
-    }
-    .buttons{
-        bottom:10px;
-    }
-}
-</style>
+      new Swiper('.swiper', {
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: true
+        },
+        centeredSlides: true,
+        grabCursor: true,
+        slidesPerView: 2,
+        rewind: true
+      })
+    </script>
+  </div>
+</div>

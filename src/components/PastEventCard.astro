@@ -1,0 +1,26 @@
+---
+const { title, mobileScreenshot, desktopScreenshot, href } = Astro.props
+---
+
+<div class='flex flex-col rounded-xl h-full bg-gray-700 p-2 sm:p-6'>
+  <a href={href}>
+    <h3 class='text-white font-semibold text-sm sm:text-2xl mb-4'>
+      {title}
+    </h3>
+
+    <picture>
+      <source
+        srcset={mobileScreenshot}
+        type='image/png'
+        media='(max-width: 767px)'
+      />
+      <source
+        srcset={desktopScreenshot}
+        type='image/png'
+        media='(min-width: 768px)'
+      />
+
+      <img src='' width='100%' class='mx-auto rounded-md' />
+    </picture>
+  </a>
+</div>
