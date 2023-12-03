@@ -1,6 +1,6 @@
 import Atropos from 'atropos/react'
 import 'atropos/css'
-// import speakerBg from '../assets/speaker-bg.png'
+
 export interface Props {
   id: number
   img: string
