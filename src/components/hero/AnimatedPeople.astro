@@ -14,6 +14,7 @@ import people from '../../assets/drawings/people.png'
 .people {
     animation: dibujo2 4s infinite;
     filter: grayscale(100%);
+    opacity: 0.7;
     position: absolute;
     top: 65%;
     right: 20%;
@@ -28,5 +29,11 @@ import people from '../../assets/drawings/people.png'
     61%, 75% { transform: translate(1px, -2px) rotate(-8deg); }
     76%, 90% { transform: translate(3px, -1px) rotate(6deg); }
     91%, 100% { transform: translate(-3px, 1px) rotate(-6deg); }
+}
+
+@media only screen and (max-width: 600px) {
+    img {
+        display: none;
+    }
 }
 </style>
