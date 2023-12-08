@@ -24,7 +24,7 @@ export const Timer = ({ targetDate }: TimerProps) => {
 
   return (
     <>
-      <span className='mb-2 text-2xl'>Faltan:</span>
+      <span className='mb-2 lg:-mb-2 text-2xl'>Faltan:</span>
       <section className='flex justify-center'>
         {time.map(({ label, value }, index) => {
           const isLast = index === time.length - 1
@@ -48,7 +48,7 @@ export const Timer = ({ targetDate }: TimerProps) => {
           )
         })}
       </section>
-      <h2 className='text-2xl text-blue'>Sábado 09 de diciembre</h2>
+      <h2 className='text-2xl lg:text-3xl text-blue'>Sábado 09 de diciembre</h2>
     </>
   )
 }
