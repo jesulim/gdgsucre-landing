@@ -1,15 +1,15 @@
 ---
 const { time, title, speaker, type } = Astro.props
+const timeTextColor = type == 'talk' ? 'text-blue' : 'text-yellow'
+const titleTextColor = speaker ? 'text-white' : timeTextColor
 ---
 
-<li class='py-2 w-64 md:w-96 list-none'>
-  <p
-    class={`text-sm font-semibold font-quantico lg:text-md ${
-      type == 'talk' ? 'text-blue' : 'text-yellow'
-    }`}
-  >
+<li class='p-2 w-80 md:w-96 lg:w-[30rem] list-none'>
+  <p class={`text-sm font-semibold font-quantico lg:text-md ${timeTextColor}`}>
     {time}
   </p>
-  <p class='font-medium leading-5 lg:text-lg lg:leading-6'>{title}</p>
+  <p class={`font-medium leading-5 lg:text-lg lg:leading-6 ${titleTextColor}`}>
+    {title}
+  </p>
   <p class='text-gray-300 lg:text-md'>{speaker}</p>
 </li>

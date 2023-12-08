@@ -9,15 +9,15 @@ import ScheduleCard from './ScheduleCard.astro'
   <div
     class='schedule flex flex-row overflow-scroll snap-x snap-mandatory text-white md:justify-center md:overflow-hidden'
   >
-    <div class='snap-start px-6'>
-      <h4 class='font-bold text-2xl'>Charlas</h4>
+    <div class='snap-start px-2'>
+      <h4 class='font-bold text-3xl'>Charlas</h4>
       {scheduleData.talks.map(talk => <ScheduleCard {...talk} type='talk' />)}
     </div>
     <!-- vertical divisor -->
     <div class='border-l-2 border-gray-600 mt-12 mb-4'></div>
 
-    <div class='snap-start px-6'>
-      <h4 class='font-bold text-2xl'>Talleres</h4>
+    <div class='snap-start px-2'>
+      <h4 class='font-bold text-3xl'>Talleres</h4>
       {
         scheduleData.workshops.map(workshop => (
           <ScheduleCard {...workshop} type='workshop' />
