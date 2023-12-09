@@ -1,9 +1,14 @@
 ---
-import { Organizers } from './Organizers'
+import { Organizer } from './Organizer'
 import SectionTitle from './SectionTitle.astro'
+import organizersData from '../data/organizers.json'
 ---
 
 <SectionTitle id='organizadores' title='Organizadores' />
-<!-- <div class='px-2'>
-  <Organizers client:visible />
-</div> -->
+<div class='max-w-screen-md mx-auto grid grid-cols-2 md:grid-cols-3 gap-8 px-4'>
+  {
+    organizersData.map((organizerProps, i) => (
+      <Organizer id={i} {...organizerProps} client:visible />
+    ))
+  }
+</div>
