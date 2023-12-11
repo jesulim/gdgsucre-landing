@@ -56,8 +56,22 @@
         "link": "https://www.linkedin.com/in/pablonoya7/"
     },
     {
+        "id": "xEdkhdMlR9GeEiVzleXH",
+        "type": 3,
+        "name": "Grover Taboada",
+        "photoUrl": "organizers/grover-taboada.jpg",
+        "link": "http://www.instagram.com/grover_taboada12/"
+    },
+    {
+        "id": "xEdkhdMlR9GeEiVzleXH",
+        "type": 3,
+        "name": "Valentina Salinas",
+        "photoUrl": "organizers/valentina_salinas.jpeg",
+        "link": "http://www.instagram.com/val_salinasdm/"
+    },
+    {
         "id": "OaQceN08HTK3UvHbuaRQ",
-        "type": 2,
+        "type": 3,
         "name": "Ivan Martinez",
         "photoUrl": "organizers/ivan_martinez.png",
         "link": "https://www.linkedin.com/in/jesulim/"
@@ -71,7 +85,7 @@
     },
     {
         "id": "p22zwdPny65pNFCAiSI5",
-        "type": 1,
+        "type": 2,
         "name": "Camilo N\u00fa\u00f1ez",
         "photoUrl": "organizers/camilo_n\u00fa\u00f1ez.png",
         "link": "https://www.instagram.com/camilo.nuneez/"
@@ -84,20 +98,6 @@
         "link": "https://instagram.com/chumacero.andrea?igshid=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
     },
     {
-        "id": "xEdkhdMlR9GeEiVzleXH",
-        "type": 1,
-        "name": "Valentina Salinas",
-        "photoUrl": "organizers/valentina_salinas.jpeg",
-        "link": "http://www.instagram.com/val_salinasdm/"
-    },
-    {
-        "id": "u4NlN0Gfgh0TKnqEJlBg",
-        "type": 1,
-        "name": "Andrés Torres",
-        "photoUrl": "organizers/alejandro_torres.jpg",
-        "link": "https://instagram.com/dog_motif_"
-    },
-    {
         "id": "sRVH1mE8IgB7C0CSIchg",
         "type": 1,
         "name": "Madizon Gonzales",
@@ -105,11 +105,11 @@
         "link": "https://instagram.com/madizon.gonzales"
     },
     {
-        "id": "qlRtu0GpHYqpUiNNrEE7",
+        "id": "u4NlN0Gfgh0TKnqEJlBg",
         "type": 1,
-        "name": "Pablo Lopez",
-        "photoUrl": "organizers/pablo_lopez.jpeg",
-        "link": "https://www.instagram.com/pablo_lopez_chavez_/"
+        "name": "Andrés Torres",
+        "photoUrl": "organizers/alejandro_torres.jpg",
+        "link": "https://instagram.com/dog_motif_"
     },
     {
         "id": "niFlRc7PZbZfuCFoalPK",
@@ -126,6 +126,20 @@
         "link": "https://instagram.com/noeliagonzaless_?igshid=YzAwZjE1ZTI0Zg%3D%3D&utm_source=qr"
     },
     {
+        "id": "F4ixjr3aV2Vwy2qerOcr",
+        "type": 1,
+        "name": "Davinia Salguero",
+        "photoUrl": "organizers/davinia_salguero.jpg",
+        "link": "https://www.instagram.com/davisalguero21/"
+    },
+    {
+        "id": "qlRtu0GpHYqpUiNNrEE7",
+        "type": 1,
+        "name": "Pablo Lopez",
+        "photoUrl": "organizers/pablo_lopez.jpeg",
+        "link": "https://www.instagram.com/pablo_lopez_chavez_/"
+    },
+    {
         "id": "Nj4veEWiY5bTZFpfLk7m",
         "type": 1,
         "name": "Daniel Gonzales",
@@ -140,17 +154,17 @@
         "link": "https://instagram.com/jhamil_c_rejas?igshid=MTNiYzNiMzkwZA=="
     },
     {
-        "id": "F4ixjr3aV2Vwy2qerOcr",
-        "type": 1,
-        "name": "Davinia Salguero",
-        "photoUrl": "organizers/davinia_salguero.jpg",
-        "link": "https://www.instagram.com/davisalguero21/"
-    },
-    {
         "id": "909a0Q1yTFTQFEYIaL6G",
-        "type": 1,
+        "type": 2,
         "name": "Oscar Delgadillo",
         "photoUrl": "organizers/oscar_delgadillo.png",
         "link": "https://www.instagram.com/andropov.delgadillo/"
+    },
+    {
+        "id": "909a0Q1yTFTQFEYIaL6G",
+        "type": 2,
+        "name": "Oscar Taboada",
+        "photoUrl": "organizers/oscar-taboada.jpg",
+        "link": "https://www.instagram.com/oscar.taboada.2000/"
     }
 ]
