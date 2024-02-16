@@ -32,23 +32,21 @@ export const Timer = ({ targetDate }: TimerProps) => {
           return (
             <div className='flex-col w-20 sm:w-24 lg:w-36' key={label}>
               <div
-                className={`text-white font-bold font-quantico text-5xl lg:text-7xl relative ${
+                className={`text-blue font-bold font-quantico text-5xl lg:text-7xl relative ${
                   !isLast &&
-                  'after:ml-2 after:font-bold after:text-yellow after:content-[""] after:absolute lg:after:ml-5'
+                  'after:ml-2 after:font-bold after:text-black after:content-[":"] after:absolute lg:after:ml-5'
                 }`}
               >
                 {value}
               </div>
               {label && (
-                <span className='text-yellow text-sm lg:text-base'>
-                  {label}
-                </span>
+                <span className='text-black text-sm lg:text-base'>{label}</span>
               )}
             </div>
           )
         })}
       </section>
-      <h2 className='text-2xl lg:text-3xl text-blue'>Sábado 09 de diciembre</h2>
+      <h2 className='text-2xl lg:text-3xl text-black'>Sábado 16 de marzo</h2>
     </>
   )
 }
