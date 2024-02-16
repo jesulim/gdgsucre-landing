@@ -9,8 +9,8 @@ export const Timer = ({ targetDate }: TimerProps) => {
 
   if (continueTime) {
     return (
-      <div className='mb-2 font-bold text-2xl text-green animate-bounce'>
-        ¡Empezó el <br /> Devfest Sucre 2023!
+      <div className='mb-2 font-bold text-2xl text-blue animate-bounce'>
+        ¡Empezó el <br /> IWD Sucre 2023!
       </div>
     )
   }
@@ -24,29 +24,24 @@ export const Timer = ({ targetDate }: TimerProps) => {
 
   return (
     <>
-      <span className='mb-2 lg:-mb-2 text-2xl'>Faltan:</span>
+      <span className='mb-1 lg:-mb-2 text-2xl'>Faltan:</span>
       <section className='flex justify-center'>
-        {time.map(({ label, value }, index) => {
-          const isLast = index === time.length - 1
-
-          return (
-            <div className='flex-col w-20 sm:w-24 lg:w-36' key={label}>
-              <div
-                className={`text-blue font-bold font-quantico text-5xl lg:text-7xl relative ${
-                  !isLast &&
-                  'after:ml-2 after:font-bold after:text-black after:content-[":"] after:absolute lg:after:ml-5'
-                }`}
-              >
-                {value}
-              </div>
-              {label && (
-                <span className='text-black text-sm lg:text-base'>{label}</span>
-              )}
+        {time.map(({ label, value }) => (
+          <div className='flex-col w-24 sm:w-24 lg:w-36' key={label}>
+            <div
+              className={
+                'text-blue font-bold font-quantico text-6xl lg:text-7xl'
+              }
+            >
+              {value}
             </div>
-          )
-        })}
+            {label && (
+              <span className='text-black text-sm lg:text-base'>{label}</span>
+            )}
+          </div>
+        ))}
       </section>
-      <h2 className='text-2xl lg:text-3xl text-black'>Sábado 16 de marzo</h2>
+      <h2 className='text-3xl lg:text-4xl text-black'>Sábado 16 de marzo</h2>
     </>
   )
 }
