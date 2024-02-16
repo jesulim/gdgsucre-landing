@@ -41,7 +41,7 @@ export const Timer = ({ targetDate }: TimerProps) => {
           </div>
         ))}
       </section>
-      <h2 className='text-3xl lg:text-4xl text-black'>Sábado 16 de marzo</h2>
+      <h2 className='pt-10 text-4xl font-semibold lg:text-4xl text-[#00DAA1]'>Sábado 16 de marzo</h2>
     </>
   )
 }
