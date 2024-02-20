@@ -66,6 +66,9 @@ export const Timer = ({ targetDate }: TimerProps) => {
 
   return (
     <>
+      <h2 className='py-8 text-4xl font-semibold lg:text-4xl text-[#00DAA1]'>
+        Sábado 16 de marzo
+      </h2>
       <span className='mb-1 lg:-mb-2 text-2xl'>Faltan:</span>
       <section className='flex justify-center'>
         {time.map(({ label, value }) => (
@@ -78,9 +81,6 @@ export const Timer = ({ targetDate }: TimerProps) => {
           </div>
         ))}
       </section>
-      <h2 className='pt-10 text-4xl font-semibold lg:text-4xl text-[#00DAA1]'>
-        Sábado 16 de marzo
-      </h2>
     </>
   )
 }
