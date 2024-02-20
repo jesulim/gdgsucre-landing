@@ -51,7 +51,7 @@ export const Timer = ({ targetDate }: TimerProps) => {
 
   if (continueTime) {
     return (
-      <div className='mb-2 font-bold text-2xl text-blue animate-bounce'>
+      <div className='mt-8 font-bold text-4xl text-blue animate-bounce'>
         ¡Empezó el <br /> IWD Sucre 2023!
       </div>
     )
