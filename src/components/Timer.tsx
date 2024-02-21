@@ -34,7 +34,7 @@ const ValueCol = ({ value }) => {
       <motion.div
         animate={{ y: position }}
         onAnimationComplete={() => setPosition(0)}
-        transition={{ duration: 0.4 }}
+        transition={{ duration: 0.3 }}
         className='overflow-y-hidden'
       >
         <div>{zeroPad(value + 1)}</div>
