@@ -8,22 +8,22 @@ import Tiktok from './icons/social/Tiktok.svg?url'
 const socialIcons = [
   {
     icon: Facebook,
-    link: 'https://www.facebook.com/gdgsucre',
+    link: 'https://www.facebook.com/wtmsucre',
     alt: 'Facebook'
   },
   {
     icon: Instagram,
-    link: 'https://www.instagram.com/gdgsucre',
+    link: 'https://www.instagram.com/wtm.sucre',
     alt: 'Instagram'
   },
   {
     icon: Twitter,
-    link: 'https://twitter.com/gdg_sucre',
+    link: 'https://twitter.com/wtmsucre',
     alt: 'Twitter'
   },
   {
     icon: Tiktok,
-    link: 'https://www.tiktok.com/@gdgsucre?lang=en',
+    link: 'https://www.tiktok.com/@gdgsucre',
     alt: 'Tiktok'
   },
   {
@@ -34,15 +34,15 @@ const socialIcons = [
 ]
 ---
 
-<div class="flex mt-4 items-center space-x-10 sm:justify-center sm:mt-0">
+<div class='flex mt-4 items-center space-x-10 sm:justify-center sm:mt-0'>
   {
     socialIcons.map(({ icon, link, alt }) => (
       <a
-        class="fill-gray-900 hover:text-gray-900 dark:hover:text-white"
+        class='fill-gray-900 hover:text-gray-900 dark:hover:text-white'
         href={link}
-        target="_blank"
+        target='_blank'
       >
-        <img src={icon} alt={alt}/>
+        <img src={icon} alt={alt} />
       </a>
     ))
   }
