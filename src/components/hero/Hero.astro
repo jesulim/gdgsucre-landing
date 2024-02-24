@@ -1,12 +1,11 @@
 ---
-import DevfestLogo from '../logos/DevfestLogo.astro'
 import { Timer } from '../Timer'
 ---
 
 <hero>
   <section class='my-20 mx-4'>
     <div class='flex place-content-center'>
-      <img src="./WTM_IWD_2024_Sticker.gif" />
+      <img src='./WTM_IWD_2024_Sticker.gif' />
     </div>
 
     <!-- <div class='mx-auto max-w-screen-md lg:py-16'>
@@ -22,10 +21,14 @@ import { Timer } from '../Timer'
     </div> -->
 
     <div
-      class='pt-10 lg:pt-0 flex items-center justify-center flex-col text-center gap-y-4 sm:gap-y-8 text-black'
+      class='pt-8 lg:pt-0 flex items-center justify-center flex-col text-center gap-y-4 sm:gap-y-8'
     >
+      <h2 class='pt-4 text-4xl font-semibold lg:text-4xl text-[#666666]'>
+        Sábado 16 de marzo
+      </h2>
+
+      <span class='mb-1 lg:-mb-2 text-2xl'>Faltan:</span>
       <Timer targetDate={new Date('2024-03-16T14:00:00-04:00')} client:load />
-      <!-- <Timer targetDate={new Date()} client:load /> -->
     </div>
   </section>
 </hero>
