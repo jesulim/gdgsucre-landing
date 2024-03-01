@@ -5,13 +5,13 @@ import { Timer } from '../Timer'
 <hero>
   <section class='my-20 mx-4'>
     <div class='flex place-content-center'>
-      <img src='./WTM_IWD_2024_Sticker.gif' />
+      <img src='./WTM_IWD_2024_Sticker.gif' width='880' height='574' />
     </div>
 
     <div class='flex flex-col place-content-center'>
       <a
         href='https://gdg.community.dev/events/details/google-gdg-sucre-presents-international-womens-day-sucre-2024/'
-        class='w-3/5 lg:w-2/5 py-1 sm:py-2 mx-auto border-black border-2 border-r-4 rounded-full font-medium text-xl md:text-4xl text-center text-white bg-[#54A7ED] hover:bg-teal hover:text-black'
+        class='w-3/5 min-w-fit max-w-[500px] py-1 sm:py-2 mx-auto border-black border-2 border-r-4 md:border-[3px] md:border-r-[6px] rounded-full font-medium text-xl md:text-4xl text-center text-white bg-[#54A7ED] hover:bg-teal hover:text-black'
         target='_blank'
       >
         Regístrate
@@ -19,15 +19,20 @@ import { Timer } from '../Timer'
     </div>
 
     <div
-      class='pt-8 lg:pt-0 flex items-center justify-center flex-col text-center gap-y-4 sm:gap-y-8'
+      class='pt-8 lg:pt-12 flex items-center justify-center flex-col text-center gap-y-4 sm:gap-y-8'
     >
-      <h2 class='py-4 text-2xl font-semibold text-[#666666]'>
-         📅 Sábado 16 de marzo <br>
-          🕒 14:00 Hrs. <br>
-          📍 Facultad de Ciencias Económicas y Empresariales
-      </h2>
+      <div
+        class='text-xl md:text-2xl text-left md:text-center font-semibold text-[#666666] leading-8 md:leading-10'
+      >
+        <p>
+          📅 Sábado 16 de marzo <br class='md:hidden' /> 🕑 14:00 hrs.
+        </p>
+        <p class='pl-8 -indent-8'>
+          📍 Facultad de Ciencias Económicas y Empresariales <br />
+        </p>
+      </div>
 
-      <span class='mb-1 lg:-mb-2 text-2xl'>Faltan:</span>
+      <span class='lg:-mb-4 text-2xl'>Faltan:</span>
       <Timer targetDate={new Date('2024-03-16T14:00:00-04:00')} client:load />
     </div>
   </section>
