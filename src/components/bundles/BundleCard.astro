@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets'
+
+const { src, alt } = Astro.props
+---
+
+<div
+  class='bg-white col-span-1 rounded-lg md:rounded-2xl border-r-2 hover:border-black transition-all'
+>
+  <Image
+    class='w-full h-full object-cover object-right rounded-lg border-black border-2 border-r-4 md:rounded-2xl md:border-r-[6px]'
+    src={src}
+    alt={alt}
+  />
+</div>

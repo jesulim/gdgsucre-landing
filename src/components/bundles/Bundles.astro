@@ -1,0 +1,29 @@
+---
+import AdaLovelace from '../../assets/bundles/ada-lovelace.jpg'
+import GraceHopper from '../../assets/bundles/grace-hopper.jpg'
+
+import BundleCard from './BundleCard.astro'
+---
+
+<section id='bundles' class='max-w-screen-lg mx-auto my-12'>
+  <div class='mx-4'>
+    <h2 class='text-2xl lg:text-3xl font-bold mb-2'>Paquetes IWD 2024</h2>
+    <p class='md:text-lg lg:text-xl'>
+      Mejora tu experiencia en el evento con nuestros paquetes 🎁✨
+    </p>
+
+    <div class='my-4 grid gap-2 grid-cols-1 sm:grid-cols-2 md:gap-8'>
+      <BundleCard src={AdaLovelace} alt='Paquete Ada Lovelace' />
+
+      <BundleCard src={GraceHopper} alt='Paquete Grace Hopper' />
+
+      <a
+        class='mx-auto sm:col-span-2 w-fit p-2 md:py-3 md:px-6 border-black border border-r-2 sm:border-2 sm:border-r-4 rounded-full font-medium text-xl md:text-2xl text-center text-white bg-[#54A7ED] hover:bg-teal hover:text-black hover:border-r-[5px]'
+        href='https://bit.ly/paquetesiwd2024'
+        target='_blank'
+      >
+        Adquiere tu paquete
+      </a>
+    </div>
+  </div>
+</section>
