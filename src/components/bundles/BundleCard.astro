@@ -4,12 +4,10 @@ import { Image } from 'astro:assets'
 const { src, alt } = Astro.props
 ---
 
-<div
-  class='bg-white col-span-1 rounded-lg md:rounded-2xl border-r-2 hover:border-black transition-all'
->
+<a href='https://bit.ly/paquetesiwd2024' target='_blank'>
   <Image
-    class='w-full h-full object-cover object-right rounded-lg border-black border-2 border-r-4 md:rounded-2xl md:border-r-[6px]'
+    class='bg-white col-span-1 rounded-lg md:rounded-2xl border-black border-2 border-r-4 hover:border-r-[6px] pr-[2px] hover:pr-0'
     src={src}
     alt={alt}
   />
-</div>
+</a>
