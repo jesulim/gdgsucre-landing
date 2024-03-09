@@ -7,7 +7,7 @@ import Bundles from '@components/bundles/Bundles.astro'
 import Footer from '../components/Footer.astro'
 // import Speakers from '../components/Speakers.astro'
 // import Agenda from '../components/Agenda.astro'
-// import Sponsors from '../components/Sponsors.astro'
+import Sponsors from '@components/Sponsors.astro'
 // import Organizadores from '@components/Organizadores.astro'
 ---
 
@@ -18,18 +18,10 @@ import Footer from '../components/Footer.astro'
   <Bundles />
   <!-- <Speakers />
   <Agenda />
-  <Organizadores />
-  <Sponsors /> -->
+  <Organizadores /> -->
+  <Sponsors />
   <Footer />
 </Layout>
-
-<noscript>
-  <style>
-    #splash-bg-fallback {
-      display: block;
-    }
-  </style>
-</noscript>
 
 <style>
   :global(html) {
@@ -38,18 +30,6 @@ import Footer from '../components/Footer.astro'
   @media (prefers-reduced-motion: reduce) {
     :global(html) {
       scroll-behavior: auto;
-    }
-
-    picture {
-      @apply animate-none;
-    }
-
-    :global(#starfield) {
-      @apply hidden;
-    }
-
-    #splash-bg-fallback {
-      @apply block;
     }
   }
 </style>
