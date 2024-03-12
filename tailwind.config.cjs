@@ -8,9 +8,10 @@ module.exports = {
         'dark-gray': '#1F2123',
         red: '#FF5145',
         green: '#38A852',
-        blue: '#3D8BFF',
+        blue: '#54A7ED',
         yellow: '#FFBB01',
-        white: '#FEFEFE'
+        white: '#FEFEFE',
+        teal: '#00DB9F'
       },
       fontFamily: {
         google: ['Prompt', 'sans-serif'],

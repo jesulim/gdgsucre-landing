@@ -3,19 +3,23 @@ import { Image } from 'astro:assets'
 
 import SectionTitle from './SectionTitle.astro'
 
-import facultadEconomia from '../assets/sponsors/facultad-economia.png'
-import itera from '../assets/sponsors/itera.png'
+import cba from '../assets/sponsors/cba.jpeg'
+import tenMinds from '../assets/sponsors/10minds.jpg'
 import droBots from '../assets/sponsors/dro-bots.png'
-import xyz from '../assets/sponsors/xyz.jpg'
-import itGroup from '../assets/sponsors/it-group.png'
-import magisterioRural from '../assets/sponsors/magisterio-rural.png'
-import jetbrains from '../assets/sponsors/jetbrains.webp'
+import education_usa from '../assets/sponsors/education_usa.jpeg'
+import unosquare from '../assets/sponsors/unosquare.jpg'
+import salvietti from '../assets/sponsors/salvietti.webp'
 
 const sponsors = [
   {
-    name: 'itera soluciones digitales',
-    logo: itera,
-    url: 'https://www.facebook.com/profile.php?id=100063753325772'
+    name: '10minds',
+    logo: tenMinds,
+    url: 'https://10minds.org/'
+  },
+  {
+    name: 'CBA',
+    logo: cba,
+    url: 'https://www.facebook.com/CBAFanPage/'
   },
   {
     name: 'Dro-bots accesorios para robótica y electrónica',
@@ -23,35 +27,25 @@ const sponsors = [
     url: 'https://www.facebook.com/profile.php?id=100083024454287'
   },
   {
-    name: 'Facultad de Ciencias Económicas y Empresariales',
-    logo: facultadEconomia,
-    url: 'https://economicas.usfx.bo/'
+    name: 'Education USA',
+    logo: education_usa,
+    url: 'https://www.facebook.com/EducationUSABolivia'
   },
   {
-    name: 'XYZ Sistema Profesional de Sonido y Luces',
-    logo: xyz,
-    url: 'https://www.facebook.com/profile.php?id=100057052885906&mibextid=ZbWKwL'
+    name: 'Salvietti',
+    logo: salvietti,
+    url: 'https://www.facebook.com/salvietti.oficial'
   },
   {
-    name: 'ITGroup Systems',
-    logo: itGroup,
-    url: 'https://www.facebook.com/ITGroupSystems/'
-  },
-  {
-    name: 'Cooperativa de Ahorro y Crédito Abierta Magisterio Rural de Chuquisaca R.L.',
-    logo: magisterioRural,
-    url: 'https://www.facebook.com/CMRChuq/'
-  },
-  {
-    name: 'JetBrains',
-    logo: jetbrains,
-    url: 'https://www.facebook.com/JetBrains'
+    name: 'Unosquare',
+    logo: unosquare,
+    url: 'https://www.unosquare.com/'
   }
 ]
 ---
 
 <SectionTitle id='sponsors' title='Sponsors' />
-<!-- <div class='max-w-screen-md px-2 mx-auto grid grid-cols-2 gap-4 md:grid-cols-3'>
+<div class='max-w-screen-md p-4 mx-auto grid grid-cols-2 gap-8 md:grid-cols-3'>
   {
     sponsors.map(sponsor => (
       <div class='flex justify-center items-center'>
@@ -61,4 +55,4 @@ const sponsors = [
       </div>
     ))
   }
-</div> -->
+</div>

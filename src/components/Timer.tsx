@@ -1,7 +1,49 @@
+import { motion } from 'framer-motion'
+
 import { useTimer } from '@hooks/useTimer'
+import { useEffect, useState, useRef } from 'react'
 
 type TimerProps = {
   targetDate: Date
+}
+
+const zeroPad = value => {
+  return `${value}`.padStart(2, '0')
+}
+
+const usePrevious = (value: number) => {
+  const ref = useRef(0)
+  useEffect(() => {
+    ref.current = value
+  }, [value])
+
+  return ref.current
+}
+
+const ValueCol = ({ value }) => {
+  const previousValue = usePrevious(value)
+
+  const [position, setPosition] = useState(0)
+
+  useEffect(() => {
+    setPosition(-60)
+  }, [previousValue])
+
+  if (previousValue !== value) {
+    return (
+      <motion.div
+        animate={{ y: position }}
+        onAnimationComplete={() => setPosition(0)}
+        transition={{ duration: 0.3 }}
+        className='overflow-y-hidden'
+      >
+        <div>{zeroPad(value + 1)}</div>
+        <div>{zeroPad(value)}</div>
+      </motion.div>
+    )
+  }
+
+  return <>{zeroPad(value)}</>
 }
 
 export const Timer = ({ targetDate }: TimerProps) => {
@@ -9,8 +51,8 @@ export const Timer = ({ targetDate }: TimerProps) => {
 
   if (continueTime) {
     return (
-      <div className='mb-2 font-bold text-2xl text-green animate-bounce'>
-        ¡Empezó el <br /> Devfest Sucre 2023!
+      <div className='mt-8 font-bold text-4xl text-blue animate-bounce'>
+        ¡Empezó el <br /> IWD Sucre 2023!
       </div>
     )
   }
@@ -23,32 +65,16 @@ export const Timer = ({ targetDate }: TimerProps) => {
   ]
 
   return (
-    <>
-      <span className='mb-2 lg:-mb-2 text-2xl'>Faltan:</span>
-      <section className='flex justify-center'>
-        {time.map(({ label, value }, index) => {
-          const isLast = index === time.length - 1
+    <section className='flex justify-center'>
+      {time.map(({ label, value }) => (
+        <div className='flex-col w-24 sm:w-24 lg:w-36' key={label}>
+          <div className='h-16 overflow-y-hidden text-[#54A7ED] font-bold font-quantico text-6xl lg:text-7xl'>
+            <ValueCol value={value} />
+          </div>
 
-          return (
-            <div className='flex-col w-20 sm:w-24 lg:w-36' key={label}>
-              <div
-                className={`text-white font-bold font-quantico text-5xl lg:text-7xl relative ${
-                  !isLast &&
-                  'after:ml-2 after:font-bold after:text-yellow after:content-[""] after:absolute lg:after:ml-5'
-                }`}
-              >
-                {value}
-              </div>
-              {label && (
-                <span className='text-yellow text-sm lg:text-base'>
-                  {label}
-                </span>
-              )}
-            </div>
-          )
-        })}
-      </section>
-      <h2 className='text-2xl lg:text-3xl text-blue'>Sábado 09 de diciembre</h2>
-    </>
+          <span className='text-black text-sm lg:text-base'>{label}</span>
+        </div>
+      ))}
+    </section>
   )
 }

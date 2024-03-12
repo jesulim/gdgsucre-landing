@@ -22,6 +22,7 @@
     "astro": "^3.0.10",
     "atropos": "^2.0.2",
     "firebase": "^10.1.0",
+    "framer-motion": "^11.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "swiper": "^10.1.0",
