@@ -3,7 +3,7 @@
         "id": "9ChU5IOWay4VyYrO9vUR",
         "type": 4,
         "name": "Andrea Cornejo",
-        "photoUrl": "organizers/andrea_cornejo.png",
+        "photoUrl": "organizers/andrea_cornejo.webp",
         "socialNetworks": [
             {
                 "type": "linkedin",
@@ -23,7 +23,7 @@
         "id": "qTprRHLN5Rk07sORYLCl",
         "type": 3,
         "name": "Sebastian Gonzales",
-        "photoUrl": "organizers/sebastian_gonzales.jpeg",
+        "photoUrl": "organizers/sebastian_gonzales.webp",
         "socialNetworks": [
             {
                 "type": "linkedin",
@@ -47,7 +47,7 @@
         "id": "d9bf1WFCGnUtHfHNBJN4",
         "type": 3,
         "name": "Heidy Paco",
-        "photoUrl": "organizers/heidy_paco.jpg",
+        "photoUrl": "organizers/heidy_paco.webp",
         "socialNetworks": [
             {
                 "type": "twitter",
@@ -59,7 +59,7 @@
         "id": "asq9qd31zRUe0Tr1uvzd",
         "type": 3,
         "name": "Pablo Noya",
-        "photoUrl": "organizers/pablo_noya.jpg",
+        "photoUrl": "organizers/pablo_noya.webp",
         "socialNetworks": [
             {
                 "type": "linkedin",
@@ -76,10 +76,26 @@
         ]
     },
     {
-        "id": "xEdkhdMlR9GeEiVzleXH",
+        "id": "OaQceN08HTK3UvHbuaRQ",
         "type": 3,
+        "name": "Ivan Martinez",
+        "photoUrl": "organizers/ivan_martinez.webp",
+        "socialNetworks": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/jesulim/"
+            },
+            {
+                "type": "github",
+                "url": "https://github.com/jesulim"
+            }
+        ]
+    },
+    {
+        "id": "xEdkhdMlR9GeEiVzleXH",
+        "type": 2,
         "name": "Valentina Salinas",
-        "photoUrl": "organizers/valentina_salinas.jpg",
+        "photoUrl": "organizers/valentina_salinas.webp",
         "socialNetworks": [
             {
                 "type": "github",
@@ -96,26 +112,10 @@
         ]
     },
     {
-        "id": "OaQceN08HTK3UvHbuaRQ",
-        "type": 3,
-        "name": "Ivan Martinez",
-        "photoUrl": "organizers/ivan_martinez.jpg",
-        "socialNetworks": [
-            {
-                "type": "linkedin",
-                "url": "https://www.linkedin.com/in/jesulim/"
-            },
-            {
-                "type": "github",
-                "url": "https://github.com/jesulim"
-            }
-        ]
-    },
-    {
         "id": "CjCVtSbRyF7di904xuZd",
-        "type": 1,
+        "type": 2,
         "name": "Aylin Oropeza",
-        "photoUrl": "organizers/aylin_oropeza.jpg",
+        "photoUrl": "organizers/aylin_oropeza.webp",
         "socialNetworks": [
             {
                 "type": "linkedin",
@@ -133,9 +133,9 @@
     },
     {
         "id": "Ukm6gHaBX4Su83Rrr0R8",
-        "type": 1,
+        "type": 2,
         "name": "Andrea Chumacero",
-        "photoUrl": "organizers/andrea_chumacero.jpeg",
+        "photoUrl": "organizers/andrea_chumacero.webp",
         "socialNetworks": [
             {
                 "type": "facebook",
@@ -149,9 +149,9 @@
     },
     {
         "id": "sRVH1mE8IgB7C0CSIchg",
-        "type": 1,
+        "type": 2,
         "name": "Madizon Gonzales",
-        "photoUrl": "organizers/mádizon_gonzales.jpg",
+        "photoUrl": "organizers/mádizon_gonzales.webp",
         "socialNetworks": [
             {
                 "type": "linkedin",
@@ -169,9 +169,9 @@
     },
     {
         "id": "u4NlN0Gfgh0TKnqEJlBg",
-        "type": 1,
+        "type": 2,
         "name": "Andrés Torres",
-        "photoUrl": "organizers/alejandro_torres.jpg",
+        "photoUrl": "organizers/alejandro_torres.webp",
         "socialNetworks": [
             {
                 "type": "github",
@@ -185,9 +185,9 @@
     },
     {
         "id": "niFlRc7PZbZfuCFoalPK",
-        "type": 1,
+        "type": 2,
         "name": "Ruben Camargo",
-        "photoUrl": "organizers/ruben_camargo.jpg",
+        "photoUrl": "organizers/ruben_camargo.webp",
         "socialNetworks": [
             {
                 "type": "facebook",
@@ -205,9 +205,9 @@
     },
     {
         "id": "VyylB4QPvxc1frJeeeTp",
-        "type": 1,
+        "type": 2,
         "name": "Noelia Gonzales",
-        "photoUrl": "organizers/noemi_gonzales.jpg",
+        "photoUrl": "organizers/noemi_gonzales.webp",
         "socialNetworks": [
             {
                 "type": "github",
@@ -225,9 +225,9 @@
     },
     {
         "id": "F4ixjr3aV2Vwy2qerOcr",
-        "type": 1,
+        "type": 2,
         "name": "Davinia Salguero",
-        "photoUrl": "organizers/davinia_salguero.jpg",
+        "photoUrl": "organizers/davinia_salguero.webp",
         "socialNetworks": [
             {
                 "type": "github",
@@ -245,9 +245,9 @@
     },
     {
         "id": "LIJ0eIuOnTSX1lefxi1I",
-        "type": 1,
+        "type": 2,
         "name": "Jhamil Crespo",
-        "photoUrl": "organizers/jhamil_crespo.jpg",
+        "photoUrl": "organizers/jhamil_crespo.webp",
         "socialNetworks": [
             {
                 "type": "instagram",
@@ -259,7 +259,7 @@
         "id": "909a0Q1yTFTQFEYIaL6G",
         "type": 2,
         "name": "Oscar Delgadillo",
-        "photoUrl": "organizers/oscar_delgadillo.jpg",
+        "photoUrl": "organizers/oscar_delgadillo.webp",
         "socialNetworks": [
             {
                 "type": "linkedin",
@@ -277,65 +277,65 @@
     },
     {
         "id": "909a0Q1yTFTQFEYIaL123",
-        "type": 2,
+        "type": 1,
         "name": "Itzel Velasquez",
-        "photoUrl": "organizers/itzel_velasquez.jpeg",
+        "photoUrl": "organizers/itzel_velasquez.webp",
         "socialNetworks": []
     },
     {
         "id": "909a0Q1yTFTQFEYIaL123",
         "type": 2,
         "name": "Elena Vallejos",
-        "photoUrl": "organizers/elena_vallejos.jpeg",
+        "photoUrl": "organizers/elena_vallejos.webp",
         "socialNetworks": []
     },
     {
         "id": "909a0Q1yTFTQFEYIaL123",
-        "type": 2,
+        "type": 1,
         "name": "Fernanda Flores",
-        "photoUrl": "organizers/fernanda_flores.jpeg",
+        "photoUrl": "organizers/fernanda_flores.webp",
         "socialNetworks": []
     },
     {
         "id": "909a0Q1yTFTQFEYIaL123",
         "type": 2,
         "name": "Sole Nina",
-        "photoUrl": "organizers/sole_nina.jpg",
+        "photoUrl": "organizers/sole_nina.webp",
         "socialNetworks": []
     },
     {
         "id": "909a0Q1yTFTQFEYIaL123",
         "type": 2,
         "name": "Samantha Hinojosa",
-        "photoUrl": "organizers/samantha_hinojosa.jpg",
+        "photoUrl": "organizers/samantha_hinojosa.webp",
         "socialNetworks": []
     },
     {
         "id": "909a0Q1yTFTQFEYIaL123",
         "type": 2,
         "name": "Jhoseline Terán",
-        "photoUrl": "organizers/jhoseline_teran.jpg",
+        "photoUrl": "organizers/jhoseline_teran.webp",
         "socialNetworks": []
     },
     {
         "id": "909a0Q1yTFTQFEYIaL123",
-        "type": 2,
+        "type": 1,
         "name": "Sheila Rojas",
-        "photoUrl": "organizers/sheila_rojas.jpg",
+        "photoUrl": "organizers/sheila_rojas.webp",
         "socialNetworks": []
     },
     {
         "id": "909a0Q1yTFTQFEYIaL123",
-        "type": 2,
+        "type": 1,
         "name": "Sarah Ramirez",
-        "photoUrl": "organizers/sarah_ramirez.jpg",
+        "photoUrl": "organizers/sarah_ramirez.webp",
         "socialNetworks": []
     },
     {
         "id": "909a0Q1yTFTQFEYIaL123",
         "type": 2,
         "name": "Alejandra Cornejo",
-        "photoUrl": "organizers/alejandra_cornejo.jpg",
+        "photoUrl": "organizers/alejandra_cornejo.webp",
         "socialNetworks": []
     }
 ]
