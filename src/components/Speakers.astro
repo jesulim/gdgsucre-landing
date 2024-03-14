@@ -1,63 +1,59 @@
 ---
 import SectionTitle from './SectionTitle.astro'
-import { Speaker } from './Speaker'
+
 const speakers = [
   {
-    img: '/speakers/alejandro-núñez.webp',
-    name: 'Alejandro Núñez 🇧🇴'
+    img: '/speakers/maureen.webp',
+    name: 'Maureen Barahona 🇭🇳',
+    link: 'https://www.linkedin.com/in/maureen-barahona/'
   },
   {
-    img: '/speakers/antonio-giler.webp',
-    name: 'Antonio Giler 🇪🇨'
+    img: '/speakers/mariangela.webp',
+    name: 'Mariangela Pachecho 🇵🇪',
+    link: 'https://www.linkedin.com/in/mariangelapacheco97/'
   },
   {
-    img: '/speakers/brian-castillo.webp',
-    name: 'Brian Castillo 🇵🇪'
+    img: '/speakers/wilma.webp',
+    name: 'Wilma Paca 🇧🇴',
+    link: 'https://www.linkedin.com/in/wilma-paca-patzi-32b58478'
   },
   {
-    img: '/speakers/brian-vega.webp',
-    name: 'Brian Vega 🇧🇴'
+    img: '/speakers/adriana.webp',
+    name: 'Adriana Calvo 🇧🇴',
+    link: 'https://www.linkedin.com/in/adriana-calvo-bueno-60b542199/'
   },
   {
-    img: '/speakers/carlos-collazos.webp',
-    name: 'Carlos Collazos 🇧🇴'
-  },
-  {
-    img: '/speakers/david-rios.webp',
-    name: 'David Ríos 🇧🇴'
-  },
-  {
-    img: '/speakers/hansy-schmitt.webp',
-    name: 'Hansy Schmitt 🇵🇪'
-  },
-  {
-    img: '/speakers/jean-roldan.webp',
-    name: 'Jean Roldán 🇪🇨'
-  },
-  {
-    img: '/speakers/nicolas-leclaros.webp',
-    name: 'Nicolás Lecaros 🇨🇱'
-  },
-  {
-    img: '/speakers/pablo-noya.webp',
-    name: 'Pablo Noya 🇧🇴'
-  },
-  {
-    img: '/speakers/paolo-pinto.webp',
-    name: 'Paolo Pinto 🇧🇴'
-  },
-  {
-    img: '/speakers/sergio-fernandez.webp',
-    name: 'Sergio Fernández 🇧🇴'
+    img: '/speakers/andrea.webp',
+    name: 'Andrea Cornejo 🇧🇴',
+    link: 'https://www.linkedin.com/in/andrea-cornejo-m/'
   }
 ]
 ---
 
 <SectionTitle id='speakers' title='Speakers' />
-<div class='max-w-screen-md mx-auto grid grid-cols-2 md:grid-cols-3 gap-8 px-4'>
+<div
+  class='max-w-screen-md mx-auto grid grid-cols-2 md:grid-cols-3 gap-8 px-4 my-8'
+>
   {
-    speakers.map((speakerProps, i) => (
-      <Speaker id={i} {...speakerProps} client:visible />
+    speakers.map(({ img, name, link }) => (
+      <div class='space-y-2'>
+        <a href={link} target='_blank'>
+          <img
+            src={img}
+            alt={name}
+            class='mx-auto object-cover rounded-full border-black border-2 border-r-[6px] ring-teal hover:ring-2'
+          />
+
+          <div class='mx-auto text-center w-max'>
+            <span
+              data-atropos-offset='3'
+              class='font-emoji text-black sm:text-md md:text-xl'
+            >
+              {name}
+            </span>
+          </div>
+        </a>
+      </div>
     ))
   }
 </div>
