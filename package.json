@@ -11,15 +11,15 @@
     "prettier": "prettier . --write"
   },
   "dependencies": {
-    "@astrojs/react": "^3.0.1",
-    "@astrojs/tailwind": "^5.0.0",
+    "@astrojs/react": "^3.6.0",
+    "@astrojs/tailwind": "^5.1.0",
     "@fontsource/noto-color-emoji": "^5.0.16",
     "@fontsource/prompt": "^5.0.5",
     "@fontsource/quantico": "^5.0.17",
     "@fontsource/russo-one": "^5.0.17",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "astro": "^3.0.10",
+    "astro": "^4.11.3",
     "atropos": "^2.0.2",
     "firebase": "^10.1.0",
     "framer-motion": "^11.0.5",
