@@ -34,12 +34,6 @@ const getRemainingTime = (targetDate: Date) => {
   return { days, hours, minutes, seconds }
 }
 
-const fillZeros = (remainingDate: RemainingDate<number>) => {
-  return mapValues(remainingDate, value =>
-    `${value}`.padStart(2, '0')
-  ) as RemainingDate<string>
-}
-
 export const useTimer = (targetDate: Date) => {
   const [remainingDate, setRemainingDate] = useState({
     days: 1,
@@ -64,5 +58,5 @@ export const useTimer = (targetDate: Date) => {
     return () => clearInterval(timer)
   }, [continueTime])
 
-  return { ...fillZeros(remainingDate), continueTime }
+  return { ...remainingDate, continueTime }
 }
