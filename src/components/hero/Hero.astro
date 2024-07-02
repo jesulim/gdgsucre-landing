@@ -4,20 +4,14 @@ import { Timer } from '../Timer'
 
 <hero>
   <section class='mt-20 mb-12 mx-4'>
-    <div class='flex place-content-center'>
-      <img
-        src='./WTM_IWD_2024_Sticker.gif'
-        width='880'
-        height='574'
-        loading='eager'
-        decoding='async'
-      />
+    <div class='flex place-content-center my-32'>
+      <img src='./IOExtended.svg' width='880' height='574' loading='eager' decoding='async' />
     </div>
 
     <div class='flex flex-col place-content-center'>
       <a
         href='https://gdg.community.dev/events/details/google-gdg-sucre-presents-international-womens-day-sucre-2024/'
-        class='w-3/5 min-w-fit max-w-[500px] py-1 sm:py-2 mx-auto border-black border-2 border-r-4 md:border-[3px] md:border-r-[6px] rounded-full font-medium text-xl md:text-4xl text-center text-white bg-[#54A7ED] hover:bg-teal hover:text-black'
+        class='min-w-fit max-w-[500px] p-6 mx-auto rounded-full font-medium text-xl md:text-4xl text-center text-black bg-gradient-to-r from-red via-orange to-yellow'
         target='_blank'
       >
         Regístrate
@@ -28,18 +22,18 @@ import { Timer } from '../Timer'
       class='pt-8 lg:pt-12 flex items-center justify-center flex-col text-center gap-y-4 sm:gap-y-8'
     >
       <div
-        class='text-xl md:text-2xl text-left md:text-center font-semibold text-[#666666] leading-8 md:leading-10'
+        class='text-xl md:text-2xl text-left md:text-center font-semibold text-black leading-8 md:leading-10'
       >
         <p>
-          📅 Sábado 16 de marzo <br class='md:hidden' /> 🕑 14:00 hrs.
+          📅 Sábado 13 de julio <br class='md:hidden' /> 🕑 09:00 hrs.
         </p>
         <p class='pl-8 -indent-8'>
-          📍 Facultad de Ciencias Económicas y Empresariales <br />
+          📍 CAINCO Chuquisaca, Calle España #64 <br />
         </p>
       </div>
 
       <span class='lg:-mb-4 text-2xl'>Faltan:</span>
-      <Timer targetDate={new Date('2024-03-16T14:00:00-04:00')} client:load />
+      <Timer targetDate={new Date('2024-07-13T09:00:00-04:00')} client:load />
     </div>
   </section>
 </hero>
