@@ -20,6 +20,7 @@ module.exports = {
       },
       fontFamily: {
         google: ['Prompt', 'sans-serif'],
+        sofia: ['Sofia Sans Variable', 'sans-serif'],
         quantico: ['Quantico', 'sans-serif'],
         russo: ['Russo One', 'sans-serif'],
         emoji: ['Noto Color Emoji', 'Prompt', 'sans-serif']

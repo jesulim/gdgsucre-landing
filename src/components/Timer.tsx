@@ -68,11 +68,11 @@ export const Timer = ({ targetDate }: TimerProps) => {
     <section className='flex justify-center'>
       {time.map(({ label, value }) => (
         <div className='flex-col w-24 sm:w-24 lg:w-36' key={label}>
-          <div className='h-16 overflow-y-hidden text-blue font-bold font-quantico text-6xl lg:text-7xl'>
+          <div className='h-16 overflow-y-hidden bg-gradient-to-t from-blue to-green text-transparent bg-clip-text font-black font-sofia text-6xl lg:text-7xl'>
             <ValueCol value={value} />
           </div>
 
-          <span className='text-black text-sm lg:text-base'>{label}</span>
+          <span className='font-google text-sm lg:text-base'>{label}</span>
         </div>
       ))}
     </section>
