@@ -72,7 +72,7 @@ export const Timer = ({ targetDate }: TimerProps) => {
             <ValueCol value={value} />
           </div>
 
-          <span className='font-google text-sm lg:text-base'>{label}</span>
+          <span className='font-google text-base lg:text-lg'>{label}</span>
         </div>
       ))}
     </section>

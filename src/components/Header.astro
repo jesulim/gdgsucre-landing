@@ -2,7 +2,11 @@
   <div class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
     <div class='w-64'>
       <a href='#' aria-current='page'>
-        <img src='./IOExtended.svg' alt='IO Extended' class='w-full h-auto' />
+        <picture>
+          <source srcset='./IOExtended-short.svg' type='image/svg+xml' media='(max-width: 767px)' />
+          <source srcset='./IOExtended.svg' type='image/svg+xml' media='(min-width: 768px)' />
+          <img alt='I/O Extended logo' class='w-fit h-auto' />
+        </picture>
       </a>
     </div>
     <div class='flex md:order-2 lg:hidden'>
