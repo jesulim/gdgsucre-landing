@@ -39,8 +39,8 @@ const AnimatedValue = ({ value }) => {
   return <>{zeroPad(value)}</>
 }
 
-export const Timer = ({ initialTime }) => {
-  const { days, hours, minutes, seconds } = useTimer(initialTime)
+export const Timer = ({ initialTime, targetDate }) => {
+  const { days, hours, minutes, seconds } = useTimer(initialTime, targetDate)
 
   if (initialTime <= 0 || seconds < 0) {
     return (

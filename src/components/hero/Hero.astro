@@ -1,11 +1,11 @@
 ---
 import { Timer } from '../Timer'
 
-const getRemainingTime = () => {
-  const targetDate = new Date('2024-07-13T08:30:00-04:00')
-  const currentDate = new Date()
+const targetDate = new Date('2024-07-13T08:30:00-04:00')
 
-  return targetDate.getTime() - currentDate.getTime()
+const getRemainingTime = () => {
+  const currentDate = Date.now()
+  return targetDate.getTime() - currentDate
 }
 ---
 
@@ -42,7 +42,7 @@ const getRemainingTime = () => {
         </p>
       </div>
 
-      <Timer initialTime={getRemainingTime()} client:load />
+      <Timer initialTime={getRemainingTime()} targetDate={targetDate} client:load />
     </div>
   </section>
 </hero>
