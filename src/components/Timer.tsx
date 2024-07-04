@@ -1,18 +1,12 @@
+import { useTimer } from '@hooks/useTimer'
 import { motion } from 'framer-motion'
 
-import { useTimer } from '@hooks/useTimer'
 import { useEffect, useState, useRef } from 'react'
 
-type TimerProps = {
-  targetDate: Date
-}
-
-const zeroPad = value => {
-  return `${value}`.padStart(2, '0')
-}
+const zeroPad = (value: number) => `${value}`.padStart(2, '0')
 
 const usePrevious = (value: number) => {
-  const ref = useRef(0)
+  const ref = useRef(value)
   useEffect(() => {
     ref.current = value
   }, [value])
@@ -20,13 +14,13 @@ const usePrevious = (value: number) => {
   return ref.current
 }
 
-const ValueCol = ({ value }) => {
+const AnimatedValue = ({ value }) => {
   const previousValue = usePrevious(value)
 
   const [position, setPosition] = useState(0)
 
   useEffect(() => {
-    setPosition(-60)
+    setPosition(-64) // 4rem = 64px
   }, [previousValue])
 
   if (previousValue !== value) {
@@ -35,7 +29,6 @@ const ValueCol = ({ value }) => {
         animate={{ y: position }}
         onAnimationComplete={() => setPosition(0)}
         transition={{ duration: 0.3 }}
-        className='overflow-y-hidden'
       >
         <div>{zeroPad(value + 1)}</div>
         <div>{zeroPad(value)}</div>
@@ -46,18 +39,18 @@ const ValueCol = ({ value }) => {
   return <>{zeroPad(value)}</>
 }
 
-export const Timer = ({ targetDate }: TimerProps) => {
-  const { days, hours, minutes, seconds, continueTime } = useTimer(targetDate)
+export const Timer = ({ initialTime }) => {
+  const { days, hours, minutes, seconds } = useTimer(initialTime)
 
-  if (continueTime) {
+  if (initialTime <= 0 || seconds < 0) {
     return (
       <div className='mt-8 font-bold text-4xl text-blue animate-bounce'>
-        ¡Empezó el <br /> IWD Sucre 2023!
+        ¡Empezó el <br /> I/O Extended Sucre 2024!
       </div>
     )
   }
 
-  const time = [
+  const timeUnits = [
     { label: 'Días', value: days },
     { label: 'Horas', value: hours },
     { label: 'Minutos', value: minutes },
@@ -66,10 +59,10 @@ export const Timer = ({ targetDate }: TimerProps) => {
 
   return (
     <section className='flex justify-center'>
-      {time.map(({ label, value }) => (
-        <div className='flex-col w-24 sm:w-24 lg:w-36' key={label}>
-          <div className='h-16 overflow-y-hidden text-blue bg-clip-text font-black font-sofia text-6xl lg:text-7xl'>
-            <ValueCol value={value} />
+      {timeUnits.map(({ label, value }) => (
+        <div className='w-24 md:w-32 lg:w-36' key={label}>
+          <div className='h-16 overflow-y-hidden text-blue font-sofia font-black leading-[4rem] text-6xl lg:text-7xl'>
+            <AnimatedValue value={value} />
           </div>
 
           <span className='font-google text-base lg:text-lg'>{label}</span>
