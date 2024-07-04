@@ -11,13 +11,17 @@ const toDatetime = (milliseconds: number) => {
   return { days, hours, minutes, seconds }
 }
 
-export const useTimer = (initialTime: number) => {
+export const useTimer = (initialTime: number, endTime: Date) => {
   const [remainingMillis, setRemainingMillis] = useState(initialTime)
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setRemainingMillis(remainingMillis => remainingMillis - 1000)
+      setRemainingMillis(endTime.getTime() - Date.now())
     }, 1000)
+
+    if (remainingMillis <= 0) {
+      clearInterval(timer)
+    }
 
     return () => clearInterval(timer)
   }, [])
