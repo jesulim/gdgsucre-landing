@@ -1,23 +1,28 @@
 ---
-// import GdgLogo from '../components/logos/GdgLogo.astro'
+import AiMind from './logos/AiMind.astro'
+import GdgLogo from '../components/logos/GdgLogo.astro'
 // import WtmLogo from '../components/logos/WtLogo.astro'
 import SocialIcons from './SocialIcons.astro'
-import WtmLogoBlack from './logos/WTM Logomark_Black.astro'
+//import WtmLogoBlack from './logos/WTM Logomark_Black.astro'
 ---
-
-<footer class='bg-[#C2E5FE]'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<footer class='bg-transparent relative'>
+  <div class=" absolute -top-[7rem] lg:w-[13rem] lg:ml-[70rem] md:w-[13rem] sm:ml-[70rem]">
+    <AiMind />
+  </div>
+  <div class="bg-gray">
   <div class='mx-auto w-full max-w-screen-lg p-4 py-6 lg:py-8'>
     <div class='relative space-y-4'>
       <div class='flex mb-6 md:mb-0 gap-2'>
         <a
-          href='https://developers.google.com/womentechmakers/ambassadors?hl=es-419'
-          class='flex items-center space-x-2'
+          href=''
+          class='flex items-center space-x-6'
           target='_blank'
         >
           <div class='w-12'>
-            <WtmLogoBlack />
-          </div>
-          <span class='font-medium'> Women Techmakers Sucre</span>
+            <GdgLogo />
+          </div> 
+          <span class='font-medium'> Google Developers Group Sucre</span>
         </a>
       </div>
 
@@ -73,4 +78,5 @@ import WtmLogoBlack from './logos/WTM Logomark_Black.astro'
       </div>
     </div>
   </div>
+</div>
 </footer>
