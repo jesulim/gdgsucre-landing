@@ -1,5 +1,12 @@
 ---
 import { Timer } from '../Timer'
+
+const getRemainingTime = () => {
+  const targetDate = new Date('2024-07-13T08:30:00-04:00')
+  const currentDate = new Date()
+
+  return targetDate.getTime() - currentDate.getTime()
+}
 ---
 
 <hero>
@@ -28,14 +35,14 @@ import { Timer } from '../Timer'
         class='text-xl md:text-2xl text-left md:text-center font-medium text-black leading-8 md:leading-10'
       >
         <p>
-          📅 Sábado 13 de julio <br class='md:hidden' /> 🕑 09:00 hrs.
+          📅 Sábado 13 de julio <br class='md:hidden' /> 🕑 08:30 hrs.
         </p>
         <p class='pl-8 -indent-8'>
           📍 CAINCO Chuquisaca <br class='md:hidden' /> Calle España #64 <br />
         </p>
       </div>
 
-      <Timer targetDate={new Date('2024-07-13T09:00:00-04:00')} client:load />
+      <Timer initialTime={getRemainingTime()} client:load />
     </div>
   </section>
 </hero>
