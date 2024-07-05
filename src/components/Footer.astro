@@ -5,78 +5,75 @@ import GdgLogo from '../components/logos/GdgLogo.astro'
 import SocialIcons from './SocialIcons.astro'
 //import WtmLogoBlack from './logos/WTM Logomark_Black.astro'
 ---
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 <footer class='bg-transparent relative'>
-  <div class=" absolute -top-[7rem] lg:w-[13rem] lg:ml-[70rem] md:w-[13rem] sm:ml-[70rem]">
-    <AiMind />
+  <div>
+    <img src="https://io.google/2024/app/images/io24-see-you-next-year.svg" class=" w-full object-cover">
   </div>
-  <div class="bg-gray">
-  <div class='mx-auto w-full max-w-screen-lg p-4 py-6 lg:py-8'>
-    <div class='relative space-y-4'>
-      <div class='flex mb-6 md:mb-0 gap-2'>
-        <a
-          href=''
-          class='flex items-center space-x-6'
-          target='_blank'
-        >
-          <div class='w-12'>
-            <GdgLogo />
-          </div> 
-          <span class='font-medium'> Google Developers Group Sucre</span>
-        </a>
-      </div>
-
-      <div class='max-w-lg grid grid-cols-2 gap-8 sm:gap-4 sm:grid-cols-2'>
-        <div>
-          <ul class='text-black font-medium'>
-            <li class='mb-4'>
-              <a
-                href='https://gdg.community.dev/gdg-sucre/'
-                class='underline hover:text-white'
-                target='_blank'
-              >
-                Comunidad GDG Sucre
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://www.gdgsucre.com/eventos-pasados/'
-                class='underline hover:text-white'
-                target='_blank'
-              >
-                Eventos Pasados
-              </a>
-            </li>
-          </ul>
+  <div class='bg-gray'>
+    <div class='mx-auto w-full max-w-screen-lg p-4 py-6 lg:py-8'>
+      <div class='relative space-y-4'>
+        <div class='flex mb-6 md:mb-0 gap-2'>
+          <a href='' class='flex items-center space-x-6' target='_blank'>
+            <div class='w-12'>
+              <GdgLogo />
+            </div>
+            <span class='font-medium'> Google Developers Group Sucre</span>
+          </a>
         </div>
-        <div>
-          <ul class='text-black font-medium'>
-            <li class='mb-4'>
-              <a
-                href='https://github.com/gdgsucre'
-                class='underline hover:text-white'
-                target='_blank'
-              >
-                Github
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://discord.gg/rwcakVfyrx'
-                class='underline hover:text-white'
-                target='_blank'
-              >
-                Discord
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
 
-      <div class='sm:flex sm:items-center sm:justify-between'>
-        <SocialIcons />
+        <div class='max-w-lg grid grid-cols-2 gap-8 sm:gap-4 sm:grid-cols-2'>
+          <div>
+            <ul class='text-black font-medium'>
+              <li class='mb-4'>
+                <a
+                  href='https://gdg.community.dev/gdg-sucre/'
+                  class='underline hover:text-white'
+                  target='_blank'
+                >
+                  Comunidad GDG Sucre
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://www.gdgsucre.com/eventos-pasados/'
+                  class='underline hover:text-white'
+                  target='_blank'
+                >
+                  Eventos Pasados
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class='text-black font-medium'>
+              <li class='mb-4'>
+                <a
+                  href='https://github.com/gdgsucre'
+                  class='underline hover:text-white'
+                  target='_blank'
+                >
+                  Github
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://discord.gg/rwcakVfyrx'
+                  class='underline hover:text-white'
+                  target='_blank'
+                >
+                  Discord
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class='sm:flex sm:items-center sm:justify-between'>
+          <SocialIcons />
+        </div>
       </div>
     </div>
   </div>
-</div>
 </footer>
