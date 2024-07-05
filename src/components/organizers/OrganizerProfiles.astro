@@ -1,0 +1,20 @@
+---
+import { OrganizerCard } from '../../components/organizers/OrganizerCard';
+import SectionTitle from '../SectionTitle.astro';
+import organizersData from '../../data/organizers.json';
+---
+
+<SectionTitle id='organizadores' title='Organizadores' />
+<div class="container mx-auto px-4 py-8">
+  <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-24">
+    {
+      organizersData
+        .sort((a, b) => b.type - a.type)
+        .map((organizerProps, i) => (
+          <div class="flex justify-center">
+            <OrganizerCard client:visible id={i.toString()} {...organizerProps} />
+          </div>
+        ))
+    }
+  </div>
+</div>
