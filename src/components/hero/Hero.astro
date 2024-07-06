@@ -28,21 +28,25 @@ const getRemainingTime = () => {
       </a>
     </div>
 
-    <div
-      class='pt-8 lg:pt-12 flex items-center justify-center flex-col text-center gap-y-4 sm:gap-y-8'
-    >
-      <div
-        class='text-xl md:text-2xl text-left md:text-center font-medium text-black leading-8 md:leading-10'
-      >
-        <p>
-          📅 Sábado 13 de julio <br class='md:hidden' /> 🕑 08:30 hrs.
-        </p>
-        <p class='pl-8 -indent-8'>
-          📍 CAINCO Chuquisaca <br class='md:hidden' /> Calle España #64 <br />
-        </p>
+<div class='pt-4 lg:pt-6 flex items-center justify-center flex-col text-center'>
+  <div class='text-xl md:text-2xl font-medium text-black leading-8 md:leading-10 flex flex-col md:flex-row justify-between items-start md:items-center'>
+    <div class='p-2 sm:p-2 md:p-6 lg:p-8 text-left flex items-start'>
+      <img src="./Calendar.svg" alt="" class='mr-2 mt-2'>
+      <div>
+        <span class='block'>Sábado 13 de julio</span>
+        <span class='block'>08:30 hrs.</span>
       </div>
-
-      <Timer initialTime={getRemainingTime()} targetDate={targetDate} client:load />
     </div>
+
+    <div class='p-2 sm:p-2 md:p-6 lg:p-8 text-left flex items-start'>
+      <img src="./LocationMarker.svg" alt="" class='mr-2 mt-2'>
+      <div>
+        <span class='block'>CAINCO Chuquisaca</span>
+        <span class='block'>Calle España #64</span>
+      </div>
+    </div>
+  </div>
+<Timer initialTime={getRemainingTime()} targetDate={targetDate} client:load />
+</div>
   </section>
 </hero>
