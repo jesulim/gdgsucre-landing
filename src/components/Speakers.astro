@@ -1,58 +1,31 @@
 ---
 import SectionTitle from './SectionTitle.astro'
-
-const speakers = [
-  {
-    img: '/speakers/maureen.webp',
-    name: 'Maureen Barahona 🇭🇳',
-    link: 'https://www.linkedin.com/in/maureen-barahona/'
-  },
-  {
-    img: '/speakers/mariangela.webp',
-    name: 'Mariangela Pacheco 🇵🇪',
-    link: 'https://www.linkedin.com/in/mariangelapacheco97/'
-  },
-  {
-    img: '/speakers/wilma.webp',
-    name: 'Wilma Paca 🇧🇴',
-    link: 'https://www.linkedin.com/in/wilma-paca-patzi-32b58478'
-  },
-  {
-    img: '/speakers/adriana.webp',
-    name: 'Adriana Calvo 🇧🇴',
-    link: 'https://www.linkedin.com/in/adriana-calvo-bueno-60b542199/'
-  },
-  {
-    img: '/speakers/andrea.webp',
-    name: 'Andrea Cornejo 🇧🇴',
-    link: 'https://www.linkedin.com/in/andrea-cornejo-m/'
-  }
-]
+import speakersData from '../data/speakers.json'
 ---
 
 <SectionTitle id='speakers' title='Speakers' />
 <div
-  class='max-w-screen-md mx-auto grid grid-cols-2 md:grid-cols-3 gap-8 px-4 my-8'
+  class='max-w-screen-lg mx-auto grid grid-cols-2 md:grid-cols-3 gap-8 px-4 my-8'
 >
   {
-    speakers.map(({ img, name, link }) => (
-      <div class='space-y-2'>
-        <a href={link} target='_blank'>
-          <img
-            src={img}
-            alt={name}
-            class='mx-auto object-cover rounded-full border-black border-2 border-r-[6px] ring-teal hover:ring-2'
-          />
+    speakersData.map(({ img, name, location }) => (
+      <div class='p-4 border-2 border-black bg-white rounded-3xl flex flex-col space-y-4'>
+        <img
+          src={img}
+          alt={name}
+          class='mx-auto w-48'
+        />
 
-          <div class='mx-auto text-center w-max'>
-            <span
-              data-atropos-offset='3'
-              class='font-emoji text-black sm:text-md md:text-xl'
-            >
-              {name}
-            </span>
-          </div>
-        </a>
+        <div class='mx-auto text-center'>
+          <span
+            class='text-black font-semibold text-base sm:text-lg md:text-2xl'
+          >
+            {name}
+          </span>
+          <p class='font-emoji text-black text-sm sm:text-md md:text-xl'>
+            {location}
+          </p>
+        </div>
       </div>
     ))
   }

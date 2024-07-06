@@ -1,0 +1,22 @@
+[
+    {
+        "img": "/speakers/Lesly Zerna.svg",
+        "name": "Lesly Zerna",
+        "location": "🇧🇴 Sucre, Bolivia"
+    },
+    {
+        "img": "/speakers/Angel Flores.svg",
+        "name": "Angel Flores",
+        "location": "🇧🇴 Santa Cruz, Bolivia"
+    },
+    {
+        "img": "/speakers/Ariel Ortuño.svg",
+        "name": "Ariel Ortuño",
+        "location": "🇧🇴 Santa Cruz, Bolivia"
+    },
+    {
+        "img": "/speakers/Fernando Silva.svg",
+        "name": "Fernando Silva",
+        "location": "🇧🇴 Santa Cruz, Bolivia"
+    }
+]
