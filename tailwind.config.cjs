@@ -16,7 +16,15 @@ module.exports = {
         white: '#FFFFFF',
         gray: '#EEEEEE',
         black: '#202124',
-        teal: '#00DB9F'
+        teal: '#00DB9F',
+        light: {
+          background: '#EEEEEE',
+          text: '#333333',
+        },
+        dark: {
+          background: '#202124',
+          text: '#e2e8f0',
+        },
       },
       fontFamily: {
         google: ['Prompt', 'sans-serif'],
