@@ -1,9 +1,10 @@
 ---
-import Facebook from './icons/social/Facebook.svg?url'
-import Twitter from './icons/social/Twitter.svg?url'
-import Instagram from './icons/social/Instagram.svg?url'
-import Linkedin from './icons/social/Linkedin.svg?url'
-import Tiktok from './icons/social/Tiktok.svg?url'
+import Facebook from './icons/social/Facebook.svg'
+import Twitter from './icons/social/Twitter.svg'
+import Instagram from './icons/social/Instagram.svg'
+import Linkedin from './icons/social/Linkedin.svg'
+import Tiktok from './icons/social/Tiktok.svg'
+import Discord from './icons/social/Discord.svg'
 
 const socialIcons = [
   {
@@ -30,19 +31,20 @@ const socialIcons = [
     icon: Linkedin,
     link: 'https://www.linkedin.com/company/gdgsucre',
     alt: 'Linkedin'
+  },
+  {
+    icon: Discord,
+    link: 'https://discord.gg/vcmjfcA7',
+    alt: 'Discord'
   }
 ]
 ---
 
-<div class='flex mt-4 items-center space-x-10 sm:justify-center sm:mt-0'>
+<div class='flex items-center space-x-8'>
   {
     socialIcons.map(({ icon, link, alt }) => (
-      <a
-        class='fill-white'
-        href={link}
-        target='_blank'
-      >
-        <img src={icon} alt={alt} width='24' height='24' />
+      <a class='fill-white' href={link} target='_blank'>
+        <img src={icon.src} alt={alt} width='24' height='24' />
       </a>
     ))
   }
