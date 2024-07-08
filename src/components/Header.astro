@@ -1,15 +1,24 @@
-<nav class='fixed w-full z-20 top-0 left-0 border-b border-black bg-gray'>
+---
+import { ThemeToggle } from '../components/themes/ThemeToggle'
+import Logo from '../assets/IOExtended.astro'
+import LogoShort from '../assets/IOExtended-short.astro'
+---
+
+<nav
+  class='fixed w-full z-20 top-0 left-0 border-b border-black bg-gray dark:bg-black dark:text-white dark:border-white'
+>
   <div class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
-    <div class='w-64'>
-      <a href='#' aria-current='page'>
-        <picture>
-          <source srcset='./IOExtended-short.svg' type='image/svg+xml' media='(max-width: 767px)' />
-          <source srcset='./IOExtended.svg' type='image/svg+xml' media='(min-width: 768px)' />
-          <img alt='I/O Extended logo' class='w-fit h-auto' />
-        </picture>
-      </a>
-    </div>
-    <div class='flex md:order-2 lg:hidden'>
+    <a href='#' aria-current='page'>
+      <div class='block md:hidden'>
+        <LogoShort />
+      </div>
+      <div class='hidden md:block'>
+        <Logo />
+      </div>
+    </a>
+
+    <div class='flex md:order-2 md:hidden'>
+      <ThemeToggle client:load />
       <button
         data-collapse-toggle='navbar-sticky'
         type='button'
@@ -39,7 +48,7 @@
       id='navbar-sticky'
     >
       <ul
-        class='flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-white/90 md:bg-transparent border-gray-700'
+        class='flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-white dark:bg-black md:bg-transparent border-gray-700'
       >
         <!-- <li>
           <a
@@ -77,15 +86,18 @@
             class='block hover:text-blue py-2 pl-3 pr-4 text-black bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500'
             >Equipo</a
           >
-        </li> -->
+        -->
         <li>
           <a
             href='/pastEvents/'
-            class='block hover:text-red py-2 pl-3 pr-4 text-black bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500'
+            class='block hover:text-red py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500'
             >Eventos Pasados</a
           >
         </li>
       </ul>
+      <div class='h-8 hidden md:block'>
+        <ThemeToggle client:load />
+      </div>
     </div>
   </div>
 </nav>
