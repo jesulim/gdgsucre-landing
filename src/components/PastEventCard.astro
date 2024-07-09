@@ -12,12 +12,14 @@ const { title, mobileScreenshot, desktopScreenshot, href } = Astro.props
       <source
         srcset={mobileScreenshot}
         type='image/webp'
-        media='(max-width: 1023px)'
+        media='(max-width: 1024px)'
+        media='(max-height: 768px)'
       />
       <source
         srcset={desktopScreenshot}
         type='image/webp'
-        media='(min-width: 1024px)'
+        media='(max-width: 1920px)'
+        media='(max-height: 1080px)'
       />
 
       <img src='' width='100%' class='mx-auto rounded-md' />
