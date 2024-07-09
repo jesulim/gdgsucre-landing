@@ -1,4 +1,5 @@
 ---
+import { ThemeToggle } from '../components/themes/ThemeToggle'
 import GdgSucreLogo from './logos/GDGSucreLogo.astro'
 import SocialIcons from './SocialIcons.astro'
 ---
@@ -6,10 +7,11 @@ import SocialIcons from './SocialIcons.astro'
 <footer class='relative pt-4 md:pt-8 bg-gray dark:bg-black'>
   <img
     src='https://io.google/2024/app/images/io24-see-you-next-year.svg'
-    class='w-full object-cover'
+    class='w-full object-cover dark:hidden'
   />
+  <img src="https://io.google/2024/app/images/io24-see-you-next-year-dark.svg" class="w-full object-cover hidden dark:block" />
 
-  <div class='bg-gray dark:bg-black'>
+  <div class='dark:bg-black dark:text-white dark:border-white'>
     <div class='mx-auto max-w-screen-2xl p-4 pt-8 pb-16 lg:py-12'>
       <div class='flex space-y-4 flex-col lg:flex-row lg:space-y-0 font-medium'>
         <GdgSucreLogo />
