@@ -3,7 +3,6 @@ import GdgSucreLogo from './logos/GDGSucreLogo.astro'
 import SocialIcons from './SocialIcons.astro'
 ---
 
-<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 <footer class='relative pt-4 md:pt-8 bg-gray'>
   <img
     src='https://io.google/2024/app/images/io24-see-you-next-year.svg'
@@ -11,16 +10,24 @@ import SocialIcons from './SocialIcons.astro'
   />
 
   <div class='bg-gray'>
-    <div class='mx-auto max-w-screen-2xl p-4 py-6 lg:py-8'>
-      <div class='flex space-y-4 flex-col lg:flex-row lg:space-y-0 lg:text-lg font-medium'>
+    <div class='mx-auto max-w-screen-2xl p-4 pt-8 pb-16 lg:py-12'>
+      <div class='flex space-y-4 flex-col lg:flex-row lg:space-y-0 font-medium'>
         <GdgSucreLogo />
 
         <a
           href='https://www.gdgsucre.com/eventos-pasados/'
           target='_blank'
-          class='hover:text-blue lg:ml-8 mr-auto'
+          class='lg:mx-8 hover:text-blue'
         >
           Eventos Pasados
+        </a>
+
+        <a
+          href='https://developers.google.com/community-guidelines'
+          target='_blank'
+          class='hover:text-blue lg:mr-auto'
+        >
+          Lineamientos de la comunidad
         </a>
 
         <SocialIcons />
