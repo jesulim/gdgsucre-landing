@@ -2,66 +2,79 @@
     {
         "img": "/speakers/Angel Flores.svg",
         "name": "Angel Flores",
-        "location": "🇧🇴 Cochabamba, Bolivia"
+        "location": "Cochabamba, Bolivia",
+        "flag": "/Bolivia Flag 2.svg"
     },
     {
         "img": "/speakers/Ariel Colque.svg",
         "name": "Ariel Colque",
-        "location": "🇧🇴 La Paz, Bolivia"
+        "location": "La Paz, Bolivia",
+        "flag": "/Bolivia Flag 2.svg"
     },
     {
         "img": "/speakers/Ariel Ortuño.svg",
         "name": "Ariel Ortuño",
-        "location": "🇧🇴 Santa Cruz, Bolivia"
+        "location": "Santa Cruz, Bolivia",
+        "flag": "/Bolivia Flag 2.svg"
     },
     {
         "img": "/speakers/Fernando Silva.svg",
         "name": "Fernando Silva",
-        "location": "🇧🇴 La Paz, Bolivia"
+        "location": "La Paz, Bolivia",
+        "flag": "/Bolivia Flag 2.svg"
     },
     {
         "img": "/speakers/Gabriela Torrico.svg",
         "name": "Gabriela Torrico",
-        "location": "🇧🇴 Cochabamba, Bolivia"
+        "location": "Cochabamba, Bolivia",
+        "flag": "/Bolivia Flag 2.svg"
     },
     {
         "img": "/speakers/Gustavo Pacchi.svg",
         "name": "Gustavo Pacchi",
-        "location": "🇧🇴 Cochabamba, Bolivia"
+        "location": "Cochabamba, Bolivia",
+        "flag": "/Bolivia Flag 2.svg"
     },
     {
         "img": "/speakers/Lesly Zerna.svg",
         "name": "Lesly Zerna",
-        "location": "🇧🇴 Sucre, Bolivia"
+        "location": "Sucre, Bolivia",
+        "flag": "/Bolivia Flag 2.svg"
     },
     {
         "img": "/speakers/Melvy Ancieta.svg",
         "name": "Melvy Ancieta",
-        "location": "🇧🇴 Cochabamba, Bolivia"
+        "location": "Cochabamba, Bolivia",
+        "flag": "/Bolivia Flag 2.svg"
     },
     {
         "img": "/speakers/Paolo Pinto.svg",
         "name": "Paolo Pinto",
-        "location": "🇧🇴 El Alto, Bolivia"
+        "location": "El Alto, Bolivia",
+        "flag": "/Bolivia Flag 2.svg"
     },
     {
         "img": "/speakers/Pedro Anze.svg",
         "name": "Pedro Anze",
-        "location": "🇧🇴 Tarija, Bolivia"
+        "location": "Tarija, Bolivia",
+        "flag": "/Bolivia Flag 2.svg"
     },
     {
         "img": "/speakers/Rodrigo Torrico.svg",
         "name": "Rodrigo Torrico",
-        "location": "🇧🇴 Cochabamba, Bolivia"
+        "location": "Cochabamba, Bolivia",
+        "flag": "/Bolivia Flag 2.svg"
     },
     {
         "img": "/speakers/Ronald Chipana.svg",
         "name": "Ronald Chipana",
-        "location": "🇧🇴 Cochabamba, Bolivia"
+        "location": "Cochabamba, Bolivia",
+        "flag": "/Bolivia Flag 2.svg"
     },
     {
         "img": "/speakers/Sergio Fernandez.svg",
         "name": "Sergio Fernandez",
-        "location": "🇧🇴 La Paz, Bolivia"
+        "location": "La Paz, Bolivia",
+        "flag": "/Bolivia Flag 2.svg"
     }
 ]
