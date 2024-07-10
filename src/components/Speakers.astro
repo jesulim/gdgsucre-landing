@@ -1,6 +1,7 @@
 ---
 import SectionTitle from './SectionTitle.astro'
 import speakersData from '../data/speakers.json'
+import { Speaker } from './Speakers.jsx'
 ---
 
 <SectionTitle id='speakers' title='Speakers' />
@@ -8,22 +9,8 @@ import speakersData from '../data/speakers.json'
   class='max-w-screen-lg mx-auto grid grid-cols-2 md:grid-cols-3 gap-8 px-4 my-8'
 >
   {
-    speakersData.map(({ img, name, location, flag }) => (
-      <div class='p-4 border-2 border-black bg-white rounded-3xl flex flex-col space-y-4 dark:border-white dark:bg-black'>
-        <img src={img} alt={name} class='mx-auto w-48' />
-
-        <div class='mx-auto text-center'>
-          <span class='text-black font-semibold text-base sm:text-lg md:text-2xl  dark:text-white'>
-            {name}
-          </span>
-          <div class='flex flex-row items-center'>
-            <img src={flag} class='pr-2 w-7 lg:w-8'/>
-            <p class='text-black text-sm sm:text-md md:text-xl dark:text-white'>
-              {location}
-            </p>
-          </div>
-        </div>
-      </div>
+    speakersData.map(({ img, name, location, flag }, i) => (
+      <Speaker id={i} img={img} name={name} location={location} flag={flag} client:visible />
     ))
   }
 </div>
