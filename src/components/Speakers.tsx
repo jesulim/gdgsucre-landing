@@ -21,7 +21,7 @@ export const Speaker = ({ id, img, name, location, flag }: Props) => {
     >
       <div
         key={id}
-        className='p-4 h-[15rem] md:h-[22rem] lg:h-80 border-2 border-black bg-white rounded-3xl flex flex-col space-y-4 dark:border-white dark:bg-black'
+        className='p-4 border-2 border-black bg-white rounded-3xl flex flex-col space-y-4 h-full dark:border-white dark:bg-black'
       >
         <img
           src={img}
@@ -39,7 +39,7 @@ export const Speaker = ({ id, img, name, location, flag }: Props) => {
             {name}
           </span>
           <div className='flex flex-row items-center justify-center' data-atropos-offset='0'>
-            <img src={flag} className='pr-2 w-7 lg:w-8' decoding='async' loading='lazy'/>
+            <img src={flag} alt='country flag' className='pr-2 w-7 lg:w-8' decoding='async' loading='lazy'/>
             <p
               className='text-black text-sm sm:text-md md:text-xl dark:text-white'
             >
