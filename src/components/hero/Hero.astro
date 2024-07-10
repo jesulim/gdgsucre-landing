@@ -14,9 +14,8 @@ const getRemainingTime = () => {
 
 <hero>
   <section class='mt-20 mb-12 mx-4 font-google'>
-    <div class='flex place-content-center md:mt-40'>
-      <!-- <img src='./IOExtended.svg' width='880' height='574' loading='eager' decoding='async' /> -->
-        <IOExtendedLogo/>
+    <div class='flex place-content-center pt-8 lg:mt-40'>
+      <IOExtendedLogo />
     </div>
     <h2 class='text-center font-google font-medium text-2xl md:text-4xl lg:text-5xl mb-8 md:mb-12'>
       Sucre 2024
@@ -32,25 +31,27 @@ const getRemainingTime = () => {
       </a>
     </div>
 
-<div class='pt-4 lg:pt-6 flex items-center justify-center flex-col text-center '>
-  <div class='text-xl md:text-2xl font-medium text-black leading-8 md:leading-10 flex flex-col md:flex-row justify-between items-start md:items-center dark:text-white'>
-    <div class='p-2 sm:p-2 md:p-6 lg:p-8 text-left flex items-start'>
-      <div class='mr-2 mt-2'><CalendarLogo/></div>
-      <div>
-        <span class='block'>Sábado 13 de julio</span>
-        <span class='block'>08:30 hrs.</span>
-      </div>
-    </div>
+    <div class='pt-4 lg:pt-6 flex items-center justify-center flex-col text-center'>
+      <div
+        class='my-4 text-xl md:text-2xl font-medium text-black leading-8 md:leading-10 flex flex-col md:flex-row justify-between items-start md:items-center dark:text-white'
+      >
+        <div class='p-2 sm:p-2 md:p-6 lg:p-8 text-left flex items-start'>
+          <div class='mr-2 mt-2'><CalendarLogo /></div>
+          <div>
+            <span class='block'>Sábado 13 de julio</span>
+            <span class='block'>08:30 hrs.</span>
+          </div>
+        </div>
 
-    <div class='p-2 sm:p-2 md:p-6 lg:p-8 text-left flex items-start'>
-      <div class='mr-2 mt-2'><LocationMarker/></div>
-      <div>
-        <span class='block'>CAINCO Chuquisaca</span>
-        <span class='block'>Calle España #64</span>
+        <div class='p-2 sm:p-2 md:p-6 lg:p-8 text-left flex items-start'>
+          <div class='mr-2 mt-2'><LocationMarker /></div>
+          <div>
+            <span class='block'>CAINCO Chuquisaca</span>
+            <span class='block'>Calle España #64</span>
+          </div>
+        </div>
       </div>
+      <Timer initialTime={getRemainingTime()} targetDate={targetDate} client:load />
     </div>
-  </div>
-<Timer initialTime={getRemainingTime()} targetDate={targetDate} client:load />
-</div>
   </section>
 </hero>
