@@ -1,5 +1,12 @@
 [
     {
+        "id": "",
+        "type": 4,
+        "name": "Armando Lopez",
+        "photoUrl": "organizers/armando_lopez.webp",
+        "socialNetworks": []
+    },
+    {
         "id": "9ChU5IOWay4VyYrO9vUR",
         "type": 4,
         "name": "Andrea Cornejo",
@@ -16,30 +23,6 @@
             {
                 "type": "twitter",
                 "url": "https://twitter.com/andreacoding"
-            }
-        ]
-    },
-    {
-        "id": "qTprRHLN5Rk07sORYLCl",
-        "type": 3,
-        "name": "Sebastian Gonzales",
-        "photoUrl": "organizers/sebastian_gonzales.webp",
-        "socialNetworks": [
-            {
-                "type": "linkedin",
-                "url": "https://www.linkedin.com/in/sebastiangonzalestito/"
-            },
-            {
-                "type": "github",
-                "url": "https://github.com/Sebas21gt"
-            },
-            {
-                "type": "facebook",
-                "url": "https://www.facebook.com/sebastian.sebas.tito"
-            },
-            {
-                "type": "instagram",
-                "url": "https://instagram.com/sebas21gt"
             }
         ]
     },
@@ -76,29 +59,6 @@
         ]
     },
     {
-        "id": "OaQceN08HTK3UvHbuaRQ",
-        "type": 3,
-        "name": "Ivan Martinez",
-        "photoUrl": "organizers/ivan_martinez.webp",
-        "socialNetworks": [
-            {
-                "type": "linkedin",
-                "url": "https://www.linkedin.com/in/jesulim/"
-            },
-            {
-                "type": "github",
-                "url": "https://github.com/jesulim"
-            }
-        ]
-    },
-    {
-        "id": "",
-        "type": 3,
-        "name": "Armando Lopez",
-        "photoUrl": "organizers/armando_lopez.webp",
-        "socialNetworks": []
-    },
-    {
         "id": "",
         "type": 3,
         "name": "Stefany Reynaga",
@@ -120,6 +80,30 @@
         "socialNetworks": []
     },
     {
+        "id": "qTprRHLN5Rk07sORYLCl",
+        "type": 3,
+        "name": "Sebastian Gonzales",
+        "photoUrl": "organizers/sebastian_gonzales.webp",
+        "socialNetworks": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/sebastiangonzalestito/"
+            },
+            {
+                "type": "github",
+                "url": "https://github.com/Sebas21gt"
+            },
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/sebastian.sebas.tito"
+            },
+            {
+                "type": "instagram",
+                "url": "https://instagram.com/sebas21gt"
+            }
+        ]
+    },
+    {
         "id": "",
         "type": 3,
         "name": "Franklin Castillo",
@@ -127,8 +111,24 @@
         "socialNetworks": []
     },
     {
+        "id": "OaQceN08HTK3UvHbuaRQ",
+        "type": 3,
+        "name": "Ivan Martinez",
+        "photoUrl": "organizers/ivan_martinez.webp",
+        "socialNetworks": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/jesulim/"
+            },
+            {
+                "type": "github",
+                "url": "https://github.com/jesulim"
+            }
+        ]
+    },
+    {
         "id": "xEdkhdMlR9GeEiVzleXH",
-        "type": 2,
+        "type": 3,
         "name": "Valentina Salinas",
         "photoUrl": "organizers/valentina_salinas.webp",
         "socialNetworks": [
@@ -219,18 +219,6 @@
         ]
     },
     {
-        "id": "LIJ0eIuOnTSX1lefxi1I",
-        "type": 2,
-        "name": "Jhamil Crespo",
-        "photoUrl": "organizers/jhamil_crespo.webp",
-        "socialNetworks": [
-            {
-                "type": "instagram",
-                "url": "https://instagram.com/jhamil_c_rejas"
-            }
-        ]
-    },
-    {
         "id": "909a0Q1yTFTQFEYIaL6G",
         "type": 2,
         "name": "Oscar Delgadillo",
@@ -255,6 +243,32 @@
         "type": 2,
         "name": "Samantha Hinojosa",
         "photoUrl": "organizers/samantha_hinojosa.webp",
+        "socialNetworks": []
+    },
+    {
+        "id": "LIJ0eIuOnTSX1lefxi1I",
+        "type": 2,
+        "name": "Jhamil Crespo",
+        "photoUrl": "organizers/jhamil_crespo.webp",
+        "socialNetworks": [
+            {
+                "type": "instagram",
+                "url": "https://instagram.com/jhamil_c_rejas"
+            }
+        ]
+    },
+    {
+        "id": "",
+        "type": 2,
+        "name": "Oscar Taboada",
+        "photoUrl": "organizers/oscar_taboada.webp",
+        "socialNetworks": []
+    },
+    {
+        "id": "",
+        "type": 2,
+        "name": "Gabriela Choquevillca",
+        "photoUrl": "organizers/gabriela_choquevillca.webp",
         "socialNetworks": []
     },
     {
@@ -302,6 +316,13 @@
     {
         "id": "",
         "type": 1,
+        "name": "Nicolás Zelaya",
+        "photoUrl": "organizers/nicolas_zelaya.webp",
+        "socialNetworks": []
+    },
+    {
+        "id": "",
+        "type": 1,
         "name": "Danner Aly",
         "photoUrl": "organizers/danner_aly.webp",
         "socialNetworks": []
@@ -311,13 +332,6 @@
         "type": 1,
         "name": "Emily Peñaranda",
         "photoUrl": "organizers/emily_penaranda.webp",
-        "socialNetworks": []
-    },
-    {
-        "id": "",
-        "type": 1,
-        "name": "Gabriela Choquevillca",
-        "photoUrl": "organizers/gabriela_choquevillca.webp",
         "socialNetworks": []
     },
     {
@@ -358,22 +372,8 @@
     {
         "id": "",
         "type": 1,
-        "name": "Nicolás Zelaya",
-        "photoUrl": "organizers/nicolas_zelaya.webp",
-        "socialNetworks": []
-    },
-    {
-        "id": "",
-        "type": 1,
         "name": "Noelia Duran",
         "photoUrl": "organizers/noelia_duran.webp",
-        "socialNetworks": []
-    },
-    {
-        "id": "",
-        "type": 1,
-        "name": "Oscar Taboada",
-        "photoUrl": "organizers/oscar_taboada.webp",
         "socialNetworks": []
     },
     {
