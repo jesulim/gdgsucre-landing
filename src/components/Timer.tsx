@@ -61,7 +61,7 @@ export const Timer = ({ initialTime, targetDate }) => {
     <section className='flex justify-center'>
       {timeUnits.map(({ label, value }) => (
         <div className='w-24 md:w-32 lg:w-36' key={label}>
-          <div className='h-16 overflow-y-hidden text-blue font-sofia font-black leading-[4rem] text-6xl lg:text-7xl'>
+          <div className='h-16 overflow-y-hidden bg-transparent font-sofia font-black leading-[4rem] text-6xl lg:text-7xl'>
             <AnimatedValue value={value} />
           </div>
 

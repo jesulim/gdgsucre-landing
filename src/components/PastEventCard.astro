@@ -4,7 +4,7 @@ const { title, mobileScreenshot, desktopScreenshot, href } = Astro.props
 
 <div class='flex flex-col rounded-xl h-full bg-gray-700 p-2 sm:p-6'>
   <a href={href}>
-    <h3 class='text-white font-semibold text-2xl mb-4'>
+    <h3 class='text-black dark:text-white font-semibold text-2xl mb-4'>
       {title}
     </h3>
 
@@ -12,12 +12,14 @@ const { title, mobileScreenshot, desktopScreenshot, href } = Astro.props
       <source
         srcset={mobileScreenshot}
         type='image/webp'
-        media='(max-width: 1023px)'
+        media='(max-width: 1024px)'
+        media='(max-height: 768px)'
       />
       <source
         srcset={desktopScreenshot}
         type='image/webp'
-        media='(min-width: 1024px)'
+        media='(max-width: 1920px)'
+        media='(max-height: 1080px)'
       />
 
       <img src='' width='100%' class='mx-auto rounded-md' />

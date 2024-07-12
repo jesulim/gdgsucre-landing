@@ -2,45 +2,99 @@
 import PastEvent from '@components/PastEventCard.astro'
 import 'swiper/css'
 import 'swiper/css/effect-cards'
+import 'swiper/css/pagination'
+import PastEventsHeader from '@components/PastEventsHeader.astro'
 ---
+<div class='absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black dark:text-white bg-[linear-gradient(to_right,#eeeeee_1px,transparent_1px),linear-gradient(to_bottom,#eeeeee_1px,transparent_1px)] bg-[size:4rem_4rem] dark:bg-[linear-gradient(to_right,#444,transparent_1px),linear-gradient(to_bottom,#444,transparent_1px)]'>
+  <PastEventsHeader/>
+  <div class='min-h-screen mx-auto bg-gray-800 pt-8 lg:pt-4 space-y-12'>
+    <div class='xl:pb-16 lg:pb-14 md:pb-32 sm:pb-52'></div>
+    <div class='swiper p-4 md:p-8 lg:p-10'>
+      <div class='swiper-wrapper space-x-4 md:space-x-6 lg:space-x-8 pb-8'>
+        <div class='swiper-slide'>
+          <PastEvent
+            title='I/O Extended Sucre 2024'
+            desktopScreenshot='/screenshots/io-extended-2024-desktop.webp'
+            mobileScreenshot='/screenshots/io-extended-2024-mobile.webp'
+            href='https://gdgsucre.com/'
+          />
+        </div>
 
-<div class='h-screen mx-auto bg-gray-800 pt-8 lg:pt-4 space-y-12'>
-  <h3 class='font-semibold mx-8 lg:mx-64 text-3xl md:text-4xl'>Eventos pasados</h3>
+        <div class='swiper-slide'>
+          <PastEvent
+            title='WTM 2024'
+            desktopScreenshot='/screenshots/Women-Techmakers-2024-desktop.webp'
+            mobileScreenshot='/screenshots/Women-Techmakers-2024-mobile.webp'
+            href='https://iwd2024.gdgsucre.com/'
+          />
+        </div>
 
-  <div class='swiper p-16'>
-    <div class='swiper-wrapper space-x-8'>
-      <div class='swiper-slide'>
-        <PastEvent
-          title='I/O Extended Sucre 2023'
-          desktopScreenshot='/screenshots/io-extended-2023-desktop.webp'
-          mobileScreenshot='/screenshots/io-extended-2023-mobile.webp'
-          href='https://googleio2023.gdgsucre.com/'
-        />
+        <div class='swiper-slide'>
+          <PastEvent
+            title='DevFest Sucre 2023'
+            desktopScreenshot='/screenshots/devfest-2023-desktop.webp'
+            mobileScreenshot='/screenshots/devfest-2023-mobile.webp'
+            href='https://devfest2023.gdgsucre.com/'
+          />
+        </div>
+
+        <div class='swiper-slide'>
+          <PastEvent
+            title='I/O Extended Sucre 2023'
+            desktopScreenshot='/screenshots/io-extended-2023-desktop.webp'
+            mobileScreenshot='/screenshots/io-extended-2023-mobile.webp'
+            href='https://googleio2023.gdgsucre.com/'
+          />
+        </div>
       </div>
-
-      <div class='swiper-slide'>
-        <PastEvent
-          title='DevFest Sucre 2023'
-          desktopScreenshot='/screenshots/devfest-2023-desktop.webp'
-          mobileScreenshot='/screenshots/devfest-2023-mobile.webp'
-          href='https://gdgsucre.com/'
-        />
-      </div>
+      <div class="swiper-pagination"></div>
     </div>
 
     <script>
-      import Swiper from 'swiper/bundle'
+      import Swiper from 'swiper/bundle';      
 
       new Swiper('.swiper', {
+        effect: 'coverflow',
+        coverflowEffect: {
+          rotate: 20,
+          stretch: 0,
+          depth: 300,
+          modifier: 2,
+          slideShadows: true,
+        },
+        mousewheel: {
+          invert: true,
+        },
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false,
+        },
         autoplay: {
           delay: 4000,
-          disableOnInteraction: true
+          disableOnInteraction: true,
         },
         centeredSlides: true,
-        grabCursor: true,
-        slidesPerView: 2,
-        rewind: true
-      })
+        slidesPerView: 1,
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 2,
+          },
+        },
+        rewind: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '" style="background-color: #eb4934;"></span>';
+          }
+        },
+      });
     </script>
   </div>
 </div>

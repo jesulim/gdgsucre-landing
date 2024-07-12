@@ -1,78 +1,52 @@
 ---
-import AiMind from './logos/AiMind.astro'
-import GdgLogo from '../components/logos/GdgLogo.astro'
-// import WtmLogo from '../components/logos/WtLogo.astro'
+import Image from 'astro/components/Image.astro'
+
+import bicycle from '../assets/io24-bicycle.svg'
+import bicycleDark from '../assets/io24-bicycle-dark.svg'
+
+import GdgSucreLogo from './logos/GDGSucreLogo.astro'
 import SocialIcons from './SocialIcons.astro'
-//import WtmLogoBlack from './logos/WTM Logomark_Black.astro'
 ---
 
-<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-<footer class='bg-transparent relative'>
-  <div>
-    <img src="https://io.google/2024/app/images/io24-see-you-next-year.svg" class=" w-full object-cover">
-  </div>
-  <div class='bg-gray'>
-    <div class='mx-auto w-full max-w-screen-lg p-4 py-6 lg:py-8'>
-      <div class='relative space-y-4'>
-        <div class='flex mb-6 md:mb-0 gap-2'>
-          <a href='' class='flex items-center space-x-6' target='_blank'>
-            <div class='w-12'>
-              <GdgLogo />
-            </div>
-            <span class='font-medium'> Google Developers Group Sucre</span>
-          </a>
-        </div>
+<footer class='relative pt-4 md:pt-8 bg-gray dark:bg-black'>
+  <Image
+    width='1440'
+    height='319'
+    src={bicycle}
+    class='w-full object-cover dark:hidden'
+    alt='I/O 2024 bicycle'
+  />
 
-        <div class='max-w-lg grid grid-cols-2 gap-8 sm:gap-4 sm:grid-cols-2'>
-          <div>
-            <ul class='text-black font-medium'>
-              <li class='mb-4'>
-                <a
-                  href='https://gdg.community.dev/gdg-sucre/'
-                  class='underline hover:text-white'
-                  target='_blank'
-                >
-                  Comunidad GDG Sucre
-                </a>
-              </li>
-              <li>
-                <a
-                  href='https://www.gdgsucre.com/eventos-pasados/'
-                  class='underline hover:text-white'
-                  target='_blank'
-                >
-                  Eventos Pasados
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <ul class='text-black font-medium'>
-              <li class='mb-4'>
-                <a
-                  href='https://github.com/gdgsucre'
-                  class='underline hover:text-white'
-                  target='_blank'
-                >
-                  Github
-                </a>
-              </li>
-              <li>
-                <a
-                  href='https://discord.gg/rwcakVfyrx'
-                  class='underline hover:text-white'
-                  target='_blank'
-                >
-                  Discord
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <Image
+    width='1440'
+    height='319'
+    src={bicycleDark}
+    class='w-full object-cover hidden dark:block'
+    alt='I/O 2024 bicycle'
+  />
 
-        <div class='sm:flex sm:items-center sm:justify-between'>
-          <SocialIcons />
-        </div>
+  <div class='dark:bg-black dark:text-white dark:border-white'>
+    <div class='mx-auto max-w-screen-2xl p-4 pt-8 pb-16 lg:py-12'>
+      <div class='flex space-y-4 flex-col lg:flex-row lg:space-y-0 font-medium'>
+        <GdgSucreLogo />
+
+        <a
+          href='https://www.gdgsucre.com/eventos-pasados/'
+          target='_blank'
+          class='lg:mx-8 hover:text-blue'
+        >
+          Eventos Pasados
+        </a>
+
+        <a
+          href='https://developers.google.com/community-guidelines'
+          target='_blank'
+          class='hover:text-blue lg:mr-auto'
+        >
+          Lineamientos de la comunidad
+        </a>
+
+        <SocialIcons />
       </div>
     </div>
   </div>
