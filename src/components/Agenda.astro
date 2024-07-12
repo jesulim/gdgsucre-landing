@@ -4,25 +4,23 @@ import scheduleData from '../data/schedule.json'
 import ScheduleCard from './ScheduleCard.astro'
 ---
 
-<SectionTitle id='agenda' title='Agenda' />
-<div class='max-w-screen-lg mx-auto'>
-  <div
-    class='schedule flex flex-row overflow-scroll snap-x snap-mandatory text-white md:justify-center md:overflow-hidden'
-  >
-    <div class='snap-start px-2'>
-      <h4 class='font-bold text-3xl'>Charlas</h4>
-      {scheduleData.talks.map(talk => <ScheduleCard {...talk} type='talk' />)}
-    </div>
-    <!-- vertical divisor -->
-    <div class='border-l-2 border-gray-600 mt-12 mb-4'></div>
+<div class='bg-gray dark:bg-black'>
+  <SectionTitle id='agenda' title='Agenda' />
+  <div class='p-4'>
+    <div
+      class='schedule flex flex-row overflow-scroll snap-x snap-mandatory dark:text-white md:justify-center md:overflow-hidden'
+    >
+      <div class='snap-start'>
+        <h4 class='font-semibold text-2xl'>Mañana</h4>
+        {scheduleData.day.map(talk => <ScheduleCard {...talk} type='talk' />)}
+      </div>
+      <!-- vertical divisor -->
+      <div class='border-l-2 border-gray-600 mt-12 mx-4'></div>
 
-    <div class='snap-start px-2'>
-      <h4 class='font-bold text-3xl'>Talleres</h4>
-      {
-        scheduleData.workshops.map(workshop => (
-          <ScheduleCard {...workshop} type='workshop' />
-        ))
-      }
+      <div class='snap-start'>
+        <h4 class='font-semibold text-2xl'>Tarde</h4>
+        {scheduleData.afternoon.map(workshop => <ScheduleCard {...workshop} type='workshop' />)}
+      </div>
     </div>
   </div>
 </div>
