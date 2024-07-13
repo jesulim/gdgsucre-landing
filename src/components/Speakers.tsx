@@ -11,7 +11,8 @@ export interface Props {
 
 export const Speaker = ({ id, img, name, location, flag }: Props) => {
   return (
-    <Atropos className='atropos-banner'
+    <Atropos
+      className='atropos-banner'
       rotateTouch='scroll-y'
       activeOffset={50}
       rotateXMax={15}
@@ -38,11 +39,20 @@ export const Speaker = ({ id, img, name, location, flag }: Props) => {
           <span className='text-black font-semibold text-base sm:text-lg md:text-2xl  dark:text-white'>
             {name}
           </span>
-          <div className='flex flex-row items-center justify-center' data-atropos-offset='0'>
-            <img src={flag} alt='country flag' className='pr-2 w-7 lg:w-8' decoding='async' loading='lazy'/>
-            <p
-              className='text-black text-sm sm:text-md md:text-xl dark:text-white'
-            >
+          <div
+            className='flex flex-row items-center justify-center'
+            data-atropos-offset='0'
+          >
+            <img
+              width='30'
+              height='15'
+              src={flag}
+              alt='country flag'
+              className='pr-2 w-7 lg:w-8'
+              decoding='async'
+              loading='lazy'
+            />
+            <p className='text-black text-sm sm:text-md md:text-xl dark:text-white'>
               {location}
             </p>
           </div>
