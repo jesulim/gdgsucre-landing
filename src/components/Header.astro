@@ -18,7 +18,7 @@ import LogoShort from '../assets/IOExtended-short.astro'
     </a>
 
     <div class='flex md:order-2 md:hidden'>
-      <ThemeToggle client:load />
+      <ThemeToggle client:media='(max-width: 767px)' />
 
       <button
         data-collapse-toggle='navbar-sticky'
@@ -78,7 +78,7 @@ import LogoShort from '../assets/IOExtended-short.astro'
       </ul>
 
       <div class='h-8 hidden md:block'>
-        <ThemeToggle client:load />
+        <ThemeToggle client:media='(min-width: 768px)' />
       </div>
     </div>
   </div>

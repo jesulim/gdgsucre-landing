@@ -20,13 +20,21 @@ import aboutLogoDark from '../assets/io24-learning-cta-dark.webp'
     </div>
 
     <div class='hidden md:block md:ml-6 w-72'>
-      <Image width='300' height='300' class='block dark:hidden' src={aboutLogo} alt='Loguuu' />
+      <Image
+        width='300'
+        height='300'
+        class='block dark:hidden'
+        src={aboutLogo}
+        alt='Loguuu'
+        loading='eager'
+      />
       <Image
         width='300'
         height='300'
         class='hidden dark:block'
         src={aboutLogoDark}
         alt='Loguuu dark'
+        loading='eager'
       />
     </div>
   </div>
