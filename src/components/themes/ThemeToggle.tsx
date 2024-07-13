@@ -22,7 +22,7 @@ export const ThemeToggle = () => {
   }
 
   return (
-    <button onClick={handleToggle} className='px-2'>
+    <button onClick={handleToggle} className='px-2' title='toogle theme'>
       <svg
         width='32'
         height='32'

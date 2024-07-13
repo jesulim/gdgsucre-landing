@@ -1,14 +1,14 @@
 ---
 const { time, title, speaker } = Astro.props
-const textColor = !speaker ? 'text-green font-semibold' : ''
+const textColor = !speaker ? 'text-blue font-semibold' : ''
 ---
 
-<li class='p-2 w-80 md:w-96 lg:w-[31rem] list-none space-y-1'>
-  <p class='w-40 font-semibold font-sofia text-md text-green'>
+<div class='py-2 w-72 md:w-80 lg:w-[31rem] space-y-1'>
+  <p class='w-40 font-semibold font-sofia text-md text-blue'>
     {time}
   </p>
   <p class={`font-medium text-md lg:text-xl leading-5 ${textColor}`}>
     {title}
   </p>
   <p class='text-sm lg:text-md'>{speaker}</p>
-</li>
+</div>
