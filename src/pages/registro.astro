@@ -1,0 +1,47 @@
+---
+import Layout from '@layouts/Layout.astro'
+import RegisterTicket from '@components/register/RegisterTicket.astro'
+import RegisterForm from '@components/register/RegisterForm.astro'
+
+import { getAuth } from 'firebase-admin/auth'
+import { getFirestore } from 'firebase-admin/firestore'
+
+import { app } from '../firebase/server'
+
+const auth = getAuth(app)
+
+interface User {
+  firstname: string
+  lastname: string
+  email: string
+  phone: string
+}
+
+let register: User = {
+  firstname: '',
+  lastname: '',
+  email: '',
+  phone: ''
+}
+
+const sessionCookie = Astro.cookies.get('__session')?.value
+if (!sessionCookie) {
+  console.log(sessionCookie)
+  return Astro.redirect('/')
+}
+
+const user = await auth.verifySessionCookie(sessionCookie)
+
+if (user) {
+  const db = getFirestore(app).collection('registro-devfest2024')
+
+  const doc = await db.doc(user.uid).get()
+  register = doc.data() as User
+}
+---
+
+<Layout title='Registro'>
+  <div class='pt-32'>
+    {register ? <RegisterTicket {...register} /> : <RegisterForm {...user} />}
+  </div>
+</Layout>

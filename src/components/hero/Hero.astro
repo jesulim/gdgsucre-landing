@@ -5,6 +5,7 @@ import CalendarLogo from '../../../public/Calendar.astro'
 // import LocationMarker from '../../../public/LocationMarker.astro'
 
 import Logo from './Logo.astro'
+import RegisterButton from './RegisterButton.astro'
 
 const targetDate = new Date('2024-11-16T08:30:00-04:00')
 
@@ -12,6 +13,8 @@ const getRemainingTime = () => {
   const currentDate = Date.now()
   return targetDate.getTime() - currentDate
 }
+
+const sessionCookie = Astro.cookies.has('__session')
 ---
 
 <hero>
@@ -26,12 +29,18 @@ const getRemainingTime = () => {
     </h2>
 
     <div class='flex flex-col place-content-center'>
-      <a
-        href='#'
-        class='min-w-fit py-2 px-6 lg:py-4 lg:px-8 mx-auto rounded-full text-xl md:text-3xl text-center text-black dark:text-white border-2 border-black dark:border-white bg-gray dark:bg-black hover:bg-yellow dark:hover:bg-blue transition-all'
-      >
-        Regístrate
-      </a>
+      {
+        sessionCookie ? (
+          <a
+            href='/registro'
+            class='min-w-fit py-2 px-6 lg:py-4 lg:px-8 mx-auto rounded-full text-xl md:text-3xl text-center text-black dark:text-white border-2 border-black dark:border-white bg-gray dark:bg-black hover:bg-yellow dark:hover:bg-blue transition-all'
+          >
+            Ver entrada
+          </a>
+        ) : (
+          <RegisterButton />
+        )
+      }
     </div>
 
     <div
