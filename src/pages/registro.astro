@@ -8,40 +8,44 @@ import { getFirestore } from 'firebase-admin/firestore'
 
 import { app } from '../firebase/server'
 
-const auth = getAuth(app)
-
-interface User {
+interface Registration {
   firstname: string
   lastname: string
   email: string
   phone: string
+  dietaryRestriction: string
 }
 
-let register: User = {
-  firstname: '',
-  lastname: '',
-  email: '',
-  phone: ''
-}
+let registration: Registration
+let user
 
 const sessionCookie = Astro.cookies.get('__session')?.value
 if (!sessionCookie) {
-  console.log(sessionCookie)
   return Astro.redirect('/')
 }
 
-const user = await auth.verifySessionCookie(sessionCookie)
+const auth = getAuth(app)
 
-if (user) {
+try {
+  user = await auth.verifySessionCookie(sessionCookie)
+
   const db = getFirestore(app).collection('registro-devfest2024')
-
   const doc = await db.doc(user.uid).get()
-  register = doc.data() as User
+  registration = doc.data() as Registration
+} catch (error) {
+  Astro.cookies.delete('__session')
+  return Astro.redirect('/')
 }
 ---
 
 <Layout title='Registro'>
   <div class='pt-32'>
-    {register ? <RegisterTicket {...register} /> : <RegisterForm {...user} />}
+    {
+      registration ? (
+        <RegisterTicket {...registration} />
+      ) : (
+        <RegisterForm {...user} />
+      )
+    }
   </div>
 </Layout>

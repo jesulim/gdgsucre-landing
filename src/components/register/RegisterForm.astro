@@ -1,7 +1,7 @@
 ---
 import { actions } from 'astro:actions'
+
 const { email, uid } = Astro.props
-console.log(uid, email)
 ---
 
 <div class='max-w-screen-sm mx-auto px-4 space-y-4 flex flex-col'>
@@ -10,9 +10,9 @@ console.log(uid, email)
   <form method='POST' action={actions.register} class='space-y-4'>
     <input type='hidden' id='uid' name='uid' value={uid} />
     <div class='space-y-2'>
-      <label for='email' class='block font-medium'> Email</label>
+      <label for='email' class='block font-medium'>Email</label>
       <input
-        class='rounded-lg bg-white border-black border p-2 w-full focus:ring-0 dark:bg-black wdark:border-white'
+        class='rounded-lg bg-white border-black border p-2 w-full focus:ring-0 dark:bg-black dark:border-white'
         type='email'
         name='email'
         id='email'
@@ -23,7 +23,7 @@ console.log(uid, email)
     </div>
 
     <div class='space-y-2'>
-      <label for='firstname' class='block'> Nombre(s)</label>
+      <label for='firstname' class='block'>Nombre(s)</label>
       <input
         class='rounded-lg bg-white border-black border p-2 w-full focus:ring-0 dark:bg-black dark:border-white'
         id='firstname'
@@ -33,7 +33,7 @@ console.log(uid, email)
     </div>
 
     <div class='space-y-2'>
-      <label for='lastname' class='block'> Apellido(s)</label>
+      <label for='lastname' class='block'>Apellido(s)</label>
       <input
         class='rounded-lg bg-white border-black border p-2 w-full focus:ring-0 dark:bg-black dark:border-white'
         id='lastname'
@@ -41,12 +41,14 @@ console.log(uid, email)
         required
       />
     </div>
+
     <div class='space-y-2'>
-      <label for='phone' class='block font-medium'> Número de teléfono</label>
+      <label for='phone' class='block font-medium'>Número de teléfono</label>
       <input
         class='rounded-lg bg-white border-black border p-2 w-full focus:ring-0 dark:bg-black dark:border-white'
         id='phone'
         name='phone'
+        required
       />
     </div>
 
