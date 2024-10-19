@@ -16,18 +16,15 @@ import Header from '@components/Header.astro'
     <meta name='generator' content={Astro.generator} />
 
     <!-- HTML Meta Tags -->
-    <title>I/O Extended Sucre 2024</title>
-    <meta name='description' content='I/O Extended Sucre 2024' />
+    <title>DevFest Sucre 2024</title>
+    <meta name='description' content='DevFest Sucre 2024' />
 
     <!-- Facebook Meta Tags -->
     <meta property='og:url' content='https://www.gdgsucre.com/' />
     <meta property='og:type' content='website' />
-    <meta property='og:title' content='Google IO Sucre 2024' />
-    <meta property='og:description' content='Google IO Extended Sucre 2024' />
-    <meta
-      property='og:image'
-      content='https://www.gdgsucre.com/opengraph.avif'
-    />
+    <meta property='og:title' content='DevFest Sucre 2024' />
+    <meta property='og:description' content='DevFest Sucre 2024' />
+    <meta property='og:image' content=`${Astro.url}opengraph.avif` />
     <meta property='og:image:type' content='image/gif' />
 
     <!-- Twitter Meta Tags -->
@@ -36,10 +33,7 @@ import Header from '@components/Header.astro'
     <meta property='twitter:url' content='https://www.gdgsucre.com/' />
     <meta name='twitter:title' content='www.gdgsucre.com/' />
     <meta name='twitter:description' content='www.gdgsucre.com/' />
-    <!-- <meta
-      name='twitter:image'
-      content='https://gdgsucre.com/opengraph.jpg'
-    /> -->
+    <meta name='twitter:image' content=`${Astro.url}opengraph.avif` />
 
     <!-- Load light or dark mode -->
     <script is:inline>
