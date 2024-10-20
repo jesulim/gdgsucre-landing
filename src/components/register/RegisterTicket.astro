@@ -1,0 +1,43 @@
+---
+import LogoShort from 'src/assets/Logo-short.astro'
+import Logo from 'src/assets/Logo.astro'
+
+const { firstname, lastname } = Astro.props
+---
+
+<div class='flex flex-col space-y-4 p-4'>
+  <h1 class='mx-auto animate-bounce text-2xl'>¡Te esperamos en el evento!</h1>
+  <div
+    class='bg-white w-fit mx-auto rounded-3xl border-2 border-black p-4 space-y-4 dark:bg-black dark:border-white'
+    data-atropos-offset='0'
+  >
+    <div class='flex space-x-2'>
+      <LogoShort />
+      <span class='text-2xl md:text-3xl self-baseline font-semibold'
+        >DevFest Sucre 2024</span
+      >
+    </div>
+
+    <h1 class='font-medium text-3xl md:text-3xl md:mb-12'>
+      {firstname}
+      {lastname}
+    </h1>
+    <div class='space-x-1'>
+      <span
+        class='rounded-full px-2 border border-black dark:bg-black dark:border-white'
+        >16 de Nov. 2024</span
+      >
+      <span
+        class='rounded-full px-2 border border-black dark:bg-black dark:border-white'
+      >
+        08:30
+      </span>
+    </div>
+  </div>
+  <form action='/api/auth/signout'>
+    <button
+      class='flex bg-gray w-fit mx-auto rounded-lg border-2 border-black py-1 px-2 dark:bg-black dark:border-white'
+      type='submit'>Cerrar sesión</button
+    >
+  </form>
+</div>

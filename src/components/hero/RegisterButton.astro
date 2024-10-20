@@ -1,0 +1,27 @@
+<button
+  id='register'
+  class='min-w-fit py-2 px-6 lg:py-4 lg:px-8 mx-auto rounded-full text-xl md:text-3xl text-center text-black dark:text-white border-2 border-black dark:border-white bg-gray dark:bg-black hover:bg-yellow dark:hover:bg-blue transition-all'
+>
+  Regístrate
+</button>
+<script>
+  // firebase google login
+  import { app } from '../../firebase/client'
+  import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+
+  const auth = getAuth(app)
+  document.querySelector('#register').addEventListener('click', async () => {
+    const userCredential = await signInWithPopup(auth, new GoogleAuthProvider())
+    const idToken = await userCredential.user.getIdToken()
+
+    const res = await fetch('/api/auth/signin', {
+      headers: {
+        Authorization: `Bearer ${idToken}`
+      }
+    })
+
+    if (res.redirected) {
+      window.location.assign(res.url)
+    }
+  })
+</script>

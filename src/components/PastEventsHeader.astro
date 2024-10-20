@@ -1,7 +1,7 @@
 ---
 import { ThemeToggle } from '../components/themes/ThemeToggle'
-import Logo from '../assets/IOExtended.astro'
-import LogoShort from '../assets/IOExtended-short.astro'
+import Logo from '../assets/Logo.astro'
+import LogoShort from '../assets/Logo-short.astro'
 ---
 
 <nav
@@ -33,11 +33,13 @@ import LogoShort from '../assets/IOExtended-short.astro'
 </nav>
 
 <script>
-  document.querySelector('[data-collapse-toggle]').addEventListener('click', function () {
-    const target = document.getElementById(this.getAttribute('aria-controls'))
-    const expanded = this.getAttribute('aria-expanded') === 'true' || false
+  document
+    .querySelector('[data-collapse-toggle]')
+    .addEventListener('click', function () {
+      const target = document.getElementById(this.getAttribute('aria-controls'))
+      const expanded = this.getAttribute('aria-expanded') === 'true' || false
 
-    this.setAttribute('aria-expanded', !expanded)
-    target.classList.toggle('hidden')
-  })
+      this.setAttribute('aria-expanded', !expanded)
+      target.classList.toggle('hidden')
+    })
 </script>
