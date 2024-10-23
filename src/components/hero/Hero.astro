@@ -1,11 +1,10 @@
 ---
-import { Timer } from '../Timer'
+import { Timer } from './Timer'
 
-import CalendarLogo from '../../../public/Calendar.astro'
-// import LocationMarker from '../../../public/LocationMarker.astro'
+import CalendarLogo from '../../assets/icons/Calendar.astro'
 
 import Logo from './Logo.astro'
-// import RegisterButton from './RegisterButton.astro'
+import RegisterButton from './RegisterButton.astro'
 
 const targetDate = new Date('2024-11-16T08:30:00-04:00')
 
@@ -14,53 +13,40 @@ const getRemainingTime = () => {
   return targetDate.getTime() - currentDate
 }
 
-// const sessionCookie = Astro.cookies.has('__session')
+const hasSessionCookie = Astro.cookies.has('__session')
 ---
 
 <hero>
-  <section class='pt-32 lg:pt-40 mb-12 mx-4 font-google'>
-    <div class='flex place-content-center'>
-      <Logo />
-    </div>
-    <h2 class='text-center font-google font-medium text-2xl md:text-4xl my-4'>
-      Sucre 2024
-    </h2>
+  <section
+    class='pt-32 lg:pt-40 mb-12 flex flex-col items-center space-y-4 md:space-y-6'
+  >
+    <Logo class='w-auto sm:h-24' />
+    <h2 class='text-center font-medium text-2xl md:text-4xl'>Sucre 2024</h2>
 
-    <!-- <div class='flex flex-col place-content-center'>
-      {
-        sessionCookie ? (
-          <a
-            href='/registro'
-            class='min-w-fit py-2 px-6 lg:py-4 lg:px-8 mx-auto rounded-full text-xl md:text-3xl text-center text-black dark:text-white border-2 border-black dark:border-white bg-gray dark:bg-black hover:bg-yellow dark:hover:bg-blue transition-all'
-          >
-            Ver entrada
-          </a>
-        ) : (
-          <RegisterButton />
-        )
-      }
-    </div> -->
+    {
+      hasSessionCookie ? (
+        <a
+          href='/registro'
+          class='w-fit py-2 lg:py-3 px-8 rounded-full text-xl md:text-3xl text-center border-2 bg-gray dark:bg-black hover:bg-yellow dark:hover:bg-blue transition-all'
+        >
+          Ver entrada
+        </a>
+      ) : (
+        <RegisterButton />
+      )
+    }
 
-    <div class='flex items-center justify-center flex-col text-center'>
-      <div
-        class='my-4 text-xl md:text-2xl font-medium text-black leading-8 md:leading-10 flex flex-col md:flex-row justify-between items-start md:items-center dark:text-white'
-      >
-        <div class='p-2 sm:p-2 md:p-6 lg:p-8 text-left flex items-start'>
-          <div class='mr-2 mt-2'><CalendarLogo /></div>
-          <div>
-            <span class='block'>Sábado 16 de noviembre</span>
-            <span class='block'>08:30 hrs.</span>
-          </div>
+    <div class='text-xl md:text-2xl font-medium leading-8 md:leading-10 pt-4'>
+      <div class='flex items-start'>
+        <CalendarLogo class='m-2' />
+        <div>
+          <span class='block'>Sábado 16 de noviembre</span>
+          <span class='block'>08:30 hrs.</span>
         </div>
-
-        <!-- <div class='p-2 sm:p-2 md:p-6 lg:p-8 text-left flex items-start'>
-           <div class='mr-2 mt-2'><LocationMarker /></div>
-          <div>
-            <span class='block'>CAINCO Chuquisaca</span>
-            <span class='block'>Calle España #64</span>
-          </div>
-        </div> -->
       </div>
+    </div>
+
+    <div>
       <Timer
         initialTime={getRemainingTime()}
         targetDate={targetDate}

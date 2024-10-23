@@ -52,6 +52,18 @@ const { email, uid } = Astro.props
       />
     </div>
 
+    <div class='space-y-2'>
+      <label for='dietaryRestriction' class='block font-medium'
+        >(Opcional) ¿Tienes alguna alergia o restricción alimentaria?</label
+      >
+      <textarea
+        class='rounded-lg bg-white border-black border p-2 w-full focus:ring-0 dark:bg-black dark:border-white'
+        id='dietaryRestriction'
+        name='dietaryRestriction'
+      >
+      </textarea>
+    </div>
+
     <button
       class='w-full bg-blue text-white rounded-lg p-2 font-medium'
       type='submit'
