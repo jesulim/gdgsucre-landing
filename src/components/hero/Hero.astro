@@ -22,16 +22,18 @@ const hasSessionCookie = Astro.cookies.has('__session')
     <h2 class='text-center text-2xl font-medium md:text-4xl'>Sucre 2024</h2>
 
     {
-      hasSessionCookie ? (
-        <a
-          href='/registro'
-          class='w-fit rounded-full border-2 bg-gray px-8 py-2 text-center text-xl transition-all hover:bg-yellow dark:bg-black dark:hover:bg-blue md:text-3xl lg:py-3'
-        >
+      hasSessionCookie
+        ? (
+          <a
+            href='/registro'
+            class='w-fit border-2 bg-gray px-8 py-2 text-center text-xl transition-all hover:bg-yellow dark:bg-black dark:hover:bg-blue md:text-3xl lg:py-3'
+          >
           Ver registro
-        </a>
-      ) : (
-        <RegisterButton />
-      )
+          </a>
+        )
+        : (
+          <RegisterButton />
+        )
     }
 
     <div class='pt-4 text-xl font-medium leading-8 md:text-2xl md:leading-10'>
