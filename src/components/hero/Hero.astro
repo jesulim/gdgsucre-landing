@@ -17,26 +17,24 @@ const hasSessionCookie = Astro.cookies.has('__session')
 ---
 
 <hero>
-  <section
-    class='pt-32 lg:pt-40 mb-12 flex flex-col items-center space-y-4 md:space-y-6'
-  >
+  <section class='mb-12 flex flex-col items-center space-y-4 pt-32 md:space-y-6 lg:pt-40'>
     <Logo class='w-auto sm:h-24' />
-    <h2 class='text-center font-medium text-2xl md:text-4xl'>Sucre 2024</h2>
+    <h2 class='text-center text-2xl font-medium md:text-4xl'>Sucre 2024</h2>
 
     {
       hasSessionCookie ? (
         <a
           href='/registro'
-          class='w-fit py-2 lg:py-3 px-8 rounded-full text-xl md:text-3xl text-center border-2 bg-gray dark:bg-black hover:bg-yellow dark:hover:bg-blue transition-all'
+          class='w-fit rounded-full border-2 bg-gray px-8 py-2 text-center text-xl transition-all hover:bg-yellow dark:bg-black dark:hover:bg-blue md:text-3xl lg:py-3'
         >
-          Ver entrada
+          Ver registro
         </a>
       ) : (
         <RegisterButton />
       )
     }
 
-    <div class='text-xl md:text-2xl font-medium leading-8 md:leading-10 pt-4'>
+    <div class='pt-4 text-xl font-medium leading-8 md:text-2xl md:leading-10'>
       <div class='flex items-start'>
         <CalendarLogo class='m-2' />
         <div>
@@ -47,11 +45,7 @@ const hasSessionCookie = Astro.cookies.has('__session')
     </div>
 
     <div>
-      <Timer
-        initialTime={getRemainingTime()}
-        targetDate={targetDate}
-        client:load
-      />
+      <Timer initialTime={getRemainingTime()} targetDate={targetDate} client:load />
     </div>
   </section>
 </hero>

@@ -7,13 +7,17 @@ import { getAuth } from 'firebase-admin/auth'
 import { getFirestore } from 'firebase-admin/firestore'
 
 import { app } from '../firebase/server'
+import Diplodocus from 'src/assets/Diplodocus.astro'
 
 interface Registration {
   firstname: string
   lastname: string
   email: string
   phone: string
+  ci: string
+  cu: string
   dietaryRestriction: string
+  validated: boolean
 }
 
 let registration: Registration
@@ -39,12 +43,26 @@ try {
 ---
 
 <Layout title='Registro'>
-  <div class='pt-32'>
+  <div class='pt-24 md:pt-32'>
+    {!registration && <RegisterForm uid={user.uid} email={user.email} />}
+    {registration && registration.validated && <RegisterTicket {...registration} />}
     {
-      registration ? (
-        <RegisterTicket {...registration} />
-      ) : (
-        <RegisterForm {...user} />
+      registration && !registration.validated && (
+        <div class='flex flex-col'>
+          <div class='mx-auto p-8 md:text-xl'>
+            Estamos procesando tu registro.
+            <br /> Te notificaremos cuando haya sido validado.
+          </div>
+          <div class='mx-auto flex flex-col items-center space-y-1'>
+            <Diplodocus />
+            <a
+              href='/'
+              class='border-2 border-black bg-green p-2 px-4 dark:border-white dark:bg-black'
+            >
+              Volver al inicio
+            </a>
+          </div>
+        </div>
       )
     }
   </div>
