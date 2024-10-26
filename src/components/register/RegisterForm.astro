@@ -3,21 +3,23 @@ import { actions } from 'astro:actions'
 import Input from './Input.astro'
 
 const { email, uid } = Astro.props
-const result = Astro.getActionResult(actions.register)
 ---
 
-<div class='mx-auto flex max-w-screen-sm flex-col space-y-4 pb-12'>
+<div class='mx-auto flex max-w-screen-sm flex-col space-y-4 pb-16'>
   <div class='space-y-2'>
     <h1 class='text-2xl font-bold md:text-4xl'>Regístrate al evento</h1>
     <span class='block text-black/90 dark:text-white/90'>
-      El evento es gratuito e incluye almuerzo y refrigerio. ¡Los cupos son limitados!
+      El evento es gratuito e incluye almuerzo. <br /> ¡Los cupos son limitados!
     </span>
   </div>
 
   <form method='POST' action={actions.register} class='space-y-4'>
     <input type='hidden' id='uid' name='uid' value={uid} />
 
-    <Input label='Email' type='email' name='email' value={email} required />
+    <Input label='Email' type='email' name='email' value={email} disabled required />
+    <span class='block bg-green/80 p-2 font-medium text-black/90 dark:bg-green/70 dark:text-white'>
+      <b>Nota:</b> Los nombres y apellidos registrados aparecerán en el certificado.
+    </span>
 
     <Input label='Nombre(s)' name='firstname' required />
     <Input label='Apellido(s)' name='lastname' required />
@@ -43,11 +45,13 @@ const result = Astro.getActionResult(actions.register)
       name='dietaryRestriction'
     />
 
-    <button
-      class='w-full border-2 border-black bg-blue p-2 font-medium text-white dark:border-white'
-      type='submit'
-    >
-      Regístrate
-    </button>
+    <div class='pt-4'>
+      <button
+        class='w-full border-2 border-black bg-blue p-2 font-medium text-white dark:border-white'
+        type='submit'
+      >
+        Regístrate
+      </button>
+    </div>
   </form>
 </div>
