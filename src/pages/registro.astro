@@ -43,21 +43,26 @@ try {
 ---
 
 <Layout title='Registro'>
-  <div class='pt-24 md:pt-32'>
+  <div class='px-4 pt-24 md:pt-32'>
     {!registration && <RegisterForm uid={user.uid} email={user.email} />}
     {registration && registration.validated && <RegisterTicket {...registration} />}
     {
       registration && !registration.validated && (
         <div class='flex flex-col'>
-          <div class='mx-auto p-8 md:text-xl'>
-            Estamos procesando tu registro.
-            <br /> Te notificaremos cuando haya sido validado.
+          <div class='mx-auto md:text-xl'>
+            Estamos revisando tu registro. Recibirás un correo electrónico cuando haya sido aceptado
+            o rechazado.
           </div>
-          <div class='mx-auto flex flex-col items-center space-y-1'>
-            <Diplodocus />
-            <a href='/' class='dark:bg border-2 border-black bg-green p-2 px-4 dark:border-white'>
-              Volver al inicio
-            </a>
+          <div class='mx-auto mt-4 flex flex-col items-center space-y-2'>
+            <Diplodocus class='w-20' />
+            <div class='border-2 bg-green pb-1 pr-1'>
+              <a
+                href='/'
+                class='block border-b-2 border-r-2 border-black bg-white p-2 px-4 dark:border-white dark:bg-black'
+              >
+                Volver al inicio
+              </a>
+            </div>
           </div>
         </div>
       )

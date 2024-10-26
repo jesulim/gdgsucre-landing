@@ -1,11 +1,12 @@
 ---
-const { label, name, ...rest } = Astro.props
+const { title, name, subtitle, ...rest } = Astro.props
 ---
 
-<div class='my-4 space-y-2'>
-  <label for={name} class='block font-medium'>{label}</label>
+<div class='my-4'>
+  <label for={name} class='block font-medium'>{title}</label>
+  {subtitle && <p class='text-sm'>{subtitle}</p>}
   <input
-    class='w-full border border-black bg-white p-2 focus:ring-0 disabled:bg-gray dark:border-white dark:bg-black'
+    class='mt-2 w-full border border-black bg-white p-2 focus:ring-0 disabled:bg-gray dark:border-white dark:bg-black'
     id={name}
     name={name}
     {...rest}

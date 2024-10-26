@@ -17,26 +17,25 @@ const hasSessionCookie = Astro.cookies.has('__session')
 ---
 
 <hero>
-  <section class='mb-12 flex flex-col items-center space-y-4 pt-32 md:space-y-6 lg:pt-40'>
-    <Logo class='w-auto sm:h-24' />
-    <h2 class='text-center text-2xl font-medium md:text-4xl'>Sucre 2024</h2>
+  <section class='mb-12 flex flex-col items-center px-4 pt-32 lg:pt-40'>
+    <Logo class='h-20 sm:h-32' />
 
-    {
-      hasSessionCookie
-        ? (
+    <div class='my-8 border-2 bg-yellow pb-1 pr-1 dark:bg-blue md:my-12'>
+      {
+        hasSessionCookie ? (
           <a
             href='/registro'
-            class='w-fit border-2 bg-gray px-8 py-2 text-center text-xl transition-all hover:bg-yellow dark:bg-black dark:hover:bg-blue md:text-3xl lg:py-3'
+            class='block w-fit border-b-2 border-r-2 bg-white px-8 py-2 text-center text-xl transition-all dark:bg-black md:text-3xl lg:py-3'
           >
-          Ver registro
+            Ver registro
           </a>
-        )
-        : (
+        ) : (
           <RegisterButton />
         )
-    }
+      }
+    </div>
 
-    <div class='pt-4 text-xl font-medium leading-8 md:text-2xl md:leading-10'>
+    <div class='mb-4 pt-4 text-xl font-medium leading-8 md:mb-8 md:text-2xl md:leading-10'>
       <div class='flex items-start'>
         <CalendarLogo class='m-2' />
         <div>

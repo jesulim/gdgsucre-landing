@@ -1,11 +1,11 @@
 <button
   id='register'
-  class='flex items-center w-fit py-2 lg:py-3 px-8 rounded-full text-xl md:text-3xl text-center border-2 bg-gray dark:bg-black hover:bg-yellow dark:hover:bg-blue transition-all'
+  class='flex w-fit items-center border-b-2 border-r-2 bg-white px-8 py-2 text-center text-xl transition-all dark:bg-black md:text-3xl lg:py-3'
 >
   <svg
     id='loader'
     aria-hidden='true'
-    class='w-6 h-6 text-black/50 animate-spin dark:text-white/50 fill-blue hidden mr-2'
+    class='mr-3 hidden h-6 w-6 animate-spin fill-blue text-black/50 dark:text-white/50'
     viewBox='0 0 100 101'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
@@ -31,10 +31,7 @@
     loaderIcon.classList.remove('hidden')
 
     try {
-      const userCredential = await signInWithPopup(
-        auth,
-        new GoogleAuthProvider()
-      )
+      const userCredential = await signInWithPopup(auth, new GoogleAuthProvider())
       const idToken = await userCredential.user.getIdToken()
 
       const res = await fetch('/api/auth/signin', {

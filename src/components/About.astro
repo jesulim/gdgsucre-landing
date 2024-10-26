@@ -1,40 +1,19 @@
 ---
-import { Image } from 'astro:assets'
-import aboutLogo from '../assets/io24-learning-cta.webp'
-import aboutLogoDark from '../assets/io24-learning-cta-dark.webp'
+import Diplodocus from 'src/assets/Diplodocus.astro'
 ---
 
-<section id='about' class='max-w-screen-lg mx-auto my-8'>
-  <div
-    class='flex flex-row lg:py-8 items-center justify-between mx-4 px-6 py-4 bg-gray dark:bg-black text-black dark:text-white border-2 border-black dark:border-white'
-  >
-    <!-- <div class='space-y-4 md:max-w-lg md:text-lg'> -->
-      <!-- <h1 class='font-bold md:text-xl'>
-        ¡Acompáñanos a descubrir las novedades del Google I/O 2024 en la hermosa capital de Bolivia!
-      </h1> -->
-      <p class="text-center">
-        El DevFest Sucre es un evento tecnológico, organizado por la comunidad GDG Sucre, donde se comparten conocimientos sobre desarrollo de software, nuevas tecnologías y herramientas de Google.
-      </p>
-      <!-- <p class='font-bold md:text-left'>¡No te pierdas este gran evento!</p> -->
-    <!-- </div> -->
+<section id='about' class='mx-auto my-8 max-w-screen-lg px-4'>
+  <Diplodocus class='ml-auto mr-2 w-20 md:w-32' />
 
-    <!-- <div class='hidden md:block md:ml-6 w-72'>
-      <Image
-        width='300'
-        height='300'
-        class='block dark:hidden'
-        src={aboutLogo}
-        alt='Loguuu'
-        loading='eager'
-      />
-      <Image
-        width='300'
-        height='300'
-        class='hidden dark:block'
-        src={aboutLogoDark}
-        alt='Loguuu dark'
-        loading='eager'
-      />
-    </div> -->
+  <div class='border-2 bg-yellow pb-3 pr-3 dark:bg-blue'>
+    <div
+      class='border-b-2 border-r-2 border-black bg-white px-6 py-4 text-black dark:border-white dark:bg-black dark:text-white md:flex-row lg:py-8'
+    >
+      <p class='text-center'>
+        El DevFest Sucre es un evento tecnológico, organizado por la comunidad GDG Sucre, donde se
+        comparten conocimientos sobre desarrollo de software, nuevas tecnologías y herramientas de
+        Google.
+      </p>
+    </div>
   </div>
 </section>
