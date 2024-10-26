@@ -22,8 +22,7 @@ const { email, uid } = Astro.props
   <form method='POST' action={actions.register}>
     <input type='hidden' id='uid' name='uid' value={uid} />
 
-    <Input label='Email' type='email' name='email' value={email} disabled required />
-
+    <Input label='Email' type='email' name='email' value={email} required />
     <Input title='Nombre(s)' name='firstname' required />
     <Input title='Apellido(s)' name='lastname' required />
     <Input
