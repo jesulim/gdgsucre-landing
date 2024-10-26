@@ -13,7 +13,7 @@ const { email, uid } = Astro.props
     </span>
   </div>
 
-  <form method='POST' action={actions.register} class='space-y-4'>
+  <form method='POST' action={actions.register}>
     <input type='hidden' id='uid' name='uid' value={uid} />
 
     <Input label='Email' type='email' name='email' value={email} disabled required />
@@ -27,7 +27,7 @@ const { email, uid } = Astro.props
     <Input label='Carnet de identidad' name='ci' required />
     <Input label='(Opcional) Carnet universitario' name='cu' />
 
-    <div class='space-y-2'>
+    <div class='my-4 space-y-2'>
       <label for='reasonToParticipate' class='block font-medium'>
         ¿Por qué te gustaría ser parte del evento?
       </label>
@@ -45,13 +45,11 @@ const { email, uid } = Astro.props
       name='dietaryRestriction'
     />
 
-    <div class='pt-4'>
-      <button
-        class='w-full border-2 border-black bg-blue p-2 font-medium text-white dark:border-white'
-        type='submit'
-      >
-        Regístrate
-      </button>
-    </div>
+    <button
+      class='mt-8 w-full border-2 border-black bg-blue p-2 font-medium text-white dark:border-white'
+      type='submit'
+    >
+      Regístrate
+    </button>
   </form>
 </div>
