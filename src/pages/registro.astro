@@ -49,14 +49,15 @@ try {
     {
       registration && !registration.validated && (
         <div class='flex flex-col'>
-          <div class='mx-auto p-8'>
-            Estamos procesando tu registro. Te notificaremos cuando haya sido validado.
+          <div class='mx-auto p-8 md:text-xl'>
+            Estamos procesando tu registro.
+            <br /> Te notificaremos cuando haya sido validado.
           </div>
           <div class='mx-auto flex flex-col items-center space-y-1'>
             <Diplodocus />
             <a
               href='/'
-              class='border-2 border-black bg-white px-2 hover:bg-green dark:border-white dark:bg-black'
+              class='border-2 border-black bg-green p-2 px-4 dark:border-white dark:bg-black'
             >
               Volver al inicio
             </a>
