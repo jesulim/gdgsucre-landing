@@ -1,14 +1,13 @@
 ---
-import { actions } from 'astro:actions'
 import Input from './Input.astro'
 
 const { email, uid } = Astro.props
 ---
 
-<div class='mx-auto flex max-w-screen-sm flex-col pb-16'>
-  <div class='space-y-2 md:space-y-4'>
+<div class='mx-auto max-w-screen-sm pb-16'>
+  <div class='space-y-2 pb-4 md:space-y-4'>
     <h1 class='text-2xl font-bold md:text-4xl'>Regístrate al Evento</h1>
-    <ul class='space list-disc space-y-2 pl-4 leading-tight'>
+    <ul class='space list-disc space-y-2 pl-4 leading-tight marker:text-blue'>
       <li>La entrada al evento es gratuita e incluye almuerzo.</li>
       <li>Los certificados se otorgarán a quienes asistan en la mañana y en la tarde.</li>
       <li>
@@ -19,10 +18,10 @@ const { email, uid } = Astro.props
     </ul>
   </div>
 
-  <form method='POST' action={actions.register}>
+  <form>
     <input type='hidden' id='uid' name='uid' value={uid} />
 
-    <Input label='Email' type='email' name='email' value={email} required />
+    <Input title='Email' type='email' name='email' value={email} required readonly />
     <Input title='Nombre(s)' name='firstname' required />
     <Input title='Apellido(s)' name='lastname' required />
     <Input
@@ -34,18 +33,17 @@ const { email, uid } = Astro.props
     <Input title='Carnet de identidad' name='ci' required />
     <Input title='(Opcional) Carnet universitario' name='cu' />
 
-    <div class='my-4 space-y-2'>
-      <label for='reasonToParticipate' class='block font-medium'>
-        ¿Por qué te gustaría ser parte del evento?
-      </label>
+    <label for='reasonToParticipate' class='my-4 space-y-2'>
+      ¿Por qué te gustaría participar en el evento?
+      <span class='font-bold text-red'>*</span>
+
       <textarea
-        class='w-full border border-black bg-white p-2 focus:ring-0 dark:border-white dark:bg-black'
+        class='w-full border bg-white p-2 dark:bg-black'
         id='reasonToParticipate'
         name='reasonToParticipate'
-        value=''
-      >
-      </textarea>
-    </div>
+        required></textarea>
+      <span class='text-sm text-red' id='error-reasonToParticipate'></span>
+    </label>
 
     <Input
       title='(Opcional) ¿Tienes alguna alergia o restricción alimentaria?'
@@ -53,10 +51,45 @@ const { email, uid } = Astro.props
     />
 
     <button
-      class='mt-6 w-full border-2 border-black bg-blue p-2 font-medium text-white dark:border-white'
+      class='group-invalid:disabled mt-6 w-full border-2 border-black bg-blue p-2 font-semibold text-white dark:border-white'
       type='submit'
     >
       Regístrate
     </button>
   </form>
 </div>
+
+<script>
+  import { actions, isInputError } from 'astro:actions'
+  import { navigate } from 'astro:transitions/client'
+
+  const form = document.querySelector('form')
+
+  for (const input of form.elements as HTMLCollectionOf<HTMLInputElement>) {
+    input.addEventListener('invalid', () => {
+      document.getElementById(`error-${input.name}`).textContent = 'Este campo es requerido.'
+    })
+
+    input.addEventListener('input', () => {
+      document.getElementById(`error-${input.name}`).textContent = ''
+    })
+  }
+
+  form.addEventListener('submit', async event => {
+    event.preventDefault()
+
+    const formData = new FormData(form)
+    const { error } = await actions.register(formData)
+
+    if (!error) {
+      navigate('/registro')
+      return
+    }
+
+    if (isInputError(error)) {
+      for (const [fieldName, fieldErrors] of Object.entries(error.fields)) {
+        document.querySelector(`#error-${fieldName}`).textContent = fieldErrors.join(', ')
+      }
+    }
+  })
+</script>

@@ -2,13 +2,17 @@
 const { title, name, subtitle, ...rest } = Astro.props
 ---
 
-<div class='my-4'>
-  <label for={name} class='block font-medium'>{title}</label>
-  {subtitle && <p class='text-sm'>{subtitle}</p>}
+<label for={name} class='my-4 block'>
+  <span>
+    {title}
+    {rest.required && <span class='font-bold text-red'>*</span>}
+  </span>
+  {subtitle && <p class='text-sm leading-tight opacity-80'>{subtitle}</p>}
   <input
-    class='mt-2 w-full border border-black bg-white p-2 focus:ring-0 disabled:bg-gray dark:border-white dark:bg-black'
+    class='mt-2 w-full border p-2 read-only:bg-gray dark:bg-black dark:read-only:bg-gray/10'
     id={name}
     name={name}
     {...rest}
   />
-</div>
+  <span class='text-sm text-red' id={`error-${name}`}></span>
+</label>
