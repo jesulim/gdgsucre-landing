@@ -23,7 +23,7 @@ Landing page para el chapter [GDG Sucre](https://gdg.community.dev/gdg-sucre) de
 npm install
 ```
 
-3. Ejecutar el proyecto.
+3. Ejecutar el proyecto
 
 ```
 npm start
