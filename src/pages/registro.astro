@@ -44,16 +44,41 @@ try {
 
 <Layout title='Registro'>
   <div class='px-4 pt-24 md:pt-32'>
-    {!registration && <RegisterForm uid={user.uid} email={user.email} />}
+    {
+      !registration && (
+        <div class='flex flex-col'>
+          <div class='mx-auto md:text-xl'>
+            ¡Se agotaron los cupos! Gracias por tu interés en participar, esperamos verte en
+            próximos eventos.
+          </div>
+          <div class='mx-auto mt-8 flex flex-col items-center space-y-2'>
+            <Diplodocus class='w-20' />
+            <div class='border-2 bg-green pb-1 pr-1'>
+              <a
+                href='/'
+                class='block border-b-2 border-r-2 border-black bg-white p-2 px-4 dark:border-white dark:bg-black'
+              >
+                Volver al inicio
+              </a>
+            </div>
+          </div>
+        </div>
+      )
+    }
     {registration && registration.validated && <RegisterTicket {...registration} />}
     {
       registration && !registration.validated && (
         <div class='flex flex-col'>
-          <div class='mx-auto md:text-xl'>
+          <p class='mx-auto md:text-xl'>
+            {user.name && (
+              <span class='display-block'>
+                ¡Hola, {user.name}! <br />
+              </span>
+            )}
             Estamos revisando tu registro. Recibirás un correo electrónico cuando haya sido aceptado
             o rechazado.
-          </div>
-          <div class='mx-auto mt-4 flex flex-col items-center space-y-2'>
+          </p>
+          <div class='mx-auto mt-8 flex flex-col items-center space-y-2'>
             <Diplodocus class='w-20' />
             <div class='border-2 bg-green pb-1 pr-1'>
               <a
