@@ -1,6 +1,8 @@
 import Atropos from 'atropos/react'
 import 'atropos/css'
 
+const bgColors = ['bg-yellow', 'bg-green', 'bg-red', 'bg-blue']
+
 export interface Props {
   id: number
   img: string
@@ -8,7 +10,6 @@ export interface Props {
   location: string
   flag: string
 }
-const colors = ['yellow', 'green', 'red', 'blue']
 
 export const SpeakerCard = ({ id, img, name, location, flag }: Props) => {
   return (
@@ -27,7 +28,7 @@ export const SpeakerCard = ({ id, img, name, location, flag }: Props) => {
           className='relative flex h-full w-full flex-col items-center space-y-4 rounded-2xl border-2 bg-white px-2 pb-4 text-center dark:bg-black md:rounded-3xl md:pb-8 md:pt-4'
         >
           <div
-            className={`absolute -bottom-2 -left-2 -z-10 h-full w-full rounded-2xl border-2 sm:-bottom-3 sm:-left-3 md:rounded-3xl bg-${colors[id % 4]}`}
+            className={`absolute -bottom-2 -left-2 -z-10 h-full w-full rounded-2xl border-2 sm:-bottom-3 sm:-left-3 md:rounded-3xl ${bgColors[id % 4]}`}
             data-atropos-offset='-1'
           ></div>
 
