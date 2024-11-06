@@ -28,7 +28,7 @@
   const registerButton = document.querySelector('#register')
 
   const auth = getAuth(app)
-  registerButton.addEventListener('click', async () => {
+  registerButton?.addEventListener('click', async () => {
     loaderIcon.classList.remove('hidden')
 
     try {

@@ -1,80 +1,50 @@
 [
     {
-        "img": "/speakers/Angel Flores.webp",
-        "name": "Angel Flores",
+        "img": "/speakers/Yury.webp",
+        "name": "Yury Camacho",
         "location": "Cochabamba, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/bolivia.svg"
     },
     {
-        "img": "/speakers/Ariel Colque.webp",
-        "name": "Ariel Colque",
+        "img": "/speakers/Hansy.webp",
+        "name": "Hansy Schmitt",
+        "location": "Lima, Perú",
+        "flag": "/peru.svg"
+    },
+    {
+        "img": "/speakers/Adriana.webp",
+        "name": "Adriana Paz",
         "location": "La Paz, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/bolivia.svg"
     },
     {
-        "img": "/speakers/Ariel Ortuño.webp",
-        "name": "Ariel Ortuño",
-        "location": "Santa Cruz, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
-    },
-    {
-        "img": "/speakers/Fernando Silva.webp",
-        "name": "Fernando Silva",
+        "img": "/speakers/Raisa.webp",
+        "name": "Raisa Silva",
         "location": "La Paz, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/bolivia.svg"
     },
     {
-        "img": "/speakers/Gabriela Torrico.webp",
-        "name": "Gabriela Torrico",
-        "location": "Cochabamba, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "img": "/speakers/Brissia.webp",
+        "name": "Brissia Benavente",
+        "location": "Bolivia",
+        "flag": "/bolivia.svg"
     },
     {
-        "img": "/speakers/Gustavo Pacchi.webp",
-        "name": "Gustavo Pacchi",
-        "location": "Cochabamba, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
-    },
-    {
-        "img": "/speakers/Lesly Zerna.webp",
-        "name": "Lesly Zerna",
+        "img": "/speakers/Paola.webp",
+        "name": "Paola Flores",
         "location": "Sucre, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/bolivia.svg"
     },
     {
-        "img": "/speakers/Melvy Ancieta.webp",
-        "name": "Melvy Ancieta",
-        "location": "Cochabamba, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
-    },
-    {
-        "img": "/speakers/Paolo Pinto.webp",
-        "name": "Paolo Pinto",
-        "location": "El Alto, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
-    },
-    {
-        "img": "/speakers/Pedro Anze.webp",
-        "name": "Pedro Anze",
-        "location": "Tarija, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
-    },
-    {
-        "img": "/speakers/Rodrigo Torrico.webp",
-        "name": "Rodrigo Torrico",
-        "location": "Cochabamba, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
-    },
-    {
-        "img": "/speakers/Ronald Chipana.webp",
-        "name": "Ronald Chipana",
-        "location": "Cochabamba, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
-    },
-    {
-        "img": "/speakers/Sergio Fernandez.webp",
-        "name": "Sergio Fernandez",
+        "img": "/speakers/David.webp",
+        "name": "David Rios",
         "location": "La Paz, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/bolivia.svg"
+    },
+    {
+        "img": "/speakers/Josue.webp",
+        "name": "Josué Lemus",
+        "location": "Santa Cruz, Bolivia",
+        "flag": "/bolivia.svg"
     }
 ]
