@@ -3,78 +3,224 @@
         "img": "/speakers/Angel Flores.webp",
         "name": "Angel Flores",
         "location": "Cochabamba, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/Bolivia Flag 2.svg",
+        "descriptions": [
+            "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
+            "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and"
+        ],
+        "socialNetworks": [
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-blue-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='16' height='16' rx='4' /><circle cx='12' cy='12' r='3' /><line x1='16.5' y1='7.5' x2='16.5' y2='7.501' /></svg>"
+            },
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-red-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' /><path d='M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21' /></svg>"
+            }
+        ]
     },
     {
         "img": "/speakers/Ariel Colque.webp",
         "name": "Ariel Colque",
         "location": "La Paz, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/Bolivia Flag 2.svg",
+        "socialNetworks": [
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-blue-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='16' height='16' rx='4' /><circle cx='12' cy='12' r='3' /><line x1='16.5' y1='7.5' x2='16.5' y2='7.501' /></svg>"
+            },
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-red-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' /><path d='M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21' /></svg>"
+            }
+        ]
     },
     {
         "img": "/speakers/Ariel Ortuño.webp",
         "name": "Ariel Ortuño",
         "location": "Santa Cruz, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/Bolivia Flag 2.svg",
+        "descriptions": [
+            "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
+            "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and"
+        ],
+        "socialNetworks": [
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-blue-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='16' height='16' rx='4' /><circle cx='12' cy='12' r='3' /><line x1='16.5' y1='7.5' x2='16.5' y2='7.501' /></svg>"
+            },
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-red-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' /><path d='M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21' /></svg>"
+            }
+        ]
     },
     {
         "img": "/speakers/Fernando Silva.webp",
         "name": "Fernando Silva",
         "location": "La Paz, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/Bolivia Flag 2.svg",
+        "socialNetworks": [
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-blue-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='16' height='16' rx='4' /><circle cx='12' cy='12' r='3' /><line x1='16.5' y1='7.5' x2='16.5' y2='7.501' /></svg>"
+            },
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-red-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' /><path d='M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21' /></svg>"
+            }
+        ]
     },
     {
         "img": "/speakers/Gabriela Torrico.webp",
         "name": "Gabriela Torrico",
         "location": "Cochabamba, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/Bolivia Flag 2.svg",
+        "descriptions": [
+            "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
+            "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and"
+        ],
+        "socialNetworks": [
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-blue-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='16' height='16' rx='4' /><circle cx='12' cy='12' r='3' /><line x1='16.5' y1='7.5' x2='16.5' y2='7.501' /></svg>"
+            },
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-red-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' /><path d='M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21' /></svg>"
+            }
+        ]
     },
     {
         "img": "/speakers/Gustavo Pacchi.webp",
         "name": "Gustavo Pacchi",
         "location": "Cochabamba, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/Bolivia Flag 2.svg",
+        "socialNetworks": [
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-blue-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='16' height='16' rx='4' /><circle cx='12' cy='12' r='3' /><line x1='16.5' y1='7.5' x2='16.5' y2='7.501' /></svg>"
+            },
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-red-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' /><path d='M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21' /></svg>"
+            }
+        ]
     },
     {
         "img": "/speakers/Lesly Zerna.webp",
         "name": "Lesly Zerna",
         "location": "Sucre, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/Bolivia Flag 2.svg",
+        "socialNetworks": [
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-blue-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='16' height='16' rx='4' /><circle cx='12' cy='12' r='3' /><line x1='16.5' y1='7.5' x2='16.5' y2='7.501' /></svg>"
+            },
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-red-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' /><path d='M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21' /></svg>"
+            }
+        ]
     },
     {
         "img": "/speakers/Melvy Ancieta.webp",
         "name": "Melvy Ancieta",
         "location": "Cochabamba, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/Bolivia Flag 2.svg",
+        "descriptions": [
+            "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
+            "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and"
+        ],
+        "socialNetworks": [
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-blue-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='16' height='16' rx='4' /><circle cx='12' cy='12' r='3' /><line x1='16.5' y1='7.5' x2='16.5' y2='7.501' /></svg>"
+            },
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-red-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' /><path d='M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21' /></svg>"
+            }
+        ]
     },
     {
         "img": "/speakers/Paolo Pinto.webp",
         "name": "Paolo Pinto",
         "location": "El Alto, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/Bolivia Flag 2.svg",
+        "socialNetworks": [
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-blue-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='16' height='16' rx='4' /><circle cx='12' cy='12' r='3' /><line x1='16.5' y1='7.5' x2='16.5' y2='7.501' /></svg>"
+            },
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-red-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' /><path d='M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21' /></svg>"
+            }
+        ]
     },
     {
         "img": "/speakers/Pedro Anze.webp",
         "name": "Pedro Anze",
         "location": "Tarija, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/Bolivia Flag 2.svg",
+        "socialNetworks": [
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-blue-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='16' height='16' rx='4' /><circle cx='12' cy='12' r='3' /><line x1='16.5' y1='7.5' x2='16.5' y2='7.501' /></svg>"
+            },
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-red-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' /><path d='M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21' /></svg>"
+            }
+        ]
     },
     {
         "img": "/speakers/Rodrigo Torrico.webp",
         "name": "Rodrigo Torrico",
         "location": "Cochabamba, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/Bolivia Flag 2.svg",
+        "socialNetworks": [
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-blue-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='16' height='16' rx='4' /><circle cx='12' cy='12' r='3' /><line x1='16.5' y1='7.5' x2='16.5' y2='7.501' /></svg>"
+            },
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-red-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' /><path d='M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21' /></svg>"
+            }
+        ]
     },
     {
         "img": "/speakers/Ronald Chipana.webp",
         "name": "Ronald Chipana",
         "location": "Cochabamba, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/Bolivia Flag 2.svg",
+        "socialNetworks": [
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-blue-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='16' height='16' rx='4' /><circle cx='12' cy='12' r='3' /><line x1='16.5' y1='7.5' x2='16.5' y2='7.501' /></svg>"
+            },
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-red-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' /><path d='M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21' /></svg>"
+            }
+        ]
     },
     {
         "img": "/speakers/Sergio Fernandez.webp",
         "name": "Sergio Fernandez",
         "location": "La Paz, Bolivia",
-        "flag": "/Bolivia Flag 2.svg"
+        "flag": "/Bolivia Flag 2.svg",
+        "socialNetworks": [
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-blue-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='16' height='16' rx='4' /><circle cx='12' cy='12' r='3' /><line x1='16.5' y1='7.5' x2='16.5' y2='7.501' /></svg>"
+            },
+            {
+                "href": "#",
+                "svg": "<svg class='h-8 w-8 text-red-500' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' /><path d='M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21' /></svg>"
+            }
+        ]
     }
 ]
