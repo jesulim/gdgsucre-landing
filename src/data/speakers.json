@@ -33,7 +33,12 @@
         "descriptions": [
             "Full Stack Developer, enfocado en Flutter y Python, con mas de 15 años de experiencia en el desarrollo de software."
         ],
-        "socialNetworks": []
+        "socialNetworks": [
+            {
+                "name": "instagram",
+                "url": "https://www.instagram.com/hacksy.dev/"
+            }
+        ]
     },
     {
         "img": "/speakers/Adriana.webp",
