@@ -1,0 +1,7 @@
+.max-scroll {
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .max-scroll::-webkit-scrollbar {
+    display: none; /* Safari y Chrome */
+  }
