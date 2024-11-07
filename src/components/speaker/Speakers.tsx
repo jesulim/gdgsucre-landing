@@ -32,7 +32,7 @@ export const Speaker = ({ id, img, name, location, flag, descriptions, socialNet
       {/* Cards */}
       <div
         key={id}
-        className='transition-duration-300 h-full pb-4 pl-4 mix-blend-luminosity transition-all hover:!scale-100 hover:!blur-none group-hover:scale-[0.85] group-hover:blur-sm'
+        className='transition-duration-300 h-full pb-4 pl-4 mix-blend-luminosity transition-all hover:!scale-100 md:group-hover:scale-[0.90] md:group-hover:blur-[1px] hover:!blur-none'
       >
         <div className='relative flex h-full w-full flex-col items-center space-y-2 rounded-2xl border-2 bg-white px-2 pb-4 text-center dark:bg-black md:rounded-3xl md:pb-8 md:pt-4'>
           <div
