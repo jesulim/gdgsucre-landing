@@ -1,70 +1,74 @@
-import Atropos from 'atropos/react';
-import 'atropos/css';
-import './style.css';
-import { useState } from 'react';
-import { ModalSpeaker, type SocialNetworksType } from './ModalSpeaker';
+import { useState } from 'react'
+import { ModalSpeaker, type SocialNetworksType } from './ModalSpeaker'
+import './style.css'
+
+const bgColors = ['bg-yellow', 'bg-green', 'bg-red', 'bg-blue']
 
 export interface Props {
-  id: number;
-  img: string;
-  name: string;
-  location: string;
-  flag: string;
+  id: number
+  img: string
+  name: string
+  location: string
+  flag: string
   descriptions: Array<string>
   socialNetworks: Array<SocialNetworksType>
 }
 
-
 export const Speaker = ({ id, img, name, location, flag, descriptions, socialNetworks }: Props) => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
 
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = () => setIsModalOpen(true)
+  const closeModal = () => setIsModalOpen(false)
 
   return (
     <>
       {/* Modal */}
-      <ModalSpeaker isOpen={isModalOpen} onClose={closeModal} data={{ name, descriptions, socialNetworks }} />
+      <ModalSpeaker
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        data={{ name, descriptions, socialNetworks }}
+      />
 
       {/* Cards */}
-      <div key={id} className="flex flex-col items-center w-full max-w-xs mx-auto transition-all duration-300">
-        <div className="bg-white/10 p-8 rounded-lg transition-transform transform group-hover:scale-[0.85] hover:!scale-100 mix-blend-luminosity w-full group-hover:blur-sm hover:!blur-none">
+      <div
+        key={id}
+        className='transition-duration-300 h-full pb-4 pl-4 mix-blend-luminosity transition-all hover:!scale-100 hover:!blur-none group-hover:scale-[0.85] group-hover:blur-sm'
+      >
+        <div className='relative flex h-full w-full flex-col items-center space-y-2 rounded-2xl border-2 bg-white px-2 pb-4 text-center dark:bg-black md:rounded-3xl md:pb-8 md:pt-4'>
+          <div
+            className={`absolute -bottom-2 -left-2 -z-10 h-full w-full rounded-2xl border-2 sm:-bottom-3 sm:-left-3 md:rounded-3xl ${bgColors[id % 4]}`}
+            data-atropos-offset='-1'
+          ></div>
+
           <img
             src={img}
             alt={name}
-            className="mx-auto w-48"
-            data-atropos-offset="4"
-            decoding="async"
-            loading="lazy"
-            width={138}
-            height={151}
+            className='w-11/12 rounded-full md:w-48'
+            data-atropos-offset='1'
+            decoding='async'
+            loading='lazy'
+            width='500'
+            height='500'
           />
 
-          <div className="mx-auto text-center" data-atropos-offset="8">
-            <span className=" uppercase text-black font-semibold sm:text-xl md:text-xl dark:text-white">
-              {name}
-            </span>
-            <div className="flex flex-row items-center justify-center" data-atropos-offset="0">
-              <img
-                width="30"
-                height="15"
-                src={flag}
-                alt="country flag"
-                className="pr-2 w-7 lg:w-8"
-                decoding="async"
-                loading="lazy"
-              />
-              <p className="text-black text-sm sm:text-md md:text-xl dark:text-white">
-                {location}
-              </p>
-            </div>
-            <button className="py-2 text-blue" onClick={openModal}>
-              Ver biografía
-            </button>
+          <span className='font-semibold leading-tight sm:text-2xl'>{name}</span>
+          <div className='flex flex-row items-center justify-center' data-atropos-offset='0'>
+            <img
+              width='30'
+              height='15'
+              src={flag}
+              alt='country flag'
+              className='w-7 pr-2 lg:w-8'
+              decoding='async'
+              loading='lazy'
+            />
+            <p className='text-xs sm:text-xl'>{location}</p>
           </div>
+          <button className='text-blue' onClick={openModal}>
+            Ver biografía
+          </button>
         </div>
       </div>
     </>
-  );
-};
+  )
+}

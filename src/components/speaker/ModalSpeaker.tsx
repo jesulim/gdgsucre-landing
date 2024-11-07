@@ -17,7 +17,7 @@ export const ModalSpeaker = ({ isOpen, onClose, data }: ModalPropsType) => {
 
   return (
     <div className="fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-[calc(100%-1rem)] max-h-full bg-black bg-opacity-50">
-      <div className="relative w-full max-w-2xl rounded-lg shadow dark:bg-gray-700 p-4">
+      <div className="relative w-full max-w-2xl rounded-lg shadow dark:bg-gray-700 p-4 bg-white dark:bg-black">
         {/* Modal header */}
         <div className="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
           <h3 className="uppercase text-xl font-semibold text-gray-900 dark:text-white">
