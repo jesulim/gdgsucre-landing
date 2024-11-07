@@ -6,7 +6,9 @@ import 'swiper/css/pagination'
 import PastEventsHeader from '@components/PastEventsHeader.astro'
 import ReturnButton from '@components/ReturnButton.astro'
 ---
-<div class='absolute inset-0 -z-10 h-full w-full bg-white font-google dark:bg-black dark:text-white'>
+<body
+class='absolute inset-0 -z-10 h-full w-full bg-white font-google dark:bg-black dark:text-white overflow-y-auto'
+>
   <PastEventsHeader/>
   <div class='min-h-screen mx-auto bg-gray-800 pt-8 lg:pt-4 space-y-12'>
     <div class='xl:pb-16 lg:pb-14 md:pb-32 sm:pb-52'></div>
@@ -17,7 +19,7 @@ import ReturnButton from '@components/ReturnButton.astro'
             title='I/O Extended Sucre 2024'
             desktopScreenshot='/screenshots/io-extended-2024-desktop.webp'
             mobileScreenshot='/screenshots/io-extended-2024-mobile.webp'
-            href='https://gdgsucre.com/'
+            href='https://googleio2024.gdgsucre.com/'
           />
         </div>
 
@@ -99,4 +101,4 @@ import ReturnButton from '@components/ReturnButton.astro'
     </script>
   </div>
   <ReturnButton href='/'/>
-</div>
+</body>
