@@ -1,0 +1,45 @@
+---
+
+---
+
+<div class="w-full p-4 md:p-6 lg:p-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-7xl mx-auto">
+    <!-- Left side - Info boxes -->
+    <div class="grid grid-rows-2 gap-4 h-full">
+      <!-- Main info box -->
+      <div class="p-6 rounded-xl border-4 border-[#4285F4] bg-white shadow-lg transition-colors dark:bg-black dark:text-white">
+        <h2 class="text-2xl font-bold mb-2">Paraninfo Universitario</h2>
+        <p class="text-gray-600 dark:text-gray-300">Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca</p>
+      </div>
+      
+      <!-- Address box -->
+      <div class="p-6 rounded-xl border-4 border-[#EA4335] bg-white shadow-lg transition-colors dark:bg-black dark:text-white">
+        <h2 class="text-2xl font-bold mb-2">Dirección</h2>
+        <p class="text-gray-600 dark:text-gray-300">Junin & Estudiantes, Estudiantes N° 58, Sucre</p>
+      </div>
+    </div>
+    
+    <!-- Right side - Map -->
+    <div class="h-[400px] md:h-full min-h-[400px] rounded-xl border-4 border-[#34A853] bg-white shadow-lg overflow-hidden transition-colors dark:bg-black">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1679.956275278946!2d-65.26170413646413!3d-19.04727744581374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf3609d2fb5f%3A0x27f7b185248c536b!2sUniversidad%20Mayor%2C%20Real%20y%20Pontificia%20de%20San%20Francisco%20Xavier%20de%20Chuquisaca%20-%20USFX!5e0!3m2!1ses-419!2sbo!4v1730949440706!5m2!1ses-419!2sbo"
+        class="w-full h-full"
+        style="border:0;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      >
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Hover effects */
+  div[class*="border-"] {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  div[class*="border-"]:hover {
+    transform: scale(1.02);
+  }
+</style>
