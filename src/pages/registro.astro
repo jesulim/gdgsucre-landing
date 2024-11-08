@@ -2,6 +2,7 @@
 import Layout from '@layouts/Layout.astro'
 import RegisterTicket from '@components/register/RegisterTicket.astro'
 import RegisterForm from '@components/register/RegisterForm.astro'
+import EventBadge from '@components/register/eventBadge.tsx'
 
 import { getAuth } from 'firebase-admin/auth'
 import { getFirestore } from 'firebase-admin/firestore'
@@ -62,6 +63,7 @@ try {
               </a>
             </div>
           </div>
+          <RegisterForm />
         </div>
       )
     }
@@ -88,6 +90,7 @@ try {
                 Volver al inicio
               </a>
             </div>
+            <EventBadge userName={user.name}/>
           </div>
         </div>
       )
