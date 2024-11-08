@@ -4,6 +4,7 @@ import RegisterTicket from '@components/register/RegisterTicket.astro'
 import RegisterForm from '@components/register/RegisterForm.astro'
 import EventBadge from '@components/register/eventBadge.tsx'
 
+
 import { getAuth } from 'firebase-admin/auth'
 import { getFirestore } from 'firebase-admin/firestore'
 
@@ -80,7 +81,7 @@ try {
             Estamos revisando tu registro. Recibirás un correo electrónico cuando haya sido aceptado
             o rechazado.
           </p>
-          <div class='mx-auto mt-8 flex flex-col items-center space-y-2'>
+          <div class='mx-auto m-8 flex flex-col items-center space-y-2'>
             <Diplodocus class='w-20' />
             <div class='border-2 bg-green pb-1 pr-1'>
               <a
