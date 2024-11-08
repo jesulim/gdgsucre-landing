@@ -1,14 +1,44 @@
 ---
-const { time, title, speaker } = Astro.props
-const textColor = !speaker ? 'text-blue font-semibold' : ''
+
+const { title, speaker, time, location, image, isSpecial } = Astro.props;
 ---
 
-<div class='py-2 w-72 md:w-80 lg:w-[31rem] space-y-1'>
-  <p class='w-40 font-semibold font-sofia text-md text-blue'>
-    {time}
-  </p>
-  <p class={`font-medium text-md lg:text-xl leading-5 ${textColor}`}>
-    {title}
-  </p>
-  <p class='text-sm lg:text-md'>{speaker}</p>
+<div class='border-b-2 border-r-2 border-black bg-white px-6 py-4 text-black dark:border-white dark:bg-black dark:text-white shadow-lg rounded-lg p-6 flex items-center space-x-4'>
+  
+  {image && <img src={image} alt={`Foto de ${speaker || title}`} class="w-16 h-16 rounded-md object-cover" />}
+
+  <!-- Contenido de la tarjeta -->
+  <div class="flex flex-col">
+
+    <span class="text-sm font-semibold text-yellow-500 uppercase">{speaker || 'Evento especial'}</span>
+    
+    <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">{title}</h3>
+    
+    <!-- Horario y ubicación -->
+    <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mt-2 space-x-4">
+      <!-- Hora -->
+      <div class="flex items-center space-x-1">
+        <span>🕒</span>
+        <span>{time}</span>
+      </div>
+      
+      {location && (
+        <div class="flex items-center space-x-1">
+          <span>{location}</span>
+        </div>
+      )}
+    </div>
+  </div>
 </div>
+
+<style>
+  .schedule-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .schedule-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
