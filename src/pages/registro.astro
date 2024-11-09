@@ -72,16 +72,8 @@ try {
     {
       registration && !registration.validated && (
         <div class='flex flex-col'>
-          <p class='mx-auto md:text-xl'>
-            {user.name && (
-              <span class='display-block'>
-                ¡Hola, {user.name}! <br />
-              </span>
-            )}
-            Estamos revisando tu registro. Recibirás un correo electrónico cuando haya sido aceptado
-            o rechazado.
-          </p>
-          <div class='mx-auto m-8 flex flex-col items-center space-y-2'>
+          <div class='mx-auto m-12 flex flex-col items-center space-y-2'>
+            <EventBadge userName={user.name} client:visible />
             <Diplodocus class='w-20' />
             <div class='border-2 bg-green pb-1 pr-1'>
               <a
@@ -91,7 +83,6 @@ try {
                 Volver al inicio
               </a>
             </div>
-            <EventBadge userName={user.name} client:visible />
           </div>
         </div>
       )

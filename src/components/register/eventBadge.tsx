@@ -18,7 +18,7 @@ export default function EventBadge({ userName }) {
 
             <div className="grid grid-cols-12 h-1/4">
 
-              <div className="col-span-4 bg-white dark:text-black p-2 flex items-center justify-center">
+              <div className="col-span-4 bg-white dark:text-black p-2 flex items-center justify-center" data-atropos-offset='4'>
                 <div className="w-36 h-36" >
                   <Logo />
                 </div>
@@ -40,11 +40,11 @@ export default function EventBadge({ userName }) {
               </div>
             </div>
 
-            <div className="h-2/4 flex flex-col items-center justify-center p-4" data-atropos-offset='8'>
-              <div className="relative p-4 mb-8 text-black bg-white border-2 border-black shadow-[8px_8px_0px_0px_rgba(255,186,0,1)]">
+            <div className="h-2/4 flex flex-col items-center justify-center p-4">
+              <div className="relative p-4 mb-8 text-black bg-white border-2 border-black shadow-[8px_8px_0px_0px_rgba(255,186,0,1)]" data-atropos-offset='8'>
                 <h2 className="text-2xl font-bold text-center text-black">{userName}</h2>
               </div>
-              <div className="bg-white rounded-2xl border-2 border-black px-10 py-2">
+              <div className="bg-white rounded-2xl border-2 border-black px-10 py-2" data-atropos-offset='6'>
                 <span className="text-xl font-bold text-black">Participante</span>
               </div>
             </div>
