@@ -9,50 +9,67 @@ import droBots from '../assets/sponsors/dro-bots.png'
 import education_usa from '../assets/sponsors/education_usa.jpeg'
 import unosquare from '../assets/sponsors/unosquare.jpg'
 import salvietti from '../assets/sponsors/salvietti.webp'
+//import backgroundSvg from '../assets/sponsors/Background.svg'
 
 const sponsors = [
   {
     name: '10minds',
     logo: tenMinds,
-    url: 'https://10minds.org/'
+    url: 'https://10minds.org/',
+    height: 'sm:h-16 md:h-24'
   },
   {
     name: 'CBA',
     logo: cba,
-    url: 'https://www.facebook.com/CBAFanPage/'
+    url: 'https://www.facebook.com/CBAFanPage/',
+    height: 'sm:h-16 md:h-24'
   },
   {
     name: 'Dro-bots accesorios para robótica y electrónica',
     logo: droBots,
-    url: 'https://www.facebook.com/profile.php?id=100083024454287'
+    url: 'https://www.facebook.com/profile.php?id=100083024454287',
+    height: 'sm:h-16 md:h-24'
   },
   {
     name: 'Education USA',
     logo: education_usa,
-    url: 'https://www.facebook.com/EducationUSABolivia'
+    url: 'https://www.facebook.com/EducationUSABolivia',
+    height: 'sm:h-16 md:h-24'
   },
   {
     name: 'Salvietti',
     logo: salvietti,
-    url: 'https://www.facebook.com/salvietti.oficial'
+    url: 'https://www.facebook.com/salvietti.oficial',
+    height: 'sm:h-20 md:h-32'
   },
   {
     name: 'Unosquare',
     logo: unosquare,
-    url: 'https://www.unosquare.com/'
+    url: 'https://www.unosquare.com/',
+    height: 'sm:h-16 md:h-24'
   }
 ]
 ---
 
 <SectionTitle id='sponsors' title='Sponsors' />
-<div class='max-w-screen-md p-4 mx-auto grid grid-cols-2 gap-8 md:grid-cols-3'>
+<div 
+class='max-w-screen-lg p-8 mx-auto grid gap-10 sm:grid-cols-2 md:grid-cols-4'
+>
   {
-    sponsors.map(sponsor => (
-      <div class='flex justify-center items-center'>
+    sponsors.map((sponsor, index) => (
+      <div class={`flex justify-center items-center p-5 border-4 rounded-[2px] 
+        ${index === 0 ? 'col-span-1 row-span-1' : ''} 
+        ${index === 1 ? 'col-span-1 row-span-1' : ''} 
+        ${index === 2 ? 'col-span-2 row-span-1' : ''} 
+        ${index === 3 ? 'col-span-2 row-span-1' : ''} 
+        ${index === 4 ? 'col-span-1 row-span-1' : ''} 
+        ${index === 5 ? 'col-span-1 row-span-1' : ''}`}>
         <a href={sponsor.url} target='_blank'>
-          <Image src={sponsor.logo} alt={sponsor.name} />
+          <Image src={sponsor.logo} alt={sponsor.name} class={`${sponsor.height} object-contain`} />
         </a>
       </div>
     ))
   }
 </div>
+
+
