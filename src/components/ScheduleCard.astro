@@ -3,27 +3,27 @@
 const { title, speaker, time, location, image, isSpecial } = Astro.props;
 ---
 
-<div class='border-b-2 border-r-2 border-black bg-white px-6 py-4 text-black dark:border-white dark:bg-black dark:text-white shadow-lg rounded-lg p-6 flex items-center space-x-4'>
-  
-  {image && <img src={image} alt={`Foto de ${speaker || title}`} class="w-16 h-16 rounded-md object-cover" />}
+<div class='border-b-2 border-r-2 border-black bg-white px-6 py-4 text-black dark:border-white dark:bg-black dark:text-white shadow-lg p-6 flex items-center space-x-4'>
+
+  {image && <img src={image} alt={`Foto de ${speaker || title}`} class='w-16 h-16 object-cover' />}
 
   <!-- Contenido de la tarjeta -->
-  <div class="flex flex-col">
+  <div class='flex flex-col'>
 
-    <span class="text-sm font-semibold text-yellow-500 uppercase">{speaker || 'Evento especial'}</span>
-    
-    <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">{title}</h3>
-    
+    <span class='text-sm font-semibold text-yellow-500 uppercase'>{speaker || 'Evento especial'}</span>
+
+    <h3 class='text-lg font-semibold text-gray-900 dark:text-gray-100'>{title}</h3>
+
     <!-- Horario y ubicación -->
-    <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mt-2 space-x-4">
+    <div class='flex items-center text-sm text-gray-500 dark:text-gray-400 mt-2 space-x-4'>
       <!-- Hora -->
-      <div class="flex items-center space-x-1">
+      <div class='flex items-center space-x-1'>
         <span>🕒</span>
         <span>{time}</span>
       </div>
-      
+
       {location && (
-        <div class="flex items-center space-x-1">
+        <div class='flex items-center space-x-1'>
           <span>{location}</span>
         </div>
       )}
