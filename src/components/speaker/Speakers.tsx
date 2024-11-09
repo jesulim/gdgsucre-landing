@@ -37,9 +37,9 @@ export const Speaker = ({ id, img, name, location, flag, descriptions, socialNet
 
       {/* Cards */}
       <div className='transition-duration-300 pointer-events-auto h-full pb-4 pl-4 mix-blend-luminosity transition-all hover:!scale-100 hover:!blur-none md:group-hover:scale-[0.90] md:group-hover:blur-[1px]'>
-        <div className='relative flex h-full w-full flex-col items-center space-y-2 rounded-2xl border-2 bg-white px-2 pb-4 text-center dark:bg-black md:rounded-3xl md:pb-8 md:pt-4'>
+        <div className='relative flex h-full w-full flex-col items-center space-y-2 border-2 bg-white px-2 pb-4 text-center dark:bg-black md:rounded-3xl md:pb-8 md:pt-4'>
           <div
-            className={`absolute -bottom-2 -left-2 -z-10 h-full w-full rounded-2xl border-2 sm:-bottom-3 sm:-left-3 md:rounded-3xl ${bgColors[id % 4]}`}
+            className={`absolute -bottom-2 -left-2 -z-10 h-full w-full border-2 sm:-bottom-3 sm:-left-3 md:rounded-3xl ${bgColors[id % 4]}`}
           ></div>
 
           <img
