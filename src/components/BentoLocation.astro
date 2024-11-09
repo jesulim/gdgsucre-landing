@@ -1,32 +1,50 @@
 ---
-
+import Calendar from 'src/assets/icons/Calendar.astro'
+import LocationMarker from 'src/assets/icons/LocationMarker.astro'
 ---
 
-<div class="w-full p-4 md:p-6 lg:p-8">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-7xl mx-auto">
+<div class='w-full p-4 md:p-6 lg:p-8'>
+  <div class='mx-auto grid max-w-7xl grid-cols-1 gap-4 md:grid-cols-2 md:gap-6'>
     <!-- Left side - Info boxes -->
-    <div class="grid grid-rows-2 gap-4 h-full">
+    <div class='grid h-full grid-rows-2 gap-4'>
       <!-- Main info box -->
-      <div class="p-6 rounded-xl border-4 border-[#4285F4] bg-white shadow-lg transition-colors dark:bg-black dark:text-white">
-        <h2 class="text-2xl font-bold mb-2">Paraninfo Universitario</h2>
-        <p class="text-gray-600 dark:text-gray-300">Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca</p>
+      <div
+        class='rounded-xl border-4 border-[#4285F4] bg-white p-6 shadow-lg transition-colors dark:bg-black dark:text-white'
+      >
+        <div class='flex items-center h-full'>
+          <LocationMarker class='mx-3 mt-1 size-12' />
+          <span class='block leading-snug text-2xl'>
+            Edificio Central USFX
+            <br />Calle Junín & Estudiantes 
+          </span>
+        </div>
       </div>
-      
+
       <!-- Address box -->
-      <div class="p-6 rounded-xl border-4 border-[#EA4335] bg-white shadow-lg transition-colors dark:bg-black dark:text-white">
-        <h2 class="text-2xl font-bold mb-2">Dirección</h2>
-        <p class="text-gray-600 dark:text-gray-300">Junin & Estudiantes, Estudiantes N° 58, Sucre</p>
+      <div
+        class='rounded-xl border-4 border-[#EA4335] bg-white p-6 shadow-lg transition-colors dark:bg-black dark:text-white'
+      >
+        <div class='flex items-center h-full'>
+          <Calendar class='mx-3 mt-1 size-12' />
+
+          <span class='block leading-snug text-2xl'>
+            Sábado 16 de noviembre
+            <br />08:30 hrs.
+          </span>
+        </div>
       </div>
     </div>
-    
+
     <!-- Right side - Map -->
-    <div class="h-[400px] md:h-full min-h-[400px] rounded-xl border-4 border-[#34A853] bg-white shadow-lg overflow-hidden transition-colors dark:bg-black">
+    <div
+      class='h-[400px] min-h-[400px] overflow-hidden rounded-xl border-4 border-[#34A853] bg-white shadow-lg transition-colors dark:bg-black md:h-full'
+    >
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1679.956275278946!2d-65.26170413646413!3d-19.04727744581374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf3609d2fb5f%3A0x27f7b185248c536b!2sUniversidad%20Mayor%2C%20Real%20y%20Pontificia%20de%20San%20Francisco%20Xavier%20de%20Chuquisaca%20-%20USFX!5e0!3m2!1ses-419!2sbo!4v1730949440706!5m2!1ses-419!2sbo"
-        class="w-full h-full"
-        style="border:0;"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
+        src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1679.956275278946!2d-65.26170413646413!3d-19.04727744581374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf3609d2fb5f%3A0x27f7b185248c536b!2sUniversidad%20Mayor%2C%20Real%20y%20Pontificia%20de%20San%20Francisco%20Xavier%20de%20Chuquisaca%20-%20USFX!5e0!3m2!1ses-419!2sbo!4v1730949440706!5m2!1ses-419!2sbo'
+        class='h-full w-full'
+        style='border:0;'
+        loading='lazy'
+        referrerpolicy='no-referrer-when-downgrade'
       >
       </iframe>
     </div>
@@ -35,11 +53,11 @@
 
 <style>
   /* Hover effects */
-  div[class*="border-"] {
+  div[class*='border-'] {
     transition: all 0.2s ease-in-out;
   }
-  
-  div[class*="border-"]:hover {
+
+  div[class*='border-']:hover {
     transform: scale(1.02);
   }
 </style>
