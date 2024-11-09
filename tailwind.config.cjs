@@ -4,6 +4,9 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'sponsors-pattern': 'url("src/assets/sponsors/backround-patron.svg")',
+      },
       colors: {
         'dark-gray': '#1F2123',
         red: '#EA4335',
