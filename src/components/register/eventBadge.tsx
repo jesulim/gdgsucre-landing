@@ -32,7 +32,7 @@ export default function EventBadge({ userName }) {
 
               <div className="col-span-3 grid grid-rows-2">
                 <div className="bg-[#4285F4] flex items-center justify-center">
-                  <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24" data-atropos-offset='4'>
                     <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
                   </svg>
                 </div>
