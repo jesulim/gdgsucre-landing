@@ -4,34 +4,55 @@ import scheduleData from '../data/schedule.json'
 import ScheduleCard from './ScheduleCard.astro'
 ---
 
-<div class='bg-gray dark:bg-black'>
-  <SectionTitle id='agenda' title='Agenda' />
-  <div
-    class='schedule flex flex-row overflow-scroll snap-x snap-mandatory dark:text-white md:justify-center md:overflow-hidden'
-  >
-    <div class='snap-start pl-4 py-2'>
-      <h3 class='font-semibold text-2xl'>Mañana</h3>
-      {scheduleData.day.map(talk => <ScheduleCard {...talk} type='talk' />)}
-    </div>
-    <!-- vertical divisor -->
-    <div class='border-l-2 border-gray-600 mt-12 mx-3 md:mx-4'></div>
+<div class="mx-auto max-w-screen-xl grid place-content-center bg-yellow dark:bg-blue pb-3 pr-3">
 
-    <div class='snap-start pr-4 py-2'>
-      <h3 class='font-semibold text-2xl'>Tarde</h3>
-      {scheduleData.afternoon.map(workshop => <ScheduleCard {...workshop} type='workshop' />)}
+  <div class="flex justify-center">
+    <SectionTitle id="agenda" title="Agenda" />
+  </div>
+
+  <!-- Contenedor en dos columnas para pantallas grandes y una columna para pantallas pequeñas -->
+  <div class="flex flex-col lg:flex-row divide-y lg:divide-y-0 lg:divide-x divide-gray-600">
+
+    <!-- Columna de la mañana -->
+    <div class="lg:w-1/2 space-y-4 px-4 py-4">
+      <h3 class="text-2xl font-semibold">Mañana</h3>
+      {scheduleData.day.map(event => (
+        <ScheduleCard
+          title={event.title}
+          speaker={event.speaker}
+          time={event.time}
+          location={event.pais || ''}
+          image={event.photoUrl}
+          isSpecial={!event.speaker}
+        />
+      ))}
     </div>
+
+    <!-- Columna de la tarde -->
+    <div class="lg:w-1/2 space-y-4 px-4 py-4">
+      <h3 class="text-2xl font-semibold">Tarde</h3>
+      {scheduleData.afternoon.map(event => (
+        <ScheduleCard
+          title={event.title}
+          speaker={event.speaker}
+          time={event.time}
+          location={event.pais || ''}
+          image={event.photoUrl}
+          isSpecial={!event.speaker}
+        />
+      ))}
+    </div>
+
   </div>
 </div>
 
 <style>
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .schedule::-webkit-scrollbar {
-    display: none;
+  .schedule-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .schedule {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+  .schedule-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 </style>
