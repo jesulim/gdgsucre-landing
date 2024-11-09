@@ -52,24 +52,27 @@ const sponsors = [
 ---
 
 <SectionTitle id='sponsors' title='Sponsors' />
-<div 
-class='max-w-screen-lg p-8 mx-auto grid gap-10 sm:grid-cols-2 md:grid-cols-4'
->
-  {
-    sponsors.map((sponsor, index) => (
-      <div class={`flex justify-center items-center p-5 border-4 rounded-[2px] 
-        ${index === 0 ? 'col-span-1 row-span-1' : ''} 
-        ${index === 1 ? 'col-span-1 row-span-1' : ''} 
-        ${index === 2 ? 'col-span-2 row-span-1' : ''} 
-        ${index === 3 ? 'col-span-2 row-span-1' : ''} 
-        ${index === 4 ? 'col-span-1 row-span-1' : ''} 
-        ${index === 5 ? 'col-span-1 row-span-1' : ''}`}>
-        <a href={sponsor.url} target='_blank'>
-          <Image src={sponsor.logo} alt={sponsor.name} class={`${sponsor.height} object-contain`} />
-        </a>
-      </div>
-    ))
-  }
+<div class='bg-[url("src/assets/sponsors/backround-patron.svg")] mt-10 bg-yellor-orange border-4 dark:border-black'>
+  <div 
+  class='max-w-screen-lg p-8 mx-auto grid gap-10 sm:grid-cols-2 md:grid-cols-4'
+  >
+    {
+      sponsors.map((sponsor, index) => (
+        <div class={`flex justify-center items-center p-5 border-4 rounded-[2px] bg-white dark:border-black
+          ${index === 0 ? 'col-span-1 row-span-1' : ''} 
+          ${index === 1 ? 'col-span-1 row-span-1' : ''} 
+          ${index === 2 ? 'col-span-2 row-span-1' : ''} 
+          ${index === 3 ? 'col-span-2 row-span-1' : ''} 
+          ${index === 4 ? 'col-span-1 row-span-1' : ''} 
+          ${index === 5 ? 'col-span-1 row-span-1' : ''}`}>
+          <a href={sponsor.url} target='_blank'>
+            <Image src={sponsor.logo} alt={sponsor.name} class={`${sponsor.height} object-contain`} />
+          </a>
+        </div>
+      ))
+    }
+  </div>
 </div>
+
 
 
