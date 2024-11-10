@@ -63,23 +63,21 @@ try {
               </a>
             </div>
           </div>
-          <RegisterForm />
         </div>
       )
     }
-    {registration && registration.validated && <RegisterTicket {...registration} />}
     {
-      registration && !registration.validated && (
+      registration && registration.validated && (
         <div class='flex flex-col'>
-          <div class='mx-auto m-12 flex flex-col items-center space-y-8'>
-            <EventBadge userName={user.name} email={user.email} client:visible/>
-            <div class="relative px-6 py-3 text-xl font-semibold text-black bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(68,132,242,1)] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all duration-150">
-              <a
-                href='/'
-              >
-                Volver al inicio
-              </a>
-            </div>
+          <div class='m-12 mx-auto flex flex-col items-center space-y-12'>
+            <EventBadge userName={user.name} email={user.email} client:visible />
+
+            <a
+              href='/'
+              class='relative border-2 border-black bg-white px-6 py-3 text-xl font-semibold text-black shadow-[4px_4px_0px_0px_rgba(68,132,242,1)] transition-all duration-150 active:translate-x-1 active:translate-y-1 active:shadow-none'
+            >
+              Volver al inicio
+            </a>
           </div>
         </div>
       )
