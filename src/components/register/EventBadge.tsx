@@ -3,7 +3,7 @@ import 'atropos/css'
 import Logo from './Logo.tsx'
 import Diplodocus from './Diplodocus.tsx'
 
-export default function EventBadge({ userName, email }) {
+export default function EventBadge({ userName, email, role }) {
   return (
     <Atropos
       className='atropos-banner'
@@ -51,7 +51,9 @@ export default function EventBadge({ userName, email }) {
             <div className='flex gap-4  items-center h-12'>
               <Diplodocus className="w-24" data-atropos-offset='6' />
               <div className="bg-white rounded-2xl border-2 border-black px-10 py-2" data-atropos-offset='6'>
-                <span className="text-xl font-bold text-black">Participante</span>
+                <span className="text-xl font-bold text-black">
+                  {role || 'Participante'}
+                </span>
               </div>
             </div>
           </div>
