@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'sponsors-pattern': 'url("src/assets/sponsors/backround-patron.svg")',
+        'sponsors-pattern': 'url("./backround-patron.svg")',
       },
       colors: {
         'dark-gray': '#1F2123',
