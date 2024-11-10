@@ -4,54 +4,43 @@ import scheduleData from '../data/schedule.json'
 import ScheduleCard from './ScheduleCard.astro'
 ---
 
-<div class='flex justify-center pb-4'>
+<div class='mx-auto my-16 max-w-screen-2xl border-y-2 bg-yellow dark:bg-blue lg:mt-24 2xl:border-2'>
   <SectionTitle id='agenda' title='Agenda' />
-</div>
 
-<div class='mx-auto max-w-screen-xl grid place-content-center bg-yellow dark:bg-blue pb-3'>
-  <!-- Contenedor en dos columnas para pantallas grandes y una columna para pantallas pequeñas -->
-  <div class='flex flex-col lg:flex-row divide-y lg:divide-y-0 lg:divide-x divide-gray-600'>
+  <div class='mx-auto grid max-w-screen-xl place-content-center pb-4'>
+    <!-- Contenedor en dos columnas para pantallas grandes y una columna para pantallas pequeñas -->
+    <div class='flex flex-col divide-y-2 lg:flex-row lg:divide-x-2 lg:divide-y-0'>
+      <!-- Columna de la mañana -->
+      <div class='space-y-4 px-4 py-4 lg:w-1/2 lg:px-8'>
+        <h3 class='text-2xl font-semibold'>Mañana</h3>
+        {
+          scheduleData.day.map(event => (
+            <ScheduleCard
+              title={event.title}
+              speaker={event.speaker}
+              time={event.time}
+              location={event.pais || ''}
+              image={event.photoUrl}
+            />
+          ))
+        }
+      </div>
 
-    <!-- Columna de la mañana -->
-    <div class='lg:w-1/2 space-y-4 px-4 py-4'>
-      <h3 class='text-2xl font-semibold'>Mañana</h3>
-      {scheduleData.day.map(event => (
-        <ScheduleCard
-          title={event.title}
-          speaker={event.speaker}
-          time={event.time}
-          location={event.pais || ''}
-          image={event.photoUrl}
-          isSpecial={!event.speaker}
-        />
-      ))}
+      <!-- Columna de la tarde -->
+      <div class='space-y-4 px-4 py-4 lg:w-1/2 lg:px-8'>
+        <h3 class='text-2xl font-semibold'>Tarde</h3>
+        {
+          scheduleData.afternoon.map(event => (
+            <ScheduleCard
+              title={event.title}
+              speaker={event.speaker}
+              time={event.time}
+              location={event.pais}
+              image={event.photoUrl}
+            />
+          ))
+        }
+      </div>
     </div>
-
-    <!-- Columna de la tarde -->
-    <div class='lg:w-1/2 space-y-4 px-4 py-4'>
-      <h3 class='text-2xl font-semibold'>Tarde</h3>
-      {scheduleData.afternoon.map(event => (
-        <ScheduleCard
-          title={event.title}
-          speaker={event.speaker}
-          time={event.time}
-          location={event.pais || ''}
-          image={event.photoUrl}
-          isSpecial={!event.speaker}
-        />
-      ))}
-    </div>
-
   </div>
 </div>
-
-<style>
-  .schedule-card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .schedule-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-</style>
