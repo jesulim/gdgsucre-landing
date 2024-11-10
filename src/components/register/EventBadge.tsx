@@ -45,7 +45,7 @@ export default function EventBadge({ userName, email, role }) {
             <div className='flex gap-4 '>
               <img src={`https://unavatar.io/${email}`} alt={userName} className="w-14 h-14 rounded-full" data-atropos-offset='8' />
               <div className="relative p-4 mb-8 text-black bg-white border-2 border-black shadow-[8px_8px_0px_0px_rgba(255,186,0,1)]" data-atropos-offset='8'>
-                <h2 className="text-2xl font-bold text-center text-black">{userName}</h2>
+                <h2 className="text-2xl font-bold text-center capitalize text-black ">{userName}</h2>
               </div>
             </div>
             <div className='flex gap-4 items-center h-12' data-atropos-offset='6'>
