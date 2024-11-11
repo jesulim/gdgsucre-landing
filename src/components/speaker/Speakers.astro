@@ -1,0 +1,17 @@
+---
+import speakersData from '../../data/speakers.json'
+import SectionTitle from '@components/SectionTitle.astro'
+import { SpeakerCard } from './SpeakerCard.tsx'
+---
+
+<div class='flex justify-center'>
+  <SectionTitle id='speakers' title='Speakers' />
+</div>
+
+<div class='mx-auto my-8 max-w-screen-lg px-4'>
+  <div
+    class='group pointer-events-none grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8'
+  >
+    {speakersData.map((data, i) => <SpeakerCard id={i} {...data} client:visible />)}
+  </div>
+</div>
