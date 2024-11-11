@@ -4,7 +4,7 @@ import SectionTitle from '../SectionTitle.astro'
 import frequentQuestions from '../../data/frequentQuestions.json'
 ---
 
-<div class='flex justify-center pb-4'>
+<div class='flex justify-center pb-4 questions'>
   <SectionTitle id='frecuent_question' title='Preguntas Frecuentes' />
 </div>
 
@@ -27,6 +27,9 @@ import frequentQuestions from '../../data/frequentQuestions.json'
 </section>
 
 <style>
+  .questions {
+    margin: .5rem 0;
+  }
   .faq-container {
     width: 100%;
     max-width: 1200px;
