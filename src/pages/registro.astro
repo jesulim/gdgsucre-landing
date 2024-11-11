@@ -1,14 +1,11 @@
 ---
-import Layout from '@layouts/Layout.astro'
-import RegisterTicket from '@components/register/RegisterTicket.astro'
-import RegisterForm from '@components/register/RegisterForm.astro'
-import EventBadge from '@components/register/eventBadge.tsx'
-import Diplodocus from 'src/assets/Diplodocus.astro'
-
-import { getAuth } from 'firebase-admin/auth'
+import { getAuth, type DecodedIdToken } from 'firebase-admin/auth'
 import { getFirestore } from 'firebase-admin/firestore'
-
 import { app } from '../firebase/server'
+
+import Layout from '@layouts/Layout.astro'
+import EventBadge from '@components/register/EventBadge'
+import Diplodocus from 'src/assets/Diplodocus.astro'
 
 interface Registration {
   firstname: string
@@ -19,10 +16,11 @@ interface Registration {
   cu: string
   dietaryRestriction: string
   validated: boolean
+  role: string
 }
 
 let registration: Registration
-let user
+let user: DecodedIdToken
 
 const sessionCookie = Astro.cookies.get('__session')?.value
 if (!sessionCookie) {
@@ -36,6 +34,7 @@ try {
 
   const db = getFirestore(app).collection('registro-devfest2024')
   const doc = await db.doc(user.uid).get()
+
   registration = doc.data() as Registration
 } catch (error) {
   Astro.cookies.delete('__session')
@@ -44,45 +43,35 @@ try {
 ---
 
 <Layout title='Registro'>
-  <div class='px-4 pt-24 md:pt-32'>
+  <div class='flex flex-col px-4 pt-24 md:pt-32'>
     {
-      !registration && (
-        <div class='flex flex-col'>
-          <div class='mx-auto md:text-xl'>
+      !registration ? (
+        <div class='mx-auto'>
+          <span class='md:text-xl'>
             ¡Se agotaron los cupos! Gracias por tu interés en participar, esperamos verte en
             próximos eventos.
-          </div>
+          </span>
           <div class='mx-auto mt-8 flex flex-col items-center space-y-2'>
-            <Diplodocus class='w-20' />
-            <div class='border-2 bg-green pb-1 pr-1'>
-              <a
-                href='/'
-                class='block border-b-2 border-r-2 border-black bg-white p-2 px-4 dark:border-white dark:bg-black'
-              >
-                Volver al inicio
-              </a>
-            </div>
+            <Diplodocus width='100' />
           </div>
-          <RegisterForm />
+        </div>
+      ) : (
+        <div class='m-8 mx-auto flex flex-col items-center sm:m-12'>
+          <EventBadge
+            userName={`${registration.firstname} ${registration.lastname}`}
+            email={user.email}
+            role={registration.role}
+            client:visible
+          />
         </div>
       )
     }
-    {registration && registration.validated && <RegisterTicket {...registration} />}
-    {
-      registration && !registration.validated && (
-        <div class='flex flex-col'>
-          <div class='mx-auto m-12 flex flex-col items-center space-y-8'>
-            <EventBadge userName={user.name} email={user.email} client:visible/>
-            <div class="relative px-6 py-3 text-xl font-semibold text-black bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(68,132,242,1)] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all duration-150">
-              <a
-                href='/'
-              >
-                Volver al inicio
-              </a>
-            </div>
-          </div>
-        </div>
-      )
-    }
+
+    <a
+      href='/'
+      class='relative mx-auto border-2 border-black bg-white px-6 py-3 text-xl font-semibold text-black shadow-[4px_4px_0px_0px_rgba(68,132,242,1)] transition-all duration-150 active:translate-x-1 active:translate-y-1 active:shadow-none'
+    >
+      Volver al inicio
+    </a>
   </div>
 </Layout>

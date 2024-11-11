@@ -3,9 +3,9 @@ import 'atropos/css'
 import Logo from './Logo.tsx'
 import Diplodocus from './Diplodocus.tsx'
 import Arroba from 'public/arroba.tsx'
+import Parasaurolophus from './Parasaurolophus.tsx'
 
-export default function EventBadge({ userName, email }) {
-  const arrobas = Array(20).fill(null)
+export default function EventBadge({ userName, email, role }) {
   return (
     <Atropos
       className='atropos-banner'
@@ -17,23 +17,17 @@ export default function EventBadge({ userName, email }) {
       shadowOffset={80}
     >
       <div className='flex justify-center items-center bg-[#FFA500] p-4'>
-        <div className='w-full max-w-[380px] aspect-[3/4] bg-white p-0 overflow-hidden relative flex flex-col shadow-lg border-2 border-black'>
+        <div className='w-full max-w-[310px] sm:max-w-[380px] aspect-[3/4] bg-white p-0 overflow-hidden relative flex flex-col shadow-lg border-2 border-black'>
 
           <div className='grid grid-cols-12 h-1/4'>
-
-            <div className='col-span-4 bg-white dark:text-black p-2 flex items-center justify-center' data-atropos-offset='4'>
+            <div className='col-span-5 bg-white dark:text-black p-2 flex items-center justify-center' data-atropos-offset='4'>
               <div className='w-36 h-36' >
                 <Logo />
               </div>
             </div>
 
-            <div className='col-span-5 bg-[#FFA500] flex items-center justify-center'>
-              <div className='grid grid-cols-[repeat(auto-fit,minmax(30px,1fr))] gap-2 h-full w-full'>
-                {arrobas.map((_, index) => (
-                  <div key={index} className='flex items-center justify-center aspect-square'>
-                    <Arroba />
-                  </div>
-                ))}
+            <div className='col-span-4 bg-[#FFA500] flex items-center justify-center'>
+              <div className='grid grid-cols-6 gap-1'>
               </div>
             </div>
 
@@ -52,13 +46,21 @@ export default function EventBadge({ userName, email }) {
             <div className='flex gap-4 '>
               <img src={`https://unavatar.io/${email}`} alt={userName} className='w-14 h-14 rounded-full' data-atropos-offset='8' />
               <div className='relative p-4 mb-8 text-black bg-white border-2 border-black shadow-[8px_8px_0px_0px_rgba(255,186,0,1)]' data-atropos-offset='8'>
-                <h2 className='text-2xl font-bold text-center text-black'>{userName}</h2>
+                <h2 className='text-2xl font-bold text-center capitalize text-black '>{userName}</h2>
               </div>
             </div>
-            <div className='flex gap-4  items-center h-12'>
-              <Diplodocus className='w-24' data-atropos-offset='6' />
-              <div className='bg-white rounded-2xl border-2 border-black px-10 py-2' data-atropos-offset='6'>
-                <span className='text-xl font-bold text-black'>Participante</span>
+            <div className='flex gap-4 items-center h-12' data-atropos-offset='6'>
+              {role == 'Organizador'
+                ? (
+                  <Parasaurolophus className='w-28' />
+                )
+                : (
+                  <Diplodocus className='w-24' />
+                )}
+              <div className='bg-white rounded-2xl border-2 border-black px-10 py-2'>
+                <span className='text-xl font-bold text-black'>
+                  {role || 'Participante'}
+                </span>
               </div>
             </div>
           </div>
@@ -71,7 +73,7 @@ export default function EventBadge({ userName, email }) {
             <div className='absolute bottom-0 right-0 w-2/3 h-full'>
               <div className='h-1/2 bg-[#4285F4]' />
               <div className='h-1/2 bg-[#EA4335] flex items-center justify-center'>
-                <img src="" alt="" />
+                <img src='' alt='' />
               </div>
             </div>
           </div>
