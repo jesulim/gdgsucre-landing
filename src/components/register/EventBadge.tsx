@@ -68,7 +68,6 @@ export default function EventBadge({ userName, email, role }) {
 
           <div className='flex-grow relative'>
             <div className='absolute bottom-0 left-0 w-1/3 h-full bg-[#34A853] flex items-end justify-start'>
-              <img src='./src/escamas.png' alt='Escamas' className='w-full h-full'/>
             </div>
             <div className='absolute bottom-0 right-0 w-2/3 h-full'>
               <div className='h-1/2 bg-[#4285F4]' />
