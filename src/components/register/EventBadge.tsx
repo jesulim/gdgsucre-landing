@@ -27,7 +27,7 @@ export default function EventBadge({ userName, email, role, picture }) {
               </div>
             </div>
 
-            <div className='col-span-4 items-center justify-center bg-[url("textures/arroba.png")] bg-repeat'>
+            <div className='col-span-4 items-center justify-center bg-[url("/textures/arroba.png")] bg-repeat'>
               <div className='grid grid-cols-6 gap-1'></div>
             </div>
 
@@ -77,7 +77,7 @@ export default function EventBadge({ userName, email, role, picture }) {
             <div className='absolute bottom-0 left-0 flex h-full w-1/3 items-end justify-start bg-[#34A853]'></div>
             <div className='absolute bottom-0 right-0 h-full w-2/3'>
               <div className='h-1/2 bg-[#4285F4]' />
-              <div className='flex h-1/2 items-center justify-center bg-[url("textures/hearts.png")] bg-repeat'>
+              <div className='flex h-1/2 items-center justify-center bg-[url("/textures/hearts.png")] bg-repeat'>
                 <img src='' alt='' />
               </div>
             </div>
