@@ -6,6 +6,7 @@ import CalendarLogo from '../../assets/icons/Calendar.astro'
 import Logo from './Logo.astro'
 import RegisterButton from './RegisterButton.astro'
 import LocationMarker from 'src/assets/icons/LocationMarker.astro'
+import BentoLocation from '@components/BentoLocation.astro'
 
 const targetDate = new Date('2024-11-16T08:30:00-04:00')
 
@@ -36,10 +37,17 @@ const hasSessionCookie = Astro.cookies.has('__session')
       }
     </div>
 
+    <div>
+      <Timer initialTime={getRemainingTime()} targetDate={targetDate} client:load />
+    </div>
+
     <div
       class='mb-8 flex flex-col items-center space-y-4 pt-4 text-xl font-medium leading-8 md:mb-8 md:flex-row md:space-x-12 md:space-y-0 md:text-2xl md:leading-10'
     >
-      <div class='flex items-start'>
+
+      <BentoLocation />
+
+      <!-- <div class='flex items-start'>
         <CalendarLogo class='mx-2 mt-1' />
 
         <span class='block leading-snug'>
@@ -54,11 +62,8 @@ const hasSessionCookie = Astro.cookies.has('__session')
           Edificio Central USFX <br />
           Calle Junín & Estudiantes
         </span>
-      </div>
+      </div> -->
     </div>
 
-    <div>
-      <Timer initialTime={getRemainingTime()} targetDate={targetDate} client:load />
-    </div>
   </section>
 </hero>
