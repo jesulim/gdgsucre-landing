@@ -43,7 +43,7 @@ try {
 ---
 
 <Layout title='Registro'>
-  <div class='flex flex-col px-4 pt-24 md:pt-32'>
+  <div class='flex flex-col px-4 py-24 md:pt-32'>
     {
       !registration ? (
         <div class='mx-auto'>
@@ -59,6 +59,7 @@ try {
         <div class='m-8 mx-auto flex flex-col items-center sm:m-12'>
           <EventBadge
             userName={`${registration.firstname} ${registration.lastname}`}
+            picture={user.picture}
             email={user.email}
             role={registration.role}
             client:visible
