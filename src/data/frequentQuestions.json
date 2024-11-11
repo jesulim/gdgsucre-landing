@@ -1,0 +1,26 @@
+[
+  {
+    "question": "¿Qué es Google I/O Extended?",
+    "answer": "Google I/O Extended es un evento comunitario que replica la experiencia de Google I/O a nivel local. Es organizado por comunidades tecnológicas para compartir y discutir las últimas novedades presentadas en el evento principal de Google."
+  },
+  {
+    "question": "¿El evento es gratuito?",
+    "answer": "Sí, el evento es completamente gratuito. Sin embargo, es necesario registrarse previamente ya que el aforo es limitado."
+  },
+  {
+    "question": "¿Necesito tener conocimientos previos para asistir?",
+    "answer": "No es necesario tener conocimientos técnicos avanzados. El evento está diseñado para desarrolladores de todos los niveles, estudiantes y entusiastas de la tecnología."
+  },
+  {
+    "question": "¿Qué tipo de contenido se presentará?",
+    "answer": "Se cubrirán las principales novedades de Google I/O, incluyendo Android, Flutter, Cloud, Machine Learning, Web Technologies y más. Habrá charlas técnicas, demostraciones y sesiones prácticas."
+  },
+  {
+    "question": "¿Habrá certificado de participación?",
+    "answer": "Sí, todos los asistentes que completen su registro y participen en el evento recibirán un certificado digital de asistencia."
+  },
+  {
+    "question": "¿Puedo participar de forma remota?",
+    "answer": "Sí, el evento tendrá un formato híbrido. Podrás participar de manera presencial o seguir la transmisión en vivo a través de nuestra plataforma online."
+  }
+]
