@@ -1,39 +1,53 @@
+import useSvgIcons from './useSvgIcons'
+import './organizerCard.css'
+
 export interface Props {
   id: string
   name: string
   photoUrl: string
   socialNetworks: { type: string; url: string }[]
+  uuid: number
 }
 
-export const OrganizerCard = ({ id, name, photoUrl }: Props) => {
-  return (
-    <div className='w-full max-w-[150px] sm:max-w-xs'>
-      <div className='relative aspect-[4/6]' key={id}>
-        <div className='absolute top-1 sm:top-2 -right-2 sm:-right-4 w-full h-full bg-gradient-to-t from-green via-blue via-50% to-blue rounded-2xl sm:rounded-3xl shadow-sm transform rotate-2 sm:rotate-4 border-2 border-black dark:border-white sm:border-2'></div>
-        <div className='absolute top-0.5 sm:top-1 -right-1 sm:-right-2 w-full h-full bg-gradient-to-t from-green via-green via-75% to-blue rounded-2xl sm:rounded-3xl shadow-sm transform rotate-1 sm:rotate-2 border-2 border-black dark:border-white sm:border-2'></div>
+const bgShadows = ['card-shadow-yellow', 'card-shadow-green', 'card-shadow-red', 'card-shadow-blue']
 
-        <div className='absolute inset-0 bg-white dark:bg-dark-background rounded-2xl sm:rounded-3xl shadow-md overflow-hidden border-2 border-black dark:border-white sm:border-2'>
-          <div className='p-2 sm:p-4 lg:p-6 flex flex-col items-center justify-center h-full'>
-            <div className='p-4 md:p-8'>
-              <img
-                className='aspect-square object-cover rounded-full border-2 border-black dark:border-white'
-                width='300'
-                height='300'
-                src={photoUrl}
-                alt={name}
-                loading='lazy'
-                decoding='async'
-              />
-            </div>
-            <h2 className='text-sm sm:text-lg lg:text-xl font-bold text-center mb-1 dark:text-dark-text'>
-              {name}
-            </h2>
-            <p className='text-sm sm:text-lg lg:text-xl font-light text-center mb-1 dark:text-dark-text'>
-              Organizer
-            </p>
+const OrganizerCard = ({ photoUrl, name, socialNetworks, uuid }: Props) => {
+  const { gitHubSVG, linkedinSVG, instagramSVG, twitterSVG, facebookSVG, devSVG } = useSvgIcons()
+
+  const isSocialNetworksEmpty: boolean = socialNetworks.length === 0
+
+  return (
+    <div
+      className={`card border-2 border-solid border-black bg-white p-8 text-center shadow-lg dark:border-white dark:bg-black ${bgShadows[uuid % 4]}`}
+    >
+      <div className='card-details'>
+        <img className='text-title mx-auto h-40 w-40 rounded-full' src={photoUrl} alt='profile' />
+        <div className='text-body'>
+          <div className='flex items-center justify-around'>
+            {isSocialNetworksEmpty && (
+              <span className='mt-2 inline-flex items-center rounded-full border bg-white px-3 py-1 text-black shadow-md'>
+                <span>{devSVG()}</span>
+              </span>
+            )}
+            {socialNetworks.map((socialNetwork, i) => (
+              <a href={socialNetwork.url} key={i} target='_blank'>
+                <span className='mt-2 inline-flex items-center rounded-full border bg-white px-3 py-1 text-black shadow-md'>
+                  <span>
+                    {socialNetwork.type === 'linkedin' && linkedinSVG()}
+                    {socialNetwork.type === 'twitter' && twitterSVG()}
+                    {socialNetwork.type === 'instagram' && instagramSVG()}
+                    {socialNetwork.type === 'facebook' && facebookSVG()}
+                    {socialNetwork.type === 'github' && gitHubSVG()}
+                  </span>
+                </span>
+              </a>
+            ))}
           </div>
+          <h2 className='mt-2 text-2xl font-semibold text-black dark:text-white'>{name}</h2>
         </div>
       </div>
     </div>
   )
 }
+
+export default OrganizerCard

@@ -1,0 +1,51 @@
+.card {
+  padding: 1.8rem;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  overflow: visible;
+}
+
+.card-details {
+  height: 100%;
+  gap: 0.5em;
+  display: grid;
+  place-content: center;
+}
+
+.card-shadow-yellow {
+  -webkit-box-shadow: 10px 5px 18px 0 #fbbc04;
+  box-shadow: 10px 5px 18px 0 #fbbc04;
+}
+
+.card-shadow-green {
+  -webkit-box-shadow: 10px 5px 18px 0 #34a853;
+  box-shadow: 10px 5px 18px 0 #34a853;
+}
+
+.card-shadow-red {
+  -webkit-box-shadow: 10px 5px 18px 0 #ea4335;
+  box-shadow: 10px 5px 18px 0 #ea4335;
+}
+
+.card-shadow-blue {
+  -webkit-box-shadow: 10px 5px 18px 0 #4285f4;
+  box-shadow: 10px 5px 18px 0 #4285f4;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
