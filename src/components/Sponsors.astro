@@ -13,13 +13,14 @@ import jetBrains from '../assets/sponsors/jetbrains.svg'
 import jala from '../assets/sponsors/jala.png'
 import dh from '../assets/sponsors/dh.png'
 import delve from '../assets/sponsors/delve.jpg'
+import napp from '../assets/sponsors/napp.png'
 
 
 const sponsors = [
   {
     name: 'Digital Harbor',
     logo: dh,
-    url: '',
+    url: 'https://digitalharborbolivia.com/',
     height: 'sm:h-32 md:h-48'
   },
   {
@@ -31,19 +32,19 @@ const sponsors = [
   {
     name: 'JetBrains',
     logo: jetBrains,
-    url: '',
+    url: 'https://www.jetbrains.com/',
     height: 'sm:h-16 md:h-24'
   },
   {
-    name: 'Jala University',
-    logo: jala,
-    url: '',
+    name: 'NAPP',
+    logo: napp,
+    url: 'https://fundacion-napp.org/',
     height: 'sm:h-16 md:h-24'
   },
   {
     name: 'Delve',
     logo: delve,
-    url: '',
+    url: 'https://delveedu.com/',
     height: 'sm:h-16 md:h-24'
   }
 ]
@@ -61,7 +62,7 @@ const sponsors = [
 <SectionTitle id='sponsors' title='Sponsors' />
 <div class='bg-sponsors-bg mt-10 bg-yellow-orange border-4 dark:border-black'>
   <div 
-    class='max-w-screen-lg p-8 mx-auto grid gap-10 sm:grid-cols-2 md:grid-cols-5'
+    class='max-w-screen-lg p-4 sm:p-8 mx-auto grid gap-10 sm:grid-cols-2 md:grid-cols-5'
   >
     {
       sponsors.map((sponsor, index) => (
