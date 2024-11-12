@@ -4,7 +4,7 @@ import SectionTitle from './SectionTitle.astro'
 
 // import cba from '../assets/sponsors/cba.jpeg'
 import tenMinds from '../assets/sponsors/10minds.jpg'
-// import droBots from '../assets/sponsors/dro-bots.png'
+import droBots from '../assets/sponsors/dro-bots.png'
 // import education_usa from '../assets/sponsors/education_usa.jpeg'
 // import unosquare from '../assets/sponsors/unosquare.jpg'
 // import salvietti from '../assets/sponsors/salvietti.webp'
@@ -21,7 +21,7 @@ const sponsors = [
     name: 'Digital Harbor',
     logo: dh,
     url: 'https://digitalharborbolivia.com/',
-    height: 'sm:h-32 md:h-48'
+    height: 'sm:h-16 md:h-24'
   },
   {
     name: '10minds',
@@ -33,6 +33,12 @@ const sponsors = [
     name: 'JetBrains',
     logo: jetBrains,
     url: 'https://www.jetbrains.com/',
+    height: 'sm:h-16 md:h-24'
+  },
+  {
+    name: 'Dro-Bots',
+    logo: droBots,
+    url: 'http://dro-bots.com/',
     height: 'sm:h-16 md:h-24'
   },
   {
@@ -68,11 +74,11 @@ const sponsors = [
       sponsors.map((sponsor, index) => (
         <div class={`flex justify-center items-center p-5 border-4 rounded-[2px] bg-white dark:border-black
           transform transition-transform duration-200 hover:scale-105 hover:shadow-lg
-          ${index === 0 ? 'sm:col-span-1 md:sm:col-span-2 sm:row-span-1 md:sm:row-span-2' : ''} 
+          ${index === 0 ? 'sm:col-span-1 md:sm:col-span-2 sm:row-span-1 md:sm:row-span-1' : ''} 
           ${index === 1 ? 'col-span-1 row-span-1' : ''} 
           ${index === 2 ? 'col-span-2 row-span-1' : ''} 
-          ${index === 3 ? 'sm:col-span-1 md:col-span-2 row-span-1' : ''} 
-          ${index === 4 ? 'col-span-1 row-span-1' : ''} 
+          ${index === 3 ? 'col-span-2 row-span-1' : ''} 
+          ${index === 4 ? 'sm:col-span-1 md:col-span-2 row-span-1' : ''} 
           ${index === 5 ? 'col-span-1 row-span-1' : ''}`}>
           <a href={sponsor.url} target='_blank'>
             <Image src={sponsor.logo} alt={sponsor.name} class={`${sponsor.height} object-contain`} />
