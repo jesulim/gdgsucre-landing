@@ -58,7 +58,7 @@ export default function EventBadge({ userName, email, role, picture }) {
                 className='relative mb-8 border-2 border-black bg-white p-4 text-black shadow-[8px_8px_0px_0px_rgba(255,186,0,1)]'
                 data-atropos-offset='8'
               >
-                <h2 className='text-center text-2xl font-bold capitalize text-black'>{userName}</h2>
+                <h2 className='text-center text-xl font-bold capitalize text-black'>{userName}</h2>
               </div>
             </div>
             <div className='flex h-12 items-center gap-4' data-atropos-offset='6'>
