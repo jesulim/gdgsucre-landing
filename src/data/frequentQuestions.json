@@ -1,26 +1,34 @@
 [
   {
-    "question": "¿Qué es Google I/O Extended?",
-    "answer": "Google I/O Extended es un evento comunitario que replica la experiencia de Google I/O a nivel local. Es organizado por comunidades tecnológicas para compartir y discutir las últimas novedades presentadas en el evento principal de Google."
+    "question": "¿Qué es DevFest?",
+    "answer": "DevFest es el evento tecnológico más importante del año organizado por GDG Sucre. Es una conferencia presencial que reúne a la comunidad tecnológica de Sucre y Bolivia para compartir conocimientos, experiencias y las últimas tendencias en tecnología. Este año contaremos con charlas sobre desarrollo web, móvil, inteligencia artificial y mucho más."
+  },
+  {
+    "question": "¿Dónde y cuándo se realizará el evento?",
+    "answer": "El evento se realizará de manera presencial en la ciudad de Sucre, Bolivia. La ubicación específica y más detalles los podrás encontrar en la sección de 'Ubicación' de esta página."
   },
   {
     "question": "¿El evento es gratuito?",
-    "answer": "Sí, el evento es completamente gratuito. Sin embargo, es necesario registrarse previamente ya que el aforo es limitado."
+    "answer": "¡Sí! El evento es completamente gratuito. Sin embargo, el aforo es limitado, por lo que es necesario registrarse previamente a través de nuestro formulario de inscripción para asegurar tu cupo."
   },
   {
     "question": "¿Necesito tener conocimientos previos para asistir?",
-    "answer": "No es necesario tener conocimientos técnicos avanzados. El evento está diseñado para desarrolladores de todos los niveles, estudiantes y entusiastas de la tecnología."
+    "answer": "¡Para nada! DevFest está diseñado para todos los niveles. Ya seas estudiante, profesional o simplemente alguien interesado en la tecnología, tendremos charlas y contenido que te resultará interesante y valioso. Lo importante es tener entusiasmo por aprender."
   },
   {
     "question": "¿Qué tipo de contenido se presentará?",
-    "answer": "Se cubrirán las principales novedades de Google I/O, incluyendo Android, Flutter, Cloud, Machine Learning, Web Technologies y más. Habrá charlas técnicas, demostraciones y sesiones prácticas."
+    "answer": "Tendremos un programa diverso con charlas sobre desarrollo web, aplicaciones móviles, inteligencia artificial, y las últimas tendencias tecnológicas. Cada sesión será presentada por expertos en su área, con ejemplos prácticos y casos reales. Además, ¡habrá sorpresas y actividades especiales durante el evento!"
   },
   {
-    "question": "¿Habrá certificado de participación?",
-    "answer": "Sí, todos los asistentes que completen su registro y participen en el evento recibirán un certificado digital de asistencia."
+    "question": "¿Habrá networking y oportunidades de conexión?",
+    "answer": "¡Absolutamente! DevFest es el lugar perfecto para conocer a otros profesionales, estudiantes y entusiastas de la tecnología. Tendremos espacios dedicados para networking, compartir experiencias y conectar con la comunidad tech de Sucre."
   },
   {
-    "question": "¿Puedo participar de forma remota?",
-    "answer": "Sí, el evento tendrá un formato híbrido. Podrás participar de manera presencial o seguir la transmisión en vivo a través de nuestra plataforma online."
+    "question": "¿Cómo puedo unirme a la comunidad GDG Sucre?",
+    "answer": "La mejor manera de unirte a GDG Sucre es participando en nuestros eventos como el DevFest. También puedes seguirnos en nuestras redes sociales (@GDGSucre) para estar al tanto de futuros meetups y actividades. Nuestra comunidad siempre está abierta a nuevos miembros que quieran aprender y compartir conocimientos sobre tecnología."
+  },
+  {
+    "question": "¿Qué debo llevar al evento?",
+    "answer": "Te recomendamos traer: un cuaderno o dispositivo para tomar notas, y muchas ganas de aprender. Si tienes una laptop y deseas traerla, ¡también será bienvenida! Lo más importante es tu entusiasmo por la tecnología."
   }
 ]
