@@ -1,36 +1,36 @@
 {
   "day": [
     {
-      "time": "8:30 - 9:00 AM",
+      "time": "8:30 - 9:30 AM",
       "title": "ACREDITACIÓN"
     },
     {
-      "time": "9:00 AM",
-      "title": "Mejorando la Eficiencia Logística con Google Maps y Rutas Inteligentes",
-      "speaker": "Paola Flores Carvajal",
-      "pais": "Sucre, BO",
-      "photoUrl": "/speakers/Paola.webp"
+      "time": "9:30 AM",
+      "title": "Introducción al patrón BLoC y Flutter BLoC",
+      "speaker": "Josué Lemus Miranda",
+      "pais": "Santa Cruz, BO",
+      "photoUrl": "/speakers/Josue.webp"
     },
     {
-      "time": "9:45 AM ",
+      "time": "10:15 AM ",
       "title": "El Futuro Está Aquí: Introducción a la Realidad Virtual para Creadores Emergentes",
       "speaker": "Raisa Alejandra Silva Plata",
       "pais": "La Paz, BO",
       "photoUrl": "/speakers/Raisa.webp"
     },
     {
-      "time": "10:30 AM",
+      "time": "11:00 AM",
       "title": "REFRIGERIO"
     },
     {
-      "time": "11:00 AM",
+      "time": "11:30 AM",
       "title": "Gemini in Android",
       "speaker": "Yury Camacho",
       "pais": "Cochabamba, BO",
       "photoUrl": "/speakers/Yury.webp"
     },
     {
-      "time": "11:45 AM",
+      "time": "12:15 AM",
       "title": "Búsqueda Efectiva de Trabajo Remoto para Dev’s",
       "speaker": "Brissia Benavente",
       "pais": "Bolivia",
@@ -39,7 +39,7 @@
   ],
   "afternoon": [
     {
-      "time": "12:30 - 13:30 PM",
+      "time": "13:00 - 14:00 PM",
       "title": "ALMUERZO"
     },
     {
@@ -67,13 +67,15 @@
       "pais": "La Paz, BO",
       "photoUrl": "/speakers/David.webp"
     },
+
     {
       "time": "16:45 PM",
-      "title": "Introducción al patrón BLoC y Flutter BLoC",
-      "speaker": "Josué Lemus Miranda",
-      "pais": "Santa Cruz, BO",
-      "photoUrl": "/speakers/Josue.webp"
+      "title": "Mejorando la Eficiencia Logística con Google Maps y Rutas Inteligentes",
+      "speaker": "Paola Flores Carvajal",
+      "pais": "Sucre, BO",
+      "photoUrl": "/speakers/Paola.webp"
     },
+
     {
       "time": "16:45 - 17:30 PM",
       "title": "CIERRE Y SORTEO"
