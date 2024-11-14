@@ -1,0 +1,194 @@
+---
+// FrequentQuestions.astro
+import SectionTitle from '../SectionTitle.astro'
+import frequentQuestions from '../../data/frequentQuestions.json'
+---
+
+<div class='flex justify-center pb-4 questions'>
+  <SectionTitle id='frecuent_question' title='Preguntas Frecuentes' />
+</div>
+
+<section class='faq-container'>
+  <div class='faq-list'>
+    {
+      frequentQuestions.map(faq => (
+        <div class='faq-item'>
+          <button class='faq-question closed'>
+            {faq.question}
+            <span class='icon' />
+          </button>
+          <div class='faq-answer closed-answer'>
+            <p>{faq.answer}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .questions {
+    margin: .5rem 0;
+  }
+  .faq-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem 1rem;
+    font-family: 'Sofia Sans Variable', sans-serif;
+  }
+
+  .faq-title {
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1a1a1a;
+  }
+
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .faq-item {
+    /* border: 1px solid #000000; */
+    /* border-radius: 0.5rem 0.5rem 0 0.5rem; */
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .faq-item:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border: 2px solid #000000;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.125rem;
+    color: #333;
+    border-bottom: none;
+    transition: box-shadow 0.4s ease;
+  }
+
+  /* closed */
+  .closed {
+    box-shadow: 8px 8px 0px #f9ab00;
+    transition: box-shadow 0.4s ease;
+  }
+
+  .open {
+    box-shadow: 8px 0 0px #f9ab00;
+    transition: box-shadow 0.4s ease;
+  }
+
+  .faq-question:focus {
+    outline: none;
+    background-color: #f8f9fa;
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 1.5rem;
+    box-shadow: 8px 8px 0 #f9ab00;
+    border: 2px solid #000000;
+  }
+
+  /* answer-closed */
+  .closed-answer {
+    border-top: none;
+  }
+
+  .faq-answer p {
+    margin: 0;
+    padding-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #4a5568;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .icon::before,
+  .icon::after {
+    content: '';
+    position: absolute;
+    background: #333;
+    border-radius: 2px;
+  }
+
+  .icon::before {
+    width: 2px;
+    height: 20px;
+    left: 9px;
+    top: 0;
+  }
+
+  .icon::after {
+    width: 20px;
+    height: 2px;
+    left: 0;
+    top: 9px;
+  }
+
+  .faq-item.active .icon::before {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  @media (max-width: 640px) {
+    .faq-container {
+      /* padding: 1rem; */
+    }
+
+    .faq-title {
+      font-size: 2rem;
+    }
+
+    .faq-question {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const questions = document.querySelectorAll('.faq-question')
+    const answer = document.querySelectorAll('.faq-answer')
+
+    questions.forEach((question, index) => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement
+        faqItem.classList.toggle('active')
+
+        // Toggle the corresponding answer
+        answer[index].classList.toggle('open')
+        question.classList.toggle('open')
+      })
+    })
+  })
+</script>
