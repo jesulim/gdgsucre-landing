@@ -7,6 +7,8 @@ import 'swiper/css/effect-coverflow'
 import organizersData from '../../data/organizers.json'
 import OrganizerCard from './OrganizerCard'
 
+import './style.css'
+
 const Organizer = () => {
   return (
     <div className='circuit-background mx-auto max-w-screen-lg'>
