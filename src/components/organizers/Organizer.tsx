@@ -7,8 +7,6 @@ import 'swiper/css/effect-coverflow'
 import organizersData from '../../data/organizers.json'
 import OrganizerCard from './OrganizerCard'
 
-import './style.css'
-
 const Organizer = () => {
   return (
     <div className='circuit-background mx-auto max-w-screen-lg'>
@@ -27,11 +25,12 @@ const Organizer = () => {
         pagination={true}
         modules={[EffectCoverflow]}
         className='mySwiper'
+        style={{ height: '100%', paddingBottom: '50px', paddingTop: '50px' }}
       >
         {organizersData
           .sort((a, b) => b.type - a.type)
           .map((organizerProps, i) => (
-            <SwiperSlide key={i}>
+            <SwiperSlide key={i} style={{ backgroundPosition: 'center', backgroundSize: 'cover', width: '300px', height: '300px' }}>
               <OrganizerCard key={i} id={i} {...organizerProps} uuid={i + 1} />
             </SwiperSlide>
           ))}
