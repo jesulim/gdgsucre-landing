@@ -1,11 +1,11 @@
 [
   {
-    "question": "¿Qué es DevFest?",
-    "answer": "DevFest es el evento tecnológico más importante del año organizado por GDG Sucre. Es una conferencia presencial que reúne a la comunidad tecnológica de Sucre y Bolivia para compartir conocimientos, experiencias y las últimas tendencias en tecnología. Este año contaremos con charlas sobre desarrollo web, móvil, inteligencia artificial y mucho más."
+    "question": "¿Qué es el DevFest?",
+    "answer": "Es uno de los eventos más importantes del año organizado por la comunidad GDG Sucre. Es una conferencia presencial que reúne a la comunidad tecnológica para compartir conocimientos, experiencias y las últimas tendencias en tecnología."
   },
   {
     "question": "¿Dónde y cuándo se realizará el evento?",
-    "answer": "El evento se realizará de manera presencial en la ciudad de Sucre, Bolivia. La ubicación específica y más detalles los podrás encontrar en la sección de 'Ubicación' de esta página."
+    "answer": "El evento se realizará de manera presencial en la ciudad de Sucre, Bolivia. En el Edificio Central USFX el 16 de noviembre del 2024"
   },
   {
     "question": "¿El evento es gratuito?",
@@ -13,11 +13,11 @@
   },
   {
     "question": "¿Necesito tener conocimientos previos para asistir?",
-    "answer": "¡Para nada! DevFest está diseñado para todos los niveles. Ya seas estudiante, profesional o simplemente alguien interesado en la tecnología, tendremos charlas y contenido que te resultará interesante y valioso. Lo importante es tener entusiasmo por aprender."
+    "answer": "¡Para nada! el DevFest está diseñado para todos los niveles. Ya seas estudiante, profesional o simplemente alguien interesado en la tecnología, tendremos charlas y actividades que te resultarán valiosas. Lo importante es tener entusiasmo por aprender."
   },
   {
     "question": "¿Qué tipo de contenido se presentará?",
-    "answer": "Tendremos un programa diverso con charlas sobre desarrollo web, aplicaciones móviles, inteligencia artificial, y las últimas tendencias tecnológicas. Cada sesión será presentada por expertos en su área, con ejemplos prácticos y casos reales. Además, ¡habrá sorpresas y actividades especiales durante el evento!"
+    "answer": "Tendremos un programa diverso con charlas sobre desarrollo web, aplicaciones móviles, inteligencia artificial, realidad virtual y las últimas tendencias tecnológicas. Cada sesión será presentada por expertos en su área, con ejemplos prácticos y casos reales. Además, ¡habrá sorpresas y actividades especiales durante el evento!"
   },
   {
     "question": "¿Habrá networking y oportunidades de conexión?",
@@ -25,10 +25,10 @@
   },
   {
     "question": "¿Cómo puedo unirme a la comunidad GDG Sucre?",
-    "answer": "La mejor manera de unirte a GDG Sucre es participando en nuestros eventos como el DevFest. También puedes seguirnos en nuestras redes sociales (@GDGSucre) para estar al tanto de futuros meetups y actividades. Nuestra comunidad siempre está abierta a nuevos miembros que quieran aprender y compartir conocimientos sobre tecnología."
+    "answer": "Sólo necesitas participar de nuestras actividades. Síguenos en nuestras redes sociales para saber cuándo tendremos nuevas actividades, los enlaces están al final de esta página. Nuestra comunidad siempre está abierta a nuevos miembros que quieran aprender y compartir conocimientos sobre tecnología."
   },
   {
     "question": "¿Qué debo llevar al evento?",
-    "answer": "Te recomendamos traer: un cuaderno o dispositivo para tomar notas, y muchas ganas de aprender. Si tienes una laptop y deseas traerla, ¡también será bienvenida! Lo más importante es tu entusiasmo por la tecnología."
+    "answer": "Te recomendamos traer un cuaderno o dispositivo para tomar notas, y muchas ganas de aprender. Si tienes una laptop y deseas traerla, ¡también será bienvenida! Lo más importante es tu entusiasmo por la tecnología."
   }
 ]
