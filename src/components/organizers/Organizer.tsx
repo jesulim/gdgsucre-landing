@@ -1,8 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectCoverflow } from 'swiper/modules'
+import { EffectCoverflow, Pagination } from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
+import 'swiper/css/pagination'
 
 import organizersData from '../../data/organizers.json'
 import OrganizerCard from './OrganizerCard'
@@ -23,14 +24,14 @@ const Organizer = () => {
           slideShadows: false
         }}
         pagination={true}
-        modules={[EffectCoverflow]}
+        modules={[EffectCoverflow, Pagination]}
         className='mySwiper'
-        style={{ height: '100%', paddingBottom: '50px', paddingTop: '50px' }}
+        style={{ height: '100%', paddingBottom: '90px', paddingTop: '30px' }}
       >
         {organizersData
           .sort((a, b) => b.type - a.type)
           .map((organizerProps, i) => (
-            <SwiperSlide key={i} style={{ backgroundPosition: 'center', backgroundSize: 'cover', width: '300px', height: '300px' }}>
+            <SwiperSlide key={i} style={{ backgroundPosition: 'center', backgroundSize: 'cover', width: '300px', height: '360px' }}>
               <OrganizerCard key={i} id={i} {...organizerProps} uuid={i + 1} />
             </SwiperSlide>
           ))}
