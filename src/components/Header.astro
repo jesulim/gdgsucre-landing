@@ -5,10 +5,10 @@ import LogoShort from '../assets/Logo-short.astro'
 ---
 
 <nav
-  class='fixed w-full z-20 top-0 left-0 border-b-2 border-black bg-gray dark:bg-black dark:text-white dark:border-white'
+  class='fixed left-0 top-0 z-20 w-full border-b-2 border-black bg-gray dark:border-white dark:bg-black dark:text-white'
 >
-  <div class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
-    <a href='/' aria-current='page' aria-label='Return to home'>
+  <div class='mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4'>
+    <a href='/#' aria-current='page' aria-label='Return to home'>
       <div class='block md:hidden'>
         <LogoShort />
       </div>
@@ -23,13 +23,13 @@ import LogoShort from '../assets/Logo-short.astro'
       <button
         data-collapse-toggle='navbar-sticky'
         type='button'
-        class='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 dark:text-gray-400 hover:bg-gray-200 focus:ring-gray-600'
+        class='text-gray-500 dark:text-gray-400 hover:bg-gray-200 focus:ring-gray-600 inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm focus:outline-none focus:ring-2 md:hidden'
         aria-controls='navbar-sticky'
         aria-expanded='false'
       >
         <span class='sr-only'>Open main menu</span>
         <svg
-          class='w-5 h-5'
+          class='h-5 w-5'
           aria-hidden='true'
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
@@ -46,33 +46,26 @@ import LogoShort from '../assets/Logo-short.astro'
     </div>
 
     <div
-      class='items-center justify-between hidden w-full md:flex md:w-auto md:order-1 space-x-4'
+      class='hidden w-full items-center justify-between space-x-4 md:order-1 md:flex md:w-auto'
       id='navbar-sticky'
     >
       <ul
-        class='font-medium flex flex-col md:flex-row md:space-x-8 p-4 mt-4 md:p-0 md:mt-0 border-2 rounded-xl md:border-0 bg-white dark:bg-black md:bg-transparent'
+        class='mt-4 flex flex-col rounded-xl border-2 bg-white p-4 font-medium dark:bg-black md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:p-0'
       >
-        <!-- <li>
-          <a href='#bundles' class='block py-2 hover:text-yellow' aria-current='page'>Paquetes</a>
-        </li>
-
-        <li>
-          <a href='#sponsors' class='block py-2 hover:text-green'>Sponsors</a>
-        </li> -->
-
         <li>
           <a href='#speakers' class='block py-2 hover:text-blue'>Speakers</a>
         </li>
 
-        <!-- <li>
-          <a href='#agenda' class='block py-2 hover:text-orange'>Agenda</a>
+        <li>
+          <a href='#agenda' class='block py-2 hover:text-red'>Agenda</a>
         </li>
 
         <li>
-          <a href='#organizadores' class='block py-2 hover:text-purple'>Equipo</a>
-        </li>  -->
+          <a href='#sponsors' class='block py-2 hover:text-yellow'>Sponsors</a>
+        </li>
+
         <li>
-          <a href='#agenda' class='block py-2 hover:text-orange'>Agenda</a>
+          <a href='#frecuent_question' class='block py-2 hover:text-red'>Preguntas frecuentes</a>
         </li>
 
         <li>
@@ -80,7 +73,7 @@ import LogoShort from '../assets/Logo-short.astro'
         </li>
       </ul>
 
-      <div class='h-8 hidden md:block'>
+      <div class='hidden h-8 md:block'>
         <ThemeToggle client:media='(min-width: 768px)' />
       </div>
     </div>
