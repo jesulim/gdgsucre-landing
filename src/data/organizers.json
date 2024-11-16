@@ -70,7 +70,16 @@
         "type": 3,
         "name": "Grover Taboada",
         "photoUrl": "organizers/grover_taboada.webp",
-        "socialNetworks": []
+        "socialNetworks": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/grover-taboada/"
+            },
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/grover.Taboada/"
+            }
+        ]
     },
     {
         "id": "",
@@ -147,22 +156,6 @@
         ]
     },
     {
-        "id": "Ukm6gHaBX4Su83Rrr0R8",
-        "type": 2,
-        "name": "Andrea Chumacero",
-        "photoUrl": "organizers/andrea_chumacero.webp",
-        "socialNetworks": [
-            {
-                "type": "facebook",
-                "url": "https://www.facebook.com/profile.php?id=61550507218380"
-            },
-            {
-                "type": "instagram",
-                "url": "https://instagram.com/chumacero.andrea"
-            }
-        ]
-    },
-    {
         "id": "sRVH1mE8IgB7C0CSIchg",
         "type": 2,
         "name": "Madizon Gonzales",
@@ -188,6 +181,10 @@
         "name": "Andrés Torres",
         "photoUrl": "organizers/alejandro_torres.webp",
         "socialNetworks": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/andrestorresgo"
+            },
             {
                 "type": "github",
                 "url": "https://github.com/andrestorresgo"
@@ -219,98 +216,65 @@
         ]
     },
     {
-        "id": "909a0Q1yTFTQFEYIaL6G",
-        "type": 2,
-        "name": "Oscar Delgadillo",
-        "photoUrl": "organizers/oscar_delgadillo.webp",
-        "socialNetworks": [
-            {
-                "type": "linkedin",
-                "url": "https://www.linkedin.com/in/oscar-delgadillo-176bba279/"
-            },
-            {
-                "type": "facebook",
-                "url": "https://www.facebook.com/andropov.delgadillo/"
-            },
-            {
-                "type": "instagram",
-                "url": "https://www.instagram.com/andropov.delgadillo/"
-            }
-        ]
-    },
-    {
         "id": "909a0Q1yTFTQFEYIaL123",
         "type": 2,
         "name": "Samantha Hinojosa",
         "photoUrl": "organizers/samantha_hinojosa.webp",
-        "socialNetworks": []
+        "socialNetworks": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/samantha-mikaela-hinojosa-yucra-64b734263"
+            },
+            {
+                "type": "github",
+                "url": "https://github.com/mikah10"
+            },
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/mikaela.hinojosa.77"
+            },
+            {
+                "type": "instagram",
+                "url": "https://www.instagram.com/_mika.hhh/"
+            }
+        ]
     },
     {
         "id": "LIJ0eIuOnTSX1lefxi1I",
         "type": 2,
         "name": "Jhamil Crespo",
         "photoUrl": "organizers/jhamil_crespo.webp",
-        "socialNetworks": [
-            {
-                "type": "instagram",
-                "url": "https://instagram.com/jhamil_c_rejas"
-            }
-        ]
+        "socialNetworks": []
     },
     {
         "id": "",
         "type": 2,
         "name": "Oscar Taboada",
         "photoUrl": "organizers/oscar_taboada.webp",
-        "socialNetworks": []
-    },
-    {
-        "id": "",
-        "type": 2,
-        "name": "Gabriela Choquevillca",
-        "photoUrl": "organizers/gabriela_choquevillca.webp",
-        "socialNetworks": []
-    },
-    {
-        "id": "909a0Q1yTFTQFEYIaL123",
-        "type": 2,
-        "name": "Angela Rosales",
-        "photoUrl": "organizers/angela_rosales.webp",
-        "socialNetworks": []
-    },
-    {
-        "id": "909a0Q1yTFTQFEYIaL124",
-        "type": 1,
-        "name": "Adriana Paz",
-        "photoUrl": "organizers/adriana_paz.webp",
-        "socialNetworks": []
+        "socialNetworks": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/oscar-taboada-rodas-19324a2b5"
+            },
+            {
+                "type": "github",
+                "url": "https://github.com/OscarTaboada"
+            },
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/oscar.taboada.904"
+            },
+            {
+                "type": "instagram",
+                "url": "https://www.instagram.com/oscar.taboada.2000/"
+            }
+        ]
     },
     {
         "id": "909a0Q1yTFTQFEYIaL125",
         "type": 1,
         "name": "Alejandro Olguin",
         "photoUrl": "organizers/alejandro_olguin.webp",
-        "socialNetworks": []
-    },
-    {
-        "id": "",
-        "type": 1,
-        "name": "Álvaro Doria",
-        "photoUrl": "organizers/alvaro_doria.webp",
-        "socialNetworks": []
-    },
-    {
-        "id": "",
-        "type": 1,
-        "name": "Angela Miranda",
-        "photoUrl": "organizers/angela_miranda.webp",
-        "socialNetworks": []
-    },
-    {
-        "id": "",
-        "type": 1,
-        "name": "Carlos Victoria",
-        "photoUrl": "organizers/carlos_victoria.webp",
         "socialNetworks": []
     },
     {
@@ -325,14 +289,24 @@
         "type": 1,
         "name": "Danner Aly",
         "photoUrl": "organizers/danner_aly.webp",
-        "socialNetworks": []
-    },
-    {
-        "id": "",
-        "type": 1,
-        "name": "Emily Peñaranda",
-        "photoUrl": "organizers/emily_penaranda.webp",
-        "socialNetworks": []
+        "socialNetworks": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/aly-danner"
+            },
+            {
+                "type": "github",
+                "url": "https://github.com/DannerAly"
+            },
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/abalydelh"
+            },
+            {
+                "type": "instagram",
+                "url": "https://www.instagram.com/aly_danner"
+            }
+        ]
     },
     {
         "id": "",
@@ -346,21 +320,12 @@
         "type": 1,
         "name": "Laura Diaz",
         "photoUrl": "organizers/laura_diaz.webp",
-        "socialNetworks": []
-    },
-    {
-        "id": "",
-        "type": 1,
-        "name": "Lino Villca",
-        "photoUrl": "organizers/lino_villca.webp",
-        "socialNetworks": []
-    },
-    {
-        "id": "",
-        "type": 1,
-        "name": "Marshel Aillón",
-        "photoUrl": "organizers/marshel_aillon.webp",
-        "socialNetworks": []
+        "socialNetworks": [
+            {
+                "type": "instagram",
+                "url": "https://www.instagram.com/laudiaz_c_/"
+            }
+        ]
     },
     {
         "id": "",
@@ -379,8 +344,200 @@
     {
         "id": "",
         "type": 1,
-        "name": "Weimar Alarcon",
-        "photoUrl": "organizers/weimar_alarcon.webp",
+        "name": "Ruben Camargo",
+        "photoUrl": "organizers/ruben_camargo.webp",
+        "socialNetworks": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/ruben-artemio-camargo-saravia-625a492b6"
+            },
+            {
+                "type": "github",
+                "url": "https://github.com/RubenCamargoX/"
+            },
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/ruben.saravia.10"
+            },
+            {
+                "type": "instagram",
+                "url": "https://www.instagram.com/ruben_saravia_"
+            }
+        ]
+    },
+    {
+        "id": "",
+        "type": 1,
+        "name": "Alejandra Albis Jallaza",
+        "photoUrl": "organizers/alejandra_albis.webp",
+        "socialNetworks": [
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/share/1DdGZGShRj/"
+            },
+            {
+                "type": "instagram",
+                "url": "https://www.instagram.com/thesummr.girl/"
+            }
+        ]
+    },
+    {
+        "id": "",
+        "type": 1,
+        "name": "Fernando Villca",
+        "photoUrl": "organizers/fernando_villca.webp",
+        "socialNetworks": [
+            {
+                "type": "github",
+                "url": "https://github.com/ferd-dev"
+            },
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/luisfernando.villcayucra"
+            },
+            {
+                "type": "instagram",
+                "url": "https://www.instagram.com/fernando_villca62/"
+            }
+        ]
+    },
+    {
+        "id": "",
+        "type": 1,
+        "name": "Josias Asael Quispe Ticona",
+        "photoUrl": "organizers/josias_quispe.webp",
+        "socialNetworks": [
+            {
+                "type": "linkedin",
+                "url": "https://bo.linkedin.com/in/josias-quispe-ticona"
+            },
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/j0sia5"
+            },
+            {
+                "type": "instagram",
+                "url": "https://www.instagram.com/iamj0si/"
+            }
+        ]
+    },
+    {
+        "id": "",
+        "type": 1,
+        "name": "Ariel Rodrigo Colque Garcia",
+        "photoUrl": "organizers/ariel_colque.webp",
+        "socialNetworks": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/ariel-c-garcia/"
+            },
+            {
+                "type": "github",
+                "url": "https://github.com/rodrygo-c-garcia"
+            }
+        ]
+    },
+    {
+        "id": "",
+        "type": 1,
+        "name": "Susan Jhoseline Terán Cruz",
+        "photoUrl": "organizers/susan_teran.webp",
+        "socialNetworks": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/jhoseline-terán-5b7b20210/"
+            },
+            {
+                "type": "github",
+                "url": "https://github.com/sjteranc"
+            },
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/share/188uXWiz3k/"
+            },
+            {
+                "type": "instagram",
+                "url": "https://www.instagram.com/jhose_jk/"
+            }
+        ]
+    },
+    {
+        "id": "",
+        "type": 1,
+        "name": "Sebastian Delgadillo Llanos",
+        "photoUrl": "organizers/sebastian_delgadillo.webp",
+        "socialNetworks": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/delgadillo-llanos-juan-sebastian"
+            },
+            {
+                "type": "github",
+                "url": "https://github.com/sebastianDLL"
+            },
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/sebastian.delgadillollanos/"
+            },
+            {
+                "type": "instagram",
+                "url": "https://www.instagram.com/sebastian_d_ll/"
+            }
+        ]
+    },
+    {
+        "id": "",
+        "type": 1,
+        "name": "Marcela Miranda Veniz",
+        "photoUrl": "organizers/marcela_miranda.webp",
+        "socialNetworks": [
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/profile.php?id=100024371240222"
+            },
+            {
+                "type": "instagram",
+                "url": "https://www.instagram.com/mireni02/"
+            }
+        ]
+    },
+    {
+        "id": "",
+        "type": 1,
+        "name": "Coraite Yanaje Luz Clara",
+        "photoUrl": "organizers/luz_coraite.webp",
         "socialNetworks": []
+    },
+    {
+        "id": "",
+        "type": 1,
+        "name": "Elvis Mita",
+        "photoUrl": "organizers/elvis_mita.webp",
+        "socialNetworks": [
+            {
+                "type": "facebook",
+                "url": "https://facebook.com/elvismitacoronado"
+            },
+            {
+                "type": "instagram",
+                "url": "https://instagram.com/elvis.mita/"
+            }
+        ]
+    },
+    {
+        "id": "",
+        "type": 1,
+        "name": "Ariel Pacheco",
+        "photoUrl": "organizers/ariel_pacheco.webp",
+        "socialNetworks": [
+            {
+                "type": "linkedin",
+                "url": "http://www.linkedin.com/in/arielpa"
+            },
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/ariel.pachecoalejandro.7/"
+            }
+        ]
     }
 ]
