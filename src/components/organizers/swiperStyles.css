@@ -1,0 +1,6 @@
+.swiper-pagination-bullet {
+  @apply bg-black dark:bg-white;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply bg-blue;
+}
