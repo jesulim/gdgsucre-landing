@@ -3,9 +3,7 @@ import SectionTitle from '../SectionTitle.astro'
 import Organizer from './Organizer'
 ---
 
-<SectionTitle id='organizadores' title='Organizadores' />
-<div
-  class='bg-circuit-light dark:bg-circuit-dark mx-auto my-10  px-2 py-4 sm:px-4 sm:py-8'
->
-  <Organizer client:load />
+<div class='mx-auto py-4 sm:py-8'>
+  <SectionTitle id='organizadores' title='Organizadores' />
+  <Organizer client:idle />
 </div>

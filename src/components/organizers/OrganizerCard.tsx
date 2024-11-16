@@ -18,28 +18,31 @@ const OrganizerCard = ({ photoUrl, name, socialNetworks, uuid }: Props) => {
 
   return (
     <div className='cut-corners-r mt-4 h-full bg-black p-0.5 transition-all dark:bg-white'>
-      <div className={`h-full pb-2 cut-corners-r pr-2 ${bgColors[uuid % 4]}`}>
-        <div
-          className='card pb-10 border-b-2 pt-7 border-r-2 border-solid border-black bg-white text-center shadow-lg dark:border-white dark:bg-black '
-        >
+      <div className={`cut-corners-r h-full pb-2 pr-2 ${bgColors[uuid % 4]}`}>
+        <div className='card h-full border-b-2 border-r-2 bg-white text-center dark:bg-black'>
           <div className='card-details'>
-            <img className='text-title mx-auto h-48 w-48 rounded-full' src={photoUrl} alt='profile' />
+            <img
+              className='text-title mx-auto h-48 w-48 rounded-full border-2 object-cover'
+              src={photoUrl}
+              alt='profile'
+              loading='lazy'
+            />
             <div className='text-body'>
               <div className='flex items-center justify-around'>
                 {isSocialNetworksEmpty && (
-                  <span className='mt-2 inline-flex items-center rounded-full border bg-white px-3 py-1 text-black shadow-md'>
+                  <span className='mt-4 inline-flex items-center rounded-full border bg-white px-3 py-1 shadow-md'>
                     <span>{devSVG()}</span>
                   </span>
                 )}
                 {socialNetworks.map((socialNetwork, i) => (
                   <a href={socialNetwork.url} key={i} target='_blank'>
-                    <span className='mt-2 inline-flex items-center rounded-full border bg-white px-3 py-1 text-black shadow-md'>
+                    <span className='mt-4 inline-flex items-center rounded-full border bg-white px-3 py-1 shadow-md'>
                       <span>
                         {socialNetwork.type === 'linkedin' && linkedinSVG()}
-                        {socialNetwork.type === 'twitter' && twitterSVG()}
+                        {socialNetwork.type === 'github' && gitHubSVG()}
                         {socialNetwork.type === 'instagram' && instagramSVG()}
                         {socialNetwork.type === 'facebook' && facebookSVG()}
-                        {socialNetwork.type === 'github' && gitHubSVG()}
+                        {socialNetwork.type === 'twitter' && twitterSVG()}
                       </span>
                     </span>
                   </a>
