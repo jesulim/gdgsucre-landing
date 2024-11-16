@@ -1,16 +1,19 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectCoverflow, Pagination } from 'swiper/modules'
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+
+import './swiperStyles.css'
 
 import organizersData from '../../data/organizers.json'
 import OrganizerCard from './OrganizerCard'
 
 const Organizer = () => {
   return (
-    <div className='circuit-background mx-auto max-w-screen-lg'>
+    <div className='circuit-background mx-auto max-w-screen-xl'>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -24,14 +27,27 @@ const Organizer = () => {
           slideShadows: false
         }}
         pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false
+        }}
+        loop={true}
+        modules={[Autoplay, EffectCoverflow, Pagination]}
         className='mySwiper'
-        style={{ height: '100%', paddingBottom: '90px', paddingTop: '30px' }}
+        style={{ height: '100%', paddingBottom: '90px' }}
       >
         {organizersData
           .sort((a, b) => b.type - a.type)
           .map((organizerProps, i) => (
-            <SwiperSlide key={i} style={{ backgroundPosition: 'center', backgroundSize: 'cover', width: '300px', height: '360px' }}>
+            <SwiperSlide
+              key={i}
+              style={{
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                width: '300px',
+                height: '360px'
+              }}
+            >
               <OrganizerCard key={i} id={i} {...organizerProps} uuid={i + 1} />
             </SwiperSlide>
           ))}
