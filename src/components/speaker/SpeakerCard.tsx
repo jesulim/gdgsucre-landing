@@ -44,11 +44,11 @@ export const SpeakerCard = ({
       {/* Card */}
       <div className='transition-duration-300 cut-corners-l pointer-events-auto h-full bg-black p-0.5 mix-blend-luminosity transition-all dark:bg-white md:hover:!scale-100 md:hover:!blur-none md:group-hover:scale-[0.90] md:group-hover:blur-[1px]'>
         <div className={`cut-corners-l h-full pb-2 pl-2 ${bgColors[id % 4]}`}>
-          <div className='flex h-full flex-col items-center border-b-2 border-l-2 bg-white px-2 py-4 text-center dark:bg-black md:py-8'>
+          <div className='flex h-full flex-col items-center border-b-2 border-l-2 bg-white px-2 pb-2 pt-4 text-center dark:bg-black sm:py-4 md:py-6'>
             <img
               src={img}
               alt={name}
-              className='w-11/12 rounded-full md:w-48'
+              className='w-11/12 rounded-full border-2 sm:w-48'
               decoding='async'
               loading='lazy'
               width='500'

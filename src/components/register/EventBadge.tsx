@@ -51,7 +51,7 @@ export default function EventBadge({ userName, email, role, picture }) {
               <img
                 src={`https://unavatar.io/${email}?fallback=${picture}`}
                 alt={userName}
-                className='h-14 w-14 rounded-full'
+                className='h-16 w-16 rounded-full border-2 border-black'
                 data-atropos-offset='8'
               />
               <div

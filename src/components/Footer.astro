@@ -3,40 +3,22 @@ import GdgSucreLogo from './logos/GDGSucreLogo.astro'
 import SocialIcons from './SocialIcons.astro'
 ---
 
-<footer class='relative pt-4 md:pt-8 bg-gray dark:bg-black'>
-  <!-- <Image
-    width='1440'
-    height='319'
-    src={bicycle}
-    class='w-full object-cover dark:hidden'
-    alt='I/O 2024 bicycle'
-  />
+<footer class='relative border-t-2 bg-gray dark:bg-black lg:mt-12'>
+  <div class='mx-auto max-w-screen-2xl p-4 pb-16 pt-6 lg:py-8'>
+    <div class='flex flex-col space-y-4 font-medium lg:flex-row lg:space-y-0'>
+      <GdgSucreLogo />
 
-  <Image
-    width='1440'
-    height='319'
-    src={bicycleDark}
-    class='w-full object-cover hidden dark:block'
-    alt='I/O 2024 bicycle'
-  /> -->
+      <a href='/pastEvents/' class='hover:text-blue lg:mx-8'>Eventos Pasados</a>
 
-  <div class='dark:bg-black dark:text-white dark:border-white'>
-    <div class='mx-auto max-w-screen-2xl p-4 pt-8 pb-16 lg:py-12'>
-      <div class='flex space-y-4 flex-col lg:flex-row lg:space-y-0 font-medium'>
-        <GdgSucreLogo />
+      <a
+        href='https://developers.google.com/community-guidelines'
+        target='_blank'
+        class='hover:text-blue lg:mr-auto'
+      >
+        Lineamientos de la comunidad
+      </a>
 
-        <a href='/pastEvents/' class='lg:mx-8 hover:text-blue'> Eventos Pasados</a>
-
-        <a
-          href='https://developers.google.com/community-guidelines'
-          target='_blank'
-          class='hover:text-blue lg:mr-auto'
-        >
-          Lineamientos de la comunidad
-        </a>
-
-        <SocialIcons />
-      </div>
+      <SocialIcons />
     </div>
   </div>
 </footer>

@@ -4,15 +4,17 @@ import scheduleData from '../data/schedule.json'
 import ScheduleCard from './ScheduleCard.astro'
 ---
 
-<div class='mx-auto my-16 max-w-screen-2xl border-y-2 bg-yellow dark:bg-blue lg:mt-24 2xl:border-2'>
+<div
+  class='bg-yellow-orange mx-auto mb-8 mt-10 max-w-screen-2xl border-y-2 dark:bg-blue lg:mb-12 lg:mt-20 2xl:border-2'
+>
   <SectionTitle id='agenda' title='Agenda' />
 
-  <div class='mx-auto grid max-w-screen-xl place-content-center pb-4'>
+  <div class='mx-auto grid max-w-screen-xl place-content-center pb-2'>
     <!-- Contenedor en dos columnas para pantallas grandes y una columna para pantallas pequeñas -->
-    <div class='flex flex-col divide-y-2 lg:flex-row lg:divide-x-2 lg:divide-y-0'>
+    <div class='flex flex-col divide-y-2 px-4 lg:flex-row lg:divide-x-2 lg:divide-y-0'>
       <!-- Columna de la mañana -->
-      <div class='space-y-4 px-4 py-4 lg:w-1/2 lg:px-8'>
-        <h3 class='text-2xl font-semibold'>Mañana</h3>
+      <div class='lg:w-1/2 lg:px-4'>
+        <h3 class='pb-2 text-2xl font-semibold'>Mañana</h3>
         {
           scheduleData.day.map(event => (
             <ScheduleCard
@@ -27,8 +29,8 @@ import ScheduleCard from './ScheduleCard.astro'
       </div>
 
       <!-- Columna de la tarde -->
-      <div class='space-y-4 px-4 py-4 lg:w-1/2 lg:px-8'>
-        <h3 class='text-2xl font-semibold'>Tarde</h3>
+      <div class='lg:w-1/2 lg:px-4'>
+        <h3 class='py-2 text-2xl font-semibold sm:pt-0'>Tarde</h3>
         {
           scheduleData.afternoon.map(event => (
             <ScheduleCard
