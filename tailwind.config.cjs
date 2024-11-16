@@ -4,16 +4,13 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
-      backgroundImage: {
-        'sponsors-pattern': 'url("./backround-patron.svg")',
-      },
       colors: {
         'dark-gray': '#1F2123',
         red: '#EA4335',
         green: '#34A853',
         blue: '#4285F4',
         yellow: '#FBBC04',
-        'yellor-orange': '#F9AB00',
+        'yellow-orange': '#F9AB00',
         'yellow-blend': '#FFCB32',
         purple: '#9F6CD4',
         orange: '#F46831',
@@ -23,12 +20,12 @@ module.exports = {
         teal: '#00DB9F',
         light: {
           background: '#EEEEEE',
-          text: '#333333',
+          text: '#333333'
         },
         dark: {
           background: '#202124',
-          text: '#e2e8f0',
-        },
+          text: '#e2e8f0'
+        }
       },
       fontFamily: {
         google: ['Prompt', 'sans-serif'],
