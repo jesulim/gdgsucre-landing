@@ -44,7 +44,7 @@ export const Timer = ({ initialTime, targetDate }) => {
 
   if (initialTime <= 0 || seconds < 0) {
     return (
-      <div className='mt-8 font-bold text-4xl text-blue animate-bounce'>
+      <div className='mt-8 font-bold text-4xl text-yellow animate-bounce text-center'>
         ¡Empezó el <br />DevFest Sucre 2024!
       </div>
     )
