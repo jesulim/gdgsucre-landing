@@ -51,6 +51,17 @@ import Header from '@components/Header.astro'
 
       window.localStorage.setItem('theme', theme || 'light')
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-BGHRR8BE5R'></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-BGHRR8BE5R')
+    </script>
   </head>
 
   <body
