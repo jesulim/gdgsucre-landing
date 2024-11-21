@@ -6,14 +6,27 @@ import 'swiper/css/pagination'
 import PastEventsHeader from '@components/PastEventsHeader.astro'
 import ReturnButton from '@components/ReturnButton.astro'
 ---
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src='https://www.googletagmanager.com/gtag/js?id=G-BGHRR8BE5R'></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag('js', new Date())
+    gtag('config', 'G-BGHRR8BE5R')
+  </script>
+</head>
 <body
-class='absolute inset-0 -z-10 h-full w-full bg-white font-google dark:bg-black dark:text-white overflow-y-auto'
+  class='absolute inset-0 -z-10 h-full w-full overflow-y-auto bg-white font-google dark:bg-black dark:text-white'
 >
-  <PastEventsHeader/>
-  <div class='min-h-screen mx-auto bg-gray-800 pt-8 lg:pt-4 space-y-12'>
-    <div class='xl:pb-16 lg:pb-14 md:pb-32 sm:pb-52'></div>
+  <PastEventsHeader />
+  <div class='bg-gray-800 mx-auto min-h-screen space-y-12 pt-8 lg:pt-4'>
+    <div class='sm:pb-52 md:pb-32 lg:pb-14 xl:pb-16'></div>
     <div class='swiper p-4 md:p-8 lg:p-10'>
-      <div class='swiper-wrapper space-x-4 md:space-x-6 lg:space-x-8 pb-8'>
+      <div class='swiper-wrapper space-x-4 pb-8 md:space-x-6 lg:space-x-8'>
         <div class='swiper-slide'>
           <PastEvent
             title='I/O Extended Sucre 2024'
@@ -50,11 +63,11 @@ class='absolute inset-0 -z-10 h-full w-full bg-white font-google dark:bg-black d
           />
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class='swiper-pagination'></div>
     </div>
 
     <script>
-      import Swiper from 'swiper/bundle';      
+      import Swiper from 'swiper/bundle'
 
       new Swiper('.swiper', {
         effect: 'coverflow',
@@ -63,42 +76,42 @@ class='absolute inset-0 -z-10 h-full w-full bg-white font-google dark:bg-black d
           stretch: 0,
           depth: 300,
           modifier: 2,
-          slideShadows: true,
+          slideShadows: true
         },
         mousewheel: {
-          invert: true,
+          invert: true
         },
         keyboard: {
           enabled: true,
-          onlyInViewport: false,
+          onlyInViewport: false
         },
         autoplay: {
           delay: 4000,
-          disableOnInteraction: true,
+          disableOnInteraction: true
         },
         centeredSlides: true,
         slidesPerView: 1,
         breakpoints: {
           640: {
-            slidesPerView: 1,
+            slidesPerView: 1
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 2
           },
           1024: {
-            slidesPerView: 2,
-          },
+            slidesPerView: 2
+          }
         },
         rewind: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
           renderBullet: function (index, className) {
-            return '<span class="' + className + '" style="background-color: #4285f4;"></span>';
+            return '<span class="' + className + '" style="background-color: #4285f4;"></span>'
           }
-        },
-      });
+        }
+      })
     </script>
   </div>
-  <ReturnButton href='/'/>
+  <ReturnButton href='/' />
 </body>
