@@ -8,6 +8,11 @@ module.exports = {
         'dark-gray': '#1F2123',
         red: '#EA4335',
         green: '#34A853',
+        'green-one': '#D1ECE3',
+        'green-two': '#00DBA2',
+        'green-three': '#00B698',
+        'green-four': '#0F7C67',
+        'green-five': '#1A3E38',
         blue: '#4285F4',
         yellow: '#FBBC04',
         'yellow-orange': '#F9AB00',
@@ -19,7 +24,7 @@ module.exports = {
         black: '#202124',
         teal: '#00DB9F',
         light: {
-          background: '#EEEEEE',
+          background: '#FFFFFF',
           text: '#333333'
         },
         dark: {
