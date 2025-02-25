@@ -22,12 +22,12 @@ const hasSessionCookie = Astro.cookies.has('__session')
     <p class='text-4xl font-bold'>International Women's Day 2025</p>
 
     <div
-      class='bg-golden relative m-8 rounded-full border-2 border-black text-xl font-semibold text-black shadow-[4px_4px_0px_0px_#726239] transition-all duration-150 active:translate-x-1 active:translate-y-1 active:shadow-none'
+      class='relative m-8 rounded-full border-2 border-black bg-golden text-xl font-semibold text-black shadow-[4px_4px_0px_0px_#726239] transition-all duration-150 active:translate-x-1 active:translate-y-1 active:shadow-none'
     >
       {
         hasSessionCookie ? (
           <a href='/registro' class='block px-6 py-3'>
-            Ver registro
+            Verificar registro
           </a>
         ) : (
           <RegisterButton />
