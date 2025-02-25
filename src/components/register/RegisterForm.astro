@@ -4,60 +4,53 @@ import Input from './Input.astro'
 const { email, uid } = Astro.props
 ---
 
-<div class='mx-auto max-w-screen-sm pb-16'>
-  <div class='space-y-2 pb-4 md:space-y-4'>
-    <h1 class='text-2xl font-bold md:text-4xl'>Regístrate al Evento</h1>
-    <ul class='space list-disc space-y-2 pl-4 leading-tight marker:text-blue'>
-      <li>La entrada al evento es gratuita e incluye almuerzo.</li>
-      <li>Los certificados se otorgarán a quienes asistan en la mañana y en la tarde.</li>
-      <li>
-        Revisaremos tus respuestas para confirmar la inscripción. Priorizando a quienes expliquen
-        sus razones para participar.
-      </li>
-      <li>El nombre y apellido proporcionados se utilizarán para el certificado.</li>
-    </ul>
-  </div>
-
-  <form>
-    <input type='hidden' id='uid' name='uid' value={uid} />
-
-    <Input title='Email' type='email' name='email' value={email} required readonly />
-    <Input title='Nombre(s)' name='firstname' required />
-    <Input title='Apellido(s)' name='lastname' required />
-    <Input
-      title='Número de teléfono'
-      subtitle='Incluye el código de país en caso de no ser de Bolivia.'
-      name='phone'
-      required
-    />
-    <Input title='Carnet de identidad' name='ci' required />
-    <Input title='(Opcional) Carnet universitario' name='cu' />
-
-    <label for='reasonToParticipate' class='my-4 space-y-2'>
-      ¿Por qué te gustaría participar en el evento?
-      <span class='font-bold text-red'>*</span>
-
-      <textarea
-        class='w-full border bg-white p-2 dark:bg-black'
-        id='reasonToParticipate'
-        name='reasonToParticipate'
-        required></textarea>
-      <span class='text-sm text-red' id='error-reasonToParticipate'></span>
-    </label>
-
-    <Input
-      title='(Opcional) ¿Tienes alguna alergia o restricción alimentaria?'
-      name='dietaryRestriction'
-    />
-
-    <button
-      class='group-invalid:disabled mt-6 w-full border-2 border-black bg-blue p-2 font-semibold text-white dark:border-white'
-      type='submit'
-    >
-      Regístrate
-    </button>
-  </form>
+<div class='space-y-2 pb-4 md:space-y-4'>
+  <h1 class='text-2xl font-bold md:text-4xl'>Regístrate al Evento</h1>
+  <ul class='space list-disc space-y-2 pl-4 leading-tight marker:text-green-three'>
+    <li>La entrada al evento tiene un costo de XX Bs. e incluye refrigerio.</li>
+    <li>Tu comprobante de pago será revisado para validar tu registro.</li>
+  </ul>
 </div>
+
+<form>
+  <input type='hidden' id='uid' name='uid' value={uid} />
+
+  <Input title='Email' type='email' name='email' value={email} required readonly />
+  <Input title='Nombre(s)' name='firstname' required />
+  <Input title='Apellido(s)' name='lastname' required />
+  <Input
+    title='Número de teléfono'
+    subtitle='Incluye el código de país en caso de no ser de Bolivia.'
+    name='phone'
+    required
+  />
+
+  <label class='my-4 block font-medium dark:text-white' for='voucher'>
+    Comprobante de pago
+    <span class='font-bold text-red'>*</span>
+
+    <input
+      class='my-2 block w-full cursor-pointer rounded-lg border text-sm file:mr-4 file:border-0 file:border-r-2 file:bg-green-two file:px-4 file:py-2'
+      id='voucher'
+      name='voucher'
+      type='file'
+      accept='image/*'
+    />
+    <span class='text-sm text-red' id={`error-voucher`}></span>
+  </label>
+
+  <Input
+    title='(Opcional) ¿Tienes alguna alergia o restricción alimentaria?'
+    name='dietaryRestriction'
+  />
+
+  <button
+    class='group-invalid:disabled w-full rounded-lg border-2 bg-golden py-2 font-semibold text-black'
+    type='submit'
+  >
+    Regístrate
+  </button>
+</form>
 
 <script>
   import { actions, isInputError } from 'astro:actions'
@@ -87,6 +80,8 @@ const { email, uid } = Astro.props
     }
 
     if (isInputError(error)) {
+      console.log(error.fields)
+
       for (const [fieldName, fieldErrors] of Object.entries(error.fields)) {
         document.querySelector(`#error-${fieldName}`).textContent = fieldErrors.join(', ')
       }
