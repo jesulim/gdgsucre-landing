@@ -1,5 +1,7 @@
-import type { ServiceAccount } from 'firebase-admin'
+import admin, { type ServiceAccount } from 'firebase-admin'
 import { initializeApp, cert, getApps } from 'firebase-admin/app'
+
+const COLLECTION_NAME = 'registro-iwd2025'
 
 const activeApps = getApps()
 const serviceAccount = {
@@ -15,6 +17,13 @@ const serviceAccount = {
   client_x509_cert_url: import.meta.env.FIREBASE_CLIENT_CERT_URL
 }
 
-const initApp = () => initializeApp({ credential: cert(serviceAccount as ServiceAccount) })
+const initApp = () =>
+  initializeApp({
+    credential: cert(serviceAccount as ServiceAccount),
+    storageBucket: 'gs://gdgsucre-events.appspot.com'
+  })
 
-export const app = activeApps.length === 0 ? initApp() : activeApps[0]
+const app = activeApps.length === 0 ? initApp() : activeApps[0]
+const bucket = admin.storage().bucket()
+
+export { app, bucket, COLLECTION_NAME }

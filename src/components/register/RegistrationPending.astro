@@ -1,0 +1,13 @@
+---
+import Diplodocus from 'src/assets/Diplodocus.astro'
+const { firstname } = Astro.props
+---
+
+<div class='mx-auto'>
+  <span class='md:text-xl'>
+    ¡Gracias por tu interés, {firstname}! Estamos verificando tu registro.
+  </span>
+  <div class='mx-auto mt-8 flex flex-col items-center space-y-2'>
+    <Diplodocus width='100' />
+  </div>
+</div>

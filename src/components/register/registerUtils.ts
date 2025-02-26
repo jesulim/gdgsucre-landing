@@ -1,0 +1,61 @@
+import { getAuth } from 'firebase-admin/auth'
+import { getFirestore } from 'firebase-admin/firestore'
+import { app, COLLECTION_NAME } from '../../firebase/server'
+
+interface Registration {
+  uid: string
+  picture: string
+  firstname: string
+  lastname: string
+  email: string
+  phone: string
+  ci: string
+  cu: string
+  dietaryRestriction: string
+  validated: boolean
+  role: string
+}
+
+enum RegistrationStatus {
+  Registered = 'REGISTERED',
+  Pending = 'PENDING',
+  Open = 'OPEN',
+  Closed = 'CLOSED'
+}
+
+async function fetchRegistration(sessionCookie: string): Promise<Registration | null> {
+  try {
+    const user = await getAuth(app).verifySessionCookie(sessionCookie)
+
+    const db = getFirestore(app).collection(COLLECTION_NAME)
+    const doc = await db.doc(user.uid).get()
+
+    return {
+      uid: user.uid,
+      email: user.email,
+      picture: user.picture,
+      ...doc.data()
+    } as Registration
+  } catch (error) {
+    console.error(error)
+    return null
+  }
+}
+
+function getRegistrationStatus(
+  registration: Registration,
+  registrationClosed = false
+): RegistrationStatus {
+  if (registration.validated) {
+    return RegistrationStatus.Registered
+  }
+
+  if (registration.validated === false) {
+    return RegistrationStatus.Pending
+  }
+
+  return registrationClosed ? RegistrationStatus.Closed : RegistrationStatus.Open
+}
+
+export { fetchRegistration, getRegistrationStatus, RegistrationStatus }
+export type { Registration }

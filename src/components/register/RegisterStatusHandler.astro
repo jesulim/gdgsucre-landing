@@ -1,0 +1,49 @@
+---
+import {
+  fetchRegistration,
+  getRegistrationStatus,
+  RegistrationStatus
+} from '@components/register/registerUtils'
+
+import RegistrationForm from '@components/register/RegistrationForm.astro'
+import RegistrationPending from '@components/register/RegistrationPending.astro'
+import EventBadge from '@components/register/EventBadge'
+import RegistrationClosed from '@components/register/RegistrationClosed.astro'
+
+const { sessionCookie } = Astro.props
+
+const registration = await fetchRegistration(sessionCookie)
+if (!registration) {
+  Astro.cookies.delete('__session')
+  return Astro.redirect('/')
+}
+
+const REGISTRATION_CLOSED = false
+const status = getRegistrationStatus(registration, REGISTRATION_CLOSED)
+---
+
+{status === RegistrationStatus.Closed && <RegistrationClosed />}
+
+{
+  status === RegistrationStatus.Open && (
+    <RegistrationForm uid={registration.uid} email={registration.email} />
+  )
+}
+
+{
+  status === RegistrationStatus.Pending && (
+    <RegistrationPending firstname={registration.firstname} />
+  )
+}
+
+{
+  status === RegistrationStatus.Registered && (
+    <EventBadge
+      userName={`${registration.firstname} ${registration.lastname}`}
+      email={registration.email}
+      role={registration.role}
+      picture={registration.picture}
+      client:load
+    />
+  )
+}

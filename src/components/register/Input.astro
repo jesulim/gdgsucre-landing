@@ -9,7 +9,7 @@ const { title, name, subtitle, ...rest } = Astro.props
   </span>
   {subtitle && <p class='text-sm leading-tight opacity-80'>{subtitle}</p>}
   <input
-    class='mt-2 w-full border p-2 read-only:bg-gray dark:bg-black dark:read-only:bg-gray/10'
+    class='mt-2 w-full rounded-lg border p-2 read-only:bg-gray dark:bg-black dark:read-only:bg-gray/10'
     id={name}
     name={name}
     {...rest}
