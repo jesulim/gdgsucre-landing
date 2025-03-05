@@ -1,15 +1,32 @@
 ---
 import Input from './Input.astro'
 
+import Loader from '../../assets/icons/loader.svg'
+import qrImg from '../../assets/QR.jpeg'
+import { Image } from 'astro:assets'
 const { email, uid } = Astro.props
 ---
 
 <div class='space-y-2 pb-4 md:space-y-4'>
   <h1 class='text-2xl font-bold md:text-4xl'>Regístrate al Evento</h1>
+  <span>La entrada al evento cuenta con 3 paquetes: </span>
   <ul class='space list-disc space-y-2 pl-4 leading-tight marker:text-green-three'>
-    <li>La entrada al evento tiene un costo de XX Bs. e incluye refrigerio.</li>
-    <li>Tu comprobante de pago será revisado para validar tu registro.</li>
+    <li class='leading-6'>
+      <span class='rounded-sm bg-green-one px-1 text-black'>SheStarts 10 Bs.</span>
+      <br class='lg:hidden' />Refrigerio, Lanyard y Stickers.
+    </li>
+    <li class='leading-6'>
+      <span class='rounded-sm bg-blue-one px-1 text-black'>SheCodes 20 Bs.</span>
+      <br class='lg:hidden' />SheStarts + Plantitas.
+    </li>
+    <li class='leading-6'>
+      <span class='rounded-sm bg-golden px-1 text-black'>SheLeads 40 Bs.</span>
+      <br class='lg:hidden' />SheCodes + Espejitos y Estuches.
+    </li>
   </ul>
+  <div class='rounded-lg border border-golden bg-golden/70 p-2 text-black'>
+    Tu comprobante de pago será revisado para validar tu registro.
+  </div>
 </div>
 
 <form>
@@ -25,6 +42,8 @@ const { email, uid } = Astro.props
     required
   />
 
+  <Image src={qrImg} width='350' alt='QR de pago' class='mx-auto rounded-lg border' />
+
   <label class='my-4 block font-medium dark:text-white' for='voucher'>
     Comprobante de pago
     <span class='font-bold text-red'>*</span>
@@ -35,6 +54,7 @@ const { email, uid } = Astro.props
       name='voucher'
       type='file'
       accept='image/*'
+      required
     />
     <span class='text-sm text-red' id={`error-voucher`}></span>
   </label>
@@ -45,10 +65,17 @@ const { email, uid } = Astro.props
   />
 
   <button
-    class='group-invalid:disabled w-full rounded-lg border-2 bg-golden py-2 font-semibold text-black'
+    id='register'
+    class='group-invalid:disabled flex w-full rounded-lg border-2 bg-golden py-2 font-semibold text-black disabled:bg-golden/90'
     type='submit'
   >
-    Regístrate
+    <div class='mx-auto flex'>
+      <Loader
+        id='loader'
+        class='mr-3 hidden w-6 animate-spin fill-black text-black/40 dark:text-white/50'
+      />
+      Regístrate
+    </div>
   </button>
 </form>
 
@@ -57,6 +84,8 @@ const { email, uid } = Astro.props
   import { navigate } from 'astro:transitions/client'
 
   const form = document.querySelector('form')
+  const registerButton = document.querySelector('#register')
+  const loaderIcon = document.querySelector('#loader')
 
   for (const input of form.elements as HTMLCollectionOf<HTMLInputElement>) {
     input.addEventListener('invalid', () => {
@@ -71,6 +100,9 @@ const { email, uid } = Astro.props
   form.addEventListener('submit', async event => {
     event.preventDefault()
 
+    loaderIcon.classList.remove('hidden')
+    registerButton.disabled = true
+
     const formData = new FormData(form)
     const { error } = await actions.register(formData)
 
@@ -82,9 +114,12 @@ const { email, uid } = Astro.props
     if (isInputError(error)) {
       console.log(error.fields)
 
+      loaderIcon.classList.add('hidden')
       for (const [fieldName, fieldErrors] of Object.entries(error.fields)) {
         document.querySelector(`#error-${fieldName}`).textContent = fieldErrors.join(', ')
       }
     }
+
+    registerButton.disabled = false
   })
 </script>

@@ -1,7 +1,6 @@
 ---
 import { Timer } from './Timer'
 
-import Logo from './Logo.astro'
 import RegisterButton from './RegisterButton.astro'
 import CalendarLogo from '../../assets/icons/Calendar.astro'
 import LocationMarker from 'src/assets/icons/LocationMarker.astro'
@@ -9,8 +8,7 @@ import Cloud from './Cloud.astro'
 import Lady from './Lady.astro'
 import AnimatedPlant from './AnimatedPlant.astro'
 import AnimatedHtml from './AnimatedHtml.astro'
-import html from '../../assets/drawings/html.png'
-import { Image } from 'astro:assets'
+
 import Message from './Message.astro'
 
 const targetDate = new Date('2025-03-15T14:00:00-04:00')
@@ -60,7 +58,7 @@ const hasSessionCookie = Astro.cookies.has('__session')
         <div class="px-2">
           <p class="text-2xl font-semibold" aria-live="polite">Sábado 15 de marzo</p>
           <p class="text-xl font-medium text-gray-700" aria-live="polite">
-            <time datetime="2025-03-15T08:30">8:30 Hrs.</time>
+            <time datetime="2025-03-15T08:30">14:00 Hrs.</time>
           </p>
         </div>
       </div>
