@@ -1,27 +1,28 @@
 ---
+import { Image } from 'astro:assets'
 import Input from './Input.astro'
 
 import Loader from '../../assets/icons/loader.svg'
 import qrImg from '../../assets/QR.jpeg'
-import { Image } from 'astro:assets'
+
 const { email, uid } = Astro.props
 ---
 
 <div class='space-y-2 pb-4 md:space-y-4'>
   <h1 class='text-2xl font-bold md:text-4xl'>Regístrate al Evento</h1>
-  <span>La entrada al evento cuenta con 3 paquetes: </span>
+  <span> El evento no tiene costo, pero contamos con 3 paquetes para ampliar tu experiencia: </span>
   <ul class='space list-disc space-y-2 pl-4 leading-tight marker:text-green-three'>
     <li class='leading-6'>
-      <span class='rounded-sm bg-green-one px-1 text-black'>SheStarts 10 Bs.</span>
-      <br class='lg:hidden' />Refrigerio, Lanyard y Stickers.
+      <span class='rounded-sm bg-green-one px-1 text-black'>SheStarts</span>
+      <br class='lg:hidden' /> Refrigerio, Lanyard y Stickers.
     </li>
     <li class='leading-6'>
-      <span class='rounded-sm bg-blue-one px-1 text-black'>SheCodes 20 Bs.</span>
-      <br class='lg:hidden' />SheStarts + Plantitas.
+      <span class='rounded-sm bg-blue-one px-1 text-black'>SheCodes</span>
+      <br class='lg:hidden' /> SheStarts + Plantitas.
     </li>
     <li class='leading-6'>
-      <span class='rounded-sm bg-golden px-1 text-black'>SheLeads 40 Bs.</span>
-      <br class='lg:hidden' />SheCodes + Espejitos y Estuches.
+      <span class='rounded-sm bg-golden px-1 text-black'>SheLeads</span>
+      <br class='lg:hidden' /> SheCodes + Espejitos y Estuches.
     </li>
   </ul>
   <div class='rounded-lg border border-golden bg-golden/70 p-2 text-black'>
@@ -42,11 +43,59 @@ const { email, uid } = Astro.props
     required
   />
 
-  <Image src={qrImg} width='350' alt='QR de pago' class='mx-auto rounded-lg border' />
+  <label for='package'>
+    Selecciona tu paquete <span class='font-bold text-red'>*</span>
+  </label>
+
+  <ul class='my-2 space-y-2'>
+    <li class='flex items-center gap-2'>
+      <input
+        type='radio'
+        id='package-none'
+        name='package'
+        value='Ninguno'
+        checked
+        class='h-4 w-4 appearance-none rounded-full border border-black/70 bg-gray checked:border-4 checked:border-green-three checked:bg-white dark:border-gray dark:bg-gray/20 dark:checked:border-green-three dark:checked:bg-white'
+      />
+      <label for='package-none'>Ninguno</label>
+    </li>
+    <li class='flex items-center gap-2'>
+      <input
+        type='radio'
+        id='package-shestarts'
+        name='package'
+        value='SheStarts'
+        class='h-4 w-4 appearance-none rounded-full border border-black/70 bg-gray checked:border-4 checked:border-green-three checked:bg-white dark:border-gray dark:bg-gray/20 dark:checked:border-green-three dark:checked:bg-white'
+      />
+      <label for='package-shestarts'> SheStarts 10 Bs. </label>
+    </li>
+    <li class='flex items-center gap-2'>
+      <input
+        type='radio'
+        id='package-shecodes'
+        name='package'
+        value='SheCodes'
+        class='h-4 w-4 appearance-none rounded-full border border-black/70 bg-gray checked:border-4 checked:border-green-three checked:bg-white dark:border-gray dark:bg-gray/20 dark:checked:border-green-three dark:checked:bg-white'
+      />
+      <label for='package-shecodes'> SheCodes 20 Bs. </label>
+    </li>
+    <li class='flex items-center gap-2'>
+      <input
+        type='radio'
+        id='package-sheleads'
+        name='package'
+        value='SheLeads'
+        class='h-4 w-4 appearance-none rounded-full border border-black/70 bg-gray checked:border-4 checked:border-green-three checked:bg-white dark:border-gray dark:bg-gray/20 dark:checked:border-green-three dark:checked:bg-white'
+      />
+      <label for='package-sheleads'> SheLeads 40 Bs. </label>
+    </li>
+  </ul>
+
+  <Image src={qrImg} width='350' alt='QR de pago' class='rounded-lg border' />
 
   <label class='my-4 block font-medium dark:text-white' for='voucher'>
     Comprobante de pago
-    <span class='font-bold text-red'>*</span>
+    <p class='text-sm opacity-80'>En caso de haber seleccionado un paquete</p>
 
     <input
       class='my-2 block w-full cursor-pointer rounded-lg border text-sm file:mr-4 file:border-0 file:border-r-2 file:bg-green-two file:px-4 file:py-2'
@@ -54,7 +103,6 @@ const { email, uid } = Astro.props
       name='voucher'
       type='file'
       accept='image/*'
-      required
     />
     <span class='text-sm text-red' id={`error-voucher`}></span>
   </label>
@@ -84,7 +132,7 @@ const { email, uid } = Astro.props
   import { navigate } from 'astro:transitions/client'
 
   const form = document.querySelector('form')
-  const registerButton = document.querySelector('#register')
+  const registerButton = document.querySelector('#register') as HTMLButtonElement
   const loaderIcon = document.querySelector('#loader')
 
   for (const input of form.elements as HTMLCollectionOf<HTMLInputElement>) {

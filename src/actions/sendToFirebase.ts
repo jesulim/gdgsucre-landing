@@ -15,12 +15,14 @@ const registerSchema = z.object({
   firstname: requiredString.transform(x => x.trim()),
   lastname: requiredString.transform(x => x.trim()),
   phone: requiredString,
+  package: z.enum(['Ninguno', 'SheStarts', 'SheCodes', 'SheLeads']),
   voucher: z
     .instanceof(File)
+    .optional()
     .refine(file => file.size <= MAX_FILE_SIZE, {
       message: 'El archivo debe ser menor a 5MB.'
     })
-    .refine(file => ALLOWED_MIME_TYPES.includes(file.type), {
+    .refine(file => !file.size || ALLOWED_MIME_TYPES.includes(file.type), {
       message: 'Formato no permitido. Solo JPEG, PNG o WebP.'
     }),
   dietaryRestriction: z.string().nullish().default(''),
@@ -45,22 +47,23 @@ async function compressImage(voucher: File): Promise<Buffer> {
 const sendToFirebase = async (input: z.infer<typeof registerSchema>) => {
   const { uid, voucher, ...data } = input
 
+  if (voucher.size > 0) {
+    const imageVoucher = await compressImage(voucher)
+    const filepath = `${COLLECTION_NAME}/${data.firstname} ${data.lastname}.jpeg`
+
+    const file = bucket.file(filepath)
+    await file.save(imageVoucher, {
+      metadata: {
+        contentType: voucher.type
+      }
+    })
+
+    await file.makePublic()
+    data.voucher = `https://storage.googleapis.com/${bucket.name}/${filepath}`
+  }
+
   const db = getFirestore(app).collection(COLLECTION_NAME)
-
-  const imageVoucher = await compressImage(voucher)
-  const filepath = `${COLLECTION_NAME}/${data.firstname} ${data.lastname}.jpeg`
-
-  const file = bucket.file(filepath)
-  await file.save(imageVoucher, {
-    metadata: {
-      contentType: voucher.type
-    }
-  })
-  await file.makePublic()
-
-  await db
-    .doc(uid)
-    .set({ voucher: `https://storage.googleapis.com/${bucket.name}/${filepath}`, ...data })
+  await db.doc(uid).set(data)
 }
 
 export { registerSchema, sendToFirebase }
