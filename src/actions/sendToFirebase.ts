@@ -46,7 +46,6 @@ const sendToFirebase = async (input: z.infer<typeof registerSchema>) => {
   const { uid, voucher, ...data } = input
 
   const db = getFirestore(app).collection(COLLECTION_NAME)
-  await db.doc(uid).set(data)
 
   const imageVoucher = await compressImage(voucher)
   const filepath = `${COLLECTION_NAME}/${data.firstname} ${data.lastname}.jpeg`
@@ -57,6 +56,11 @@ const sendToFirebase = async (input: z.infer<typeof registerSchema>) => {
       contentType: voucher.type
     }
   })
+  await file.makePublic()
+
+  await db
+    .doc(uid)
+    .set({ voucher: `https://storage.googleapis.com/${bucket.name}/${filepath}`, ...data })
 }
 
 export { registerSchema, sendToFirebase }
