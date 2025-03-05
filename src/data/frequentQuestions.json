@@ -1,22 +1,38 @@
 [
   {
-    "question": "¿Qué es el DevFest?",
-    "answer": "Es uno de los eventos más importantes del año organizado por la comunidad GDG Sucre. Es una conferencia presencial que reúne a la comunidad tecnológica para compartir conocimientos, experiencias y las últimas tendencias en tecnología."
+    "question": "¿El evento tiene algún costo?",
+    "answer": "No, el evento es totalmente gratuito. La entrada es libre, pero te sugerimos adquirir un paquete opcional con un delicioso refrigerio y souvenirs como una plantita, un estuche, espejitos y stickers. Además de llevarte estos recuerdos especiales, tendrás la oportunidad de participar en sorteos exclusivos durante el evento."
   },
   {
-    "question": "¿Dónde y cuándo se realizará el evento?",
-    "answer": "El evento se realizará de manera presencial en la ciudad de Sucre, Bolivia. En el Edificio Central USFX el 16 de noviembre del 2024"
+    "question": "¿Cómo puedo participar en el evento?",
+    "answer": "Solo debes registrarte en la página web del evento. Los cupos son limitados."
   },
   {
-    "question": "¿Dónde y cuándo se realizará el evento?",
-    "answer": "El evento se realizará de manera presencial en la ciudad de Sucre, Bolivia. En el Edificio Central USFX el 16 de noviembre del 2024"
+    "question": "¿Qué requisitos debo cumplir?",
+    "answer": "No hay requisitos, solo ganas de aprender."
   },
   {
-    "question": "¿Qué es el DevFest?",
-    "answer": "Es uno de los eventos más importantes del año organizado por la comunidad GDG Sucre. Es una conferencia presencial que reúne a la comunidad tecnológica para compartir conocimientos, experiencias y las últimas tendencias en tecnología."
+    "question": "¿Cuándo y dónde será el evento?",
+    "answer": "Se realizará el sábado 15 de marzo a las 14:00 en el Salón de la Facultad de Tecnología."
   },
   {
-    "question": "¿Dónde y cuándo se realizará el evento?",
-    "answer": "El evento se realizará de manera presencial en la ciudad de Sucre, Bolivia. En el Edificio Central USFX el 16 de noviembre del 2024"
+    "question": "¿Es un evento exclusivo para mujeres?",
+    "answer": "No, todos son bienvenidos. El evento busca inspirar a más mujeres a involucrarse en tecnología, pero es inclusivo para todos."
+  },
+  {
+    "question": "¿Qué temas se tratarán?",
+    "answer": "Habrá charlas de expertos en tecnología compartiendo sus conocimientos y experiencias."
+  },
+  {
+    "question": "¿El evento es solo para universitarios?",
+    "answer": "No, el evento está abierto para todos, sin importar el nivel académico."
+  },
+  {
+    "question": "¿Desde qué edad se puede asistir al evento?",
+    "answer": "No hay restricción de edad. Cualquiera que tenga interés en aprender y compartir sobre tecnología es bienvenido."
+  },
+  {
+    "question": "¿Habrá eventos en otros departamentos?",
+    "answer": "Sí, también se realizarán eventos en otros departamentos como La Paz, Cochabamba, Tarija y Santa Cruz. Te invitamos a buscar sus redes sociales con 'WTM' seguido del nombre del departamento para más información."
   }
 ]
