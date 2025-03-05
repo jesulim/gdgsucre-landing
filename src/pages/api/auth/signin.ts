@@ -3,9 +3,10 @@ import { getAuth } from 'firebase-admin/auth'
 
 import { app } from '../../../firebase/server'
 
-export const GET: APIRoute = async ({ request, cookies, redirect }) => {
-  const auth = getAuth(app)
+const expiresIn = 1000 * 60 * 60 * 24 * 14
+const auth = getAuth(app)
 
+export const GET: APIRoute = async ({ request, cookies, redirect }) => {
   /* Get token from request headers */
   const idToken = request.headers.get('Authorization')?.split('Bearer ')[1]
   if (!idToken) {
@@ -19,12 +20,8 @@ export const GET: APIRoute = async ({ request, cookies, redirect }) => {
     return new Response(`Invalid token ${error}`, { status: 401 })
   }
 
-  /* Create and set session cookie */
-  const fiveDays = 60 * 60 * 24 * 5 * 1000
-  const sessionCookie = await auth.createSessionCookie(idToken, {
-    expiresIn: fiveDays
-  })
-
+  /* Create and set session cookie for 14 days */
+  const sessionCookie = await auth.createSessionCookie(idToken, { expiresIn })
   cookies.set('__session', sessionCookie, {
     path: '/'
   })
