@@ -35,6 +35,8 @@ import Header from '@components/Header.astro'
     <meta name='twitter:description' content='www.gdgsucre.com/' />
     <meta name='twitter:image' content=`${Astro.url}opengraph.avif` />
 
+    <script type="module" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
     <!-- Load light or dark mode -->
     <script is:inline>
       let theme = localStorage?.getItem('theme')
@@ -62,6 +64,7 @@ import Header from '@components/Header.astro'
       gtag('js', new Date())
       gtag('config', 'G-BGHRR8BE5R')
     </script>
+
   </head>
 
   <body
