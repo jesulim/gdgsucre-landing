@@ -9,8 +9,6 @@ import Lady from './Lady.astro'
 import AnimatedPlant from './AnimatedPlant.astro'
 import AnimatedHtml from './AnimatedHtml.astro'
 
-import Message from './Message.astro'
-
 const targetDate = new Date('2025-03-15T14:00:00-04:00')
 
 const getRemainingTime = () => {
@@ -77,7 +75,5 @@ const hasSessionCookie = Astro.cookies.has('__session')
     <div>
       <Timer initialTime={getRemainingTime()} targetDate={targetDate} client:load />
     </div>
-
-    <Message />
   </section>
 </hero>

@@ -1,18 +1,22 @@
 ---
 import { Image } from 'astro:assets'
+import Message from '../components/hero/Message.astro'
 import foquito from '../assets/drawings/foquito.png'
 ---
 
 <section class='flex flex-col items-center px-4 pt-1 lg:pt-1'>
-  <div class='z-10 max-w-screen-md py-4 md:py-8'>
+  <div class='z-10 flex max-w-screen-md flex-col py-4 md:py-8'>
     <div class='flex items-center gap-4'>
-      <div class='border-2 bg-green-one px-3 py-6 dark:bg-green-five'>
+      <div class='rounded-xl border-2 bg-green-one px-3 py-6 dark:bg-green-five'>
         <span class='block text-center text-sm leading-snug md:text-base'>
           En el Día Internacional de la Mujer, celebra el talento y la innovación con Women
           Techmakers Sucre. Una jornada llena de inspiración, liderazgo y oportunidades te espera.
         </span>
       </div>
       <Image src={foquito} width={75} height={88} alt='foquito' />
+    </div>
+    <div class='m-4 mx-auto'>
+      <Message />
     </div>
   </div>
 </section>
