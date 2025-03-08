@@ -91,7 +91,17 @@ const { email, uid } = Astro.props
     </li>
   </ul>
 
-  <Image src={qrImg} width='350' alt='QR de pago' class='my-4 rounded-lg border' />
+  <div class='my-4 flex flex-col items-center justify-between gap-4 md:flex-row'>
+    <div class='order-1 md:order-none'>
+      <label> Detalles de la cuenta </label>
+      <ul class='list-disc pl-4 text-sm leading-loose marker:text-green-three'>
+        <li>Banco Nacional de Bolivia</li>
+        <li>4501259344</li>
+        <li>Andrea Chumacero Carballo</li>
+      </ul>
+    </div>
+    <Image src={qrImg} width='320' alt='QR de pago' class='rounded-lg border' />
+  </div>
 
   <label class='my-2 block'>
     Comprobante de pago
@@ -115,7 +125,7 @@ const { email, uid } = Astro.props
 
   <button
     id='register'
-    class='group-invalid:disabled flex w-full rounded-lg border-2 bg-golden py-2 font-semibold text-black disabled:bg-golden/90'
+    class='group-invalid:disabled flex w-full rounded-lg border-2 bg-golden py-2 font-semibold text-black disabled:bg-golden/90 dark:border-white'
     type='submit'
   >
     <div class='mx-auto flex'>
