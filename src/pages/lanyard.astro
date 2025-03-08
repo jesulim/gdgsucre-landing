@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro'
+import BandEnvironment from '../components/BandEnvironment'
+
+// Example of how to override the default card textures with SVG files
+// Uncomment the cardTextures prop below to use SVG files
+// Make sure the SVG files exist in your public directory
+
+const examplePerson = {
+  name: "Nico Zelaya",
+  image: "/assets/example-profile.jpg",
+  email: "example@gdgsucre.dev",
+  role: "Participante"
+}
+
+// custom card textures (SVG or PNG)
+const customTextures = {
+  front: "/assets/card-front.svg",
+  back: "/assets/card-back.svg"
+}
+---
+
+<Layout title="Lanyard">
+  <div class="min-h-screen pt-20 bg-[#202124]">
+    <BandEnvironment 
+      client:load 
+      userName={examplePerson.name}
+      picture={examplePerson.image}
+      email={examplePerson.email}
+      role={examplePerson.role}
+      cardTextures={customTextures}
+    />
+  </div>
+</Layout> 
