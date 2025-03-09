@@ -1,6 +1,5 @@
-'use client';
 import { useEffect, useRef, useState } from 'react';
-import * as THREE from 'three';
+import { CanvasTexture, Vector3, CatmullRomCurve3, RepeatWrapping } from 'three';
 import { Canvas, extend, useThree, useFrame } from '@react-three/fiber';
 import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei';
 import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphericalJoint } from '@react-three/rapier';
@@ -154,7 +153,7 @@ async function combineTextures(frontImagePath, backImagePath, personName, person
       }
     }
     
-    const texture = new THREE.CanvasTexture(canvas);
+    const texture = new CanvasTexture(canvas);
     texture.needsUpdate = true;
     return texture;
   } catch (error) {
@@ -174,7 +173,7 @@ useGLTF.preload(GLTF_PATH);
 useTexture.preload(TEXTURE_PATH);
 
 // actual card and lanyard
-function Lanyard({ maxSpeed = 50, minSpeed = 10, personName, personImage, email, role, cardTextures }) {
+function Lanyard({ maxSpeed = 50, minSpeed = 10, personName, personImage, role, cardTextures }) {
   const band = useRef();
   const fixed = useRef();
   const j1 = useRef();
@@ -182,16 +181,16 @@ function Lanyard({ maxSpeed = 50, minSpeed = 10, personName, personImage, email,
   const j3 = useRef();
   const card = useRef();
   
-  const vec = new THREE.Vector3();
-  const ang = new THREE.Vector3();
-  const rot = new THREE.Vector3();
-  const dir = new THREE.Vector3();
+  const vec = new Vector3();
+  const ang = new Vector3();
+  const rot = new Vector3();
+  const dir = new Vector3();
   
   const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 4, linearDamping: 4 };
   const { nodes, materials } = useGLTF(GLTF_PATH);
   const texture = useTexture(TEXTURE_PATH);
   const { width, height } = useThree((state) => state.size);
-  const [curve] = useState(() => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]));
+  const [curve] = useState(() => new CatmullRomCurve3([new Vector3(), new Vector3(), new Vector3(), new Vector3()]));
   const [cardTexture, setCardTexture] = useState(null);
   const [dragged, drag] = useState(false);
   const [hovered, hover] = useState(false);
@@ -214,7 +213,7 @@ function Lanyard({ maxSpeed = 50, minSpeed = 10, personName, personImage, email,
         } else {
           console.warn('Failed to create combined texture, using fallback');
           // fallback texture
-          const fallbackTexture = new THREE.TextureLoader().load(CARD_TEXTURES.front, (tex) => {
+          new TextureLoader().load(CARD_TEXTURES.front, (tex) => {
             tex.flipY = false;
             tex.needsUpdate = true;
             setCardTexture(tex);
@@ -224,7 +223,7 @@ function Lanyard({ maxSpeed = 50, minSpeed = 10, personName, personImage, email,
       .catch(error => {
         console.error('Error in texture creation:', error);
         // fallback texture
-        const fallbackTexture = new THREE.TextureLoader().load(CARD_TEXTURES.front, (tex) => {
+        new TextureLoader().load(CARD_TEXTURES.front, (tex) => {
           tex.flipY = false;
           tex.needsUpdate = true;
           setCardTexture(tex);
@@ -249,7 +248,7 @@ function Lanyard({ maxSpeed = 50, minSpeed = 10, personName, personImage, email,
     }
     if (fixed.current) {
       [j1, j2].forEach((ref) => {
-        if (!ref.current.lerped) ref.current.lerped = new THREE.Vector3().copy(ref.current.translation());
+        if (!ref.current.lerped) ref.current.lerped = new Vector3().copy(ref.current.translation());
         const clampedDistance = Math.max(0.1, Math.min(1, ref.current.lerped.distanceTo(ref.current.translation())));
         ref.current.lerped.lerp(ref.current.translation(), delta * (minSpeed + clampedDistance * (maxSpeed - minSpeed)));
       });
@@ -265,7 +264,7 @@ function Lanyard({ maxSpeed = 50, minSpeed = 10, personName, personImage, email,
   });
 
   curve.curveType = 'chordal';
-  texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  texture.wrapS = texture.wrapT = RepeatWrapping;
 
   return (
     <>
@@ -289,7 +288,7 @@ function Lanyard({ maxSpeed = 50, minSpeed = 10, personName, personImage, email,
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={(e) => (e.target.releasePointerCapture(e.pointerId), drag(false))}
-            onPointerDown={(e) => (e.target.setPointerCapture(e.pointerId), drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation()))))}>
+            onPointerDown={(e) => (e.target.setPointerCapture(e.pointerId), drag(new Vector3().copy(e.point).sub(vec.copy(card.current.translation()))))}>
             <mesh geometry={nodes.card.geometry}>
               {cardTexture && (
                 <meshPhysicalMaterial 
