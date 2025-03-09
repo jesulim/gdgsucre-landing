@@ -47,6 +47,9 @@ async function compressImage(voucher: File): Promise<Buffer> {
 const sendToFirebase = async (input: z.infer<typeof registerSchema>) => {
   const { uid, voucher, ...data } = input
 
+  console.log(data, voucher)
+  return
+
   if (voucher.size > 0) {
     const imageVoucher = await compressImage(voucher)
     const filepath = `${COLLECTION_NAME}/${data.firstname} ${data.lastname}.jpeg`

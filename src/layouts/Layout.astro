@@ -1,9 +1,8 @@
 ---
 import '@fontsource/prompt'
-import '@fontsource/noto-color-emoji'
 import '@fontsource-variable/sofia-sans'
 
-import Header from '@components/Header.astro'
+import Header from '@components/header/Header.astro'
 ---
 
 <!doctype html>
@@ -35,7 +34,9 @@ import Header from '@components/Header.astro'
     <meta name='twitter:description' content='iwd2025.gdgsucre.com/' />
     <meta name='twitter:image' content=`${Astro.url}opengraph.avif` />
 
-    <script type='module' src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js'></script>
+    <script
+      type='module'
+      src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js'></script>
 
     <!-- Load light or dark mode -->
     <script is:inline>
@@ -64,7 +65,6 @@ import Header from '@components/Header.astro'
       gtag('js', new Date())
       gtag('config', 'G-BGHRR8BE5R')
     </script>
-
   </head>
 
   <body

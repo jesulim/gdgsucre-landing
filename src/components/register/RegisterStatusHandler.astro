@@ -12,14 +12,16 @@ import RegistrationClosed from '@components/register/RegistrationClosed.astro'
 
 const { sessionCookie } = Astro.props
 
-const registration = await fetchRegistration(sessionCookie)
-if (!registration) {
-  Astro.cookies.delete('__session')
-  return Astro.redirect('/')
-}
+// const registration = await fetchRegistration(sessionCookie)
+// if (!registration) {
+//   Astro.cookies.delete('__session')
+//   return Astro.redirect('/')
+// }
 
-const REGISTRATION_CLOSED = false
-const status = getRegistrationStatus(registration, REGISTRATION_CLOSED)
+// const REGISTRATION_CLOSED = false
+// const status = getRegistrationStatus(registration, REGISTRATION_CLOSED)
+const registration = { uid: '213oasodij', email: 'test@example.org' }
+const status = RegistrationStatus.Open
 ---
 
 {status === RegistrationStatus.Closed && <RegistrationClosed />}
