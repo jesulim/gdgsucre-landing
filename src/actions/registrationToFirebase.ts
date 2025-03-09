@@ -15,7 +15,7 @@ const registerSchema = z.object({
   firstname: requiredString.transform(x => x.trim()),
   lastname: requiredString.transform(x => x.trim()),
   phone: requiredString,
-  package: z.enum(['Ninguno', 'SheStarts', 'SheCodes', 'SheLeads']),
+  package: z.enum(['Entrada libre', 'SheStarts', 'SheCodes', 'SheLeads']),
   voucher: z
     .instanceof(File)
     .optional()
@@ -26,6 +26,7 @@ const registerSchema = z.object({
       message: 'Formato no permitido. Solo JPEG, PNG o WebP.'
     }),
   dietaryRestriction: z.string().nullish().default(''),
+  role: z.enum(['Participante', 'Organizador']).default('Participante'),
   validated: z.boolean().default(false),
   checkin: z.boolean().default(false)
 })

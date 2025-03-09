@@ -2,14 +2,28 @@
 import Layout from '@layouts/Layout.astro'
 
 import RegisterStatusHandler from '@components/register/RegisterStatusHandler.astro'
+import { fetchRegistration } from '@components/register/registerUtils'
 
 const sessionCookie = Astro.cookies.get('__session')?.value
 if (!sessionCookie) return Astro.redirect('/')
+
+const registration = await fetchRegistration(sessionCookie)
+
+if (registration.validated) {
+  const landyardUrl = new URL('lanyard', Astro.url)
+
+  landyardUrl.searchParams.set('firstname', registration.firstname)
+  landyardUrl.searchParams.set('email', registration.email)
+  landyardUrl.searchParams.set('picture', registration.picture)
+  landyardUrl.searchParams.set('role', registration.role || 'Participante')
+
+  return Astro.redirect(landyardUrl.toString())
+}
 ---
 
 <Layout title='Registro'>
   <div class='mx-auto flex max-w-screen-sm flex-col px-4 py-24 md:pt-32'>
-    <RegisterStatusHandler sessionCookie={sessionCookie} />
+    <RegisterStatusHandler registration={registration} />
 
     <a href='/' class='my-4 w-full rounded-lg border py-2 text-center font-medium'>
       Volver al inicio

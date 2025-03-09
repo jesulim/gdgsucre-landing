@@ -17,7 +17,6 @@ interface Registration {
 }
 
 enum RegistrationStatus {
-  Registered = 'REGISTERED',
   Pending = 'PENDING',
   Open = 'OPEN',
   Closed = 'CLOSED'
@@ -46,10 +45,6 @@ function getRegistrationStatus(
   registration: Registration,
   registrationClosed = false
 ): RegistrationStatus {
-  if (registration.validated) {
-    return RegistrationStatus.Registered
-  }
-
   if (registration.validated === false) {
     return RegistrationStatus.Pending
   }

@@ -1,5 +1,5 @@
 import { defineAction } from 'astro:actions'
-import { registerSchema, sendToFirebase } from './sendToFirebase'
+import { registerSchema, sendToFirebase } from './registrationToFirebase'
 
 export const server = {
   register: defineAction({
