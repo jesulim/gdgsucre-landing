@@ -26,5 +26,5 @@ export const GET: APIRoute = async ({ request, cookies, redirect }) => {
     path: '/'
   })
 
-  return redirect('/registro')
+  return new Response('Success', { status: 200 })
 }

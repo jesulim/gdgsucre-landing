@@ -1,8 +1,9 @@
 ---
 import Loader from '../../assets/icons/loader.svg'
 ---
+
 <button id='register' class='flex items-center px-4 py-3'>
-   <Loader
+  <Loader
     id='loader'
     class='mr-3 hidden w-6 animate-spin fill-black text-black/40 dark:text-white/50'
   />
@@ -11,65 +12,42 @@ import Loader from '../../assets/icons/loader.svg'
 </button>
 
 <style>
-    #register {
-        animation: glow 1s ease-in-out;
-        transition: background 5s, box-shadow 5s;
-        border-radius: 30px;
+  #register {
+    animation: glow 1s ease-in-out;
+    transition:
+      background 5s,
+      box-shadow 5s;
+    border-radius: 30px;
+  }
+  @keyframes glow {
+    0% {
+      box-shadow:
+        0 0 5px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.4);
     }
-    @keyframes glow {
-        0% {
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.4);
-        }
-        50% {
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
-        }
-        100% {
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.4);
-        }
+    50% {
+      box-shadow:
+        0 0 5px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(255, 255, 255, 0.6);
     }
+    100% {
+      box-shadow:
+        0 0 5px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.4);
+    }
+  }
 </style>
 
 <script>
-  // firebase google login
-  import { app } from '../../firebase/client'
-  import {
-    getAuth,
-    GoogleAuthProvider,
-    signInWithPopup,
-    setPersistence,
-    browserLocalPersistence
-  } from 'firebase/auth'
+  import googleLogin from 'src/firebase/googleLogin'
 
   const loaderIcon = document.querySelector('#loader')
-  const registerButton = document.querySelector('#register')
-
-  const auth = getAuth(app)
-
-  setPersistence(auth, browserLocalPersistence)
-    .then(() => {
-      console.log('Persistence enabled!')
-    })
-    .catch(error => {
-      console.error('Error enabling persistence:', error)
-    })
-
-  registerButton.addEventListener('click', async () => {
+  document.querySelector('#register').addEventListener('click', async () => {
     loaderIcon.classList.remove('hidden')
 
     try {
-      const userCredential = await signInWithPopup(auth, new GoogleAuthProvider())
-      const idToken = await userCredential.user.getIdToken()
-
-      const res = await fetch('/api/auth/signin', {
-        headers: {
-          Authorization: `Bearer ${idToken}`
-        }
-      })
-
-      if (res.redirected) {
-        window.location.assign(res.url)
-      }
-    } catch (error) {
+      await googleLogin('/registro')
+    } finally {
       loaderIcon.classList.add('hidden')
     }
   })
