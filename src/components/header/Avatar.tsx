@@ -3,10 +3,10 @@ import { useEffect, useState, useRef } from 'react'
 import { auth } from 'src/firebase/client'
 
 async function signout() {
-  console.log('Signing out')
   try {
     await auth.signOut()
     await fetch('/api/auth/signout')
+
     window.location.assign('/')
   } catch (error) {
     console.error('Sign out failed:', error)
@@ -42,7 +42,7 @@ export default function Avatar({ email, picture }) {
       </button>
 
       {menuOpen && (
-        <div className='absolute -right-2 mt-2 w-32 rounded-lg border-2 border-green-three bg-white text-end text-sm shadow-lg dark:bg-black dark:text-white md:-right-2'>
+        <div className='absolute -right-2 mt-2 w-32 rounded-lg border-2 border-green-three bg-white text-end shadow-lg dark:bg-black dark:text-white'>
           <a href='/registro' className='block p-2 hover:text-blue-two'>
             Registro
           </a>
