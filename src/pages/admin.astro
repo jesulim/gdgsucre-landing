@@ -1,0 +1,28 @@
+---
+import Layout from '@layouts/Layout.astro'
+import { DataGrid } from '@components/admin/DataGrid'
+
+import { getFirestore } from 'firebase-admin/firestore'
+import { app, COLLECTION_NAME } from 'src/firebase/server'
+import { fetchRegistration } from '@components/register/registerUtils'
+
+const user = await fetchRegistration(Astro.cookies.get('__session')?.value)
+
+if (user.role !== 'Organizador') {
+  return Astro.redirect('/')
+}
+
+const snapshot = await getFirestore(app).collection(COLLECTION_NAME).get()
+const registerList = snapshot.docs.map(doc => ({ uid: doc.id, ...doc.data() }))
+---
+
+<Layout title='Admin'>
+  <div class='flex justify-center px-4 pt-24'>
+    <div class='w-full max-w-screen-xl flex-col'>
+      <h1 class='mb-4 text-xl font-bold text-green-four dark:text-green-three md:text-3xl'>
+        Lista de registro
+      </h1>
+      <DataGrid registerList={registerList} client:load />
+    </div>
+  </div>
+</Layout>

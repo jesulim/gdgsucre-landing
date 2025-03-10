@@ -14,6 +14,8 @@ export const ThemeToggle = () => {
     } else {
       document.documentElement.classList.remove('dark')
     }
+
+    document.documentElement.setAttribute('data-ag-theme-mode', theme)
     localStorage.setItem('theme', theme)
   }, [theme])
 
