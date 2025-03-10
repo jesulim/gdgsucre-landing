@@ -9,21 +9,31 @@ import SheCodes from 'src/assets/packages/SheCodes.webp'
 import SheLeads from 'src/assets/packages/SheLeads.webp'
 ---
 
-<div class='px-8 py-4'>
-  <div class='swiper'>
-    <div class='swiper-wrapper'>
-      <div class='swiper-slide'>
-        <Image
-          class='rounded-xl border border-green-four'
-          src={SheStarts}
-          alt='Paquete SheStarts'
-        />
-      </div>
-      <div class='swiper-slide'>
-        <Image class='rounded-xl border border-green-four' src={SheCodes} alt='Paquete SheCodes' />
-      </div>
-      <div class='swiper-slide'>
-        <Image class='rounded-xl border border-green-four' src={SheLeads} alt='Paquete SheLeads' />
+<div class='overflow-hidden px-8 py-4'>
+  <div class='mx-auto md:w-2/3'>
+    <div class='swiper'>
+      <div class='swiper-wrapper'>
+        <div class='swiper-slide'>
+          <Image
+            class='rounded-xl border border-green-four bg-gray'
+            src={SheStarts}
+            alt='Paquete SheStarts'
+          />
+        </div>
+        <div class='swiper-slide'>
+          <Image
+            class='rounded-xl border border-green-four bg-gray'
+            src={SheCodes}
+            alt='Paquete SheCodes'
+          />
+        </div>
+        <div class='swiper-slide'>
+          <Image
+            class='rounded-xl border border-green-four bg-gray'
+            src={SheLeads}
+            alt='Paquete SheLeads'
+          />
+        </div>
       </div>
     </div>
   </div>
