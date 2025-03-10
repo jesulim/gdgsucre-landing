@@ -1,8 +1,4 @@
 ---
-import { Image } from 'astro:assets'
-import plant from '../../assets/drawings/plant.png'
-import wtmPlant from '../../../public/animations/plant.webm'
-
 const { class: styles } = Astro.props;
 ---
 
@@ -15,20 +11,10 @@ const { class: styles } = Astro.props;
   <source src="/animations/plant.webm" type="video/webm">
 </video>
 
-<!--<lottie-player-->
-<!--  src="/animations/plant.json"-->
-<!--  background="transparent"-->
-<!--  speed="1"-->
-<!--  class={`plant sm:ml-8 lg:ml-20 h-52 ${styles}`}-->
-<!--  autoplay-->
-<!--  loop-->
-<!--  loading="lazy"-->
-<!--&gt;</lottie-player>-->
-
 <style>
     .plant {
         opacity: 0.4;
         position: fixed;
-        z-index: 2;
+        z-index: -20;
     }
 </style>
