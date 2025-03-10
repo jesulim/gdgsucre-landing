@@ -1,0 +1,42 @@
+---
+import { Image } from 'astro:assets'
+
+import 'swiper/css'
+import 'swiper/css/effect-cards'
+
+import SheStarts from 'src/assets/packages/SheStarts.webp'
+import SheCodes from 'src/assets/packages/SheCodes.webp'
+import SheLeads from 'src/assets/packages/SheLeads.webp'
+---
+
+<div class='px-8 py-4'>
+  <div class='swiper'>
+    <div class='swiper-wrapper'>
+      <div class='swiper-slide'>
+        <Image
+          class='rounded-xl border border-green-four'
+          src={SheStarts}
+          alt='Paquete SheStarts'
+        />
+      </div>
+      <div class='swiper-slide'>
+        <Image class='rounded-xl border border-green-four' src={SheCodes} alt='Paquete SheCodes' />
+      </div>
+      <div class='swiper-slide'>
+        <Image class='rounded-xl border border-green-four' src={SheLeads} alt='Paquete SheLeads' />
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  import Swiper from 'swiper/bundle'
+
+  new Swiper('.swiper', {
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true
+    },
+    effect: 'cards',
+    grabCursor: true
+  })
+</script>

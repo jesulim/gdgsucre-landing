@@ -4,6 +4,7 @@ import Input from './Input.astro'
 
 import Loader from '../../assets/icons/loader.svg'
 import qrImg from '../../assets/QR.jpeg'
+import PackageSlider from './PackageSlider.astro'
 
 const { email, uid } = Astro.props
 ---
@@ -11,21 +12,8 @@ const { email, uid } = Astro.props
 <div class='space-y-2 pb-4 md:space-y-4'>
   <h1 class='text-2xl font-bold md:text-4xl'>Regístrate al Evento</h1>
   <span> El evento no tiene costo, pero contamos con 3 paquetes para ampliar tu experiencia: </span>
-  <ul class='space list-disc space-y-2 pl-4 leading-tight marker:text-green-three'>
-    <li class='leading-6'>
-      <span class='rounded-sm bg-green-one px-1 text-black'>SheStarts</span>
-      <br class='lg:hidden' /> Refrigerio, Lanyard y Stickers.
-    </li>
-    <li class='leading-6'>
-      <span class='rounded-sm bg-blue-one px-1 text-black'>SheCodes</span>
-      <br class='lg:hidden' /> SheStarts + Plantitas.
-    </li>
-    <li class='leading-6'>
-      <span class='rounded-sm bg-golden px-1 text-black'>SheLeads</span>
-      <br class='lg:hidden' /> SheCodes + Espejitos y Estuches.
-    </li>
-  </ul>
-  <div class='rounded-lg border border-golden bg-golden/70 p-2 text-black'>
+  <PackageSlider />
+  <div class='rounded-lg border border-green-four bg-green-one p-2 text-green-four'>
     Tu comprobante de pago será revisado para validar tu registro.
   </div>
 </div>

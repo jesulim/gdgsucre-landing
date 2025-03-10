@@ -26,7 +26,7 @@ const registerSchema = z.object({
       message: 'Formato no permitido. Solo JPEG, PNG o WebP.'
     }),
   dietaryRestriction: z.string().nullish().default(''),
-  role: z.enum(['Participante', 'Organizador']).default('Participante'),
+  role: z.string().default('Participante'),
   validated: z.boolean().default(false),
   checkin: z.boolean().default(false)
 })
