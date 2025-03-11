@@ -1,0 +1,178 @@
+---
+import { Image } from 'astro:assets'
+import Input from './Input.astro'
+
+import Loader from '../../assets/icons/loader.svg'
+import qrImg from '../../assets/QR.jpeg'
+import PackageSlider from './PackageSlider.astro'
+
+const { email, uid } = Astro.props
+---
+
+<div class='space-y-2 pb-4 md:space-y-4'>
+  <h1 class='text-2xl font-bold md:text-4xl'>Regístrate al Evento</h1>
+  <span> El evento no tiene costo, pero contamos con 3 paquetes para ampliar tu experiencia: </span>
+  <PackageSlider />
+  <div class='rounded-lg border border-green-four bg-green-one p-2 text-green-four'>
+    Tu comprobante de pago será revisado para validar tu registro.
+  </div>
+</div>
+
+<form>
+  <input type='hidden' id='uid' name='uid' value={uid} />
+
+  <Input title='Email' type='email' name='email' value={email} required readonly />
+  <Input title='Nombre(s)' name='firstname' required />
+  <Input title='Apellido(s)' name='lastname' required />
+  <Input
+    title='Número de teléfono'
+    subtitle='Incluye el código de país en caso de no ser de Bolivia.'
+    name='phone'
+    required
+  />
+
+  <label for='package'>
+    Selecciona tu paquete <span class='font-bold text-red'>*</span>
+  </label>
+
+  <ul class='my-2 space-y-2'>
+    <li class='flex items-center gap-2'>
+      <input
+        type='radio'
+        id='package-none'
+        name='package'
+        value='Entrada libre'
+        checked
+        class='h-4 w-4 appearance-none rounded-full border border-black/40 bg-gray checked:border-4 checked:border-green-three checked:bg-white dark:border-gray dark:bg-gray/20 dark:checked:border-green-three dark:checked:bg-white'
+      />
+      <label for='package-none'>Entrada libre</label>
+    </li>
+    <li class='flex items-center gap-2'>
+      <input
+        type='radio'
+        id='package-shestarts'
+        name='package'
+        value='SheStarts'
+        class='h-4 w-4 appearance-none rounded-full border border-black/40 bg-gray checked:border-4 checked:border-green-three checked:bg-white dark:border-gray dark:bg-gray/20 dark:checked:border-green-three dark:checked:bg-white'
+      />
+      <label for='package-shestarts'> SheStarts 10 Bs. </label>
+    </li>
+    <li class='flex items-center gap-2'>
+      <input
+        type='radio'
+        id='package-shecodes'
+        name='package'
+        value='SheCodes'
+        class='h-4 w-4 appearance-none rounded-full border border-black/40 bg-gray checked:border-4 checked:border-green-three checked:bg-white dark:border-gray dark:bg-gray/20 dark:checked:border-green-three dark:checked:bg-white'
+      />
+      <label for='package-shecodes'> SheCodes 20 Bs. </label>
+    </li>
+    <li class='flex items-center gap-2'>
+      <input
+        type='radio'
+        id='package-sheleads'
+        name='package'
+        value='SheLeads'
+        class='h-4 w-4 appearance-none rounded-full border border-black/40 bg-gray checked:border-4 checked:border-green-three checked:bg-white dark:border-gray dark:bg-gray/20 dark:checked:border-green-three dark:checked:bg-white'
+      />
+      <label for='package-sheleads'> SheLeads 40 Bs. </label>
+    </li>
+  </ul>
+
+  <div class='my-4 flex flex-col items-center justify-between gap-4 md:flex-row'>
+    <div class='order-1 md:order-none'>
+      <label> Detalles de la cuenta </label>
+      <ul class='list-disc pl-4 text-sm leading-loose marker:text-green-three'>
+        <li>Banco Nacional de Bolivia</li>
+        <li>4501259344</li>
+        <li>Andrea Chumacero Carballo</li>
+      </ul>
+    </div>
+    <Image src={qrImg} width='320' alt='QR de pago' class='rounded-lg border' />
+  </div>
+
+  <label class='my-2 block'>
+    Comprobante de pago
+    <p class='text-sm opacity-80'>En caso de haber seleccionado un paquete</p>
+  </label>
+
+  <label for='voucher' class='block w-full cursor-pointer rounded-lg border text-sm'>
+    <input type='file' id='voucher' class='hidden' name='voucher' accept='image/*' />
+    <div class='flex flex-nowrap items-center gap-2'>
+      <span class='rounded-s-md border-r bg-green-two p-2 text-black'>Seleccionar</span>
+      <span id='fileName' class='truncate opacity-90'> Ningún archivo seleccionado. </span>
+    </div>
+  </label>
+
+  <span class='text-sm text-red' id='error-voucher'></span>
+
+  <Input
+    title='(Opcional) ¿Tienes alguna alergia o restricción alimentaria?'
+    name='dietaryRestriction'
+  />
+
+  <button
+    id='register'
+    class='group-invalid:disabled flex w-full rounded-lg border-2 bg-golden py-2 font-semibold text-black disabled:bg-golden/90 dark:border-white'
+    type='submit'
+  >
+    <div class='mx-auto flex'>
+      <Loader
+        id='loader'
+        class='mr-3 hidden w-6 animate-spin fill-black text-black/40 dark:text-white/50'
+      />
+      Regístrate
+    </div>
+  </button>
+</form>
+
+<script>
+  import { actions, isInputError } from 'astro:actions'
+  import { navigate } from 'astro:transitions/client'
+
+  const form = document.querySelector('form')
+  const registerButton = document.querySelector('#register') as HTMLButtonElement
+  const loaderIcon = document.querySelector('#loader')
+
+  const voucher = document.getElementById('voucher') as HTMLInputElement
+  voucher.addEventListener('change', () => {
+    const fileName = voucher.files?.[0]?.name || 'Ningún archivo seleccionado.'
+    document.getElementById('fileName').textContent = fileName
+  })
+
+  for (const input of form.elements as HTMLCollectionOf<HTMLInputElement>) {
+    input.addEventListener('invalid', () => {
+      document.getElementById(`error-${input.name}`).textContent = 'Este campo es requerido.'
+    })
+
+    input.addEventListener('input', () => {
+      document.getElementById(`error-${input.name}`).textContent = ''
+    })
+  }
+
+  form.addEventListener('submit', async event => {
+    event.preventDefault()
+
+    loaderIcon.classList.remove('hidden')
+    registerButton.disabled = true
+
+    const formData = new FormData(form)
+    const { error } = await actions.register(formData)
+
+    if (!error) {
+      navigate('/registro')
+      return
+    }
+
+    if (isInputError(error)) {
+      console.log(error.fields)
+
+      loaderIcon.classList.add('hidden')
+      for (const [fieldName, fieldErrors] of Object.entries(error.fields)) {
+        document.querySelector(`#error-${fieldName}`).textContent = fieldErrors.join(', ')
+      }
+    }
+
+    registerButton.disabled = false
+  })
+</script>

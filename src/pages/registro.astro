@@ -1,77 +1,31 @@
 ---
-import { getAuth, type DecodedIdToken } from 'firebase-admin/auth'
-import { getFirestore } from 'firebase-admin/firestore'
-import { app } from '../firebase/server'
-
 import Layout from '@layouts/Layout.astro'
-import EventBadge from '@components/register/EventBadge'
-import Diplodocus from 'src/assets/Diplodocus.astro'
 
-interface Registration {
-  firstname: string
-  lastname: string
-  email: string
-  phone: string
-  ci: string
-  cu: string
-  dietaryRestriction: string
-  validated: boolean
-  role: string
-}
-
-let registration: Registration
-let user: DecodedIdToken
+import RegisterStatusHandler from '@components/register/RegisterStatusHandler.astro'
+import { fetchRegistration } from '@components/register/registerUtils'
 
 const sessionCookie = Astro.cookies.get('__session')?.value
-if (!sessionCookie) {
-  return Astro.redirect('/')
-}
+if (!sessionCookie) return Astro.redirect('/')
 
-const auth = getAuth(app)
+const registration = await fetchRegistration(sessionCookie)
 
-try {
-  user = await auth.verifySessionCookie(sessionCookie)
+if (registration.validated) {
+  const landyardUrl = new URL('lanyard', Astro.url)
 
-  const db = getFirestore(app).collection('registro-devfest2024')
-  const doc = await db.doc(user.uid).get()
+  landyardUrl.searchParams.set('firstname', registration.firstname)
+  landyardUrl.searchParams.set('email', registration.email)
+  landyardUrl.searchParams.set('picture', registration.picture)
+  landyardUrl.searchParams.set('role', registration.role || 'Participante')
 
-  registration = doc.data() as Registration
-} catch (error) {
-  Astro.cookies.delete('__session')
-  return Astro.redirect('/')
+  return Astro.redirect(landyardUrl.toString())
 }
 ---
 
 <Layout title='Registro'>
-  <div class='flex flex-col px-4 py-24 md:pt-32'>
-    {
-      !registration ? (
-        <div class='mx-auto'>
-          <span class='md:text-xl'>
-            ¡Se agotaron los cupos! Gracias por tu interés en participar, esperamos verte en
-            próximos eventos.
-          </span>
-          <div class='mx-auto mt-8 flex flex-col items-center space-y-2'>
-            <Diplodocus width='100' />
-          </div>
-        </div>
-      ) : (
-        <div class='m-8 mx-auto flex flex-col items-center sm:m-12'>
-          <EventBadge
-            userName={`${registration.firstname} ${registration.lastname}`}
-            picture={user.picture}
-            email={user.email}
-            role={registration.role}
-            client:visible
-          />
-        </div>
-      )
-    }
+  <div class='mx-auto flex max-w-screen-sm flex-col px-4 py-24 md:pt-32'>
+    <RegisterStatusHandler registration={registration} />
 
-    <a
-      href='/'
-      class='relative mx-auto border-2 border-black bg-white px-6 py-3 text-xl font-semibold text-black shadow-[4px_4px_0px_0px_rgba(68,132,242,1)] transition-all duration-150 active:translate-x-1 active:translate-y-1 active:shadow-none'
-    >
+    <a href='/' class='my-4 w-full rounded-lg border py-2 text-center font-medium'>
       Volver al inicio
     </a>
   </div>

@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Demo Card - GDG Sucre">
+  <main class="w-full h-screen">
+    <div id="demo-container" class="w-full h-full"></div>
+  </main>
+</Layout>
+
+<script>
+  import { createElement } from 'react';
+  import { createRoot } from 'react-dom/client';
+  import DemoBandEnvironment from '../components/DemoBandEnvironment';
+
+  // Mount the React component to the container
+  const container = document.getElementById('demo-container');
+  if (container) {
+    const root = createRoot(container);
+    root.render(createElement(DemoBandEnvironment));
+  }
+</script> 

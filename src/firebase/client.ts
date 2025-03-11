@@ -1,3 +1,4 @@
+import { browserLocalPersistence, getAuth } from 'firebase/auth'
 import { initializeApp } from 'firebase/app'
 
 // Your web app's Firebase configuration
@@ -12,4 +13,9 @@ const firebaseConfig = {
 }
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig)
+const auth = getAuth(app)
+
+auth.setPersistence(browserLocalPersistence)
+
+export { app, auth }

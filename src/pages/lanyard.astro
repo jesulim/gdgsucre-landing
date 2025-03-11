@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro'
+import BandEnvironment from '../components/BandEnvironment'
+// import { fetchRegistration } from '@components/register/registerUtils'
+
+// Example of how to override the default card textures with SVG files
+// Uncomment the cardTextures prop below to use SVG files
+// Make sure the SVG files exist in your public directory
+
+// const sessionCookie = Astro.cookies.get('__session')?.value
+
+const [firstname, email, picture, role] = Astro.url.searchParams.values()
+
+// custom card textures (SVG or PNG)
+const customTextures = {
+  front: '/assets/card-front.svg',
+  back: '/assets/card-back.svg'
+}
+---
+
+<Layout title='Lanyard'>
+  <div class='min-h-screen bg-black pt-20'>
+    <BandEnvironment
+      client:load
+      userName={firstname}
+      picture={picture}
+      email={email}
+      role={role}
+      cardTextures={customTextures}
+    />
+  </div>
+</Layout>
