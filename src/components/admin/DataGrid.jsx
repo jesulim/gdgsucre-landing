@@ -99,6 +99,14 @@ export const DataGrid = ({ registerList }) => {
     { field: 'package', headerName: 'Paquete', width: 120 },
     { field: 'dietaryRestriction', headerName: 'Restricción alimentaria' },
     { field: 'checkin', headerName: 'Check-in', editable: true, width: 100 },
+    {
+      field: 'food_delivered',
+      headerName: 'Refrigerio entregado',
+      editable: true,
+      width: 200,
+      cellRenderer: 'agCheckboxCellRenderer',
+      cellEditor: 'agCheckboxCellEditor'
+    },
     { field: 'validated', headerName: 'Registro válido', editable: true, width: 140 },
     { field: 'voucher', headerName: 'Comprobante', cellRenderer: VoucherLinkRenderer }
   ])

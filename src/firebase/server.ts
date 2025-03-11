@@ -1,5 +1,6 @@
 import admin, { type ServiceAccount } from 'firebase-admin'
 import { initializeApp, cert, getApps } from 'firebase-admin/app'
+import { getFirestore } from 'firebase-admin/firestore'
 
 const COLLECTION_NAME = 'registro-iwd2025'
 
@@ -25,5 +26,6 @@ const initApp = () =>
 
 const app = activeApps.length === 0 ? initApp() : activeApps[0]
 const bucket = admin.storage().bucket()
+const db = getFirestore(app)
 
-export { app, bucket, COLLECTION_NAME }
+export { app, bucket, db, COLLECTION_NAME }
