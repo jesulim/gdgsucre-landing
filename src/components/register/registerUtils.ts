@@ -1,6 +1,5 @@
 import { getAuth } from 'firebase-admin/auth'
-import { getFirestore } from 'firebase-admin/firestore'
-import { app, COLLECTION_NAME } from '../../firebase/server'
+import { app, db, COLLECTION_NAME } from '../../firebase/server'
 
 interface Registration {
   uid: string
@@ -25,9 +24,7 @@ enum RegistrationStatus {
 async function fetchRegistration(sessionCookie: string): Promise<Registration | null> {
   try {
     const user = await getAuth(app).verifySessionCookie(sessionCookie)
-
-    const db = getFirestore(app).collection(COLLECTION_NAME)
-    const doc = await db.doc(user.uid).get()
+    const doc = await db.collection(COLLECTION_NAME).doc(user.uid).get()
 
     return {
       uid: user.uid,

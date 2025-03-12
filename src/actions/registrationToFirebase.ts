@@ -1,7 +1,6 @@
 import { z } from 'astro:schema'
 
-import { getFirestore } from 'firebase-admin/firestore'
-import { app, bucket, COLLECTION_NAME } from 'src/firebase/server'
+import { db, bucket, COLLECTION_NAME } from 'src/firebase/server'
 import sharp from 'sharp'
 
 const MAX_FILE_SIZE = 3 * 1024 * 1024 // 3MB
@@ -63,8 +62,7 @@ const sendToFirebase = async (input: z.infer<typeof registerSchema>) => {
     data.voucher = `https://storage.googleapis.com/${bucket.name}/${filepath}`
   }
 
-  const db = getFirestore(app).collection(COLLECTION_NAME)
-  await db.doc(uid).set(data)
+  await db.collection(COLLECTION_NAME).doc(uid).set(data)
 }
 
 export { registerSchema, sendToFirebase }

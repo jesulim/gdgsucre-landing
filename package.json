@@ -11,6 +11,7 @@
     "prettier": "prettier . --write"
   },
   "dependencies": {
+    "@ag-grid-community/locale": "^33.1.1",
     "@astrojs/react": "^4.2.0",
     "@astrojs/tailwind": "^6.0.0",
     "@astrojs/vercel": "^8.0.7",
@@ -24,6 +25,7 @@
     "@react-three/rapier": "^1.5.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "ag-grid-react": "^33.1.1",
     "astro": "^5.3.0",
     "atropos": "^2.0.2",
     "firebase": "^11.3.1",

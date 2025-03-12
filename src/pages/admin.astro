@@ -1,0 +1,31 @@
+---
+import Layout from '@layouts/Layout.astro'
+import { DataGrid } from '@components/admin/DataGrid'
+
+import { app, db, COLLECTION_NAME } from 'src/firebase/server'
+
+import { getAuth } from 'firebase-admin/auth'
+
+const sessionCookie = Astro.cookies.get('__session')?.value
+
+const user = await getAuth(app).verifySessionCookie(sessionCookie)
+const userAdmin = await db.collection('users-admin').where('uuid', '==', user.uid).get()
+
+if (userAdmin.empty) {
+  return Astro.redirect('/')
+}
+
+const snapshot = await db.collection(COLLECTION_NAME).get()
+const registerList = snapshot.docs.map(doc => ({ uid: doc.id, ...doc.data() }))
+---
+
+<Layout title='Admin'>
+  <div class='flex justify-center px-4 pt-24'>
+    <div class='w-full max-w-screen-xl flex-col'>
+      <h1 class='mb-4 text-xl font-bold text-green-four dark:text-green-three md:text-3xl'>
+        Lista de inscritos IWD 2025
+      </h1>
+      <DataGrid registerList={registerList} client:load />
+    </div>
+  </div>
+</Layout>
