@@ -22,7 +22,13 @@ export default function Avatar() {
   const toggleMenu = () => setMenuOpen(!menuOpen)
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(user => setUser(user))
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      if (user) {
+        setUser(user)
+      } else {
+        signout()
+      }
+    })
 
     return () => unsubscribe()
   }, [])

@@ -58,7 +58,11 @@ const VoucherLinkRenderer = ({ value }) => (
 export const DataGrid = ({ registerList }) => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
-      if (!user) window.location.assign('/')
+      if (!user) {
+        fetch('/api/auth/signout').then(() => {
+          window.location.assign('/')
+        })
+      }
     })
 
     return () => unsubscribe()
