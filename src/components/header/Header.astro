@@ -1,7 +1,4 @@
 ---
-import { getAuth } from 'firebase-admin/auth'
-import { app } from 'src/firebase/server'
-
 import { ThemeToggle } from './ThemeToggle'
 
 import Logo from '../../assets/Logo.astro'
@@ -19,14 +16,7 @@ const links = [
   { name: 'Eventos Pasados', href: '/pastEvents/', class: 'hover:text-blue-three' }
 ]
 
-async function getUser() {
-  const sessionCookie = Astro.cookies.get('__session')?.value
-  if (!sessionCookie) return null
-
-  return await getAuth(app).verifySessionCookie(sessionCookie)
-}
-
-const user = await getUser()
+const sessionCookie = Astro.cookies.has('__session')
 ---
 
 <nav class='fixed top-0 z-20 w-full border-b-2 border-green-four bg-green-one text-green-four'>
@@ -59,8 +49,8 @@ const user = await getUser()
     <div class='flex items-center gap-4'>
       <ThemeToggle client:load />
       {
-        user ? (
-          <Avatar client:load email={user.email} picture={user.picture} />
+        sessionCookie ? (
+          <Avatar client:only='react' />
         ) : (
           <button
             id='login'
