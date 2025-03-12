@@ -1,10 +1,10 @@
 import React from 'react';
-import { GitHubIcon, TwitterIcon, InstagramIcon, LinkedInIcon } from './SocialIcons';
+import { GitHubIcon, FacebookIcon, InstagramIcon, LinkedInIcon, WebIcon } from './SocialIcons';
 import { Border } from './Border';
 
 export default function SpeakerCard({ image, area, name, location, social, flag }) {
   return (
-    <div className="relative flex items-center h-fit w-[350px] lg:w-[440px]">
+    <div className="relative flex items-center h-fit w-[350px] md:w-[380px] lg:w-[440px]">
       <div className="relative z-10 flex-shrink-0 h-[170px] lg:h-[200px]">
         <img
           src={image}
@@ -26,8 +26,8 @@ export default function SpeakerCard({ image, area, name, location, social, flag 
         w-full
         h-[168.5px] lg:h-[200px]
       ">
-        <h3 className="text-2xl lg:text-3xl font-bold">{name}</h3>
-        <p className="text-[#165185] dark:text-[#00B698] lg:text-xl">{area}</p>
+        <div className="text-[18px] md:text-[20px] lg:text-2xl lg:font-bold">{name}</div>
+        <p className="mb-2 text-[#165185] dark:text-[#00B698] lg:text-xl">{area}</p>
         {/* Redes sociales */}
         <div className="flex justify-center align-middle space-x-4">
           {social?.github && (
@@ -35,9 +35,9 @@ export default function SpeakerCard({ image, area, name, location, social, flag 
               <GitHubIcon className="w-6 h-6 md:w-7 md:h-7 lg:h-8 lg:w-8"/>
             </a>
           )}
-          {social?.twitter && (
+          {social?.facebook && (
             <a href={social.twitter}>
-              <TwitterIcon className="w-6 h-6 md:w-7 md:h-7 lg:h-8 lg:w-8"/>
+              <FacebookIcon className="w-6 h-6 md:w-7 md:h-7 lg:h-8 lg:w-8"/>
             </a>
           )}
           {social?.instagram && (
@@ -48,6 +48,11 @@ export default function SpeakerCard({ image, area, name, location, social, flag 
           {social?.linkedin && (
             <a href={social.linkedin}>
               <LinkedInIcon className="w-6 h-6 md:w-7 md:h-7 lg:h-8 lg:w-8"/>
+            </a>
+          )}
+          {social?.web && (
+            <a href={social.web}>
+              <WebIcon className="w-6 h-6 md:w-7 md:h-7 lg:h-8 lg:w-8"/>
             </a>
           )}
         </div>
