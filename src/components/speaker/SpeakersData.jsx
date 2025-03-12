@@ -1,18 +1,5 @@
 export const speakersData = [
   {
-    image: 'speakers/AlisonOrellana.webp',
-    area: 'IA',
-    name: 'Alison Orellana',
-    location: 'Cochabamba',
-    flag: 'bolivia.svg',
-    social: {
-      github: 'https://github.com/AllyOR',
-      instagram: 'https://www.instagram.com/sonny_orellana',
-      linkedin: 'https://www.linkedin.com/in/alison-or',
-      web: 'https://linktr.ee/AllyOR'
-    }
-  },
-  {
     image: 'speakers/CarlaAlejo.webp',
     area: 'IoT',
     name: 'Carla Alejo',
@@ -36,37 +23,6 @@ export const speakersData = [
       instagram: 'https://www.instagram.com/dev.ventura_/',
       linkedin: 'https://www.linkedin.com/in/melany-ventura/',
       facebook: 'https://www.facebook.com/melanyventurah/'
-    }
-  },
-  {
-    image: 'speakers/MayraRomay.webp',
-    area: 'IA',
-    name: 'Mayra Romay',
-    location: 'Sucre',
-    flag: 'bolivia.svg',
-    social: {
-    }
-  },
-  {
-    image: 'speakers/PaolaFlores.webp',
-    area: 'Liderazgo',
-    name: 'Paola Flores',
-    location: 'Sucre',
-    flag: 'bolivia.svg',
-    social: {
-      instagram: 'https://www.instagram.com/paolaflorescarv/',
-      linkedin: 'https://www.linkedin.com/in/paola-carvajal-0ab95814b/',
-      facebook: 'https://www.facebook.com/profile.php?id=100057735305157'
-    }
-  },
-  {
-    image: 'speakers/MabelAcha.webp',
-    area: 'Productividad',
-    name: 'Mabel Acha',
-    location: 'Sucre',
-    flag: 'bolivia.svg',
-    social: {
-      linkedin: 'https://www.linkedin.com/in/mabel-sara-acha-moya-a16312141/'
     }
   },
   {

@@ -4,7 +4,7 @@ import { Border } from './Border';
 
 export default function SpeakerCard({ image, area, name, location, social, flag }) {
   return (
-    <div className="relative flex items-center h-fit w-[350px] md:w-[380px] lg:w-[440px]">
+    <div className="relative flex items-center h-fit w-[350px] md:w-[380px] lg:w-[440px] transition-all duration-300 transform hover:scale-105">
       <div className="relative z-10 flex-shrink-0 h-[170px] lg:h-[200px]">
         <img
           src={image}
