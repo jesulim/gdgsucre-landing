@@ -60,7 +60,7 @@ const user = await getUser()
       <ThemeToggle client:load />
       {
         user ? (
-          <Avatar client:load email={user.email} picture={user.picture} />
+          <Avatar client:only="'react" email={user.email} picture={user.picture} />
         ) : (
           <button
             id='login'
