@@ -1,13 +1,15 @@
 ---
 import { Timer } from './Timer'
 
-import CalendarLogo from '../../assets/icons/Calendar.astro'
-
-import Logo from './Logo.astro'
 import RegisterButton from './RegisterButton.astro'
+import CalendarLogo from '../../assets/icons/Calendar.astro'
 import LocationMarker from 'src/assets/icons/LocationMarker.astro'
+import Cloud from './Cloud.astro'
+import Lady from './Lady.astro'
+import AnimatedPlant from './AnimatedPlant.astro'
+import AnimatedHtml from './AnimatedHtml.astro'
 
-const targetDate = new Date('2024-11-16T08:30:00-04:00')
+const targetDate = new Date('2025-03-15T14:00:00-04:00')
 
 const getRemainingTime = () => {
   const currentDate = Date.now()
@@ -18,16 +20,29 @@ const hasSessionCookie = Astro.cookies.has('__session')
 ---
 
 <hero>
-  <section class='mb-4 flex flex-col items-center px-4 pt-28 lg:pt-40'>
-    <Logo class='h-20 sm:h-32' />
+  <section class='mb-4 flex flex-col items-center gap-12 pt-20 md:pt-28'>
+    <AnimatedHtml class='left-6 top-40 hidden md:block' />
+    <AnimatedPlant class='top-30 right-12 hidden md:block lg:right-24' />
+    <AnimatedPlant class='bottom-60 left-6 md:bottom-20 lg:left-10' />
+    <AnimatedHtml class='bottom-48 right-0 lg:bottom-20 lg:right-10' />
+
+    <div class='mt-16 flex flex-col items-center lg:mt-44'>
+      <div class='flex flex-col items-center gap-2 lg:flex-row'>
+        <span class='text-6xl font-bold lg:text-8xl'>Redefine</span>
+        <span class='text-6xl font-bold text-green-two lg:text-8xl'>Possible</span>
+      </div>
+      <p class='pt-16 text-xl font-bold md:pt-6 lg:text-2xl'>International Women's Day 2025</p>
+      <Cloud />
+      <Lady />
+    </div>
 
     <div
-      class='relative m-8 border-2 border-black bg-white text-xl font-semibold text-black shadow-[4px_4px_0px_0px_rgba(255,186,0,1)] transition-all duration-150 active:translate-x-1 active:translate-y-1 active:shadow-none'
+      class='z-10 rounded-full border-2 border-black bg-golden text-xl font-semibold text-black shadow-[4px_4px_0px_0px_#726239] transition-all duration-150 active:translate-x-1 active:translate-y-1 active:shadow-none lg:mt-40'
     >
       {
         hasSessionCookie ? (
           <a href='/registro' class='block px-6 py-3'>
-            Ver registro
+            Verificar registro
           </a>
         ) : (
           <RegisterButton />
@@ -35,9 +50,30 @@ const hasSessionCookie = Astro.cookies.has('__session')
       }
     </div>
 
+    <div class='flex flex-col justify-between gap-4 lg:flex-row lg:gap-8'>
+      <div class='flex flex-row'>
+        <CalendarLogo class='mt-1' />
+        <div class='px-2 text-lg'>
+          <p class='font-semibold md:text-2xl' aria-live='polite'>Sábado 15 de marzo</p>
+          <p class='font-medium' aria-live='polite'>
+            <time datetime='2025-03-15T08:30'>14:00 Hrs.</time>
+          </p>
+        </div>
+      </div>
+
+      <div class='flex flex-row'>
+        <LocationMarker class='mt-1' />
+        <div class='px-2 text-lg'>
+          <p class='font-semibold md:text-2xl' aria-live='polite'>Facultad de Tecnología</p>
+          <address class='not-italic' aria-label='Dirección de la facultad'>
+            Regimiento Campos #180.
+          </address>
+        </div>
+      </div>
+    </div>
+
     <div>
       <Timer initialTime={getRemainingTime()} targetDate={targetDate} client:load />
     </div>
-
   </section>
 </hero>

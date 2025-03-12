@@ -1,13 +1,12 @@
 ---
 import '@fontsource/prompt'
-import '@fontsource/noto-color-emoji'
 import '@fontsource-variable/sofia-sans'
 
-import Header from '@components/Header.astro'
+import Header from '@components/header/Header.astro'
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang='es'>
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content='Astro description' />
@@ -16,24 +15,28 @@ import Header from '@components/Header.astro'
     <meta name='generator' content={Astro.generator} />
 
     <!-- HTML Meta Tags -->
-    <title>DevFest Sucre 2024</title>
-    <meta name='description' content='DevFest Sucre 2024' />
+    <title>International Women's Day 2025</title>
+    <meta name='description' content='IWD 2025' />
 
     <!-- Facebook Meta Tags -->
-    <meta property='og:url' content='https://www.gdgsucre.com/' />
+    <meta property='og:url' content='https://iwd2025.gdgsucre.com/' />
     <meta property='og:type' content='website' />
-    <meta property='og:title' content='DevFest Sucre 2024' />
-    <meta property='og:description' content='DevFest Sucre 2024' />
+    <meta property='og:title' content="International Women's Day 2025" />
+    <meta property='og:description' content="International Women's Day 2025" />
     <meta property='og:image' content=`${Astro.url}opengraph.avif` />
     <meta property='og:image:type' content='image/gif' />
 
     <!-- Twitter Meta Tags -->
     <meta name='twitter:card' content='summary_large_image' />
-    <meta property='twitter:domain' content='www.gdgsucre.com/' />
-    <meta property='twitter:url' content='https://www.gdgsucre.com/' />
-    <meta name='twitter:title' content='www.gdgsucre.com/' />
-    <meta name='twitter:description' content='www.gdgsucre.com/' />
+    <meta property='twitter:domain' content='iwd2025.gdgsucre.com/' />
+    <meta property='twitter:url' content='https://iwd2025.gdgsucre.com/' />
+    <meta name='twitter:title' content='iwd2025.gdgsucre.com/' />
+    <meta name='twitter:description' content='iwd2025.gdgsucre.com/' />
     <meta name='twitter:image' content=`${Astro.url}opengraph.avif` />
+
+    <script
+      type='module'
+      src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js'></script>
 
     <!-- Load light or dark mode -->
     <script is:inline>

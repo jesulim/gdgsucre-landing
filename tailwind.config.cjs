@@ -8,7 +8,17 @@ module.exports = {
         'dark-gray': '#1F2123',
         red: '#EA4335',
         green: '#34A853',
+        'green-one': '#D1ECE3',
+        'green-two': '#00DBA2',
+        'green-three': '#00B698',
+        'green-four': '#0F7C67',
+        'green-five': '#1A3E38',
         blue: '#4285F4',
+        'blue-one': '#CAE6FF',
+        'blue-two': '#54A7ED',
+        'blue-three': '#2480F0',
+        'blue-four': '#165185',
+        'blue-five': '#20344B',
         yellow: '#FBBC04',
         'yellow-orange': '#F9AB00',
         'yellow-blend': '#FFCB32',
@@ -18,8 +28,9 @@ module.exports = {
         gray: '#EEEEEE',
         black: '#202124',
         teal: '#00DB9F',
+        golden: '#E4C472',
         light: {
-          background: '#EEEEEE',
+          background: '#FFFFFF',
           text: '#333333'
         },
         dark: {

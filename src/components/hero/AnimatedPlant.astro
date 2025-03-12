@@ -1,0 +1,20 @@
+---
+const { class: styles } = Astro.props;
+---
+
+<video autoplay loop
+       muted playsinline
+       class={`plant mt-2 mr-2 sm:ml-8 lg:ml-20 ${styles}`}
+       height="120"
+       width="120"
+>
+  <source src="/animations/plant.webm" type="video/webm">
+</video>
+
+<style>
+    .plant {
+        opacity: 0.4;
+        position: fixed;
+        z-index: -20;
+    }
+</style>
