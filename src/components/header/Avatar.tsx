@@ -13,12 +13,19 @@ async function signout() {
   }
 }
 
-export default function Avatar({ email, picture }) {
+export default function Avatar() {
   const menuRef = useRef(null)
 
   const [menuOpen, setMenuOpen] = useState(false)
+  const [user, setUser] = useState(null)
 
   const toggleMenu = () => setMenuOpen(!menuOpen)
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => setUser(user))
+
+    return () => unsubscribe()
+  }, [])
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -34,11 +41,13 @@ export default function Avatar({ email, picture }) {
   return (
     <div ref={menuRef} className='relative'>
       <button id='avatar' className='block' onClick={toggleMenu}>
-        <img
-          src={`https://unavatar.io/${email}?fallback=${picture}`}
-          alt={email}
-          className='h-8 w-8 rounded-full border-2 border-green-four'
-        />
+        {user && (
+          <img
+            src={`https://unavatar.io/${user.email}?fallback=${user.photoURL}`}
+            alt={user.email}
+            className='h-8 w-8 rounded-full border-2 border-green-four'
+          />
+        )}
       </button>
 
       {menuOpen && (
