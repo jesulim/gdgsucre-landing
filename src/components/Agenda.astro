@@ -1,57 +1,31 @@
 ---
 import SectionTitle from './SectionTitle.astro'
-// import scheduleData from '../data/schedule.json'
-// import ScheduleCard from './ScheduleCard.astro'
+import scheduleData from '../data/schedule.json'
+import ScheduleCard from './ScheduleCard.astro'
 ---
+<div class='mx-2.5'>
+  <div
+    class='bg-blue-one mx-auto mb-8 mt-10 max-w-screen-lg border-2 rounded-xl dark:bg-blue-five lg:mb-12 lg:mt-20 2xl:border-2 flex flex-col items-center'
+  >
+    <SectionTitle id='agenda' title='Agenda' />
 
-<div
-  class='bg-blue-one mx-auto mb-8 mt-10 max-w-screen-lg border-2 rounded-lg dark:bg-blue-five lg:mb-12 lg:mt-20 2xl:border-2 '
->
-  <SectionTitle id='agenda' title='Agenda' />
+    <div class='flex justify-center items-center'>
+      <div class='max-w w-full py-6 relative'>
+        <div class='space-y-8'>
 
-  <div class='flex justify-center items-center'>
-    <div class='max-w-3xl w-full py-6 relative'>
-      <div class='space-y-8'>
-        <div class='schedule-card'>
-          <div class='flex flex-col md:flex-row items-start gap-4'>
-            <div class='w-16 h-16 bg-gray-300 rounded-full pt-2 flex-shrink-0'>
-              <img
-                src='/speakers/Josue.webp'
-                alt='Speaker'
-                class='w-full h-full rounded-full object-cover'
+          {
+            scheduleData.afternoon.map(event => (
+              <ScheduleCard
+                title={event.title}
+                speaker={event.speaker}
+                time={event.time}
+                image={event.photoUrl}
               />
-            </div>
+            ))
+          }
 
-            <div class='w-full p-1'>
-              <p class='text-blue-600 font-bold text-lg sm:text-xl text-blue-five dark:text-blue-one'>
-                12:00PM - 2:00PM
-              </p>
-              <p class='text-gray-700 mt-1 text-sm sm:text-base'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed nonummy nibh euismod tincidunt ut laoreet.
-              </p>
-              <p class='text-blue-500 font-bold text-right mt-2 text-lg sm:text-xl text-blue-five dark:text-blue-one'>
-                Speaker Name
-              </p>
-            </div>
-          </div>
-          <hr class='border border-blue-five dark:border-blue-one'>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-<style>
-  .schedule-card {
-    transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease;
-  }
-
-  .schedule-card:hover {
-    transform: translateX(-6px);
-    transform: translateX(-6px);
-    box-shadow: 8px 8px 0 0 #165185;
-  }
-</style>
