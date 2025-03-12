@@ -7,7 +7,7 @@ import Avatar from './Avatar'
 import Loader from '../../assets/icons/loader.svg'
 
 const links = [
-  // { name: 'Speakers', href: '#speakers', class: 'hover:text-blue' },
+  { name: 'Speakers', href: '#speakers', class: 'hover:text-blue' },
   { name: 'Agenda', href: '#agenda', class: 'hover:text-blue' },
   { name: 'Preguntas frecuentes', href: '#faq', class: 'hover:text-blue' },
   // { name: 'Sponsors', href: '#speakers', class: 'hover:text-blue' },
@@ -31,7 +31,7 @@ const sessionCookie = Astro.cookies.has('__session')
 
     <div id='navbar-sticky' class='order-1 ml-auto hidden w-full md:order-none md:block md:w-fit'>
       <ul
-        class='mt-4 flex flex-col rounded-xl border-2 p-4 font-medium md:mt-0 md:flex-row md:gap-4 md:border-0 md:p-0'
+        class='mt-4 flex flex-col rounded-xl border-2 p-4 font-medium md:mt-0 md:flex-row md:gap-6 md:border-0 md:p-0'
       >
         {
           links.map(item => (
