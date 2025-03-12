@@ -1,14 +1,14 @@
 ---
-import speakersData from '../../data/speakers.json'
-import SectionTitle from '@components/SectionTitle.astro'
-import { SpeakerCard } from './SpeakerCard.tsx'
+import SectionTitle from '@components/SectionTitle.astro';
+import SpeakerCard from './SpeakersCard.jsx';
+import { speakersData } from './SpeakersData.jsx';
 ---
 
-<div class='mx-auto my-2 max-w-screen-lg px-4 md:my-8'>
-  <SectionTitle id='speakers' title='Speakers' />
-  <div
-    class='group pointer-events-none mt-2 grid grid-cols-2 gap-4 sm:mt-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8'
-  >
-    {speakersData.map((data, i) => <SpeakerCard id={i} {...data} client:visible />)}
+<SectionTitle title="Speakers" />
+<div class="mx-auto my-2 px-4 md:my-8 max-w-screen-2xl flex flex-col items-center">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 lg:gap-15 justify-center mx-3">
+    {speakersData.map((speaker, i) => (
+      <SpeakerCard {...speaker} />
+    ))}
   </div>
 </div>
