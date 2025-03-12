@@ -125,6 +125,7 @@ export const DataGrid = ({ registerList }) => {
         pagination={true}
         paginationAutoPageSize={true}
         localeText={AG_GRID_LOCALE_ES}
+        enableCellTextSelection
       />
     </div>
   )
