@@ -5,12 +5,13 @@ import {
   TextFilterModule,
   SelectEditorModule,
   ClientSideRowModelModule,
-  LocaleModule
+  LocaleModule,
+  CsvExportModule
 } from 'ag-grid-community'
 import { AgGridReact } from 'ag-grid-react'
 import { AG_GRID_LOCALE_ES } from '@ag-grid-community/locale'
 import { getFirestore, doc, updateDoc } from 'firebase/firestore'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef, useCallback } from 'react'
 
 import { app, auth } from '../../firebase/client'
 
@@ -20,7 +21,8 @@ ModuleRegistry.registerModules([
   TextFilterModule,
   SelectEditorModule,
   ClientSideRowModelModule,
-  LocaleModule
+  LocaleModule,
+  CsvExportModule
 ])
 
 const db = getFirestore(app)
@@ -56,6 +58,8 @@ const VoucherLinkRenderer = ({ value }) => (
 )
 
 export const DataGrid = ({ registerList }) => {
+  const gridRef = useRef()
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (!user) {
@@ -66,6 +70,10 @@ export const DataGrid = ({ registerList }) => {
     })
 
     return () => unsubscribe()
+  }, [])
+
+  const downloadCSV = useCallback(() => {
+    gridRef.current.api.exportDataAsCsv()
   }, [])
 
   // Row Data: The data to be displayed.
@@ -117,7 +125,15 @@ export const DataGrid = ({ registerList }) => {
 
   return (
     <div style={{ height: '80vh', width: '100%' }}>
+      <button
+        className='mb-2 rounded-md border border-green-three p-2 text-sm'
+        onClick={downloadCSV}
+      >
+        Descargar como CSV
+      </button>
+
       <AgGridReact
+        ref={gridRef}
         rowData={rowData}
         columnDefs={colDefs}
         onCellValueChanged={onCellValueChanged}
