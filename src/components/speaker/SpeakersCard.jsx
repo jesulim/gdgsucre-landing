@@ -36,7 +36,7 @@ export default function SpeakerCard({ image, area, name, location, social, flag 
             </a>
           )}
           {social?.facebook && (
-            <a href={social.twitter}>
+            <a href={social.facebook}>
               <FacebookIcon className="w-6 h-6 md:w-7 md:h-7 lg:h-8 lg:w-8"/>
             </a>
           )}
