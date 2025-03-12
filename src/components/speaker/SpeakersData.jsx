@@ -1,6 +1,6 @@
 export const speakersData = [
   {
-    image: 'speakers/AlisonOrellana.svg',
+    image: 'speakers/AlisonOrellana.webp',
     area: 'IA',
     name: 'Alison Orellana',
     location: 'Cochabamba',
@@ -13,7 +13,7 @@ export const speakersData = [
     }
   },
   {
-    image: 'speakers/CarlaAlejo.svg',
+    image: 'speakers/CarlaAlejo.webp',
     area: 'IoT',
     name: 'Carla Alejo',
     location: 'La Paz',
@@ -26,7 +26,7 @@ export const speakersData = [
     }
   },
   {
-    image: 'speakers/MelanyVentura.svg',
+    image: 'speakers/MelanyVentura.webp',
     area: 'Productividad',
     name: 'Melany Ventura',
     location: 'La Paz',
@@ -39,7 +39,7 @@ export const speakersData = [
     }
   },
   {
-    image: 'speakers/MayraRomay.svg',
+    image: 'speakers/MayraRomay.webp',
     area: 'IA',
     name: 'Mayra Romay',
     location: 'Sucre',
@@ -48,7 +48,7 @@ export const speakersData = [
     }
   },
   {
-    image: 'speakers/PaolaFlores.svg',
+    image: 'speakers/PaolaFlores.webp',
     area: 'Liderazgo',
     name: 'Paola Flores',
     location: 'Sucre',
@@ -60,7 +60,7 @@ export const speakersData = [
     }
   },
   {
-    image: 'speakers/MabelAcha.svg',
+    image: 'speakers/MabelAcha.webp',
     area: 'Productividad',
     name: 'Mabel Acha',
     location: 'Sucre',
@@ -70,7 +70,7 @@ export const speakersData = [
     }
   },
   {
-    image: 'speakers/NairPerez.svg',
+    image: 'speakers/NairPerez.webp',
     area: 'Productividad',
     name: 'Nair Perez',
     location: 'Sucre',
@@ -81,7 +81,7 @@ export const speakersData = [
     }
   },
   {
-    image: 'speakers/AdrianaCalvo.svg',
+    image: 'speakers/AdrianaCalvo.webp',
     area: 'Motivación',
     name: 'Adriana Calvo',
     location: 'Sucre',
@@ -92,7 +92,7 @@ export const speakersData = [
     }
   },
   {
-    image: 'speakers/KarolCatacora.svg',
+    image: 'speakers/KarolCatacora.webp',
     area: 'Productividad',
     name: 'Karol Catacora',
     location: 'La Paz',
@@ -104,7 +104,7 @@ export const speakersData = [
     }
   },
   {
-    image: 'speakers/RaisaSilva.svg',
+    image: 'speakers/RaisaSilva.webp',
     area: 'Productividad',
     name: 'Raisa Silva',
     location: 'La Paz',
