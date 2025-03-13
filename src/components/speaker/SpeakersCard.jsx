@@ -30,27 +30,27 @@ export default function SpeakerCard({ image, area, name, location, social, flag 
         {/* Redes sociales */}
         <div className="flex justify-center align-middle space-x-4">
           {social?.github && (
-            <a href={social.github}>
+            <a href={social.github} aria-label={`GitHub profile of ${name}`}>
               <GitHubIcon className="w-6 h-6 md:w-7 md:h-7 lg:h-8 lg:w-8"/>
             </a>
           )}
           {social?.facebook && (
-            <a href={social.facebook}>
+            <a href={social.facebook} aria-label={`Facebook profile of ${name}`}>
               <FacebookIcon className="w-6 h-6 md:w-7 md:h-7 lg:h-8 lg:w-8"/>
             </a>
           )}
           {social?.instagram && (
-            <a href={social.instagram}>
+            <a href={social.instagram} aria-label={`Instagram profile of ${name}`}>
               <InstagramIcon className="w-6 h-6 md:w-7 md:h-7 lg:h-8 lg:w-8"/>
             </a>
           )}
           {social?.linkedin && (
-            <a href={social.linkedin}>
+            <a href={social.linkedin} aria-label={`LinkedIn profile of ${name}`}>
               <LinkedInIcon className="w-6 h-6 md:w-7 md:h-7 lg:h-8 lg:w-8"/>
             </a>
           )}
           {social?.web && (
-            <a href={social.web}>
+            <a href={social.web} aria-label={`Website of ${name}`}>
               <WebIcon className="w-6 h-6 md:w-7 md:h-7 lg:h-8 lg:w-8"/>
             </a>
           )}

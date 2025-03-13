@@ -24,7 +24,7 @@ export const ThemeToggle = () => {
   }
 
   return (
-    <button onClick={handleToggle}>
+    <button onClick={handleToggle} aria-label='Toggle dark mode'>
       <svg
         width='36'
         height='36'
