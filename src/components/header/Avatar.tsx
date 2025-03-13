@@ -10,34 +10,7 @@ async function signout() {
   }
 }
 
-const UserImg = () => {
-  const [user, setUser] = useState(null)
-
-  useEffect(() => {
-    async function fetchUser() {
-      const res = await fetch('/api/auth/user')
-      if (!res.ok) {
-        await signout()
-      }
-
-      setUser(await res.json())
-    }
-
-    fetchUser()
-  }, [])
-
-  return (
-    user && (
-      <img
-        src={`https://unavatar.io/${user.email}?fallback=${user.picture}`}
-        alt={user.email}
-        className='h-8 w-8 rounded-full border-2 border-green-four'
-      />
-    )
-  )
-}
-
-export default function Avatar() {
+export default function Avatar({ email, picture }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const menuRef = useRef(null)
 
@@ -54,8 +27,18 @@ export default function Avatar() {
 
   return (
     <div ref={menuRef} className='relative'>
-      <button id='avatar' className='block' onClick={() => setMenuOpen(!menuOpen)}>
-        <UserImg />
+      <button
+        id='avatar'
+        className='block h-8 w-8 rounded-full border-2 border-green-four'
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <img
+          src={`https://unavatar.io/${email}?fallback=${picture}`}
+          alt={email}
+          className='rounded-full'
+          width={32}
+          height={32}
+        />
       </button>
 
       {menuOpen && (

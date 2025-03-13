@@ -1,10 +1,11 @@
 ---
-import { ThemeToggle } from './ThemeToggle'
-
 import Logo from '../../assets/Logo.astro'
 import LogoShort from '../../assets/Logo-short.astro'
-import Avatar from './Avatar'
 import Loader from '../../assets/icons/loader.svg'
+import { GET } from '../../pages/api/auth/user'
+
+import Avatar from './Avatar'
+import { ThemeToggle } from './ThemeToggle'
 
 const links = [
   { name: 'Speakers', href: '#speakers', class: 'hover:text-blue-three' },
@@ -15,7 +16,8 @@ const links = [
   { name: 'Eventos Pasados', href: '/pastEvents/', class: 'hover:text-blue-three' }
 ]
 
-const sessionCookie = Astro.cookies.has('__session')
+const res = await GET(Astro)
+const user = res.ok ? await res.json() : null
 ---
 
 <nav class='fixed top-0 z-20 w-full border-b-2 border-green-four bg-green-one text-green-four'>
@@ -48,8 +50,8 @@ const sessionCookie = Astro.cookies.has('__session')
     <div class='flex items-center gap-4'>
       <ThemeToggle client:load />
       {
-        sessionCookie ? (
-          <Avatar client:load />
+        user ? (
+          <Avatar client:load email={user.email} picture={user.picture} />
         ) : (
           <button
             id='login'
