@@ -1,4 +1,5 @@
 ---
+import  { Image } from 'astro:assets'
 const { title, speaker, time, image } = Astro.props
 
 const cardActive = speaker ? 'schedule-card' : 'schedule-card-active'
@@ -9,11 +10,13 @@ const cardActive = speaker ? 'schedule-card' : 'schedule-card-active'
     {
       image && (
         <div class='w-16 h-16 bg-gray-300 rounded-full pt-2 flex-shrink-0'>
-          <img
+          <Image
             src={image}
             alt={`Foto de ${speaker || title}`}
             class='h-16 w-16 rounded-full border-2 object-cover'
             loading='lazy'
+            width={64}
+            height={64}
           />
         </div>
       )

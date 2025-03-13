@@ -1,4 +1,3 @@
-import React from 'react';
 import { GitHubIcon, FacebookIcon, InstagramIcon, LinkedInIcon, WebIcon } from './SocialIcons';
 import { Border } from './Border';
 
