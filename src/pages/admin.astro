@@ -1,15 +1,17 @@
 ---
 import Layout from '@layouts/Layout.astro'
 import { DataGrid } from '@components/admin/DataGrid'
+import { GET } from 'src/pages/api/auth/user.ts'
 
-import { app, db, COLLECTION_NAME } from 'src/firebase/server'
+import { db, COLLECTION_NAME } from 'src/firebase/server'
 
-import { getAuth } from 'firebase-admin/auth'
+const res = await GET(Astro)
+if (!res.ok) {
+  return Astro.redirect('/')
+}
 
-const sessionCookie = Astro.cookies.get('__session')?.value
-
-const user = await getAuth(app).verifySessionCookie(sessionCookie)
-const userAdmin = await db.collection('users-admin').where('uuid', '==', user.uid).get()
+const { uid } = await res.json()
+const userAdmin = await db.collection('users-admin').where('uuid', '==', uid).get()
 
 if (userAdmin.empty) {
   return Astro.redirect('/')

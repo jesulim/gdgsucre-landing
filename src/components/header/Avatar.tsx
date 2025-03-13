@@ -1,10 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 
-import { auth } from 'src/firebase/client'
-
 async function signout() {
   try {
-    await auth.signOut()
     await fetch('/api/auth/signout')
 
     window.location.assign('/')
@@ -13,28 +10,39 @@ async function signout() {
   }
 }
 
-export default function Avatar() {
-  const menuRef = useRef(null)
-
-  const [menuOpen, setMenuOpen] = useState(false)
+const UserImg = () => {
   const [user, setUser] = useState(null)
 
-  const toggleMenu = () => setMenuOpen(!menuOpen)
-
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(user => {
-      if (user) {
-        setUser(user)
-      } else {
-        signout()
+    async function fetchUser() {
+      const res = await fetch('/api/auth/user')
+      if (!res.ok) {
+        await signout()
       }
-    })
 
-    return () => unsubscribe()
+      setUser(await res.json())
+    }
+
+    fetchUser()
   }, [])
 
+  return (
+    user && (
+      <img
+        src={`https://unavatar.io/${user.email}?fallback=${user.picture}`}
+        alt={user.email}
+        className='h-8 w-8 rounded-full border-2 border-green-four'
+      />
+    )
+  )
+}
+
+export default function Avatar() {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const menuRef = useRef(null)
+
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    function handleClickOutside(event: MouseEvent) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setMenuOpen(false)
       }
@@ -46,14 +54,8 @@ export default function Avatar() {
 
   return (
     <div ref={menuRef} className='relative'>
-      <button id='avatar' className='block' onClick={toggleMenu}>
-        {user && (
-          <img
-            src={`https://unavatar.io/${user.email}?fallback=${user.photoURL}`}
-            alt={user.email}
-            className='h-8 w-8 rounded-full border-2 border-green-four'
-          />
-        )}
+      <button id='avatar' className='block' onClick={() => setMenuOpen(!menuOpen)}>
+        <UserImg />
       </button>
 
       {menuOpen && (

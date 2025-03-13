@@ -1,13 +1,14 @@
 ---
 import Layout from '@layouts/Layout.astro'
+import { GET } from 'src/pages/api/auth/user.ts'
 
 import RegisterStatusHandler from '@components/register/RegisterStatusHandler.astro'
 import { fetchRegistration } from '@components/register/registerUtils'
 
-const sessionCookie = Astro.cookies.get('__session')?.value
-if (!sessionCookie) return Astro.redirect('/')
+const res = await GET(Astro)
+const user = await res.json()
 
-const registration = await fetchRegistration(sessionCookie)
+const registration = await fetchRegistration(user)
 
 if (registration.validated) {
   const landyardUrl = new URL('lanyard', Astro.url)

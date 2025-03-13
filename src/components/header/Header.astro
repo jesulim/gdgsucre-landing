@@ -49,7 +49,7 @@ const sessionCookie = Astro.cookies.has('__session')
       <ThemeToggle client:load />
       {
         sessionCookie ? (
-          <Avatar client:only='react' />
+          <Avatar client:load />
         ) : (
           <button
             id='login'
