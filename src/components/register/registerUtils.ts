@@ -1,4 +1,4 @@
-import { db, COLLECTION_NAME } from '../../firebase/server'
+import { getFirebaseAdmin, COLLECTION_NAME } from '../../firebase/server'
 
 interface Registration {
   uid: string
@@ -22,6 +22,7 @@ enum RegistrationStatus {
 
 async function fetchRegistration(user): Promise<Registration | null> {
   try {
+    const { db } = getFirebaseAdmin()
     const doc = await db.collection(COLLECTION_NAME).doc(user.uid).get()
 
     return {

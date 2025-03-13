@@ -1,11 +1,11 @@
 import type { APIRoute } from 'astro'
 import { getAuth } from 'firebase-admin/auth'
 
-import { app } from '../../../firebase/server'
-
-const auth = getAuth(app)
+import { getFirebaseAdmin } from '../../../firebase/server'
 
 export const GET: APIRoute = async ({ cookies }) => {
+  const { app } = getFirebaseAdmin()
+  const auth = getAuth(app)
   const sessionCookie = cookies.get('__session')?.value
 
   try {

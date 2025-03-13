@@ -1,7 +1,7 @@
 import { z } from 'astro:schema'
-
-import { db, bucket, COLLECTION_NAME } from 'src/firebase/server'
 import sharp from 'sharp'
+
+import { getFirebaseAdmin, COLLECTION_NAME } from 'src/firebase/server'
 
 const MAX_FILE_SIZE = 3 * 1024 * 1024 // 3MB
 const ALLOWED_MIME_TYPES = ['image/jpeg', 'image/png', 'image/webp']
@@ -46,6 +46,7 @@ async function compressImage(voucher: File): Promise<Buffer> {
 
 const sendToFirebase = async (input: z.infer<typeof registerSchema>) => {
   const { uid, voucher, ...data } = input
+  const { db, bucket } = getFirebaseAdmin()
 
   if (voucher.size > 0) {
     const imageVoucher = await compressImage(voucher)
