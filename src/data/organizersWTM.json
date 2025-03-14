@@ -1,0 +1,395 @@
+[
+  {
+    "id": "2621B937200A45879822AE7584C8BB8E",
+    "name": "Laura Luciana Diaz",
+    "photoUrl": "organizersWTM/laura_diaz.webp",
+    "socialNetworks": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/laudiaz_c_/"
+      }
+    ]
+  },
+  {
+    "id": "29CE9F4094E934EEE99365D4D196ACD76",
+    "name": "Angela Micaela Miranda",
+    "photoUrl": "organizersWTM/angela_miranda.webp",
+    "socialNetworks": []
+  },
+  {
+    "id": "C8A22F7B7BE943D4A44E18922A1B7425",
+    "name": "Pablo Noya",
+    "photoUrl": "organizers/pablo_noya.webp",
+    "socialNetworks": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/pablonoya7/"
+      },
+      {
+        "type": "github",
+        "url": "https://www.github.com/pablonoya/"
+      },
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/PabloNoya18/"
+      }
+    ]
+  },
+  {
+    "id": "5EC9EE8F2535490BA2AB5DA149A0726D",
+    "name": "Fernando Villca",
+    "photoUrl": "organizers/fernando_villca.webp",
+    "socialNetworks": [
+      {
+        "type": "github",
+        "url": "https://github.com/ferd-dev"
+      },
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/luisfernando.villcayucra"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/fernando_villca62/"
+      }
+    ]
+  },
+  {
+    "id": "OA347197B9FFC4F5ABE85CEBEDEBCDE46",
+    "name": "Ivan Martinez",
+    "photoUrl": "organizers/ivan_martinez.webp",
+    "socialNetworks": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jesulim/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/jesulim"
+      }
+    ]
+  },
+  {
+    "id": "AE80A59C23F9462297A99CFE7D7F00FA",
+    "name": "Gabriela Nathaly Torrico",
+    "photoUrl": "organizersWTM/gabriela_torrico.webp",
+    "socialNetworks": []
+  },
+  {
+    "id": "DFB99FB7B07544478807D42C30527DE4",
+    "name": "Rafael Alejandro Saravia",
+    "photoUrl": "organizersWTM/rafael_saravia.webp",
+    "socialNetworks": []
+  },
+  {
+    "id": "48EE53F0ECC7478DA0E04A8FDE44D9F0",
+    "name": "Sebastian Gonzales",
+    "photoUrl": "organizers/sebastian_gonzales.webp",
+    "socialNetworks": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sebastiangonzalestito/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/Sebas21gt"
+      },
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/sebastian.sebas.tito"
+      },
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/sebas21gt"
+      }
+    ]
+  },
+  {
+    "id": "EBC394EB620F4442BA321E94F7E16780",
+    "name": "Danner Aly",
+    "photoUrl": "organizers/danner_aly.webp",
+    "socialNetworks": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/aly-danner"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/DannerAly"
+      },
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/abalydelh"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/aly_danner"
+      }
+    ]
+  },
+  {
+    "id": "BF553D4BDB484196B6CE51AC58A424A1",
+    "name": "Lizandra Rodriguez",
+    "photoUrl": "organizersWTM/lizandra_rodriguez.webp",
+    "socialNetworks": []
+  },
+  {
+    "id": "B9FE9E0B6BB14EAB9E30DA1329A17C90",
+    "name": "Jhamil Crespo",
+    "photoUrl": "organizers/jhamil_crespo.webp",
+    "socialNetworks": []
+  },
+  {
+    "id": "A22A0B67295F4CC5B95386D0EAC892B0",
+    "name": "Andrés Torres",
+    "photoUrl": "organizers/alejandro_torres.webp",
+    "socialNetworks": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/andrestorresgo"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/andrestorresgo"
+      },
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/dog_motif_"
+      }
+    ]
+  },
+  {
+    "id": "EA88AD76754C48C58B75D572633524B5",
+    "name": "Agustin Apaza Guzman",
+    "photoUrl": "organizersWTM/juan_apaza.webp",
+    "socialNetworks": [
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/JuanAgustin95"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/juan-agustin-apaza-537015286"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/juan_agustin_apaza"
+      }
+    ]
+  },
+  {
+    "id": "F28EBEB764F4454C9BABBDEB292DFCC9",
+    "name": "Roxana Arancibia Barron",
+    "photoUrl": "organizersWTM/Roxana_arancibia.webp",
+    "socialNetworks": []
+  },
+  {
+    "id": "BB792B36EA7A4C6AA637588E48F58980",
+    "name": "Emilys Dominguez",
+    "photoUrl": "organizersWTM/emilys_dominguez.webp",
+    "socialNetworks": []
+  },
+  {
+    "id": "E09E3A60C67C42C0A5F3680E07A6767E",
+    "name": "Ángela Alicia Fernández",
+    "photoUrl": "organizersWTM/angela_fernandez.webp",
+    "socialNetworks": []
+  },
+  {
+    "id": "623DDFB1DB7440739BB5A7558A150D8C",
+    "name": "Noelia Gonzales",
+    "photoUrl": "organizersWTM/noemi_gonzales.webp",
+    "socialNetworks": [
+      {
+        "type": "github",
+        "url": "https://github.com/noegonzalespereira"
+      },
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/profile.php?id=100008626331345"
+      },
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/noeliagonzaless_"
+      }
+    ]
+  },
+  {
+    "id": "99DC38A57C47451E9B124BE8FE76FC2D",
+    "name": "Marcela Miranda Veniz",
+    "photoUrl": "organizers/marcela_miranda.webp",
+    "socialNetworks": [
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/profile.php?id=100024371240222"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/mireni02/"
+      }
+    ]
+  },
+  {
+    "id": "D1AC0DAC5F114F7B8F00F9E8489D6F07",
+    "name": "Alejandro Olguin",
+    "photoUrl": "organizers/alejandro_olguin.webp",
+    "socialNetworks": []
+  },
+  {
+    "id": "7D90C3F3C3C34B63BB7B980DEA34567C",
+    "name": "Fernanda Flores",
+    "photoUrl": "organizersWTM/fernanda_flores.webp",
+    "socialNetworks": [
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/share/16KWjo6CkL/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/floresgallofernanda"
+      }
+    ]
+  },
+  {
+    "id": "83FE0B687CF34BD3A759BA592E4E0CF8",
+    "name": "Burlecot Matias Corso",
+    "photoUrl": "organizersWTM/matias_corso.webp",
+    "socialNetworks": []
+  },
+  {
+    "id": "6C1095863CE74FAC9CEB40DE78590941",
+    "name": "Julián Fenanden",
+    "photoUrl": "organizersWTM/charls_gavimontes.webp",
+    "socialNetworks": []
+  },
+  {
+    "id": "77F959CBA91F4A17B73A7FF1D6A63E85",
+    "name": "Ariel Pacheco",
+    "photoUrl": "organizers/ariel_pacheco.webp",
+    "socialNetworks": [
+      {
+        "type": "linkedin",
+        "url": "http://www.linkedin.com/in/arielpa"
+      },
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/ariel.pachecoalejandro.7/"
+      }
+    ]
+  },
+  {
+    "id": "FA9EEDDAFA694B4EA1C26185544952B8",
+    "name": "Noelia Paola Duran",
+    "photoUrl": "organizersWTM/noelia_duran.webp",
+    "socialNetworks": []
+  },
+  {
+    "id": "0953C63641844C0B8CC88A54076FA77A",
+    "name": "Joaquin Aramayo",
+    "photoUrl": "organizersWTM/joaquin_aramayo.webp",
+    "socialNetworks": []
+  },
+  {
+    "id": "1D21EBE794594A979A4DFEC910BBFB33",
+    "name": "Ruben Camargo",
+    "photoUrl": "organizers/ruben_camargo.webp",
+    "socialNetworks": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ruben-artemio-camargo-saravia-625a492b6"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/RubenCamargoX/"
+      },
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/ruben.saravia.10"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/ruben_saravia_"
+      }
+    ]
+  },
+  {
+    "id": "32A3AF9976DC4F679118B322810646FF",
+    "name": "Susan Jhoseline Terán",
+    "photoUrl": "organizers/susan_teran.webp",
+    "socialNetworks": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jhoseline-terán-5b7b20210/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/sjteranc"
+      },
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/share/188uXWiz3k/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/jhose_jk/"
+      }
+    ]
+  },
+  {
+    "id": "0B8ED65A520B42778418EEF25921CF40",
+    "name": "Samantha Hinojosa",
+    "photoUrl": "organizers/samantha_hinojosa.webp",
+    "socialNetworks": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/samantha-mikaela-hinojosa-yucra-64b734263"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/mikah10"
+      },
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/mikaela.hinojosa.77"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/_mika.hhh/"
+      }
+    ]
+  },
+  {
+    "id": "E845CD425521414A9AA89FF4AA614B73",
+    "name": "Andrea Cornejo",
+    "photoUrl": "organizers/andrea_cornejo.webp",
+    "socialNetworks": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/andrea-cornejo-m/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/andreacoding"
+      }
+    ]
+  },
+  {
+    "id": "15A8901C157942B380525C38CB80B5BA",
+    "name": "Madizon Gonzales",
+    "photoUrl": "organizers/mádizon_gonzales.webp",
+    "socialNetworks": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/madizongonzales"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/madizongonzales"
+      },
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/madizon.gonzales"
+      }
+    ]
+  }
+]
