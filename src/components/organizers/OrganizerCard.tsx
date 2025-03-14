@@ -4,7 +4,7 @@ import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
-  WebIcon
+  WTMIcon
 } from '@components/speaker/SocialIcons'
 
 export interface Props {
@@ -36,7 +36,9 @@ const OrganizerCard = ({ photoUrl, name, socialNetworks, uuid }: Props) => {
           <div className='flex items-center justify-center'>
             {isSocialNetworksEmpty && (
               <span className='mt-4 inline-flex items-center px-3 py-1'>
-                <span>{<WebIcon className='h-6 w-6 md:h-7 md:w-7 lg:h-8 lg:w-8' />}</span>
+                <span>
+                  <WTMIcon className='h-6 w-6 md:h-7 md:w-7 lg:h-8 lg:w-8' />
+                </span>
               </span>
             )}
             {socialNetworks.map((socialNetwork, i) => (
@@ -54,9 +56,6 @@ const OrganizerCard = ({ photoUrl, name, socialNetworks, uuid }: Props) => {
                     )}
                     {socialNetwork.type === 'facebook' && (
                       <FacebookIcon className='h-6 w-6 md:h-7 md:w-7 lg:h-8 lg:w-8' />
-                    )}
-                    {socialNetwork.type === 'twitter' && (
-                      <WebIcon className='h-6 w-6 md:h-7 md:w-7 lg:h-8 lg:w-8' />
                     )}
                   </span>
                 </span>
