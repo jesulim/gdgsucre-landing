@@ -405,5 +405,17 @@
         "url": "https://instagram.com/madizon.gonzales"
       }
     ]
+  },
+  {
+    "id": "15A8901C157942B380525C38CB80B5BB",
+    "name": "Aylin Oropeza",
+    "photoUrl": "organizersWTM/aylin_oropeza.webp",
+    "socialNetworks": []
+  },
+  {
+    "id": "15A8901C157942B380525C38CB80B5BC",
+    "name": "Davinia Salguero",
+    "photoUrl": "organizersWTM/davinia_salguero.webp",
+    "socialNetworks": []
   }
 ]
