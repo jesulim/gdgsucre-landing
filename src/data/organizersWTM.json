@@ -137,7 +137,12 @@
     "id": "B9FE9E0B6BB14EAB9E30DA1329A17C90",
     "name": "Jhamil Crespo",
     "photoUrl": "organizers/jhamil_crespo.webp",
-    "socialNetworks": []
+    "socialNetworks": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/jhamilc_rejas/"
+      }
+    ]
   },
   {
     "id": "A22A0B67295F4CC5B95386D0EAC892B0",
@@ -233,7 +238,16 @@
     "id": "D1AC0DAC5F114F7B8F00F9E8489D6F07",
     "name": "Alejandro Olguin",
     "photoUrl": "organizers/alejandro_olguin.webp",
-    "socialNetworks": []
+    "socialNetworks": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/alejandroolguin17 "
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/alejandroolguin.am"
+      }
+    ]
   },
   {
     "id": "7D90C3F3C3C34B63BB7B980DEA34567C",
