@@ -1,5 +1,4 @@
-import { getAuth } from 'firebase-admin/auth'
-import { app, db, COLLECTION_NAME } from '../../firebase/server'
+import { getFirebaseAdmin, COLLECTION_NAME } from '../../firebase/server'
 
 interface Registration {
   uid: string
@@ -21,9 +20,9 @@ enum RegistrationStatus {
   Closed = 'CLOSED'
 }
 
-async function fetchRegistration(sessionCookie: string): Promise<Registration | null> {
+async function fetchRegistration(user): Promise<Registration | null> {
   try {
-    const user = await getAuth(app).verifySessionCookie(sessionCookie)
+    const { db } = getFirebaseAdmin()
     const doc = await db.collection(COLLECTION_NAME).doc(user.uid).get()
 
     return {

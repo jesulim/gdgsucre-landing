@@ -10,10 +10,7 @@ import {
 } from 'ag-grid-community'
 import { AgGridReact } from 'ag-grid-react'
 import { AG_GRID_LOCALE_ES } from '@ag-grid-community/locale'
-import { getFirestore, doc, updateDoc } from 'firebase/firestore'
-import { useEffect, useState, useRef, useCallback } from 'react'
-
-import { app, auth } from '../../firebase/client'
+import { useState, useRef, useCallback } from 'react'
 
 ModuleRegistry.registerModules([
   ColumnAutoSizeModule,
@@ -25,14 +22,15 @@ ModuleRegistry.registerModules([
   CsvExportModule
 ])
 
-const db = getFirestore(app)
-
 async function updateRegister(rowData) {
   try {
-    const { uid, ...data } = rowData
-
-    const docRef = doc(db, 'registro-iwd2025', uid)
-    await updateDoc(docRef, data)
+    await fetch('/api/firestore/registration/', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(rowData)
+    })
   } catch (error) {
     console.error('Error updating document:', error)
   }
@@ -59,18 +57,6 @@ const VoucherLinkRenderer = ({ value }) => (
 
 export const DataGrid = ({ registerList }) => {
   const gridRef = useRef()
-
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(user => {
-      if (!user) {
-        fetch('/api/auth/signout').then(() => {
-          window.location.assign('/')
-        })
-      }
-    })
-
-    return () => unsubscribe()
-  }, [])
 
   const downloadCSV = useCallback(() => {
     gridRef.current.api.exportDataAsCsv()
