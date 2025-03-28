@@ -42,9 +42,13 @@ const AnimatedValue = ({ value }) => {
 export const Timer = ({ initialTime, targetDate }) => {
   const { days, hours, minutes, seconds } = useTimer(initialTime, targetDate)
 
+  if (days < -1) {
+    return
+  }
+
   if (initialTime <= 0 || seconds < 0) {
     return (
-      <div className='mt-8 animate-bounce text-center text-4xl font-bold text-yellow'>
+      <div className='mt-8 animate-bounce text-center text-4xl font-bold text-green-three'>
         ¡Empezó el <br />
         International Women's Day 2025!
       </div>
@@ -62,7 +66,7 @@ export const Timer = ({ initialTime, targetDate }) => {
     <div className='flex text-center'>
       {timeUnits.map(({ label, value }) => (
         <div className='w-24 md:w-32 lg:w-36' key={label}>
-          <div className='text-blue-two h-16 overflow-y-hidden bg-transparent font-sofia text-6xl font-black leading-[4rem] lg:text-7xl'>
+          <div className='h-16 overflow-y-hidden bg-transparent font-sofia text-6xl font-black leading-[4rem] text-blue-two lg:text-7xl'>
             <AnimatedValue value={value} />
           </div>
 
