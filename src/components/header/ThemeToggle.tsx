@@ -14,6 +14,8 @@ export const ThemeToggle = () => {
     } else {
       document.documentElement.classList.remove('dark')
     }
+
+    document.documentElement.setAttribute('data-ag-theme-mode', theme)
     localStorage.setItem('theme', theme)
   }, [theme])
 
@@ -22,7 +24,7 @@ export const ThemeToggle = () => {
   }
 
   return (
-    <button onClick={handleToggle}>
+    <button onClick={handleToggle} aria-label='Toggle dark mode'>
       <svg
         width='36'
         height='36'

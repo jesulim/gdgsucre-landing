@@ -8,7 +8,7 @@ import 'swiper/css/navigation'
 
 import './swiperStyles.css'
 
-import organizersData from '../../data/organizers.json'
+import organizersData from '../../data/organizersWTM.json'
 import OrganizerCard from './OrganizerCard'
 
 const Organizer = () => {
@@ -37,7 +37,7 @@ const Organizer = () => {
         style={{ height: '100%', paddingBottom: '90px' }}
       >
         {organizersData
-          .sort((a, b) => b.type - a.type)
+          .sort((a, b) => a.name.localeCompare(b.name))
           .map((organizerProps, i) => (
             <SwiperSlide
               key={i}

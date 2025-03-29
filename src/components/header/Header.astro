@@ -1,22 +1,23 @@
 ---
-import { ThemeToggle } from './ThemeToggle'
-
 import Logo from '../../assets/Logo.astro'
 import LogoShort from '../../assets/Logo-short.astro'
-import Avatar from './Avatar'
 import Loader from '../../assets/icons/loader.svg'
+import { GET } from '../../pages/api/auth/user'
+
+import Avatar from './Avatar'
+import { ThemeToggle } from './ThemeToggle'
 
 const links = [
-  // { name: 'Speakers', href: '#speakers', class: 'hover:text-blue' },
-  // { name: 'Agenda', href: '#agenda', class: 'hover:text-blue' },
-  // { name: 'Equipo', href: '#organizadores', class: 'hover:text-blue' },
-  // { name: 'Preguntas frecuentes', href: '#faq', class: 'hover:text-blue' },
-  // { name: 'Speakers', href: '#speakers', class: 'hover:text-blue' },
-  // { name: 'Sponsors', href: '#speakers', class: 'hover:text-blue' },
+  { name: 'Speakers', href: '#speakers', class: 'hover:text-blue-three' },
+  { name: 'Agenda', href: '#agenda', class: 'hover:text-blue-three' },
+  { name: 'Sponsors', href: '#sponsors', class: 'hover:text-blue-three' },
+  { name: 'Equipo', href: '#organizadores', class: 'hover:text-blue-three' },
+  { name: 'Preguntas frecuentes', href: '#faq', class: 'hover:text-blue-three' },
   { name: 'Eventos Pasados', href: '/pastEvents/', class: 'hover:text-blue-three' }
 ]
 
-const sessionCookie = Astro.cookies.has('__session')
+const res = await GET(Astro)
+const user = res.ok ? await res.json() : null
 ---
 
 <nav class='fixed top-0 z-20 w-full border-b-2 border-green-four bg-green-one text-green-four'>
@@ -32,7 +33,7 @@ const sessionCookie = Astro.cookies.has('__session')
 
     <div id='navbar-sticky' class='order-1 ml-auto hidden w-full md:order-none md:block md:w-fit'>
       <ul
-        class='mt-4 flex flex-col rounded-xl border-2 p-4 font-medium md:mt-0 md:flex-row md:gap-4 md:border-0 md:p-0'
+        class='mt-4 flex flex-col rounded-xl border-2 p-4 font-medium md:mt-0 md:flex-row md:gap-6 md:border-0 md:p-0'
       >
         {
           links.map(item => (
@@ -49,8 +50,8 @@ const sessionCookie = Astro.cookies.has('__session')
     <div class='flex items-center gap-4'>
       <ThemeToggle client:load />
       {
-        sessionCookie ? (
-          <Avatar client:only='react' />
+        user ? (
+          <Avatar client:load email={user.email} picture={user.picture} />
         ) : (
           <button
             id='login'

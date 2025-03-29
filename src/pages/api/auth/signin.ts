@@ -1,12 +1,15 @@
 import type { APIRoute } from 'astro'
 import { getAuth } from 'firebase-admin/auth'
 
-import { app } from '../../../firebase/server'
+import { getFirebaseAdmin } from '../../../firebase/server'
 
 const expiresIn = 1000 * 60 * 60 * 24 * 14
-const auth = getAuth(app)
 
-export const GET: APIRoute = async ({ request, cookies, redirect }) => {
+export const GET: APIRoute = async ({ request, cookies }) => {
+  const { app } = getFirebaseAdmin()
+
+  const auth = getAuth(app)
+
   /* Get token from request headers */
   const idToken = request.headers.get('Authorization')?.split('Bearer ')[1]
   if (!idToken) {

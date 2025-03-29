@@ -1,9 +1,9 @@
 import admin, { type ServiceAccount } from 'firebase-admin'
-import { initializeApp, cert, getApps } from 'firebase-admin/app'
+import { initializeApp, cert, getApps, getApp } from 'firebase-admin/app'
+import { getFirestore } from 'firebase-admin/firestore'
 
 const COLLECTION_NAME = 'registro-iwd2025'
 
-const activeApps = getApps()
 const serviceAccount = {
   type: 'service_account',
   project_id: import.meta.env.FIREBASE_PROJECT_ID,
@@ -17,13 +17,22 @@ const serviceAccount = {
   client_x509_cert_url: import.meta.env.FIREBASE_CLIENT_CERT_URL
 }
 
-const initApp = () =>
-  initializeApp({
-    credential: cert(serviceAccount as ServiceAccount),
-    storageBucket: 'gs://gdgsucre-events.appspot.com'
-  })
+let app = getApps().length > 0 ? getApp()[0] : null
+let db = null
+let bucket = null
 
-const app = activeApps.length === 0 ? initApp() : activeApps[0]
-const bucket = admin.storage().bucket()
+function getFirebaseAdmin() {
+  if (!app) {
+    app = initializeApp({
+      credential: cert(serviceAccount as ServiceAccount),
+      storageBucket: 'gs://gdgsucre-events.appspot.com'
+    })
 
-export { app, bucket, COLLECTION_NAME }
+    db = getFirestore(app)
+    bucket = admin.storage().bucket()
+  }
+
+  return { app, db, bucket }
+}
+
+export { getFirebaseAdmin, COLLECTION_NAME }

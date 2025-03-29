@@ -1,20 +1,24 @@
 ---
 import { ThemeToggle } from './header/ThemeToggle'
-import Logo from '../assets/Logo.astro'
-import LogoShort from '../assets/Logo-short.astro'
+
+import GDGLogo from '../assets/GDG.svg'
+
+const url = new URL('https://iwd2025.gdgsucre.com/')
+const redirectUrl = `${url.protocol}//${url.host.split('.').slice(-2).join('.')}`
 ---
 
 <nav
   class='fixed left-0 top-0 z-20 w-full border-b-2 border-black bg-gray dark:border-white dark:bg-black dark:text-white'
 >
   <div class='mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4'>
-    <a href='/' aria-current='page' aria-label='Return to home'>
-      <div class='block md:hidden'>
-        <LogoShort />
-      </div>
-      <div class='hidden md:block'>
-        <Logo />
-      </div>
+    <a
+      href={redirectUrl}
+      aria-current='page'
+      aria-label='Return to home'
+      class='hidden items-center gap-4 font-medium md:flex md:text-xl'
+    >
+      <GDGLogo width='64' />
+      <span> Google Developer Group Sucre </span>
     </a>
 
     <div class='flex md:order-2 md:hidden'>

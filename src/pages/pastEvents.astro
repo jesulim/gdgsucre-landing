@@ -1,32 +1,39 @@
 ---
-import PastEvent from '@components/PastEventCard.astro'
+export const prerender = true
+
 import 'swiper/css'
 import 'swiper/css/effect-cards'
 import 'swiper/css/pagination'
+
+import PastEvent from '@components/PastEventCard.astro'
 import PastEventsHeader from '@components/PastEventsHeader.astro'
 import ReturnButton from '@components/ReturnButton.astro'
 ---
 
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src='https://www.googletagmanager.com/gtag/js?id=G-BGHRR8BE5R'></script>
-  <script is:inline>
-    window.dataLayer = window.dataLayer || []
-    function gtag() {
-      dataLayer.push(arguments)
-    }
-    gtag('js', new Date())
-    gtag('config', 'G-BGHRR8BE5R')
-  </script>
-</head>
 <body
   class='absolute inset-0 -z-10 h-full w-full overflow-y-auto bg-white font-google dark:bg-black dark:text-white'
 >
   <PastEventsHeader />
-  <div class='bg-gray-800 mx-auto min-h-screen space-y-12 pt-8 lg:pt-4'>
+  <div class='mx-auto min-h-screen space-y-12 pt-8 lg:pt-4'>
     <div class='sm:pb-52 md:pb-32 lg:pb-14 xl:pb-16'></div>
     <div class='swiper p-4 md:p-8 lg:p-10'>
       <div class='swiper-wrapper space-x-4 pb-8 md:space-x-6 lg:space-x-8'>
+        <div class='swiper-slide'>
+          <PastEvent
+            title="International Women's Day 2025"
+            desktopScreenshot='/screenshots/iwd-2025-desktop.webp'
+            mobileScreenshot='/screenshots/iwd-2025-mobile.webp'
+            href='https://iwd2025.gdgsucre.com/'
+          />
+        </div>
+        <div class='swiper-slide'>
+          <PastEvent
+            title='DevFest Sucre 2024'
+            desktopScreenshot='/screenshots/devfest-2024-desktop.webp'
+            mobileScreenshot='/screenshots/devfest-2024-mobile.webp'
+            href='https://devfest2024.gdgsucre.com/'
+          />
+        </div>
         <div class='swiper-slide'>
           <PastEvent
             title='I/O Extended Sucre 2024'
